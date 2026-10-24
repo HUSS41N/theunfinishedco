@@ -1,0 +1,2786 @@
+{
+ "meta": {
+  "title": "What If You Met Yourself at Age 8?",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 41.8
+ },
+ "cast": {
+  "adult": {
+   "skin": "peach",
+   "hair": {
+    "style": "short",
+    "color": "brown"
+   },
+   "top": {
+    "style": "shirt",
+    "color": "grey"
+   },
+   "bottom": {
+    "style": "pants",
+    "color": "charcoal"
+   },
+   "shoes": {
+    "color": "black"
+   }
+  },
+  "kid": {
+   "skin": "peach",
+   "build": {
+    "height": 0.66,
+    "head": 0.95,
+    "width": 0.78,
+    "limbs": 0.85
+   },
+   "hair": {
+    "style": "short",
+    "color": "brown"
+   },
+   "top": {
+    "style": "stripes",
+    "color": "blue",
+    "detail": "white"
+   },
+   "bottom": {
+    "style": "shorts",
+    "color": "denim"
+   },
+   "shoes": {
+    "color": "red"
+   },
+   "face": {
+    "blush": true
+   },
+   "accessories": [
+    {
+     "type": "cap",
+     "color": "red"
+    }
+   ]
+  }
+ },
+ "shots": [
+  {
+   "start": 0,
+   "end": 2.6,
+   "set": {
+    "preset": "room",
+    "wall": "#D9D2C4",
+    "floor": "#9C8A74",
+    "window": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 590,
+     "y": 1060,
+     "zoom": 1.22
+    },
+    {
+     "t": 2.6,
+     "x": 580,
+     "y": 1070,
+     "zoom": 1.3
+    }
+   ],
+   "actors": [
+    {
+     "id": "kid",
+     "x": 400,
+     "y": 1500,
+     "scale": 1.05,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 30,
+       "b": -100
+      },
+      "armL": {
+       "a": 40,
+       "b": -95
+      }
+     },
+     "hold": {
+      "R": {
+       "type": "note",
+       "label": "MY LIST",
+       "scale": 0.9
+      }
+     },
+     "face": {
+      "eyes": "angry",
+      "mouth": "flat",
+      "brows": "angry",
+      "look": [
+       0.8,
+       -0.6
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "adult",
+     "x": 780,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 50,
+       "b": -60
+      }
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "brows": "flat",
+      "look": [
+       -0.3,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.8,
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         -0.8,
+         0.8
+        ]
+       }
+      },
+      {
+       "t": 0.9,
+       "pose": "scared",
+       "dur": 0.3
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "jump",
+       "from": 0.8,
+       "dur": 0.35,
+       "height": 30
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "door",
+     "x": 400,
+     "y": 1500,
+     "open": 0.15,
+     "keys": [
+      {
+       "t": 0,
+       "open": 0.15
+      },
+      {
+       "t": 0.5,
+       "open": 0.95,
+       "ease": "out"
+      }
+     ],
+     "layer": "back"
+    }
+   ],
+   "text": [
+    {
+     "text": "WHAT IF YOU MET\nYOURSELF AT AGE 8?",
+     "x": 540,
+     "y": 270,
+     "size": 92,
+     "from": 0.15
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0,
+     "kind": "dooropen",
+     "gain": 0.6
+    },
+    {
+     "t": 0.8,
+     "kind": "sting",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 2.6,
+   "end": 4.4,
+   "set": {
+    "preset": "room",
+    "wall": "#D9D2C4",
+    "floor": "#9C8A74",
+    "window": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 600,
+     "y": 900,
+     "zoom": 1.75
+    },
+    {
+     "t": 1.8,
+     "x": 600,
+     "y": 900,
+     "zoom": 1.85
+    }
+   ],
+   "actors": [
+    {
+     "id": "kid",
+     "x": 470,
+     "y": 1500,
+     "scale": 1.05,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 30,
+       "b": -100
+      },
+      "armL": {
+       "a": 40,
+       "b": -95
+      }
+     },
+     "hold": {
+      "R": {
+       "type": "note",
+       "label": "MY LIST",
+       "scale": 0.9
+      }
+     },
+     "face": {
+      "eyes": "angry",
+      "mouth": "flat",
+      "brows": "angry",
+      "look": [
+       1,
+       -1
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 0.9,
+       "face": {
+        "eyes": "angry",
+        "mouth": "sad",
+        "brows": "angry",
+        "look": [
+         1,
+         -1
+        ],
+        "turn": 0.3
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "adult",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": {
+      "base": "stand",
+      "armL": {
+       "a": 20,
+       "b": -140
+      },
+      "armR": {
+       "a": 10,
+       "b": 4
+      }
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "O",
+      "brows": "up",
+      "look": [
+       -1,
+       1
+      ],
+      "turn": -0.3
+     },
+     "keys": [
+      {
+       "t": 0.9,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "brows": "raised",
+        "look": [
+         -1,
+         1
+        ],
+        "turn": -0.3
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "door",
+     "x": 300,
+     "y": 1500,
+     "open": 0.95
+    },
+    {
+     "type": "tag",
+     "text": "AGE 8",
+     "color": "#E2453C",
+     "size": 44,
+     "x": 440,
+     "y": 780,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0.3,
+       "opacity": 0
+      },
+      {
+       "t": 0.45,
+       "opacity": 1
+      }
+     ]
+    },
+    {
+     "type": "tag",
+     "text": "AGE 34",
+     "color": "#55555C",
+     "size": 44,
+     "x": 760,
+     "y": 560,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0.6,
+       "opacity": 0
+      },
+      {
+       "t": 0.75,
+       "opacity": 1
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 0.6,
+     "kind": "pop",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 4.4,
+   "end": 6.8,
+   "set": {
+    "preset": "room",
+    "wall": "#D9D2C4",
+    "floor": "#9C8A74",
+    "window": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 600,
+     "y": 1100,
+     "zoom": 1.2
+    },
+    {
+     "t": 2.4,
+     "x": 640,
+     "y": 1100,
+     "zoom": 1.28
+    }
+   ],
+   "actors": [
+    {
+     "id": "adult",
+     "x": 260,
+     "y": 1500,
+     "scale": 0.92,
+     "pose": "shrug",
+     "face": {
+      "eyes": "open",
+      "mouth": "flat",
+      "brows": "worried",
+      "look": [
+       1,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.4,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 20,
+         "b": -140
+        },
+        "armR": {
+         "a": 30,
+         "b": -100
+        }
+       },
+       "dur": 0.4
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "kid",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "pose": "stand",
+     "hold": {
+      "R": {
+       "type": "note",
+       "label": "MY LIST",
+       "scale": 0.9
+      }
+     },
+     "face": {
+      "eyes": "angry",
+      "mouth": "flat",
+      "brows": "angry",
+      "look": [
+       1,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.2,
+       "pose": {
+        "base": "point",
+        "armL": {
+         "a": 30,
+         "b": -100
+        }
+       },
+       "dur": 0.3,
+       "face": {
+        "eyes": "bored",
+        "mouth": "flat",
+        "brows": "angry",
+        "look": [
+         1,
+         -0.4
+        ]
+       }
+      },
+      {
+       "t": 1.9,
+       "face": {
+        "eyes": "bored",
+        "mouth": "sad",
+        "brows": "raised",
+        "look": [
+         1,
+         -0.6
+        ]
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "walk",
+       "from": 0,
+       "to": 1.1,
+       "dx": 220,
+       "rate": 2.4,
+       "keepArms": true
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "desk",
+     "x": 820,
+     "y": 1500,
+     "color": "#C9D2DC"
+    },
+    {
+     "type": "laptop",
+     "x": 760,
+     "y": 1200
+    },
+    {
+     "type": "svg",
+     "markup": "<g transform=\"translate(0 0)\"><path d=\"M-44 -70 L44 -70 L34 0 L-34 0Z\" fill=\"#F2F0EC\"/><path d=\"M10 -70 L44 -70 L34 0 L8 0Z\" fill=\"#DDD8CE\"/><rect x=\"-40\" y=\"-48\" width=\"80\" height=\"12\" fill=\"#E2453C\"/><path d=\"M-30 -70 Q0 -100 30 -70\" fill=\"none\" stroke=\"#B9B4AE\" stroke-width=\"5\"/></g><g transform=\"translate(90 0)\"><path d=\"M-44 -70 L44 -70 L34 0 L-34 0Z\" fill=\"#F2F0EC\"/><path d=\"M10 -70 L44 -70 L34 0 L8 0Z\" fill=\"#DDD8CE\"/><rect x=\"-40\" y=\"-48\" width=\"80\" height=\"12\" fill=\"#E2453C\"/><path d=\"M-30 -70 Q0 -100 30 -70\" fill=\"none\" stroke=\"#B9B4AE\" stroke-width=\"5\"/></g>",
+     "x": 920,
+     "y": 1200
+    },
+    {
+     "type": "svg",
+     "markup": "<g transform=\"translate(0 0)\"><path d=\"M-44 -70 L44 -70 L34 0 L-34 0Z\" fill=\"#F2F0EC\"/><path d=\"M10 -70 L44 -70 L34 0 L8 0Z\" fill=\"#DDD8CE\"/><rect x=\"-40\" y=\"-48\" width=\"80\" height=\"12\" fill=\"#E2453C\"/><path d=\"M-30 -70 Q0 -100 30 -70\" fill=\"none\" stroke=\"#B9B4AE\" stroke-width=\"5\"/></g>",
+     "x": 940,
+     "y": 1130,
+     "rot": -8
+    },
+    {
+     "type": "svg",
+     "markup": "<g><path d=\"M-48 -90 L48 -90 L38 0 L-38 0Z\" fill=\"#C9663A\"/><rect x=\"-52\" y=\"-100\" width=\"104\" height=\"20\" rx=\"6\" fill=\"#A8532E\"/>\n <path d=\"M-16 -100 L-16 -200 Q0 -222 16 -200 L16 -100Z\" fill=\"#6E9A4E\"/><path d=\"M4 -100 L4 -206 Q12 -214 16 -200 L16 -100Z\" fill=\"#577D3D\"/>\n <path d=\"M-16 -150 Q-44 -150 -50 -126\" fill=\"none\" stroke=\"#6E9A4E\" stroke-width=\"18\" stroke-linecap=\"round\"/>\n <path d=\"M16 -170 Q40 -168 50 -186\" fill=\"none\" stroke=\"#6E9A4E\" stroke-width=\"16\" stroke-linecap=\"round\"/><circle cx=\"-56\" cy=\"-120\" r=\"7\" fill=\"#E8508A\"/></g>",
+     "x": 600,
+     "y": 1200,
+     "scale": 0.8
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.15,
+     "kind": "step",
+     "gain": 0.5
+    },
+    {
+     "t": 0.45,
+     "kind": "step",
+     "gain": 0.5
+    },
+    {
+     "t": 0.75,
+     "kind": "step",
+     "gain": 0.5
+    },
+    {
+     "t": 1.2,
+     "kind": "swipe",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 6.8,
+   "end": 9,
+   "set": {
+    "preset": "solid",
+    "color": "#D9D2C4",
+    "vig": 0.2
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1
+    },
+    {
+     "t": 2.2,
+     "x": 540,
+     "y": 950,
+     "zoom": 1.05
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "list0",
+     "markup": "<g transform=\"translate(0 -436)\"><path d=\"M-230 0 L230 6 L224 436 L-226 432Z\" fill=\"#FFFDF4\"/><path d=\"M160 434 L224 436 L228 376Z\" fill=\"#E9E3CF\"/><rect x=\"-220\" y=\"100\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"192\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"284\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"376\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"468\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-170\" y=\"4\" width=\"4\" height=\"428\" fill=\"#F2B8B8\"/><text x=\"10\" y=\"80\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"54\" fill=\"#E2453C\" transform=\"rotate(-3 10 70)\">MY LIST</text><path d=\"M-146 130 L-100 128 L-98 174 L-144 176 L-146 130\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"172\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 160)\">ROCKET</text><path d=\"M-146 222 L-100 220 L-98 266 L-144 268 L-146 222\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"264\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(1.5 -66 252)\">DOG</text><path d=\"M-146 314 L-100 312 L-98 358 L-144 360 L-146 314\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"356\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 344)\">FUN</text></g>",
+     "x": 540,
+     "y": 1300,
+     "scale": 1.55,
+     "rot": -2,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0
+      },
+      {
+       "t": 0.01,
+       "opacity": 1
+      },
+      {
+       "t": 0.51,
+       "opacity": 1
+      },
+      {
+       "t": 0.52,
+       "opacity": 0
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "list1",
+     "markup": "<g transform=\"translate(0 -436)\"><path d=\"M-230 0 L230 6 L224 436 L-226 432Z\" fill=\"#FFFDF4\"/><path d=\"M160 434 L224 436 L228 376Z\" fill=\"#E9E3CF\"/><rect x=\"-220\" y=\"100\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"192\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"284\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"376\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"468\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-170\" y=\"4\" width=\"4\" height=\"428\" fill=\"#F2B8B8\"/><text x=\"10\" y=\"80\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"54\" fill=\"#E2453C\" transform=\"rotate(-3 10 70)\">MY LIST</text><path d=\"M-146 130 L-100 128 L-98 174 L-144 176 L-146 130\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 124 L-92 180\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 122 L-148 182\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"172\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 160)\">ROCKET</text><path d=\"M-146 222 L-100 220 L-98 266 L-144 268 L-146 222\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"264\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(1.5 -66 252)\">DOG</text><path d=\"M-146 314 L-100 312 L-98 358 L-144 360 L-146 314\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"356\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 344)\">FUN</text></g>",
+     "x": 540,
+     "y": 1300,
+     "scale": 1.55,
+     "rot": -2,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0.5,
+       "opacity": 0
+      },
+      {
+       "t": 0.51,
+       "opacity": 1
+      },
+      {
+       "t": 1.31,
+       "opacity": 1
+      },
+      {
+       "t": 1.32,
+       "opacity": 0
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "list2",
+     "markup": "<g transform=\"translate(0 -436)\"><path d=\"M-230 0 L230 6 L224 436 L-226 432Z\" fill=\"#FFFDF4\"/><path d=\"M160 434 L224 436 L228 376Z\" fill=\"#E9E3CF\"/><rect x=\"-220\" y=\"100\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"192\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"284\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"376\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"468\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-170\" y=\"4\" width=\"4\" height=\"428\" fill=\"#F2B8B8\"/><text x=\"10\" y=\"80\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"54\" fill=\"#E2453C\" transform=\"rotate(-3 10 70)\">MY LIST</text><path d=\"M-146 130 L-100 128 L-98 174 L-144 176 L-146 130\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 124 L-92 180\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 122 L-148 182\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"172\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 160)\">ROCKET</text><path d=\"M-146 222 L-100 220 L-98 266 L-144 268 L-146 222\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 216 L-92 272\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 214 L-148 274\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"264\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(1.5 -66 252)\">DOG</text><g transform=\"translate(154 268) scale(0.55)\"><rect x=\"-26\" y=\"-30\" width=\"52\" height=\"34\" rx=\"6\" fill=\"#C9663A\"/><path d=\"M-10 -30 L-10 -110 Q0 -124 10 -110 L10 -30Z\" fill=\"#4F9A4A\"/><path d=\"M-10 -70 L-30 -70 L-30 -96\" fill=\"none\" stroke=\"#4F9A4A\" stroke-width=\"14\" stroke-linecap=\"round\"/></g><text x=\"184\" y=\"258\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"30\" fill=\"#E2453C\">??</text><path d=\"M-146 314 L-100 312 L-98 358 L-144 360 L-146 314\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"356\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 344)\">FUN</text></g>",
+     "x": 540,
+     "y": 1300,
+     "scale": 1.55,
+     "rot": -2,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 1.3,
+       "opacity": 0
+      },
+      {
+       "t": 1.31,
+       "opacity": 1
+      }
+     ]
+    }
+   ],
+   "text": [],
+   "sfx": [
+    {
+     "t": 0.5,
+     "kind": "scribble",
+     "gain": 0.9
+    },
+    {
+     "t": 1.3,
+     "kind": "scribble",
+     "gain": 0.9
+    }
+   ]
+  },
+  {
+   "start": 9,
+   "end": 10.8,
+   "set": {
+    "preset": "solid",
+    "color": "#2B3040",
+    "vig": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 800,
+     "zoom": 1.6
+    },
+    {
+     "t": 1.8,
+     "x": 540,
+     "y": 790,
+     "zoom": 1.7
+    }
+   ],
+   "props": [
+    {
+     "type": "phoneUI",
+     "x": 540,
+     "y": 1660,
+     "scale": 1.25,
+     "header": "Inbox",
+     "accent": "#3F6FD8",
+     "messages": [
+      {
+       "text": "From: Boss",
+       "from": "them"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0.35,
+       "messages": [
+        {
+         "text": "From: Boss",
+         "from": "them"
+        },
+        {
+         "text": "Q3 REPORT APPROVED ✓",
+         "from": "them"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "text": [
+    {
+     "text": "“LOOK! I DID IT!”",
+     "x": 540,
+     "y": 1300,
+     "size": 70,
+     "font": "display",
+     "from": 0.6,
+     "color": "#3F6FD8",
+     "shadow": false
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.35,
+     "kind": "ping",
+     "gain": 0.7
+    }
+   ]
+  },
+  {
+   "start": 10.8,
+   "end": 13,
+   "set": {
+    "preset": "room",
+    "wall": "#D9D2C4",
+    "floor": "#9C8A74",
+    "window": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 620,
+     "y": 1000,
+     "zoom": 1.4
+    },
+    {
+     "t": 2.2,
+     "x": 610,
+     "y": 1010,
+     "zoom": 1.5
+    }
+   ],
+   "actors": [
+    {
+     "id": "adult",
+     "x": 820,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 80,
+       "b": -40
+      }
+     },
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "brows": "raised",
+      "look": [
+       -1,
+       0.6
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.4,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "brows": "flat",
+        "look": [
+         -1,
+         0.8
+        ]
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "kid",
+     "x": 420,
+     "y": 1500,
+     "scale": 1.05,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 30,
+       "b": -100
+      }
+     },
+     "hold": {
+      "R": {
+       "type": "note",
+       "label": "MY LIST",
+       "scale": 0.9
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "flat",
+      "brows": "flat",
+      "look": [
+       1,
+       -1
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 0.6,
+       "face": {
+        "eyes": "bored",
+        "mouth": "flat",
+        "brows": "raised",
+        "look": [
+         0.5,
+         0
+        ],
+        "turn": 0.1
+       }
+      },
+      {
+       "t": 1.2,
+       "face": {
+        "eyes": "open",
+        "mouth": "sad",
+        "brows": "sad",
+        "look": [
+         0,
+         0.6
+        ],
+        "turn": 0
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "desk",
+     "x": 820,
+     "y": 1500,
+     "color": "#C9D2DC"
+    },
+    {
+     "type": "laptop",
+     "x": 760,
+     "y": 1200
+    },
+    {
+     "type": "svg",
+     "markup": "<g transform=\"translate(0 0)\"><path d=\"M-44 -70 L44 -70 L34 0 L-34 0Z\" fill=\"#F2F0EC\"/><path d=\"M10 -70 L44 -70 L34 0 L8 0Z\" fill=\"#DDD8CE\"/><rect x=\"-40\" y=\"-48\" width=\"80\" height=\"12\" fill=\"#E2453C\"/><path d=\"M-30 -70 Q0 -100 30 -70\" fill=\"none\" stroke=\"#B9B4AE\" stroke-width=\"5\"/></g><g transform=\"translate(90 0)\"><path d=\"M-44 -70 L44 -70 L34 0 L-34 0Z\" fill=\"#F2F0EC\"/><path d=\"M10 -70 L44 -70 L34 0 L8 0Z\" fill=\"#DDD8CE\"/><rect x=\"-40\" y=\"-48\" width=\"80\" height=\"12\" fill=\"#E2453C\"/><path d=\"M-30 -70 Q0 -100 30 -70\" fill=\"none\" stroke=\"#B9B4AE\" stroke-width=\"5\"/></g>",
+     "x": 920,
+     "y": 1200
+    },
+    {
+     "type": "svg",
+     "markup": "<g transform=\"translate(0 0)\"><path d=\"M-44 -70 L44 -70 L34 0 L-34 0Z\" fill=\"#F2F0EC\"/><path d=\"M10 -70 L44 -70 L34 0 L8 0Z\" fill=\"#DDD8CE\"/><rect x=\"-40\" y=\"-48\" width=\"80\" height=\"12\" fill=\"#E2453C\"/><path d=\"M-30 -70 Q0 -100 30 -70\" fill=\"none\" stroke=\"#B9B4AE\" stroke-width=\"5\"/></g>",
+     "x": 940,
+     "y": 1130,
+     "rot": -8
+    },
+    {
+     "type": "svg",
+     "markup": "<g><path d=\"M-48 -90 L48 -90 L38 0 L-38 0Z\" fill=\"#C9663A\"/><rect x=\"-52\" y=\"-100\" width=\"104\" height=\"20\" rx=\"6\" fill=\"#A8532E\"/>\n <path d=\"M-16 -100 L-16 -200 Q0 -222 16 -200 L16 -100Z\" fill=\"#6E9A4E\"/><path d=\"M4 -100 L4 -206 Q12 -214 16 -200 L16 -100Z\" fill=\"#577D3D\"/>\n <path d=\"M-16 -150 Q-44 -150 -50 -126\" fill=\"none\" stroke=\"#6E9A4E\" stroke-width=\"18\" stroke-linecap=\"round\"/>\n <path d=\"M16 -170 Q40 -168 50 -186\" fill=\"none\" stroke=\"#6E9A4E\" stroke-width=\"16\" stroke-linecap=\"round\"/><circle cx=\"-56\" cy=\"-120\" r=\"7\" fill=\"#E8508A\"/></g>",
+     "x": 600,
+     "y": 1200,
+     "scale": 0.8
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1.2,
+     "kind": "cut",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 13,
+   "end": 14.4,
+   "set": {
+    "preset": "solid",
+    "color": "#D9D2C4",
+    "vig": 0.2
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1
+    },
+    {
+     "t": 1.4000000000000004,
+     "x": 540,
+     "y": 950,
+     "zoom": 1.05
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "list0",
+     "markup": "<g transform=\"translate(0 -436)\"><path d=\"M-230 0 L230 6 L224 436 L-226 432Z\" fill=\"#FFFDF4\"/><path d=\"M160 434 L224 436 L228 376Z\" fill=\"#E9E3CF\"/><rect x=\"-220\" y=\"100\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"192\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"284\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"376\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"468\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-170\" y=\"4\" width=\"4\" height=\"428\" fill=\"#F2B8B8\"/><text x=\"10\" y=\"80\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"54\" fill=\"#E2453C\" transform=\"rotate(-3 10 70)\">MY LIST</text><path d=\"M-146 130 L-100 128 L-98 174 L-144 176 L-146 130\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 124 L-92 180\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 122 L-148 182\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"172\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 160)\">ROCKET</text><path d=\"M-146 222 L-100 220 L-98 266 L-144 268 L-146 222\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 216 L-92 272\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 214 L-148 274\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"264\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(1.5 -66 252)\">DOG</text><g transform=\"translate(154 268) scale(0.55)\"><rect x=\"-26\" y=\"-30\" width=\"52\" height=\"34\" rx=\"6\" fill=\"#C9663A\"/><path d=\"M-10 -30 L-10 -110 Q0 -124 10 -110 L10 -30Z\" fill=\"#4F9A4A\"/><path d=\"M-10 -70 L-30 -70 L-30 -96\" fill=\"none\" stroke=\"#4F9A4A\" stroke-width=\"14\" stroke-linecap=\"round\"/></g><text x=\"184\" y=\"258\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"30\" fill=\"#E2453C\">??</text><path d=\"M-146 314 L-100 312 L-98 358 L-144 360 L-146 314\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"356\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 344)\">FUN</text></g>",
+     "x": 540,
+     "y": 1300,
+     "scale": 1.55,
+     "rot": -2,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0
+      },
+      {
+       "t": 0.01,
+       "opacity": 1
+      },
+      {
+       "t": 0.51,
+       "opacity": 1
+      },
+      {
+       "t": 0.52,
+       "opacity": 0
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "list1",
+     "markup": "<g transform=\"translate(0 -436)\"><path d=\"M-230 0 L230 6 L224 436 L-226 432Z\" fill=\"#FFFDF4\"/><path d=\"M160 434 L224 436 L228 376Z\" fill=\"#E9E3CF\"/><rect x=\"-220\" y=\"100\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"192\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"284\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"376\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"468\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-170\" y=\"4\" width=\"4\" height=\"428\" fill=\"#F2B8B8\"/><text x=\"10\" y=\"80\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"54\" fill=\"#E2453C\" transform=\"rotate(-3 10 70)\">MY LIST</text><path d=\"M-146 130 L-100 128 L-98 174 L-144 176 L-146 130\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 124 L-92 180\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 122 L-148 182\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"172\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 160)\">ROCKET</text><path d=\"M-146 222 L-100 220 L-98 266 L-144 268 L-146 222\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 216 L-92 272\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 214 L-148 274\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"264\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(1.5 -66 252)\">DOG</text><g transform=\"translate(154 268) scale(0.55)\"><rect x=\"-26\" y=\"-30\" width=\"52\" height=\"34\" rx=\"6\" fill=\"#C9663A\"/><path d=\"M-10 -30 L-10 -110 Q0 -124 10 -110 L10 -30Z\" fill=\"#4F9A4A\"/><path d=\"M-10 -70 L-30 -70 L-30 -96\" fill=\"none\" stroke=\"#4F9A4A\" stroke-width=\"14\" stroke-linecap=\"round\"/></g><text x=\"184\" y=\"258\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"30\" fill=\"#E2453C\">??</text><path d=\"M-146 314 L-100 312 L-98 358 L-144 360 L-146 314\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 308 L-92 364\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 306 L-148 366\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"356\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 344)\">FUN</text></g>",
+     "x": 540,
+     "y": 1300,
+     "scale": 1.55,
+     "rot": -2,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0.5,
+       "opacity": 0
+      },
+      {
+       "t": 0.51,
+       "opacity": 1
+      }
+     ]
+    }
+   ],
+   "text": [],
+   "sfx": [
+    {
+     "t": 0.5,
+     "kind": "scribble",
+     "gain": 1
+    }
+   ]
+  },
+  {
+   "start": 14.4,
+   "end": 18.4,
+   "set": {
+    "preset": "room",
+    "wall": "#D9D2C4",
+    "floor": "#9C8A74",
+    "window": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 600,
+     "y": 1080,
+     "zoom": 1.3
+    },
+    {
+     "t": 4,
+     "x": 600,
+     "y": 1060,
+     "zoom": 1.45
+    }
+   ],
+   "actors": [
+    {
+     "id": "kid",
+     "x": 340,
+     "y": 1500,
+     "scale": 1.05,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 30,
+       "b": -100
+      }
+     },
+     "hold": {
+      "R": {
+       "type": "note",
+       "label": "MY LIST",
+       "scale": 0.9
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "sad",
+      "brows": "sad",
+      "look": [
+       1,
+       -1
+      ],
+      "turn": 0.25
+     },
+     "keys": [
+      {
+       "t": 0.6,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 100,
+         "b": -25
+        },
+        "armL": {
+         "a": 14,
+         "b": 8
+        }
+       },
+       "hold": {
+        "R": {
+         "type": "note",
+         "label": "ARE WE HAPPY?",
+         "scale": 1.35
+        }
+       },
+       "dur": 0.4
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "adult",
+     "x": 880,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 80,
+       "b": -40
+      }
+     },
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "brows": "flat",
+      "look": [
+       -1,
+       0.6
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.4,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "brows": "flat",
+        "look": [
+         -1,
+         0
+        ]
+       }
+      },
+      {
+       "t": 2.4,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 10,
+         "b": 6
+        }
+       },
+       "hold": {},
+       "dur": 0.6
+      },
+      {
+       "t": 2.6,
+       "face": {
+        "eyes": "tired",
+        "mouth": "sad",
+        "brows": "sad",
+        "look": [
+         -0.6,
+         0.6
+        ]
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "desk",
+     "x": 820,
+     "y": 1500,
+     "color": "#C9D2DC"
+    },
+    {
+     "type": "laptop",
+     "x": 760,
+     "y": 1200
+    },
+    {
+     "type": "svg",
+     "markup": "<g transform=\"translate(0 0)\"><path d=\"M-44 -70 L44 -70 L34 0 L-34 0Z\" fill=\"#F2F0EC\"/><path d=\"M10 -70 L44 -70 L34 0 L8 0Z\" fill=\"#DDD8CE\"/><rect x=\"-40\" y=\"-48\" width=\"80\" height=\"12\" fill=\"#E2453C\"/><path d=\"M-30 -70 Q0 -100 30 -70\" fill=\"none\" stroke=\"#B9B4AE\" stroke-width=\"5\"/></g><g transform=\"translate(90 0)\"><path d=\"M-44 -70 L44 -70 L34 0 L-34 0Z\" fill=\"#F2F0EC\"/><path d=\"M10 -70 L44 -70 L34 0 L8 0Z\" fill=\"#DDD8CE\"/><rect x=\"-40\" y=\"-48\" width=\"80\" height=\"12\" fill=\"#E2453C\"/><path d=\"M-30 -70 Q0 -100 30 -70\" fill=\"none\" stroke=\"#B9B4AE\" stroke-width=\"5\"/></g>",
+     "x": 920,
+     "y": 1200
+    },
+    {
+     "type": "svg",
+     "markup": "<g transform=\"translate(0 0)\"><path d=\"M-44 -70 L44 -70 L34 0 L-34 0Z\" fill=\"#F2F0EC\"/><path d=\"M10 -70 L44 -70 L34 0 L8 0Z\" fill=\"#DDD8CE\"/><rect x=\"-40\" y=\"-48\" width=\"80\" height=\"12\" fill=\"#E2453C\"/><path d=\"M-30 -70 Q0 -100 30 -70\" fill=\"none\" stroke=\"#B9B4AE\" stroke-width=\"5\"/></g>",
+     "x": 940,
+     "y": 1130,
+     "rot": -8
+    },
+    {
+     "type": "svg",
+     "markup": "<g><path d=\"M-48 -90 L48 -90 L38 0 L-38 0Z\" fill=\"#C9663A\"/><rect x=\"-52\" y=\"-100\" width=\"104\" height=\"20\" rx=\"6\" fill=\"#A8532E\"/>\n <path d=\"M-16 -100 L-16 -200 Q0 -222 16 -200 L16 -100Z\" fill=\"#6E9A4E\"/><path d=\"M4 -100 L4 -206 Q12 -214 16 -200 L16 -100Z\" fill=\"#577D3D\"/>\n <path d=\"M-16 -150 Q-44 -150 -50 -126\" fill=\"none\" stroke=\"#6E9A4E\" stroke-width=\"18\" stroke-linecap=\"round\"/>\n <path d=\"M16 -170 Q40 -168 50 -186\" fill=\"none\" stroke=\"#6E9A4E\" stroke-width=\"16\" stroke-linecap=\"round\"/><circle cx=\"-56\" cy=\"-120\" r=\"7\" fill=\"#E8508A\"/></g>",
+     "x": 600,
+     "y": 1200,
+     "scale": 0.8
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.6,
+     "kind": "paper",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 18.4,
+   "end": 20.4,
+   "set": {
+    "preset": "room",
+    "wall": "#D9D2C4",
+    "floor": "#9C8A74",
+    "window": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 480,
+     "y": 1150,
+     "zoom": 1.3
+    },
+    {
+     "t": 2,
+     "x": 480,
+     "y": 1170,
+     "zoom": 1.38
+    }
+   ],
+   "actors": [
+    {
+     "id": "adult",
+     "x": 560,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 70,
+       "b": -20
+      }
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "brows": "sad",
+      "look": [
+       -1,
+       0.3
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.7,
+       "face": {
+        "eyes": "open",
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         -1,
+         0.8
+        ]
+       }
+      },
+      {
+       "t": 0.7,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 30,
+         "b": -20
+        }
+       },
+       "dur": 0.3
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "kid",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": "stand",
+     "hold": {},
+     "face": {
+      "eyes": "open",
+      "mouth": "flat",
+      "brows": "sad",
+      "look": [
+       -1,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.2,
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         -1,
+         0.3
+        ]
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "door",
+     "x": 280,
+     "y": 1500,
+     "color": "#E9E2D6",
+     "open": 0,
+     "keys": [
+      {
+       "t": 0.1,
+       "open": 0
+      },
+      {
+       "t": 0.6,
+       "open": 1,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "markup": "<g><path d=\"M-170 -220 L170 -220 L160 0 L-160 0Z\" fill=\"#C49A6C\"/><path d=\"M60 -220 L170 -220 L160 0 L56 0Z\" fill=\"#A87E52\"/>\n <path d=\"M-170 -220 L-170 -220 L-10 -220 L0 -220Z\" fill=\"#D8B485\"/>\n <path d=\"M170 -220 L170 -220 L10 -220 L0 -220Z\" fill=\"#B8915F\"/>\n <rect x=\"-110\" y=\"-150\" width=\"150\" height=\"64\" rx=\"6\" fill=\"#F2F0EC\"/><text x=\"-35\" y=\"-104\" text-anchor=\"middle\" font-family=\"JetBrains Mono\" font-weight=\"600\" font-size=\"44\" fill=\"#2A2A40\">1998</text>\n <circle cx=\"-120\" cy=\"-30\" r=\"14\" fill=\"#B9B4AE\" opacity=\"0.6\"/><circle cx=\"110\" cy=\"-60\" r=\"10\" fill=\"#B9B4AE\" opacity=\"0.6\"/></g>",
+     "x": 250,
+     "y": 1500,
+     "scale": 0.55,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0.5,
+       "opacity": 0
+      },
+      {
+       "t": 0.6,
+       "opacity": 1
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "markup": "<g><circle cx=\"-80\" cy=\"-40\" r=\"34\" fill=\"#CFC9BE\"/><circle cx=\"0\" cy=\"-90\" r=\"44\" fill=\"#CFC9BE\"/><circle cx=\"90\" cy=\"-30\" r=\"30\" fill=\"#CFC9BE\"/><circle cx=\"-30\" cy=\"10\" r=\"26\" fill=\"#CFC9BE\"/><circle cx=\"60\" cy=\"-110\" r=\"24\" fill=\"#CFC9BE\"/></g>",
+     "x": 260,
+     "y": 1300,
+     "opacity": 0,
+     "layer": "front",
+     "keys": [
+      {
+       "t": 0.6,
+       "opacity": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.8,
+       "opacity": 1,
+       "scale": 1
+      },
+      {
+       "t": 1.6,
+       "opacity": 0,
+       "scale": 1.5,
+       "y": 1200
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.15,
+     "kind": "dooropen",
+     "gain": 0.6
+    },
+    {
+     "t": 0.7,
+     "kind": "breath",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 20.4,
+   "end": 22.6,
+   "set": {
+    "preset": "room",
+    "wall": "#D9D2C4",
+    "floor": "#9C8A74",
+    "window": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 1080,
+     "zoom": 1.4
+    },
+    {
+     "t": 2.2,
+     "x": 540,
+     "y": 1060,
+     "zoom": 1.5
+    }
+   ],
+   "actors": [
+    {
+     "id": "kid",
+     "x": 760,
+     "y": 1500,
+     "scale": 1.05,
+     "facing": -1,
+     "pose": {
+      "base": "cheer"
+     },
+     "hold": {},
+     "face": {
+      "eyes": "wide",
+      "mouth": "O",
+      "brows": "up",
+      "look": [
+       -1,
+       0.3
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.9,
+       "face": {
+        "eyes": "happy",
+        "mouth": "grin",
+        "brows": "raised",
+        "look": [
+         -1,
+         0.3
+        ]
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "jump",
+       "from": 0.9,
+       "dur": 0.4,
+       "height": 70
+      }
+     ]
+    },
+    {
+     "id": "adult",
+     "x": 260,
+     "y": 1500,
+     "scale": 0.95,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 60,
+       "b": -50
+      },
+      "armL": {
+       "a": 30,
+       "b": -40
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "brows": "raised",
+      "look": [
+       1,
+       0.3
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "markup": "<g><path d=\"M-170 -220 L170 -220 L160 0 L-160 0Z\" fill=\"#C49A6C\"/><path d=\"M60 -220 L170 -220 L160 0 L56 0Z\" fill=\"#A87E52\"/>\n <path d=\"M-170 -220 L-230 -300 L-10 -300 L0 -220Z\" fill=\"#D8B485\"/>\n <path d=\"M170 -220 L230 -300 L10 -300 L0 -220Z\" fill=\"#B8915F\"/>\n <rect x=\"-110\" y=\"-150\" width=\"150\" height=\"64\" rx=\"6\" fill=\"#F2F0EC\"/><text x=\"-35\" y=\"-104\" text-anchor=\"middle\" font-family=\"JetBrains Mono\" font-weight=\"600\" font-size=\"44\" fill=\"#2A2A40\">1998</text>\n <circle cx=\"-120\" cy=\"-30\" r=\"14\" fill=\"#B9B4AE\" opacity=\"0.6\"/><circle cx=\"110\" cy=\"-60\" r=\"10\" fill=\"#B9B4AE\" opacity=\"0.6\"/></g>",
+     "x": 480,
+     "y": 1500,
+     "scale": 0.75
+    },
+    {
+     "type": "rocket",
+     "x": 480,
+     "y": 1420,
+     "scale": 1,
+     "built": 0.45,
+     "keys": [
+      {
+       "t": 0,
+       "y": 1500
+      },
+      {
+       "t": 0.5,
+       "y": 1380,
+       "ease": "out"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "whoosh",
+     "gain": 0.4
+    },
+    {
+     "t": 0.9,
+     "kind": "chime",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 22.6,
+   "end": 24.6,
+   "set": {
+    "preset": "room",
+    "wall": "#D9D2C4",
+    "floor": "#9C8A74",
+    "window": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 1100,
+     "zoom": 1.3
+    },
+    {
+     "t": 2,
+     "x": 540,
+     "y": 1100,
+     "zoom": 1.36
+    }
+   ],
+   "actors": [
+    {
+     "id": "adult",
+     "x": 300,
+     "y": 1500,
+     "scale": 0.95,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 70,
+       "b": -30
+      },
+      "armL": {
+       "a": 30,
+       "b": -60
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "brows": "raised",
+      "look": [
+       1,
+       0
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "laugh",
+       "amp": 5,
+       "rate": 5
+      }
+     ]
+    },
+    {
+     "id": "kid",
+     "x": 790,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 70,
+       "b": -20
+      },
+      "armL": {
+       "a": 40,
+       "b": -60
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "brows": "raised",
+      "look": [
+       -1,
+       0
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "laugh",
+       "amp": 7,
+       "rate": 6
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "rocket",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.2,
+     "built": 0.45,
+     "keys": [
+      {
+       "t": 0.8,
+       "built": 0.45
+      },
+      {
+       "t": 0.85,
+       "built": 0.6
+      }
+     ]
+    },
+    {
+     "type": "tag",
+     "text": "TAPE!",
+     "color": "#F5C33B",
+     "ink": "#1E1E22",
+     "size": 40,
+     "x": 540,
+     "y": 900,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0.8,
+       "opacity": 0
+      },
+      {
+       "t": 0.9,
+       "opacity": 1
+      },
+      {
+       "t": 1.6,
+       "opacity": 0
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.8,
+     "kind": "paper",
+     "gain": 0.7
+    },
+    {
+     "t": 1.4,
+     "kind": "chuckle",
+     "gain": 0.7
+    }
+   ]
+  },
+  {
+   "start": 24.6,
+   "end": 26.6,
+   "set": {
+    "preset": "room",
+    "wall": "#D9D2C4",
+    "floor": "#9C8A74",
+    "window": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1000,
+     "zoom": 1.5
+    },
+    {
+     "t": 2,
+     "x": 560,
+     "y": 980,
+     "zoom": 1.6
+    }
+   ],
+   "actors": [
+    {
+     "id": "kid",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": "cheer",
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "brows": "raised"
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "laugh",
+       "amp": 8,
+       "rate": 6
+      }
+     ]
+    },
+    {
+     "id": "adult",
+     "x": 300,
+     "y": 1500,
+     "scale": 0.95,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 120,
+       "b": 10
+      },
+      "armL": {
+       "a": 30,
+       "b": -60
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "brows": "raised",
+      "look": [
+       1,
+       -0.5
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "laugh",
+       "amp": 4,
+       "rate": 5
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "rocket",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.2,
+     "built": 0.75,
+     "keys": [
+      {
+       "t": 0.6,
+       "built": 0.75
+      },
+      {
+       "t": 0.65,
+       "built": 1
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.6,
+     "kind": "pop",
+     "gain": 0.7
+    },
+    {
+     "t": 0.9,
+     "kind": "chuckle",
+     "gain": 0.8
+    }
+   ]
+  },
+  {
+   "start": 26.6,
+   "end": 29.6,
+   "set": {
+    "preset": "room",
+    "wall": "#3B4058",
+    "floor": "#4E443C",
+    "window": true,
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1080,
+     "zoom": 1.2
+    },
+    {
+     "t": 3,
+     "x": 560,
+     "y": 1060,
+     "zoom": 1.3
+    }
+   ],
+   "actors": [
+    {
+     "id": "kid",
+     "x": 860,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": "stand",
+     "hold": {},
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "brows": "raised",
+      "look": [
+       -1,
+       -0.3
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.6,
+       "x": 860,
+       "y": 1500
+      },
+      {
+       "t": 1.1,
+       "x": 550,
+       "y": 1150,
+       "ease": "out"
+      },
+      {
+       "t": 1.3,
+       "y": 1170
+      },
+      {
+       "t": 1.1,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -60
+        },
+        "armR": {
+         "a": 40,
+         "b": -60
+        }
+       },
+       "dur": 0.4
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "jump",
+       "from": 0.6,
+       "dur": 0.5,
+       "height": 120
+      }
+     ]
+    },
+    {
+     "id": "adult",
+     "x": 250,
+     "y": 1500,
+     "scale": 0.95,
+     "pose": {
+      "base": "stand",
+      "armL": {
+       "a": 20,
+       "b": -140
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "smile",
+      "brows": "raised",
+      "look": [
+       1,
+       -0.3
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "rocket",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.5,
+     "built": 1
+    },
+    {
+     "type": "svg",
+     "markup": "<g><path d=\"M-100 -150 L100 -150 L100 0 L-100 0Z\" fill=\"#C49A6C\"/><path d=\"M30 -150 L100 -150 L100 0 L30 0Z\" fill=\"#A87E52\"/><rect x=\"-110\" y=\"-162\" width=\"220\" height=\"24\" rx=\"10\" fill=\"#A87E52\"/>\n <circle cx=\"-40\" cy=\"-75\" r=\"26\" fill=\"#E2453C\"/><circle cx=\"30\" cy=\"-75\" r=\"10\" fill=\"#F5C33B\"/></g>",
+     "x": 540,
+     "y": 1210,
+     "scale": 1,
+     "layer": "front",
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 1,
+       "opacity": 0
+      },
+      {
+       "t": 1.05,
+       "opacity": 1
+      }
+     ]
+    }
+   ],
+   "text": [
+    {
+     "text": "11:58 PM",
+     "x": 540,
+     "y": 300,
+     "size": 64,
+     "font": "mono",
+     "from": 0.2,
+     "color": "#F7E7C9"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.6,
+     "kind": "boing",
+     "gain": 0.4
+    },
+    {
+     "t": 1.1,
+     "kind": "thud",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 29.6,
+   "end": 32.4,
+   "set": {
+    "preset": "room",
+    "wall": "#3B4058",
+    "floor": "#4E443C",
+    "window": true,
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 860,
+     "zoom": 1.7
+    },
+    {
+     "t": 2.8,
+     "x": 540,
+     "y": 860,
+     "zoom": 1.85
+    }
+   ],
+   "actors": [
+    {
+     "id": "kid",
+     "x": 550,
+     "y": 1170,
+     "scale": 1,
+     "shadow": false,
+     "pose": "stand",
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "brows": "raised",
+      "look": [
+       -0.6,
+       0.2
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.4,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "brows": "sad",
+        "look": [
+         -0.8,
+         0.3
+        ]
+       }
+      },
+      {
+       "t": 0.8,
+       "opacity": 1
+      },
+      {
+       "t": 2.8,
+       "opacity": 0.45
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "wave",
+       "arm": "R"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "rocket",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.5,
+     "built": 1
+    },
+    {
+     "type": "svg",
+     "markup": "<g><path d=\"M-100 -150 L100 -150 L100 0 L-100 0Z\" fill=\"#C49A6C\"/><path d=\"M30 -150 L100 -150 L100 0 L30 0Z\" fill=\"#A87E52\"/><rect x=\"-110\" y=\"-162\" width=\"220\" height=\"24\" rx=\"10\" fill=\"#A87E52\"/>\n <circle cx=\"-40\" cy=\"-75\" r=\"26\" fill=\"#E2453C\"/><circle cx=\"30\" cy=\"-75\" r=\"10\" fill=\"#F5C33B\"/></g>",
+     "x": 540,
+     "y": 1210,
+     "scale": 1,
+     "layer": "front"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1,
+     "kind": "freeze",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 32.4,
+   "end": 35,
+   "set": {
+    "preset": "room",
+    "wall": "#3B4058",
+    "floor": "#4E443C",
+    "window": true,
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 520,
+     "y": 1060,
+     "zoom": 1.3
+    },
+    {
+     "t": 2.6,
+     "x": 520,
+     "y": 1080,
+     "zoom": 1.38
+    }
+   ],
+   "actors": [
+    {
+     "id": "kid",
+     "x": 550,
+     "y": 1170,
+     "scale": 1,
+     "shadow": false,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 60,
+       "b": -20
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "smile",
+      "brows": "sad",
+      "look": [
+       -1,
+       0.3
+      ]
+     },
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.45
+      },
+      {
+       "t": 1.1,
+       "opacity": 0,
+       "ease": "in"
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "adult",
+     "x": 260,
+     "y": 1500,
+     "scale": 0.95,
+     "pose": "stand",
+     "face": {
+      "eyes": "wide",
+      "mouth": "O",
+      "brows": "worried",
+      "look": [
+       1,
+       -0.4
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.5,
+       "pose": {
+        "base": "point",
+        "armR": {
+         "a": 100,
+         "b": -10
+        }
+       },
+       "dur": 0.4
+      },
+      {
+       "t": 1.2,
+       "face": {
+        "eyes": "open",
+        "mouth": "sad",
+        "brows": "sad",
+        "look": [
+         1,
+         -0.2
+        ]
+       }
+      },
+      {
+       "t": 2,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 40,
+         "b": -10
+        }
+       },
+       "dur": 0.5
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "rocket",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.5,
+     "built": 1
+    },
+    {
+     "type": "svg",
+     "markup": "<g><path d=\"M-100 -150 L100 -150 L100 0 L-100 0Z\" fill=\"#C49A6C\"/><path d=\"M30 -150 L100 -150 L100 0 L30 0Z\" fill=\"#A87E52\"/><rect x=\"-110\" y=\"-162\" width=\"220\" height=\"24\" rx=\"10\" fill=\"#A87E52\"/>\n <circle cx=\"-40\" cy=\"-75\" r=\"26\" fill=\"#E2453C\"/><circle cx=\"30\" cy=\"-75\" r=\"10\" fill=\"#F5C33B\"/></g>",
+     "x": 540,
+     "y": 1210,
+     "scale": 1,
+     "layer": "front"
+    },
+    {
+     "type": "svg",
+     "markup": "<g><path d=\"M0 -96 L9 -69 L36 -60 L9 -51 L0 -24 L-9 -51 L-36 -60 L-9 -69Z\" fill=\"#F7D774\"/><path d=\"M-70 -24 L-64 -6 L-46 0 L-64 6 L-70 24 L-76 6 L-94 0 L-76 -6Z\" fill=\"#F7D774\"/><path d=\"M60 -8 L67 13 L88 20 L67 27 L60 48 L53 27 L32 20 L53 13Z\" fill=\"#F7D774\"/><path d=\"M20 50 L25 65 L40 70 L25 75 L20 90 L15 75 L0 70 L15 65Z\" fill=\"#F7D774\"/><path d=\"M-40 -118 L-35.5 -104.5 L-22 -100 L-35.5 -95.5 L-40 -82 L-44.5 -95.5 L-58 -100 L-44.5 -104.5Z\" fill=\"#F7D774\"/></g>",
+     "x": 550,
+     "y": 900,
+     "layer": "front",
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0.6,
+       "opacity": 0,
+       "scale": 0.6
+      },
+      {
+       "t": 1,
+       "opacity": 1,
+       "scale": 1
+      },
+      {
+       "t": 1.4,
+       "opacity": 0,
+       "scale": 1.3
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "markup": "<g transform=\"translate(0 -436)\"><path d=\"M-230 0 L230 6 L224 436 L-226 432Z\" fill=\"#FFFDF4\"/><path d=\"M160 434 L224 436 L228 376Z\" fill=\"#E9E3CF\"/><rect x=\"-220\" y=\"100\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"192\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"284\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"376\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"468\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-170\" y=\"4\" width=\"4\" height=\"428\" fill=\"#F2B8B8\"/><text x=\"10\" y=\"80\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"54\" fill=\"#E2453C\" transform=\"rotate(-3 10 70)\">MY LIST</text><path d=\"M-146 130 L-100 128 L-98 174 L-144 176 L-146 130\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 124 L-92 180\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 122 L-148 182\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"172\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 160)\">ROCKET</text><path d=\"M-146 222 L-100 220 L-98 266 L-144 268 L-146 222\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 216 L-92 272\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 214 L-148 274\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"264\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(1.5 -66 252)\">DOG</text><path d=\"M-146 314 L-100 312 L-98 358 L-144 360 L-146 314\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 308 L-92 364\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 306 L-148 366\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"356\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 344)\">FUN</text></g>",
+     "x": 600,
+     "y": 1000,
+     "scale": 0.3,
+     "opacity": 0,
+     "layer": "front",
+     "keys": [
+      {
+       "t": 1,
+       "opacity": 0,
+       "rot": 0
+      },
+      {
+       "t": 1.1,
+       "opacity": 1
+      },
+      {
+       "t": 1.5,
+       "x": 520,
+       "y": 1200,
+       "rot": -30
+      },
+      {
+       "t": 1.9,
+       "x": 600,
+       "y": 1380,
+       "rot": 20
+      },
+      {
+       "t": 2.3,
+       "x": 540,
+       "y": 1520,
+       "rot": -80
+      },
+      {
+       "t": 2.6,
+       "rot": -85
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1,
+     "kind": "chime",
+     "gain": 0.7
+    },
+    {
+     "t": 1.2,
+     "kind": "paper",
+     "gain": 0.4
+    },
+    {
+     "t": 2.3,
+     "kind": "paper",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 35,
+   "end": 36.4,
+   "set": {
+    "preset": "room",
+    "wall": "#3B4058",
+    "floor": "#4E443C",
+    "window": true,
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 400,
+     "y": 1100,
+     "zoom": 1.5
+    },
+    {
+     "t": 1.4,
+     "x": 400,
+     "y": 1080,
+     "zoom": 1.6
+    }
+   ],
+   "actors": [
+    {
+     "id": "adult",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 30,
+       "b": -10
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "sad",
+      "brows": "sad",
+      "look": [
+       0.3,
+       1
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.7,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 24,
+         "b": -50
+        }
+       },
+       "hold": {
+        "R": {
+         "type": "note",
+         "label": "MY LIST",
+         "scale": 0.8
+        }
+       },
+       "dur": 0.5
+      },
+      {
+       "t": 1,
+       "face": {
+        "eyes": "open",
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         0,
+         1
+        ]
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "rocket",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.5,
+     "built": 1
+    },
+    {
+     "type": "svg",
+     "markup": "<g><path d=\"M-100 -150 L100 -150 L100 0 L-100 0Z\" fill=\"#C49A6C\"/><path d=\"M30 -150 L100 -150 L100 0 L30 0Z\" fill=\"#A87E52\"/><rect x=\"-110\" y=\"-162\" width=\"220\" height=\"24\" rx=\"10\" fill=\"#A87E52\"/>\n <circle cx=\"-40\" cy=\"-75\" r=\"26\" fill=\"#E2453C\"/><circle cx=\"30\" cy=\"-75\" r=\"10\" fill=\"#F5C33B\"/></g>",
+     "x": 540,
+     "y": 1210,
+     "scale": 1,
+     "layer": "front"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.7,
+     "kind": "paper",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 36.4,
+   "end": 38.6,
+   "set": {
+    "preset": "solid",
+    "color": "#D9D2C4",
+    "vig": 0.2
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1
+    },
+    {
+     "t": 2.200000000000003,
+     "x": 540,
+     "y": 950,
+     "zoom": 1.05
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "list0",
+     "markup": "<g transform=\"translate(0 -516)\"><path d=\"M-230 0 L230 6 L224 516 L-226 512Z\" fill=\"#FFFDF4\"/><path d=\"M160 514 L224 516 L228 456Z\" fill=\"#E9E3CF\"/><rect x=\"-220\" y=\"100\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"192\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"284\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"376\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-220\" y=\"468\" width=\"440\" height=\"3\" fill=\"#BFD7F2\"/><rect x=\"-170\" y=\"4\" width=\"4\" height=\"508\" fill=\"#F2B8B8\"/><text x=\"10\" y=\"80\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"54\" fill=\"#E2453C\" transform=\"rotate(-3 10 70)\">MY LIST</text><path d=\"M-146 130 L-100 128 L-98 174 L-144 176 L-146 130\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 124 L-92 180\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 122 L-148 182\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"172\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(-1.5 -66 160)\">ROCKET</text><path d=\"M-146 222 L-100 220 L-98 266 L-144 268 L-146 222\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-150 216 L-92 272\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-94 214 L-148 274\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"11\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"264\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2F5FC4\" transform=\"rotate(1.5 -66 252)\">DOG</text><g transform=\"translate(154 268) scale(0.55)\"><rect x=\"-26\" y=\"-30\" width=\"52\" height=\"34\" rx=\"6\" fill=\"#C9663A\"/><path d=\"M-10 -30 L-10 -110 Q0 -124 10 -110 L10 -30Z\" fill=\"#4F9A4A\"/><path d=\"M-10 -70 L-30 -70 L-30 -96\" fill=\"none\" stroke=\"#4F9A4A\" stroke-width=\"14\" stroke-linecap=\"round\"/></g><text x=\"184\" y=\"258\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"30\" fill=\"#E2453C\">??</text><path d=\"M-146 314 L-100 312 L-98 358 L-144 360 L-146 314\" fill=\"none\" stroke=\"#2A2A40\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-144 336 L-126 358 L-84 296\" fill=\"none\" stroke=\"#2E9E5B\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"-66\" y=\"356\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"52\" fill=\"#2E9E5B\" transform=\"rotate(-1.5 -66 344)\">FUN</text><text x=\"-146\" y=\"446\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"46\" fill=\"#E2453C\" transform=\"rotate(-2 0 436)\">P.S. GET A DOG.</text></g>",
+     "x": 540,
+     "y": 1300,
+     "scale": 1.55,
+     "rot": -2,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0
+      },
+      {
+       "t": 0.01,
+       "opacity": 1
+      }
+     ]
+    }
+   ],
+   "text": [],
+   "sfx": [
+    {
+     "t": 0.1,
+     "kind": "chime",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 38.6,
+   "end": 40.4,
+   "set": {
+    "preset": "park"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1150,
+     "zoom": 1.3
+    },
+    {
+     "t": 1.8,
+     "x": 640,
+     "y": 1150,
+     "zoom": 1.35
+    }
+   ],
+   "actors": [
+    {
+     "id": "adult",
+     "x": 380,
+     "y": 1500,
+     "scale": 0.95,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 30,
+       "b": -10
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "brows": "raised",
+      "look": [
+       1,
+       0.6
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "walk",
+       "from": 0,
+       "to": 1.8,
+       "dx": 180,
+       "rate": 1.8,
+       "keepArms": true
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "markup": "\n<g>\n <path d=\"M-112 -112 Q-150 -150 -140 -186 Q-118 -150 -98 -128Z\" fill=\"#B9875A\"/>\n <rect x=\"-88\" y=\"-70\" width=\"26\" height=\"70\" rx=\"12\" fill=\"#B9875A\"/>\n <rect x=\"40\" y=\"-70\" width=\"26\" height=\"70\" rx=\"12\" fill=\"#B9875A\"/>\n <ellipse cx=\"-8\" cy=\"-112\" rx=\"112\" ry=\"52\" fill=\"#E0B07C\"/>\n <path d=\"M-112 -100 Q-8 -40 100 -100 Q100 -66 -8 -62 Q-112 -66 -112 -100Z\" fill=\"#B9875A\" opacity=\"0.55\"/>\n <rect x=\"-60\" y=\"-70\" width=\"26\" height=\"70\" rx=\"12\" fill=\"#E0B07C\"/>\n <rect x=\"66\" y=\"-70\" width=\"26\" height=\"70\" rx=\"12\" fill=\"#E0B07C\"/>\n <circle cx=\"100\" cy=\"-168\" r=\"52\" fill=\"#E0B07C\"/>\n <ellipse cx=\"148\" cy=\"-150\" rx=\"34\" ry=\"24\" fill=\"#F4DCB8\"/>\n <circle cx=\"176\" cy=\"-160\" r=\"11\" fill=\"#26262B\"/>\n <path d=\"M70 -206 Q50 -170 62 -126 Q86 -150 90 -196Z\" fill=\"#B9875A\"/>\n <circle cx=\"114\" cy=\"-184\" r=\"10\" fill=\"#1C1A1E\"/><circle cx=\"117\" cy=\"-188\" r=\"3.5\" fill=\"#FFFFFF\"/>\n <path d=\"M140 -134 Q154 -124 166 -136\" fill=\"none\" stroke=\"#4A1D22\" stroke-width=\"5\" stroke-linecap=\"round\"/>\n <path d=\"M58 -150 Q86 -112 128 -122 L130 -108 Q84 -96 50 -138Z\" fill=\"#E2453C\"/>\n <g><circle cx=\"98\" cy=\"-104\" r=\"9\" fill=\"#D9A520\"/><rect x=\"95\" y=\"-104\" width=\"6\" height=\"22\" fill=\"#D9A520\"/>\n   <rect x=\"16\" y=\"-84\" width=\"164\" height=\"46\" rx=\"14\" fill=\"#F5C33B\"/>\n   <rect x=\"16\" y=\"-58\" width=\"164\" height=\"20\" rx=\"10\" fill=\"#D9A520\"/>\n   <text x=\"98\" y=\"-50\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"30\" fill=\"#1E1E22\">ROCKET</text></g>\n</g>",
+     "x": 640,
+     "y": 1500,
+     "scale": 0.75,
+     "keys": [
+      {
+       "t": 0,
+       "x": 640
+      },
+      {
+       "t": 1.8,
+       "x": 820
+      }
+     ]
+    },
+    {
+     "type": "rope",
+     "x": 440,
+     "y": 1060,
+     "x2": 290,
+     "y2": 340,
+     "color": "#E2453C",
+     "keys": [
+      {
+       "t": 0,
+       "x": 440
+      },
+      {
+       "t": 1.8,
+       "x": 620
+      }
+     ]
+    }
+   ],
+   "text": [
+    {
+     "text": "NEXT MORNING",
+     "x": 540,
+     "y": 300,
+     "size": 56,
+     "font": "mono",
+     "from": 0.1,
+     "color": "#FFFFFF"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.1,
+     "kind": "birds",
+     "gain": 0.6
+    },
+    {
+     "t": 0.6,
+     "kind": "step",
+     "gain": 0.4
+    },
+    {
+     "t": 1.2,
+     "kind": "step",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 40.4,
+   "end": 41.8,
+   "set": {
+    "preset": "park"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 900,
+     "y": 1380,
+     "zoom": 2.3
+    },
+    {
+     "t": 1.4,
+     "x": 900,
+     "y": 1380,
+     "zoom": 2.45
+    }
+   ],
+   "actors": [],
+   "props": [
+    {
+     "type": "svg",
+     "markup": "\n<g>\n <path d=\"M-112 -112 Q-150 -150 -140 -186 Q-118 -150 -98 -128Z\" fill=\"#B9875A\"/>\n <rect x=\"-88\" y=\"-70\" width=\"26\" height=\"70\" rx=\"12\" fill=\"#B9875A\"/>\n <rect x=\"40\" y=\"-70\" width=\"26\" height=\"70\" rx=\"12\" fill=\"#B9875A\"/>\n <ellipse cx=\"-8\" cy=\"-112\" rx=\"112\" ry=\"52\" fill=\"#E0B07C\"/>\n <path d=\"M-112 -100 Q-8 -40 100 -100 Q100 -66 -8 -62 Q-112 -66 -112 -100Z\" fill=\"#B9875A\" opacity=\"0.55\"/>\n <rect x=\"-60\" y=\"-70\" width=\"26\" height=\"70\" rx=\"12\" fill=\"#E0B07C\"/>\n <rect x=\"66\" y=\"-70\" width=\"26\" height=\"70\" rx=\"12\" fill=\"#E0B07C\"/>\n <circle cx=\"100\" cy=\"-168\" r=\"52\" fill=\"#E0B07C\"/>\n <ellipse cx=\"148\" cy=\"-150\" rx=\"34\" ry=\"24\" fill=\"#F4DCB8\"/>\n <circle cx=\"176\" cy=\"-160\" r=\"11\" fill=\"#26262B\"/>\n <path d=\"M70 -206 Q50 -170 62 -126 Q86 -150 90 -196Z\" fill=\"#B9875A\"/>\n <circle cx=\"114\" cy=\"-184\" r=\"10\" fill=\"#1C1A1E\"/><circle cx=\"117\" cy=\"-188\" r=\"3.5\" fill=\"#FFFFFF\"/>\n <path d=\"M140 -134 Q154 -124 166 -136\" fill=\"none\" stroke=\"#4A1D22\" stroke-width=\"5\" stroke-linecap=\"round\"/>\n <path d=\"M58 -150 Q86 -112 128 -122 L130 -108 Q84 -96 50 -138Z\" fill=\"#E2453C\"/>\n <g><circle cx=\"98\" cy=\"-104\" r=\"9\" fill=\"#D9A520\"/><rect x=\"95\" y=\"-104\" width=\"6\" height=\"22\" fill=\"#D9A520\"/>\n   <rect x=\"16\" y=\"-84\" width=\"164\" height=\"46\" rx=\"14\" fill=\"#F5C33B\"/>\n   <rect x=\"16\" y=\"-58\" width=\"164\" height=\"20\" rx=\"10\" fill=\"#D9A520\"/>\n   <text x=\"98\" y=\"-50\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"30\" fill=\"#1E1E22\">ROCKET</text></g>\n</g>",
+     "x": 840,
+     "y": 1500,
+     "scale": 0.9,
+     "keys": [
+      {
+       "t": 0,
+       "y": 1500
+      },
+      {
+       "t": 0.3,
+       "y": 1470
+      },
+      {
+       "t": 0.6,
+       "y": 1500
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.05,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 0.3,
+     "kind": "boing",
+     "gain": 0.3
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "mood": "playful",
+   "a": 0,
+   "b": 13
+  },
+  {
+   "mood": "tender",
+   "a": 18.4,
+   "b": 26.6
+  },
+  {
+   "mood": "eerie",
+   "a": 26.8,
+   "b": 35
+  },
+  {
+   "mood": "resolve",
+   "a": 36.4,
+   "b": 41.8
+  }
+ ],
+ "beds": [
+  {
+   "name": "room",
+   "a": 0,
+   "b": 26.6,
+   "gain": 0.5
+  },
+  {
+   "name": "silence",
+   "a": 14.4,
+   "b": 18.4,
+   "gain": 1
+  },
+  {
+   "name": "hum",
+   "a": 26.6,
+   "b": 38.6,
+   "gain": 0.4
+  }
+ ]
+}

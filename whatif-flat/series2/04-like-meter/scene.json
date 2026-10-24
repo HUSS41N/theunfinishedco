@@ -1,0 +1,3221 @@
+{
+ "meta": {
+  "title": "Everyone Has a Number. His Is 4%.",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 42.3,
+  "style": "flat",
+  "motion": {
+   "overlap": 1,
+   "blend": 0.2,
+   "idle": true
+  }
+ },
+ "cast": {
+  "leo": {
+   "skin": "tan",
+   "hair": {
+    "style": "quiff",
+    "color": "black"
+   },
+   "top": {
+    "style": "shirt",
+    "color": "teal"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "navy"
+   },
+   "shoes": {
+    "color": "brown"
+   }
+  },
+  "mia": {
+   "skin": "peach",
+   "build": "woman",
+   "hair": {
+    "style": "long",
+    "color": "ginger"
+   },
+   "top": {
+    "style": "blouse",
+    "color": "coral"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "denim"
+   },
+   "shoes": {
+    "style": "flat",
+    "color": "white"
+   },
+   "face": {
+    "lashes": true,
+    "blush": true
+   }
+  },
+  "boss": {
+   "skin": "fair",
+   "build": {
+    "width": 1.1
+   },
+   "hair": {
+    "style": "bald",
+    "color": "grey"
+   },
+   "top": {
+    "style": "jacket",
+    "color": "navy",
+    "detail": "white"
+   },
+   "bottom": {
+    "style": "pants",
+    "color": "charcoal"
+   },
+   "shoes": {
+    "color": "black"
+   },
+   "accessories": [
+    "glasses",
+    "mustache"
+   ]
+  },
+  "jogger": {
+   "skin": "deep",
+   "hair": {
+    "style": "buzz",
+    "color": "black"
+   },
+   "top": {
+    "style": "tank",
+    "color": "grey"
+   },
+   "bottom": {
+    "style": "shorts",
+    "color": "black"
+   },
+   "shoes": {
+    "color": "red"
+   },
+   "accessories": [
+    "headphones"
+   ]
+  }
+ },
+ "shots": [
+  {
+   "start": 0,
+   "end": 3.1,
+   "set": {
+    "preset": "cafe"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": -1000,
+     "y": 890,
+     "zoom": 1.3
+    },
+    {
+     "t": 3.1,
+     "x": -990,
+     "y": 900,
+     "zoom": 1.36
+    }
+   ],
+   "actors": [
+    {
+     "id": "leo",
+     "x": -1250,
+     "y": 1500,
+     "facing": 1,
+     "pose": {
+      "base": "sit",
+      "armR": {
+       "a": 60,
+       "b": -60
+      },
+      "armL": {
+       "a": 30,
+       "b": -60
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "grin",
+      "brows": "raised",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 1.2,
+       "dur": 0.4,
+       "pose": {
+        "base": "sit",
+        "armR": {
+         "a": 80,
+         "b": -30
+        },
+        "armL": {
+         "a": 50,
+         "b": -80
+        },
+        "body": {
+         "dy": 150,
+         "lean": 8
+        }
+       }
+      },
+      {
+       "t": 2.2,
+       "dur": 0.4,
+       "pose": {
+        "base": "sit",
+        "armR": {
+         "a": 60,
+         "b": -70
+        },
+        "armL": {
+         "a": 70,
+         "b": -40
+        },
+        "body": {
+         "dy": 150,
+         "lean": 6
+        }
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "talk",
+       "from": 0.3,
+       "to": 3.1
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "x": -750,
+     "y": 1500,
+     "facing": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 24,
+       "b": -60
+      },
+      "armR": {
+       "a": 24,
+       "b": -60
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "smile",
+      "look": [
+       -1,
+       0
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 1.4,
+       "dur": 0.4,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "look": [
+         -1,
+         0
+        ],
+        "turn": 0.3
+       }
+      },
+      {
+       "t": 2.5,
+       "dur": 0.3,
+       "face": {
+        "eyes": "bored",
+        "mouth": "flat",
+        "brows": "flat",
+        "look": [
+         0.4,
+         -0.4
+        ],
+        "turn": 0.1
+       }
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "mug",
+     "x": -1090,
+     "y": 1148
+    },
+    {
+     "type": "mug",
+     "x": -890,
+     "y": 1148
+    },
+    {
+     "type": "cafeTable",
+     "x": -1000,
+     "y": 1500,
+     "layer": "front"
+    },
+    {
+     "type": "tag",
+     "id": "miaTag",
+     "x": -750,
+     "y": 750,
+     "size": 64,
+     "text": "72%",
+     "color": "#2E9E5B",
+     "keys": [
+      {
+       "t": 0,
+       "text": "72%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1,
+       "text": "72%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1,
+       "text": "72%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.114,
+       "text": "71%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.229,
+       "text": "70%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.343,
+       "text": "69%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.457,
+       "text": "68%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.571,
+       "text": "67%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.686,
+       "text": "66%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.8,
+       "text": "65%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.914,
+       "text": "64%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 2.029,
+       "text": "63%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 2.143,
+       "text": "62%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 2.257,
+       "text": "61%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 2.371,
+       "text": "60%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 2.486,
+       "text": "59%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 2.6,
+       "text": "58%",
+       "color": "#E58A1F"
+      }
+     ]
+    }
+   ],
+   "text": [
+    {
+     "text": "WHAT IF FEELINGS\nHAD NUMBERS?",
+     "y": 380,
+     "size": 104,
+     "from": 0,
+     "to": 3.05
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.05,
+     "kind": "pop",
+     "gain": 0.4
+    },
+    {
+     "t": 1.2,
+     "kind": "tick",
+     "gain": 0.3
+    },
+    {
+     "t": 1.8,
+     "kind": "tick",
+     "gain": 0.3
+    },
+    {
+     "t": 2.4,
+     "kind": "tick",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 3.1,
+   "end": 7.7,
+   "set": {
+    "preset": "cafe"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": -1000,
+     "y": 1000,
+     "zoom": 1.25
+    },
+    {
+     "t": 2.4,
+     "x": -1000,
+     "y": 1000,
+     "zoom": 1.3
+    },
+    {
+     "t": 3,
+     "x": -1010,
+     "y": 990,
+     "zoom": 1.34,
+     "ease": "inOutCubic"
+    },
+    {
+     "t": 4.6,
+     "x": -1010,
+     "y": 990,
+     "zoom": 1.36
+    }
+   ],
+   "actors": [
+    {
+     "id": "leo",
+     "x": -1250,
+     "y": 1500,
+     "facing": 1,
+     "pose": {
+      "base": "sit",
+      "armR": {
+       "a": 60,
+       "b": -70
+      },
+      "armL": {
+       "a": 70,
+       "b": -40
+      },
+      "body": {
+       "dy": 150,
+       "lean": 6
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "grin",
+      "brows": "raised",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.3
+     },
+     "say": [
+      {
+       "from": 0.1,
+       "to": 2.2,
+       "text": "SO, I'M INTO CRYPTO–"
+      }
+     ],
+     "keys": [
+      {
+       "t": 2.3,
+       "dur": 0.15,
+       "face": {
+        "eyes": "wide",
+        "mouth": "teeth",
+        "brows": "worried",
+        "look": [
+         1,
+         -0.3
+        ],
+        "turn": 0.3
+       }
+      },
+      {
+       "t": 3.1,
+       "dur": 0.35,
+       "pose": {
+        "base": "sit",
+        "armR": {
+         "a": 125,
+         "b": 4
+        },
+        "armL": {
+         "a": 125,
+         "b": 4
+        },
+        "body": {
+         "dy": 150,
+         "lean": 4
+        }
+       },
+       "face": {
+        "eyes": "happy",
+        "mouth": "grin",
+        "brows": "raised",
+        "look": [
+         1,
+         0
+        ],
+        "turn": 0.3
+       },
+       "ease": "outBack"
+      },
+      {
+       "t": 3.6,
+       "dur": 0.12,
+       "pose": {
+        "base": "sit",
+        "armR": {
+         "a": 140,
+         "b": -14
+        },
+        "armL": {
+         "a": 140,
+         "b": -14
+        },
+        "body": {
+         "dy": 150,
+         "lean": 4
+        }
+       }
+      },
+      {
+       "t": 3.8,
+       "dur": 0.12,
+       "pose": {
+        "base": "sit",
+        "armR": {
+         "a": 125,
+         "b": 4
+        },
+        "armL": {
+         "a": 125,
+         "b": 4
+        },
+        "body": {
+         "dy": 150,
+         "lean": 4
+        }
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "tremble",
+       "from": 2.3,
+       "to": 2.9,
+       "amp": 2
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "x": -750,
+     "y": 1500,
+     "facing": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 24,
+       "b": -60
+      },
+      "armR": {
+       "a": 24,
+       "b": -60
+      }
+     },
+     "face": {
+      "eyes": "bored",
+      "mouth": "flat",
+      "look": [
+       -1,
+       0
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 3.7,
+       "dur": 0.3,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 112,
+         "b": -250,
+         "c": 24
+        },
+        "armR": {
+         "a": 24,
+         "b": -60
+        }
+       },
+       "face": {
+        "eyes": "closed",
+        "mouth": "flat",
+        "brows": "sad",
+        "turn": 0.3
+       }
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "mug",
+     "x": -1090,
+     "y": 1148
+    },
+    {
+     "type": "mug",
+     "x": -890,
+     "y": 1148
+    },
+    {
+     "type": "cafeTable",
+     "x": -1000,
+     "y": 1500,
+     "layer": "front"
+    },
+    {
+     "type": "tag",
+     "id": "miaTag",
+     "x": -750,
+     "y": 750,
+     "size": 64,
+     "text": "58%",
+     "color": "#E58A1F",
+     "keys": [
+      {
+       "t": 0.5,
+       "text": "58%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 0.569,
+       "text": "56%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 0.638,
+       "text": "54%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 0.708,
+       "text": "52%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 0.777,
+       "text": "50%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 0.846,
+       "text": "48%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 0.915,
+       "text": "46%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 0.985,
+       "text": "43%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.054,
+       "text": "41%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.123,
+       "text": "39%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.192,
+       "text": "37%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.262,
+       "text": "35%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.331,
+       "text": "33%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.4,
+       "text": "31%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.6,
+       "text": "31%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.675,
+       "text": "29%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.75,
+       "text": "26%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.825,
+       "text": "24%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 1.9,
+       "text": "22%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 1.975,
+       "text": "19%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 2.05,
+       "text": "17%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 2.125,
+       "text": "14%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 2.2,
+       "text": "12%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 3.5,
+       "text": "12%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 3.633,
+       "text": "11%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 3.767,
+       "text": "10%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 3.9,
+       "text": "9%",
+       "color": "#E2453C"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.1,
+     "kind": "pop",
+     "gain": 0.35
+    },
+    {
+     "t": 0.6,
+     "kind": "tick",
+     "gain": 0.3
+    },
+    {
+     "t": 1.2,
+     "kind": "tick",
+     "gain": 0.3
+    },
+    {
+     "t": 2,
+     "kind": "buzz",
+     "gain": 0.4
+    },
+    {
+     "t": 3.2,
+     "kind": "boing",
+     "gain": 0.4
+    },
+    {
+     "t": 3.65,
+     "kind": "pop",
+     "gain": 0.3
+    },
+    {
+     "t": 3.9,
+     "kind": "buzz",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 7.7,
+   "end": 10.6,
+   "in": {
+    "type": "push",
+    "dir": "left",
+    "dur": 0.45
+   },
+   "set": {
+    "preset": "office"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1020,
+     "zoom": 1.05
+    },
+    {
+     "t": 2.9,
+     "x": 560,
+     "y": 1010,
+     "zoom": 1.12
+    }
+   ],
+   "actors": [
+    {
+     "id": "leo",
+     "x": 340,
+     "y": 1500,
+     "facing": 1,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 70,
+       "b": -30
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "brows": "raised",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.3
+     },
+     "say": [
+      {
+       "from": 0.2,
+       "to": 2.1,
+       "text": "NICE SUIT, SIR!",
+       "side": "left"
+      }
+     ],
+     "keys": [
+      {
+       "t": 1,
+       "dur": 0.3,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 130,
+         "b": 10
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "boss",
+     "x": 760,
+     "y": 1500,
+     "facing": -1,
+     "pose": "armsCrossed",
+     "face": {
+      "eyes": "bored",
+      "mouth": "flat",
+      "look": [
+       -1,
+       0
+      ],
+      "turn": 0.3
+     }
+    }
+   ],
+   "props": [
+    {
+     "type": "tag",
+     "id": "bossTag",
+     "x": 760,
+     "y": 650,
+     "size": 64,
+     "text": "41%",
+     "color": "#E58A1F",
+     "keys": [
+      {
+       "t": 0,
+       "text": "41%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.6,
+       "text": "41%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.6,
+       "text": "41%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.9,
+       "text": "42%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 2.2,
+       "text": "43%",
+       "color": "#E58A1F"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.05,
+     "kind": "whoosh",
+     "gain": 0.4
+    },
+    {
+     "t": 0.2,
+     "kind": "pop",
+     "gain": 0.35
+    },
+    {
+     "t": 1.7,
+     "kind": "tick",
+     "gain": 0.3
+    },
+    {
+     "t": 2.2,
+     "kind": "tick",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 10.6,
+   "end": 13.3,
+   "in": {
+    "type": "whip",
+    "dir": "left",
+    "dur": 0.3
+   },
+   "set": {
+    "preset": "park"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1020,
+     "zoom": 1
+    },
+    {
+     "t": 2.7,
+     "x": 560,
+     "y": 1010,
+     "zoom": 1.08
+    }
+   ],
+   "actors": [
+    {
+     "id": "leo",
+     "x": 330,
+     "y": 1500,
+     "facing": 1,
+     "pose": {
+      "base": "stand",
+      "armL": {
+       "a": 100,
+       "b": -110
+      },
+      "armR": {
+       "a": 100,
+       "b": -110
+      }
+     },
+     "face": {
+      "eyes": "angry",
+      "mouth": "teeth",
+      "brows": "angry",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.3
+     },
+     "do": [
+      {
+       "act": "tremble",
+       "from": 0.3,
+       "to": 2.6,
+       "amp": 2
+      }
+     ]
+    },
+    {
+     "id": "jogger",
+     "x": 980,
+     "y": 1500,
+     "facing": -1,
+     "pose": "stand",
+     "face": {
+      "eyes": "bored",
+      "mouth": "flat",
+      "look": [
+       1,
+       0
+      ],
+      "turn": -0.2
+     },
+     "keys": [
+      {
+       "t": 1.3,
+       "dur": 0.3,
+       "face": {
+        "eyes": "bored",
+        "mouth": "flat",
+        "look": [
+         -1,
+         0
+        ],
+        "turn": 0.3
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "walk",
+       "from": 0.1,
+       "to": 2.7,
+       "dx": -330,
+       "stride": 1
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "tag",
+     "id": "jogTag",
+     "x": 980,
+     "y": 640,
+     "size": 64,
+     "text": "3%",
+     "color": "#E2453C",
+     "keys": [
+      {
+       "t": 0.1,
+       "x": 980
+      },
+      {
+       "t": 2.7,
+       "x": 650,
+       "ease": "smooth"
+      },
+      {
+       "t": 0,
+       "text": "3%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 1.2,
+       "text": "3%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 1.3,
+       "text": "3%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 1.55,
+       "text": "2%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 1.8,
+       "text": "1%",
+       "color": "#E2453C"
+      }
+     ]
+    }
+   ],
+   "text": [],
+   "sfx": [
+    {
+     "t": 0.05,
+     "kind": "whoosh",
+     "gain": 0.4
+    },
+    {
+     "t": 0.4,
+     "kind": "breath",
+     "gain": 0.3
+    },
+    {
+     "t": 1.4,
+     "kind": "tick",
+     "gain": 0.3
+    },
+    {
+     "t": 1.8,
+     "kind": "buzz",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 13.3,
+   "end": 16.7,
+   "in": {
+    "type": "whip",
+    "dir": "left",
+    "dur": 0.3
+   },
+   "set": {
+    "preset": "livingRoom",
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 1500,
+     "y": 1010,
+     "zoom": 0.9
+    },
+    {
+     "t": 1.6,
+     "x": 1050,
+     "y": 1010,
+     "zoom": 0.9
+    },
+    {
+     "t": 3.4,
+     "x": 880,
+     "y": 1010,
+     "zoom": 0.98
+    }
+   ],
+   "actors": [
+    {
+     "id": "leo",
+     "x": 2150,
+     "y": 1500,
+     "facing": -1,
+     "pose": "stand",
+     "face": {
+      "eyes": "tired",
+      "mouth": "sad",
+      "brows": "sad",
+      "look": [
+       0,
+       0.5
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 2.3,
+       "dur": 0.4,
+       "pose": {
+        "base": "crouch"
+       },
+       "face": {
+        "eyes": "happy",
+        "mouth": "grin",
+        "brows": "raised",
+        "look": [
+         -1,
+         0.4
+        ],
+        "turn": 0.3
+       }
+      },
+      {
+       "t": 2.9,
+       "dur": 0.3,
+       "pose": {
+        "base": "crouch",
+        "armR": {
+         "a": 60,
+         "b": -20
+        }
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "walk",
+       "from": 0.05,
+       "to": 2.2,
+       "dx": -1030,
+       "stride": 1
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "mirror",
+     "x": 1700,
+     "y": 1500,
+     "w": 420,
+     "h": 900
+    },
+    {
+     "type": "svg",
+     "id": "dog",
+     "x": 800,
+     "y": 1500,
+     "markup": "<path d=\"M-120 -170 Q-180 -230 -170 -270\" fill=\"none\" stroke=\"#B9783E\" stroke-width=\"16\" stroke-linecap=\"round\"/><rect x=\"-110\" y=\"-120\" width=\"26\" height=\"120\" rx=\"12\" fill=\"#A86A33\"/><rect x=\"60\" y=\"-120\" width=\"26\" height=\"120\" rx=\"12\" fill=\"#A86A33\"/><ellipse cx=\"-10\" cy=\"-160\" rx=\"135\" ry=\"62\" fill=\"#C98A4B\"/><rect x=\"-80\" y=\"-120\" width=\"26\" height=\"120\" rx=\"12\" fill=\"#C98A4B\"/><rect x=\"90\" y=\"-120\" width=\"26\" height=\"120\" rx=\"12\" fill=\"#C98A4B\"/><circle cx=\"125\" cy=\"-235\" r=\"62\" fill=\"#C98A4B\"/><ellipse cx=\"178\" cy=\"-218\" rx=\"36\" ry=\"26\" fill=\"#E2B27C\"/><circle cx=\"208\" cy=\"-226\" r=\"11\" fill=\"#2A2522\"/><ellipse cx=\"88\" cy=\"-270\" rx=\"22\" ry=\"44\" fill=\"#8E5A2A\" transform=\"rotate(-20 88 -270)\"/><circle cx=\"140\" cy=\"-252\" r=\"8\" fill=\"#2A2522\"/><path d=\"M160 -200 Q180 -186 196 -200\" fill=\"none\" stroke=\"#2A2522\" stroke-width=\"5\" stroke-linecap=\"round\"/>",
+     "keys": [
+      {
+       "t": 2,
+       "y": 1500
+      },
+      {
+       "t": 2.3,
+       "y": 1440,
+       "ease": "outQuad"
+      },
+      {
+       "t": 2.55,
+       "y": 1500,
+       "ease": "inQuad"
+      },
+      {
+       "t": 2.8,
+       "y": 1460,
+       "ease": "outQuad"
+      },
+      {
+       "t": 3,
+       "y": 1500,
+       "ease": "inQuad"
+      }
+     ]
+    },
+    {
+     "type": "tag",
+     "id": "dogTag",
+     "x": 920,
+     "y": 1180,
+     "size": 64,
+     "text": "100%",
+     "color": "#2E9E5B",
+     "layer": "front",
+     "keys": [
+      {
+       "t": 2,
+       "y": 1180
+      },
+      {
+       "t": 2.3,
+       "y": 1120,
+       "ease": "outQuad"
+      },
+      {
+       "t": 2.55,
+       "y": 1180,
+       "ease": "inQuad"
+      },
+      {
+       "t": 2.8,
+       "y": 1140,
+       "ease": "outQuad"
+      },
+      {
+       "t": 3,
+       "y": 1180,
+       "ease": "inQuad"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.05,
+     "kind": "whoosh",
+     "gain": 0.4
+    },
+    {
+     "t": 0.4,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 1,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 1.6,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 2.3,
+     "kind": "boing",
+     "gain": 0.35
+    },
+    {
+     "t": 2.5,
+     "kind": "heart",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 16.7,
+   "end": 21.9,
+   "in": {
+    "type": "fade",
+    "dur": 0.4,
+    "color": "#000000"
+   },
+   "set": {
+    "preset": "livingRoom",
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 1550,
+     "y": 1010,
+     "zoom": 0.95
+    },
+    {
+     "t": 2,
+     "x": 1560,
+     "y": 1000,
+     "zoom": 1
+    },
+    {
+     "t": 3.4,
+     "x": 1640,
+     "y": 900,
+     "zoom": 1.5,
+     "ease": "inOutCubic"
+    },
+    {
+     "t": 5.2,
+     "x": 1650,
+     "y": 890,
+     "zoom": 1.58
+    }
+   ],
+   "actors": [
+    {
+     "id": "leo",
+     "x": 1150,
+     "y": 1500,
+     "facing": 1,
+     "pose": "stand",
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       0,
+       0.4
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 1.6,
+       "dur": 0.3,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "look": [
+         1,
+         0
+        ],
+        "turn": 0.3
+       }
+      },
+      {
+       "t": 2.6,
+       "dur": 0.25,
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "worried",
+        "look": [
+         1,
+         -0.4
+        ],
+        "turn": 0.3
+       }
+      },
+      {
+       "t": 4.2,
+       "dur": 0.4,
+       "face": {
+        "eyes": "tired",
+        "mouth": "sad",
+        "brows": "sad",
+        "look": [
+         1,
+         -0.2
+        ],
+        "turn": 0.3
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "walk",
+       "from": 0.1,
+       "to": 1.4,
+       "dx": 300,
+       "stride": 0.9
+      }
+     ]
+    },
+    {
+     "id": "leo",
+     "x": 1870,
+     "y": 1470,
+     "scale": 0.8,
+     "facing": -1,
+     "idle": false,
+     "pose": "stand",
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       0,
+       0.4
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 1.6,
+       "dur": 0.3,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "look": [
+         -1,
+         0
+        ],
+        "turn": 0.3
+       }
+      },
+      {
+       "t": 2.6,
+       "dur": 0.25,
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "worried",
+        "look": [
+         -1,
+         -0.4
+        ],
+        "turn": 0.3
+       }
+      },
+      {
+       "t": 3.6,
+       "dur": 0.5,
+       "face": {
+        "eyes": "tired",
+        "mouth": "sad",
+        "brows": "sad",
+        "look": [
+         1,
+         0.3
+        ],
+        "turn": -0.6
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "walk",
+       "from": 0.1,
+       "to": 1.4,
+       "dx": -170,
+       "stride": 0.6
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "mirror",
+     "x": 1700,
+     "y": 1500,
+     "w": 420,
+     "h": 900
+    },
+    {
+     "type": "tag",
+     "id": "selfTag",
+     "x": 1700,
+     "y": 760,
+     "size": 64,
+     "text": "4%",
+     "color": "#E2453C",
+     "opacity": 0,
+     "scale": 0.6,
+     "keys": [
+      {
+       "t": 1.9,
+       "opacity": 0,
+       "scale": 0.6
+      },
+      {
+       "t": 2.15,
+       "opacity": 1,
+       "scale": 1,
+       "ease": "outBack"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 0.9,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 2,
+     "kind": "notif",
+     "gain": 0.5
+    },
+    {
+     "t": 2.6,
+     "kind": "sting",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 21.9,
+   "end": 28.5,
+   "in": {
+    "type": "crossfade",
+    "dur": 0.4
+   },
+   "set": {
+    "preset": "livingRoom",
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 1180,
+     "y": 1060,
+     "zoom": 0.74
+    },
+    {
+     "t": 2.4,
+     "x": 1240,
+     "y": 1040,
+     "zoom": 0.8
+    },
+    {
+     "t": 4.4,
+     "x": 1430,
+     "y": 1000,
+     "zoom": 0.98,
+     "ease": "inOutCubic"
+    },
+    {
+     "t": 6.6,
+     "x": 1460,
+     "y": 990,
+     "zoom": 1.04
+    }
+   ],
+   "actors": [
+    {
+     "id": "leo",
+     "x": 1000,
+     "y": 1500,
+     "facing": 1,
+     "pose": "stand",
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       -1,
+       0
+      ],
+      "turn": -0.3
+     },
+     "keys": [
+      {
+       "t": 0.6,
+       "dur": 0.4,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 60,
+         "b": -20
+        }
+       },
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "look": [
+         -1,
+         0
+        ],
+        "turn": -0.3
+       }
+      },
+      {
+       "t": 1.1,
+       "dur": 0.3,
+       "pose": "stand",
+       "face": {
+        "eyes": "open",
+        "mouth": "smirk",
+        "brows": "raised",
+        "look": [
+         -1,
+         0
+        ],
+        "turn": -0.3
+       }
+      },
+      {
+       "t": 1.9,
+       "dur": 0.3,
+       "pose": "dance",
+       "face": {
+        "eyes": "happy",
+        "mouth": "grin",
+        "turn": 0.2
+       }
+      },
+      {
+       "t": 1.9,
+       "dur": 0.3,
+       "pose": {
+        "base": "dance",
+        "armL": {
+         "a": 56,
+         "b": -70,
+         "c": 20
+        },
+        "armR": {
+         "a": 132,
+         "b": 34
+        },
+        "legL": {
+         "a": -6,
+         "b": 40,
+         "c": 10
+        },
+        "legR": {
+         "a": 22,
+         "b": -6
+        },
+        "body": {
+         "dy": -4,
+         "lean": 6,
+         "bend": -8
+        },
+        "head": {
+         "tilt": 8
+        }
+       }
+      },
+      {
+       "t": 2.4,
+       "dur": 0.3,
+       "pose": "dance"
+      },
+      {
+       "t": 2.9,
+       "dur": 0.3,
+       "pose": {
+        "base": "dance",
+        "armL": {
+         "a": 56,
+         "b": -70,
+         "c": 20
+        },
+        "armR": {
+         "a": 132,
+         "b": 34
+        },
+        "legL": {
+         "a": -6,
+         "b": 40,
+         "c": 10
+        },
+        "legR": {
+         "a": 22,
+         "b": -6
+        },
+        "body": {
+         "dy": -4,
+         "lean": 6,
+         "bend": -8
+        },
+        "head": {
+         "tilt": 8
+        }
+       }
+      },
+      {
+       "t": 3.4,
+       "dur": 0.3,
+       "pose": "dance"
+      },
+      {
+       "t": 3.9,
+       "dur": 0.3,
+       "pose": {
+        "base": "dance",
+        "armL": {
+         "a": 56,
+         "b": -70,
+         "c": 20
+        },
+        "armR": {
+         "a": 132,
+         "b": 34
+        },
+        "legL": {
+         "a": -6,
+         "b": 40,
+         "c": 10
+        },
+        "legR": {
+         "a": 22,
+         "b": -6
+        },
+        "body": {
+         "dy": -4,
+         "lean": 6,
+         "bend": -8
+        },
+        "head": {
+         "tilt": 8
+        }
+       }
+      },
+      {
+       "t": 4.4,
+       "dur": 0.3,
+       "pose": "dance"
+      },
+      {
+       "t": 4.9,
+       "dur": 0.3,
+       "pose": {
+        "base": "dance",
+        "armL": {
+         "a": 56,
+         "b": -70,
+         "c": 20
+        },
+        "armR": {
+         "a": 132,
+         "b": 34
+        },
+        "legL": {
+         "a": -6,
+         "b": 40,
+         "c": 10
+        },
+        "legR": {
+         "a": 22,
+         "b": -6
+        },
+        "body": {
+         "dy": -4,
+         "lean": 6,
+         "bend": -8
+        },
+        "head": {
+         "tilt": 8
+        }
+       }
+      },
+      {
+       "t": 5.4,
+       "dur": 0.3,
+       "pose": "dance"
+      },
+      {
+       "t": 4.8,
+       "dur": 0.3,
+       "face": {
+        "eyes": "happy",
+        "mouth": "open",
+        "turn": 0.2
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "bob",
+       "from": 1.9,
+       "to": 6.4,
+       "amp": 10,
+       "rate": 2
+      },
+      {
+       "act": "laugh",
+       "from": 4.6,
+       "to": 6.2,
+       "amp": 6
+      },
+      {
+       "act": "walk",
+       "from": 2.2,
+       "to": 5.4,
+       "dx": 260,
+       "stride": 0.6,
+       "keepArms": true
+      }
+     ]
+    },
+    {
+     "id": "leo",
+     "x": 1680,
+     "y": 1470,
+     "scale": 0.8,
+     "facing": -1,
+     "idle": false,
+     "pose": "stand",
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       1,
+       0.3
+      ],
+      "turn": -0.6
+     },
+     "keys": [
+      {
+       "t": 3,
+       "dur": 0.4,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "look": [
+         -1,
+         0
+        ],
+        "turn": 0.3
+       }
+      },
+      {
+       "t": 3.4,
+       "dur": 0.3,
+       "pose": "dance",
+       "face": {
+        "eyes": "happy",
+        "mouth": "grin",
+        "turn": 0.2
+       }
+      },
+      {
+       "t": 3.9,
+       "dur": 0.3,
+       "pose": {
+        "base": "dance",
+        "armL": {
+         "a": 56,
+         "b": -70,
+         "c": 20
+        },
+        "armR": {
+         "a": 132,
+         "b": 34
+        },
+        "legL": {
+         "a": -6,
+         "b": 40,
+         "c": 10
+        },
+        "legR": {
+         "a": 22,
+         "b": -6
+        },
+        "body": {
+         "dy": -4,
+         "lean": 6,
+         "bend": -8
+        },
+        "head": {
+         "tilt": 8
+        }
+       }
+      },
+      {
+       "t": 4.4,
+       "dur": 0.3,
+       "pose": "dance"
+      },
+      {
+       "t": 4.9,
+       "dur": 0.3,
+       "pose": {
+        "base": "dance",
+        "armL": {
+         "a": 56,
+         "b": -70,
+         "c": 20
+        },
+        "armR": {
+         "a": 132,
+         "b": 34
+        },
+        "legL": {
+         "a": -6,
+         "b": 40,
+         "c": 10
+        },
+        "legR": {
+         "a": 22,
+         "b": -6
+        },
+        "body": {
+         "dy": -4,
+         "lean": 6,
+         "bend": -8
+        },
+        "head": {
+         "tilt": 8
+        }
+       }
+      },
+      {
+       "t": 5.4,
+       "dur": 0.3,
+       "pose": "dance"
+      }
+     ],
+     "do": [
+      {
+       "act": "bob",
+       "from": 3.4,
+       "to": 6.4,
+       "amp": 8,
+       "rate": 2
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "mirror",
+     "x": 1700,
+     "y": 1500,
+     "w": 420,
+     "h": 900
+    },
+    {
+     "type": "nightstand",
+     "x": 650,
+     "y": 1500,
+     "lamp": false
+    },
+    {
+     "type": "svg",
+     "id": "radio",
+     "x": 650,
+     "y": 1220,
+     "markup": "<rect x=\"-120\" y=\"-150\" width=\"240\" height=\"150\" rx=\"22\" fill=\"#D9473A\"/><rect x=\"-90\" y=\"-176\" width=\"180\" height=\"30\" rx=\"10\" fill=\"#A8342A\"/><line x1=\"70\" y1=\"-176\" x2=\"130\" y2=\"-300\" stroke=\"#8E8A84\" stroke-width=\"8\" stroke-linecap=\"round\"/><circle cx=\"-40\" cy=\"-75\" r=\"50\" fill=\"#3A3A40\"/><circle cx=\"-40\" cy=\"-75\" r=\"22\" fill=\"#5A5A62\"/><rect x=\"30\" y=\"-120\" width=\"70\" height=\"30\" rx=\"8\" fill=\"#F5C33B\"/><circle cx=\"48\" cy=\"-50\" r=\"14\" fill=\"#F3EEE6\"/><circle cx=\"84\" cy=\"-50\" r=\"14\" fill=\"#F3EEE6\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "n1",
+     "x": 620,
+     "y": 1000,
+     "opacity": 0,
+     "markup": "<path d=\"M0 0 L0 -80 L46 -96 L46 -20\" fill=\"none\" stroke=\"#F5C33B\" stroke-width=\"10\" stroke-linejoin=\"round\"/><ellipse cx=\"-12\" cy=\"0\" rx=\"18\" ry=\"14\" fill=\"#F5C33B\"/><ellipse cx=\"34\" cy=\"-18\" rx=\"18\" ry=\"14\" fill=\"#F5C33B\"/>",
+     "keys": [
+      {
+       "t": 1,
+       "opacity": 0,
+       "y": 1000
+      },
+      {
+       "t": 1.3,
+       "opacity": 1,
+       "y": 940
+      },
+      {
+       "t": 2.6,
+       "opacity": 0,
+       "y": 700
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "n2",
+     "x": 700,
+     "y": 980,
+     "opacity": 0,
+     "markup": "<path d=\"M0 0 L0 -80 L46 -96 L46 -20\" fill=\"none\" stroke=\"#F5C33B\" stroke-width=\"10\" stroke-linejoin=\"round\"/><ellipse cx=\"-12\" cy=\"0\" rx=\"18\" ry=\"14\" fill=\"#F5C33B\"/><ellipse cx=\"34\" cy=\"-18\" rx=\"18\" ry=\"14\" fill=\"#F5C33B\"/>",
+     "keys": [
+      {
+       "t": 2,
+       "opacity": 0,
+       "y": 980
+      },
+      {
+       "t": 2.3,
+       "opacity": 1,
+       "y": 920
+      },
+      {
+       "t": 3.6,
+       "opacity": 0,
+       "y": 680
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "n3",
+     "x": 600,
+     "y": 1010,
+     "opacity": 0,
+     "markup": "<path d=\"M0 0 L0 -80 L46 -96 L46 -20\" fill=\"none\" stroke=\"#F5C33B\" stroke-width=\"10\" stroke-linejoin=\"round\"/><ellipse cx=\"-12\" cy=\"0\" rx=\"18\" ry=\"14\" fill=\"#F5C33B\"/><ellipse cx=\"34\" cy=\"-18\" rx=\"18\" ry=\"14\" fill=\"#F5C33B\"/>",
+     "keys": [
+      {
+       "t": 3,
+       "opacity": 0,
+       "y": 1010
+      },
+      {
+       "t": 3.3,
+       "opacity": 1,
+       "y": 950
+      },
+      {
+       "t": 4.6,
+       "opacity": 0,
+       "y": 710
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "n4",
+     "x": 690,
+     "y": 990,
+     "opacity": 0,
+     "markup": "<path d=\"M0 0 L0 -80 L46 -96 L46 -20\" fill=\"none\" stroke=\"#F5C33B\" stroke-width=\"10\" stroke-linejoin=\"round\"/><ellipse cx=\"-12\" cy=\"0\" rx=\"18\" ry=\"14\" fill=\"#F5C33B\"/><ellipse cx=\"34\" cy=\"-18\" rx=\"18\" ry=\"14\" fill=\"#F5C33B\"/>",
+     "keys": [
+      {
+       "t": 4,
+       "opacity": 0,
+       "y": 990
+      },
+      {
+       "t": 4.3,
+       "opacity": 1,
+       "y": 930
+      },
+      {
+       "t": 5.6,
+       "opacity": 0,
+       "y": 690
+      }
+     ]
+    },
+    {
+     "type": "tag",
+     "id": "selfTag",
+     "x": 1700,
+     "y": 760,
+     "size": 64,
+     "text": "4%",
+     "color": "#E2453C",
+     "keys": [
+      {
+       "t": 0,
+       "text": "4%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 3.2,
+       "text": "4%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 3.2,
+       "text": "4%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 3.32,
+       "text": "5%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 3.44,
+       "text": "6%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 3.56,
+       "text": "7%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 3.68,
+       "text": "8%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 3.8,
+       "text": "9%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 4.6,
+       "text": "9%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 4.677,
+       "text": "10%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 4.754,
+       "text": "11%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 4.831,
+       "text": "12%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 4.908,
+       "text": "13%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 4.985,
+       "text": "14%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 5.062,
+       "text": "15%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 5.138,
+       "text": "16%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 5.215,
+       "text": "17%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 5.292,
+       "text": "18%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 5.369,
+       "text": "19%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 5.446,
+       "text": "20%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 5.523,
+       "text": "21%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 5.6,
+       "text": "22%",
+       "color": "#E2453C"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.8,
+     "kind": "click",
+     "gain": 0.6
+    },
+    {
+     "t": 3.3,
+     "kind": "tick",
+     "gain": 0.3
+    },
+    {
+     "t": 3.7,
+     "kind": "tick",
+     "gain": 0.3
+    },
+    {
+     "t": 4.8,
+     "kind": "chuckle",
+     "gain": 0.45
+    },
+    {
+     "t": 5,
+     "kind": "tick",
+     "gain": 0.3
+    },
+    {
+     "t": 5.5,
+     "kind": "ping",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 28.5,
+   "end": 33.4,
+   "in": {
+    "type": "push",
+    "dir": "up",
+    "dur": 0.45
+   },
+   "set": {
+    "preset": "livingRoom",
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 940,
+     "zoom": 1.55
+    },
+    {
+     "t": 4.9,
+     "x": 540,
+     "y": 930,
+     "zoom": 1.62
+    }
+   ],
+   "actors": [],
+   "props": [
+    {
+     "type": "phoneUI",
+     "id": "phone",
+     "x": 540,
+     "y": 1480,
+     "header": "Mia",
+     "accent": "#2E9E5B",
+     "banner": "Mia: Saw your story",
+     "messages": [],
+     "keys": [
+      {
+       "t": 0.6,
+       "dur": 0.04,
+       "banner": null,
+       "messages": [
+        {
+         "text": "Saw your story",
+         "from": "them"
+        }
+       ]
+      },
+      {
+       "t": 1.1,
+       "dur": 0.04,
+       "messages": [
+        {
+         "text": "Saw your story",
+         "from": "them"
+        },
+        {
+         "text": "Fun dancing video?",
+         "from": "them"
+        }
+       ]
+      },
+      {
+       "t": 1.7,
+       "dur": 0.04,
+       "messages": [
+        {
+         "text": "Saw your story",
+         "from": "them"
+        },
+        {
+         "text": "Fun dancing video?",
+         "from": "them"
+        },
+        {
+         "text": "You saw that?!",
+         "from": "me"
+        }
+       ]
+      },
+      {
+       "t": 2.8,
+       "dur": 0.04,
+       "typing": true
+      },
+      {
+       "t": 3.3,
+       "dur": 0.04,
+       "typing": false,
+       "messages": [
+        {
+         "text": "Saw your story",
+         "from": "them"
+        },
+        {
+         "text": "Fun dancing video?",
+         "from": "them"
+        },
+        {
+         "text": "You saw that?!",
+         "from": "me"
+        },
+        {
+         "text": "Coffee again Friday?",
+         "from": "them"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "phone-extras",
+     "x": 540,
+     "y": 1480,
+     "markup": "<text x=\"0\" y=\"-814\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"600\" font-size=\"26\" fill=\"#8A8A92\">Today 9:41 PM</text>"
+    },
+    {
+     "type": "svg",
+     "id": "read",
+     "x": 540,
+     "y": 1480,
+     "opacity": 0,
+     "markup": "<text x=\"236\" y=\"-516\" text-anchor=\"end\" font-family=\"Inter\" font-weight=\"600\" font-size=\"24\" fill=\"#8A8A92\">Read 9:42 PM</text>",
+     "keys": [
+      {
+       "t": 1.9,
+       "opacity": 0
+      },
+      {
+       "t": 2.1,
+       "opacity": 1
+      },
+      {
+       "t": 3.28,
+       "opacity": 1
+      },
+      {
+       "t": 3.3,
+       "opacity": 0,
+       "ease": "hold"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.1,
+     "kind": "notif",
+     "gain": 0.6
+    },
+    {
+     "t": 1.1,
+     "kind": "notif",
+     "gain": 0.4
+    },
+    {
+     "t": 1.7,
+     "kind": "swipe",
+     "gain": 0.35
+    },
+    {
+     "t": 3.3,
+     "kind": "notif",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 33.4,
+   "end": 37,
+   "in": {
+    "type": "whip",
+    "dir": "left",
+    "dur": 0.3
+   },
+   "set": {
+    "preset": "cafe"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": -1000,
+     "y": 1010,
+     "zoom": 1.2
+    },
+    {
+     "t": 3.6,
+     "x": -1000,
+     "y": 1000,
+     "zoom": 1.3
+    }
+   ],
+   "actors": [
+    {
+     "id": "leo",
+     "x": -1250,
+     "y": 1500,
+     "facing": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 132,
+       "b": 34
+      },
+      "armR": {
+       "a": 56,
+       "b": -70,
+       "c": 20
+      },
+      "body": {
+       "dy": 150,
+       "lean": -6
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 0.5,
+       "dur": 0.3,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 56,
+         "b": -70,
+         "c": 20
+        },
+        "armR": {
+         "a": 132,
+         "b": 34
+        },
+        "body": {
+         "dy": 150,
+         "lean": 6
+        }
+       }
+      },
+      {
+       "t": 1,
+       "dur": 0.3,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 132,
+         "b": 34
+        },
+        "armR": {
+         "a": 56,
+         "b": -70,
+         "c": 20
+        },
+        "body": {
+         "dy": 150,
+         "lean": -6
+        }
+       }
+      },
+      {
+       "t": 1.5,
+       "dur": 0.3,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 56,
+         "b": -70,
+         "c": 20
+        },
+        "armR": {
+         "a": 132,
+         "b": 34
+        },
+        "body": {
+         "dy": 150,
+         "lean": 6
+        }
+       }
+      },
+      {
+       "t": 2,
+       "dur": 0.3,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 132,
+         "b": 34
+        },
+        "armR": {
+         "a": 56,
+         "b": -70,
+         "c": 20
+        },
+        "body": {
+         "dy": 150,
+         "lean": -6
+        }
+       }
+      },
+      {
+       "t": 2.5,
+       "dur": 0.3,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 56,
+         "b": -70,
+         "c": 20
+        },
+        "armR": {
+         "a": 132,
+         "b": 34
+        },
+        "body": {
+         "dy": 150,
+         "lean": 6
+        }
+       }
+      },
+      {
+       "t": 3,
+       "dur": 0.3,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 132,
+         "b": 34
+        },
+        "armR": {
+         "a": 56,
+         "b": -70,
+         "c": 20
+        },
+        "body": {
+         "dy": 150,
+         "lean": -6
+        }
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "bob",
+       "from": 0,
+       "to": 3.6,
+       "amp": 8,
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "x": -750,
+     "y": 1500,
+     "facing": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 24,
+       "b": -60
+      },
+      "armR": {
+       "a": 24,
+       "b": -60
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "O",
+      "brows": "raised",
+      "look": [
+       -1,
+       0
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 1,
+       "dur": 0.3,
+       "face": {
+        "eyes": "happy",
+        "mouth": "grin",
+        "brows": "raised",
+        "look": [
+         -1,
+         0
+        ],
+        "turn": 0.3
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "laugh",
+       "from": 1.1,
+       "to": 3.5,
+       "amp": 6
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "mug",
+     "x": -1090,
+     "y": 1148
+    },
+    {
+     "type": "mug",
+     "x": -890,
+     "y": 1148
+    },
+    {
+     "type": "cafeTable",
+     "x": -1000,
+     "y": 1500,
+     "layer": "front"
+    },
+    {
+     "type": "tag",
+     "id": "miaTag",
+     "x": -750,
+     "y": 740,
+     "size": 64,
+     "text": "22%",
+     "color": "#E2453C",
+     "keys": [
+      {
+       "t": 0,
+       "text": "22%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 0.6,
+       "text": "22%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 0.7,
+       "text": "22%",
+       "color": "#E2453C"
+      },
+      {
+       "t": 0.771,
+       "text": "25%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 0.843,
+       "text": "28%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 0.914,
+       "text": "32%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 0.986,
+       "text": "35%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.057,
+       "text": "38%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.129,
+       "text": "41%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.2,
+       "text": "44%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.271,
+       "text": "48%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.343,
+       "text": "51%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.414,
+       "text": "54%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.486,
+       "text": "57%",
+       "color": "#E58A1F"
+      },
+      {
+       "t": 1.557,
+       "text": "60%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.629,
+       "text": "63%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.7,
+       "text": "67%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.771,
+       "text": "70%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.843,
+       "text": "73%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.914,
+       "text": "76%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 1.986,
+       "text": "79%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 2.057,
+       "text": "83%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 2.129,
+       "text": "86%",
+       "color": "#2E9E5B"
+      },
+      {
+       "t": 2.2,
+       "text": "89%",
+       "color": "#2E9E5B"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.05,
+     "kind": "whoosh",
+     "gain": 0.4
+    },
+    {
+     "t": 0.8,
+     "kind": "tick",
+     "gain": 0.3
+    },
+    {
+     "t": 1.3,
+     "kind": "tick",
+     "gain": 0.3
+    },
+    {
+     "t": 1.8,
+     "kind": "tick",
+     "gain": 0.3
+    },
+    {
+     "t": 2.2,
+     "kind": "chime",
+     "gain": 0.5
+    },
+    {
+     "t": 2.4,
+     "kind": "chuckle",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 37,
+   "end": 42.3,
+   "in": {
+    "type": "cut"
+   },
+   "set": {
+    "preset": "cafe"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": -760,
+     "y": 960,
+     "zoom": 1.45
+    },
+    {
+     "t": 1.6,
+     "x": -640,
+     "y": 940,
+     "zoom": 1.5
+    },
+    {
+     "t": 2.8,
+     "x": -980,
+     "y": 1050,
+     "zoom": 1.35,
+     "ease": "inOutCubic"
+    },
+    {
+     "t": 5.3,
+     "x": -990,
+     "y": 1060,
+     "zoom": 1.42
+    }
+   ],
+   "actors": [
+    {
+     "id": "mia",
+     "x": -470,
+     "y": 1360,
+     "scale": 0.78,
+     "facing": 1,
+     "behind": true,
+     "idle": false,
+     "tint": "frozen",
+     "opacity": 0.55,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 24,
+       "b": -60
+      },
+      "armR": {
+       "a": 24,
+       "b": -60
+      }
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "sad",
+      "brows": "sad",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.3
+     }
+    },
+    {
+     "id": "leo",
+     "x": -1250,
+     "y": 1500,
+     "facing": 1,
+     "pose": {
+      "base": "sit",
+      "armR": {
+       "a": 22,
+       "b": -30
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 1.6,
+       "dur": 0.3,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "brows": "raised",
+        "look": [
+         1,
+         -0.3
+        ],
+        "turn": 0.3
+       }
+      },
+      {
+       "t": 2.9,
+       "dur": 0.4,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "brows": "raised",
+        "look": [
+         1,
+         0
+        ],
+        "turn": 0.3
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "reach",
+       "arm": "R",
+       "from": 2.9,
+       "to": 3.9,
+       "target": [
+        300,
+        -360
+       ]
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "x": -750,
+     "y": 1500,
+     "facing": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 24,
+       "b": -60
+      },
+      "armR": {
+       "a": 24,
+       "b": -60
+      },
+      "body": {
+       "dy": 150,
+       "lean": 6
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "smile",
+      "look": [
+       1,
+       -0.2
+      ],
+      "turn": -0.2
+     },
+     "keys": [
+      {
+       "t": 0.8,
+       "dur": 0.4,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "look": [
+         1,
+         0
+        ],
+        "turn": -0.4
+       }
+      },
+      {
+       "t": 3.6,
+       "dur": 0.4,
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "raised",
+        "look": [
+         -1,
+         0.4
+        ],
+        "turn": 0.3
+       }
+      },
+      {
+       "t": 4.3,
+       "dur": 0.3,
+       "face": {
+        "eyes": "happy",
+        "mouth": "grin",
+        "brows": "raised",
+        "look": [
+         -1,
+         0
+        ],
+        "turn": 0.3
+       }
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "mug",
+     "x": -1090,
+     "y": 1148
+    },
+    {
+     "type": "mug",
+     "x": -890,
+     "y": 1148
+    },
+    {
+     "type": "cafeTable",
+     "x": -1000,
+     "y": 1500,
+     "layer": "front"
+    },
+    {
+     "type": "tag",
+     "id": "miaTag",
+     "x": -750,
+     "y": 740,
+     "size": 64,
+     "text": "89%",
+     "color": "#2E9E5B"
+    },
+    {
+     "type": "tag",
+     "id": "reflTag",
+     "x": -470,
+     "y": 680,
+     "size": 64,
+     "text": "6%",
+     "color": "#E2453C",
+     "opacity": 0,
+     "scale": 0.6,
+     "keys": [
+      {
+       "t": 0.9,
+       "opacity": 0,
+       "scale": 0.6
+      },
+      {
+       "t": 1.15,
+       "opacity": 1,
+       "scale": 1,
+       "ease": "outBack"
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "napkin",
+     "x": -1180,
+     "y": 1148,
+     "layer": "front",
+     "opacity": 0,
+     "markup": "<path d=\"M-120 -8 L120 -8 L130 0 L-130 0Z\" fill=\"#E9E4DA\"/><rect x=\"-120\" y=\"-150\" width=\"240\" height=\"142\" rx=\"8\" fill=\"#FFFDF4\"/><text x=\"0\" y=\"-62\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"58\" fill=\"#1E1E22\">DANCE?</text>",
+     "keys": [
+      {
+       "t": 3,
+       "opacity": 0,
+       "x": -1180
+      },
+      {
+       "t": 3.1,
+       "opacity": 1
+      },
+      {
+       "t": 3.9,
+       "x": -1010,
+       "ease": "outCubic"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.9,
+     "kind": "notif",
+     "gain": 0.4
+    },
+    {
+     "t": 1.1,
+     "kind": "sting",
+     "gain": 0.4
+    },
+    {
+     "t": 3.1,
+     "kind": "paper",
+     "gain": 0.5
+    },
+    {
+     "t": 3.9,
+     "kind": "pop",
+     "gain": 0.4
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "mood": "playful",
+   "a": 0,
+   "b": 16.7,
+   "gain": 0.45
+  },
+  {
+   "mood": "eerie",
+   "a": 16.7,
+   "b": 21.9,
+   "gain": 0.4
+  },
+  {
+   "mood": "resolve",
+   "a": 21.9,
+   "b": 37,
+   "gain": 0.55
+  },
+  {
+   "mood": "tender",
+   "a": 37,
+   "b": 42.3,
+   "gain": 0.5
+  }
+ ],
+ "beds": [
+  {
+   "name": "crowd",
+   "a": 0,
+   "b": 7.7,
+   "gain": 0.25
+  },
+  {
+   "name": "room",
+   "a": 7.7,
+   "b": 10.6,
+   "gain": 0.25
+  },
+  {
+   "name": "wind",
+   "a": 10.6,
+   "b": 13.3,
+   "gain": 0.25
+  },
+  {
+   "name": "silence",
+   "a": 16.7,
+   "b": 21.9,
+   "gain": 0.3
+  },
+  {
+   "name": "crowd",
+   "a": 33.4,
+   "b": 42.3,
+   "gain": 0.25
+  }
+ ]
+}

@@ -1,0 +1,10035 @@
+{
+ "meta": {
+  "title": "What If Your Thoughts Were Public?",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 38
+ },
+ "cast": {
+  "ben": {
+   "skin": "orange",
+   "hair": {
+    "style": "spiky",
+    "color": "black"
+   },
+   "top": {
+    "style": "shirt",
+    "color": "mustard"
+   },
+   "bottom": {
+    "style": "pants",
+    "color": "charcoal"
+   },
+   "shoes": {
+    "color": "brown"
+   }
+  },
+  "iris": {
+   "skin": "deep",
+   "hair": {
+    "style": "bun",
+    "color": "black"
+   },
+   "top": {
+    "style": "jacket",
+    "color": "teal",
+    "detail": "white"
+   },
+   "bottom": {
+    "style": "skirt",
+    "color": "navy"
+   },
+   "shoes": {
+    "color": "black"
+   },
+   "accessories": [
+    "glasses"
+   ]
+  },
+  "ceo": {
+   "skin": "fair",
+   "build": {
+    "height": 1.05
+   },
+   "hair": {
+    "style": "quiff",
+    "color": "grey"
+   },
+   "top": {
+    "style": "jacket",
+    "color": "charcoal",
+    "detail": "white"
+   },
+   "bottom": {
+    "style": "pants",
+    "color": "charcoal"
+   },
+   "shoes": {
+    "color": "black"
+   },
+   "accessories": [
+    "beard"
+   ]
+  },
+  "w1": {
+   "skin": "tan",
+   "hair": {
+    "style": "long",
+    "color": "brown"
+   },
+   "top": {
+    "style": "hoodie",
+    "color": "purple"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "denim"
+   }
+  },
+  "w2": {
+   "skin": "olive",
+   "hair": {
+    "style": "buzz",
+    "color": "black"
+   },
+   "top": {
+    "style": "tee",
+    "color": "yellow"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "navy"
+   },
+   "accessories": [
+    "headphones"
+   ]
+  },
+  "w3": {
+   "skin": "fair",
+   "hair": {
+    "style": "curly",
+    "color": "blonde"
+   },
+   "top": {
+    "style": "stripes",
+    "color": "red",
+    "detail": "white"
+   },
+   "bottom": {
+    "style": "pants",
+    "color": "grey"
+   },
+   "accessories": [
+    "glasses"
+   ]
+  }
+ },
+ "shots": [
+  {
+   "start": 0,
+   "end": 2.8,
+   "set": {
+    "preset": "office",
+    "wall": "#3A4660"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.15
+    },
+    {
+     "t": 2.8,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.19
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 22,
+       "b": -30
+      },
+      "armR": {
+       "a": 22,
+       "b": -30
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "face": {
+       "look": [
+        0.6,
+        0
+       ],
+       "turn": 0.3,
+       "mouth": "flat",
+       "brows": "worried",
+       "blink": 0
+      }
+     },
+     "do": [
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "tremble",
+       "amp": 1.5
+      }
+     ],
+     "keys": [
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.6,
+          0
+         ],
+         "turn": 0.3,
+         "mouth": "flat",
+         "brows": "worried",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.79,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.6,
+          0
+         ],
+         "turn": 0.3,
+         "mouth": "flat",
+         "brows": "worried",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.6,
+          0
+         ],
+         "turn": 0.3,
+         "mouth": "flat",
+         "brows": "worried",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 800,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 30,
+       "b": -60
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "base": "sit",
+      "face": {
+       "look": [
+        0.6,
+        0
+       ],
+       "turn": 0.3,
+       "mouth": "flat",
+       "blink": 0
+      }
+     },
+     "facing": -1,
+     "keys": [
+      {
+       "t": 0.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.596,
+          -0.035
+         ],
+         "turn": 0.296,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.873,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.584,
+          -0.158
+         ],
+         "turn": 0.284,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.915,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.566,
+          -0.338
+         ],
+         "turn": 0.266,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.956,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.546,
+          -0.544
+         ],
+         "turn": 0.246,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.998,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.526,
+          -0.743
+         ],
+         "turn": 0.226,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.04,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.51,
+          -0.903
+         ],
+         "turn": 0.21,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.081,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.501,
+          -0.992
+         ],
+         "turn": 0.201,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.123,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "wide",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "wide",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.748,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "chair",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "markup": "<rect x=\"-110\" y=\"-520\" width=\"220\" height=\"250\" rx=\"40\" fill=\"#3A3A44\"/><rect x=\"0\" y=\"-520\" width=\"110\" height=\"250\" rx=\"40\" fill=\"#30303A\"/><rect x=\"-130\" y=\"-200\" width=\"260\" height=\"46\" rx=\"18\" fill=\"#3A3A44\"/><rect x=\"-10\" y=\"-160\" width=\"20\" height=\"120\" fill=\"#55555C\"/><path d=\"M-110 0 L110 0 L0 -50Z\" fill=\"#55555C\"/>"
+    },
+    {
+     "type": "desk",
+     "id": "desk",
+     "x": 800,
+     "y": 1560,
+     "scale": 1.05,
+     "color": "#E3E7EC",
+     "layer": "front"
+    },
+    {
+     "type": "svg",
+     "id": "mug",
+     "x": 640,
+     "y": 1245,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<path d=\"M38 -86 Q78 -86 78 -50 Q78 -18 38 -18\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"14\"/><rect x=\"-50\" y=\"-110\" width=\"96\" height=\"110\" rx=\"12\" fill=\"#E2453C\"/><rect x=\"14\" y=\"-110\" width=\"32\" height=\"110\" rx=\"10\" fill=\"#C23A32\"/><text x=\"-2\" y=\"-46\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"30\" fill=\"#FFFFFF\">#1</text><text x=\"-2\" y=\"-16\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"22\" fill=\"#FFFFFF\">BOSS</text>"
+    },
+    {
+     "type": "svg",
+     "id": "sticky",
+     "x": 930,
+     "y": 1250,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<g transform=\"rotate(-6)\"><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"150\" fill=\"#F7D24A\"/><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"26\" fill=\"#E8BE2E\"/><text x=\"0\" y=\"-92\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">HOW TO</text><text x=\"0\" y=\"-62\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">INTERVIEW</text><text x=\"0\" y=\"-26\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"24\" fill=\"#1E1E22\">1. SMILE</text></g>"
+    },
+    {
+     "type": "thought",
+     "id": "t",
+     "x": 320,
+     "y": 815,
+     "text": "I HAVE NO IDEA WHAT I'M DOING.",
+     "w": 480,
+     "h": 230,
+     "size": 46,
+     "max": 18,
+     "dx": -50,
+     "dy": 120,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 0.34,
+       "scale": 0.01
+      },
+      {
+       "t": 0.6,
+       "scale": 1,
+       "ease": "back"
+      }
+     ]
+    }
+   ],
+   "text": [
+    {
+     "text": "WHAT IF YOUR THOUGHTS\nWERE PUBLIC?",
+     "x": 540,
+     "y": 190,
+     "size": 76,
+     "from": 0.1
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.35,
+     "kind": "pop",
+     "gain": 0.7
+    },
+    {
+     "t": 1.1,
+     "kind": "sting",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 2.8,
+   "end": 5.4,
+   "set": {
+    "preset": "office",
+    "wall": "#3A4660"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 330,
+     "y": 960,
+     "zoom": 1.9
+    },
+    {
+     "t": 2.6,
+     "x": 330,
+     "y": 950,
+     "zoom": 2
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 22,
+       "b": -30
+      },
+      "armR": {
+       "a": 22,
+       "b": -30
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "face": {
+       "look": [
+        0.1,
+        -1
+       ],
+       "turn": 0.1,
+       "mouth": "sad",
+       "brows": "sad",
+       "blink": 0
+      }
+     },
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.1,
+          -1
+         ],
+         "turn": 0.1,
+         "mouth": "sad",
+         "brows": "sad",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.79,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.1,
+          -1
+         ],
+         "turn": 0.1,
+         "mouth": "sad",
+         "brows": "sad",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.1,
+          -1
+         ],
+         "turn": 0.1,
+         "mouth": "sad",
+         "brows": "sad",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "chair",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "markup": "<rect x=\"-110\" y=\"-520\" width=\"220\" height=\"250\" rx=\"40\" fill=\"#3A3A44\"/><rect x=\"0\" y=\"-520\" width=\"110\" height=\"250\" rx=\"40\" fill=\"#30303A\"/><rect x=\"-130\" y=\"-200\" width=\"260\" height=\"46\" rx=\"18\" fill=\"#3A3A44\"/><rect x=\"-10\" y=\"-160\" width=\"20\" height=\"120\" fill=\"#55555C\"/><path d=\"M-110 0 L110 0 L0 -50Z\" fill=\"#55555C\"/>"
+    },
+    {
+     "type": "thought",
+     "id": "t",
+     "x": 340,
+     "y": 790,
+     "text": "",
+     "w": 380,
+     "h": 300,
+     "size": 46,
+     "max": 18,
+     "dx": -50,
+     "dy": 120,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 0.19,
+       "scale": 0.01
+      },
+      {
+       "t": 0.45,
+       "scale": 1,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "fridge",
+     "x": 330,
+     "y": 650,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 0.34,
+       "scale": 0.01
+      },
+      {
+       "t": 0.6,
+       "scale": 1,
+       "ease": "back"
+      }
+     ],
+     "markup": "<rect x=\"-80\" y=\"-120\" width=\"160\" height=\"230\" rx=\"16\" fill=\"#E8ECF0\"/><rect x=\"-66\" y=\"-104\" width=\"132\" height=\"198\" rx=\"8\" fill=\"#3E4A5C\"/><rect x=\"-66\" y=\"-40\" width=\"132\" height=\"8\" fill=\"#5C6A7E\"/><rect x=\"-66\" y=\"22\" width=\"132\" height=\"8\" fill=\"#5C6A7E\"/><circle cx=\"0\" cy=\"-86\" r=\"10\" fill=\"#FFF2B3\"/><path d=\"M80 -120 L140 -100 L140 92 L80 110Z\" fill=\"#D2D8DE\"/>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 0.6,
+     "kind": "dooropen",
+     "gain": 0.4
+    },
+    {
+     "t": 1.4,
+     "kind": "breath",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 5.4,
+   "end": 8.6,
+   "set": {
+    "preset": "office",
+    "wall": "#3A4660"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.15
+    },
+    {
+     "t": 3.2,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.2
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 22,
+       "b": -30
+      },
+      "armR": {
+       "a": 22,
+       "b": -30
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "face": {
+       "look": [
+        0,
+        0
+       ],
+       "turn": 0,
+       "mouth": "flat",
+       "brows": "angry",
+       "eyes": "closed",
+       "blink": 0
+      }
+     },
+     "keys": [
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0,
+          0
+         ],
+         "turn": 0,
+         "mouth": "flat",
+         "brows": "angry",
+         "eyes": "closed",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.79,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0,
+          0
+         ],
+         "turn": 0,
+         "mouth": "flat",
+         "brows": "angry",
+         "eyes": "closed",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0,
+          -0.076
+         ],
+         "turn": 0,
+         "mouth": "flat",
+         "brows": "angry",
+         "eyes": "closed",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.873,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0,
+          -0.32
+         ],
+         "turn": 0,
+         "mouth": "flat",
+         "brows": "angry",
+         "eyes": "closed",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.915,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0,
+          -0.627
+         ],
+         "turn": 0,
+         "mouth": "flat",
+         "brows": "angry",
+         "eyes": "closed",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.956,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0,
+          -0.89
+         ],
+         "turn": 0,
+         "mouth": "flat",
+         "brows": "angry",
+         "eyes": "closed",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.998,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 800,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 30,
+       "b": -60
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "base": "sit",
+      "face": {
+       "look": [
+        -0.2,
+        1
+       ],
+       "turn": -0.1,
+       "mouth": "flat",
+       "brows": "flat",
+       "blink": 0
+      }
+     },
+     "facing": -1,
+     "keys": [
+      {
+       "t": 1.415,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.2,
+          1
+         ],
+         "turn": -0.1,
+         "mouth": "flat",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.498,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.2,
+          1
+         ],
+         "turn": -0.1,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.54,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.162,
+          0.893
+         ],
+         "turn": -0.084,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.581,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.067,
+          0.619
+         ],
+         "turn": -0.043,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.065,
+          0.243
+         ],
+         "turn": 0.014,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.665,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.21,
+          -0.171
+         ],
+         "turn": 0.076,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.345,
+          -0.558
+         ],
+         "turn": 0.134,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.748,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.449,
+          -0.855
+         ],
+         "turn": 0.178,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.79,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.499,
+          -0.996
+         ],
+         "turn": 0.199,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.748,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "chair",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "markup": "<rect x=\"-110\" y=\"-520\" width=\"220\" height=\"250\" rx=\"40\" fill=\"#3A3A44\"/><rect x=\"0\" y=\"-520\" width=\"110\" height=\"250\" rx=\"40\" fill=\"#30303A\"/><rect x=\"-130\" y=\"-200\" width=\"260\" height=\"46\" rx=\"18\" fill=\"#3A3A44\"/><rect x=\"-10\" y=\"-160\" width=\"20\" height=\"120\" fill=\"#55555C\"/><path d=\"M-110 0 L110 0 L0 -50Z\" fill=\"#55555C\"/>"
+    },
+    {
+     "type": "desk",
+     "id": "desk",
+     "x": 800,
+     "y": 1560,
+     "scale": 1.05,
+     "color": "#E3E7EC",
+     "layer": "front"
+    },
+    {
+     "type": "svg",
+     "id": "mug",
+     "x": 640,
+     "y": 1245,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<path d=\"M38 -86 Q78 -86 78 -50 Q78 -18 38 -18\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"14\"/><rect x=\"-50\" y=\"-110\" width=\"96\" height=\"110\" rx=\"12\" fill=\"#E2453C\"/><rect x=\"14\" y=\"-110\" width=\"32\" height=\"110\" rx=\"10\" fill=\"#C23A32\"/><text x=\"-2\" y=\"-46\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"30\" fill=\"#FFFFFF\">#1</text><text x=\"-2\" y=\"-16\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"22\" fill=\"#FFFFFF\">BOSS</text>"
+    },
+    {
+     "type": "svg",
+     "id": "sticky",
+     "x": 930,
+     "y": 1250,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<g transform=\"rotate(-6)\"><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"150\" fill=\"#F7D24A\"/><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"26\" fill=\"#E8BE2E\"/><text x=\"0\" y=\"-92\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">HOW TO</text><text x=\"0\" y=\"-62\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">INTERVIEW</text><text x=\"0\" y=\"-26\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"24\" fill=\"#1E1E22\">1. SMILE</text></g>"
+    },
+    {
+     "type": "thought",
+     "id": "t",
+     "x": 320,
+     "y": 800,
+     "text": "PROFESSIONAL.",
+     "w": 480,
+     "h": 230,
+     "size": 46,
+     "max": 18,
+     "dx": -50,
+     "dy": 120,
+     "layer": "front",
+     "keys": [
+      {
+       "t": 0.9,
+       "text": "PROFESSIONAL. PROFESSIONAL."
+      },
+      {
+       "t": 1.8,
+       "text": "PROFESSIONAL. PROFESSIONAL. PIZZA."
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "pizza",
+     "x": 560,
+     "y": 600,
+     "layer": "front",
+     "rot": 14,
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 1.84,
+       "scale": 0.01
+      },
+      {
+       "t": 2.1,
+       "scale": 1,
+       "ease": "back"
+      }
+     ],
+     "markup": "<g transform=\"scale(1)\"><path d=\"M-70 -60 Q0 -95 70 -60 L0 80Z\" fill=\"#F5C33B\"/><path d=\"M0 -77 Q35 -73 70 -60 L0 80Z\" fill=\"#E0AC2A\"/><path d=\"M-74 -66 Q0 -104 74 -66 L70 -52 Q0 -86 -70 -52Z\" fill=\"#B9773E\"/><circle cx=\"-20\" cy=\"-30\" r=\"14\" fill=\"#D8433A\"/><circle cx=\"22\" cy=\"-22\" r=\"12\" fill=\"#D8433A\"/><circle cx=\"0\" cy=\"20\" r=\"11\" fill=\"#D8433A\"/></g>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 0.9,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 1.8,
+     "kind": "boing",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 8.6,
+   "end": 11.2,
+   "set": {
+    "preset": "office",
+    "wall": "#3A4660"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 360,
+     "y": 900,
+     "zoom": 1.55
+    },
+    {
+     "t": 2.6,
+     "x": 360,
+     "y": 880,
+     "zoom": 1.6
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 22,
+       "b": -30
+      },
+      "armR": {
+       "a": 22,
+       "b": -30
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "face": {
+       "look": [
+        0,
+        -1
+       ],
+       "turn": 0,
+       "mouth": "teeth",
+       "brows": "worried",
+       "eyes": "wide",
+       "blink": 0
+      }
+     },
+     "keys": [
+      {
+       "t": 0.165,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22.894,
+         "b": -29.581
+        },
+        "armR": {
+         "a": 22.894,
+         "b": -29.581
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.206,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 31.634,
+         "b": -25.484
+        },
+        "armR": {
+         "a": 31.634,
+         "b": -25.484
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.248,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 47.6,
+         "b": -18
+        },
+        "armR": {
+         "a": 47.6,
+         "b": -18
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.29,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 68.2,
+         "b": -8.344
+        },
+        "armR": {
+         "a": 68.2,
+         "b": -8.344
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.331,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 90.842,
+         "b": 2.269
+        },
+        "armR": {
+         "a": 90.842,
+         "b": 2.269
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.373,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 112.934,
+         "b": 12.625
+        },
+        "armR": {
+         "a": 112.934,
+         "b": 12.625
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.415,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 131.885,
+         "b": 21.509
+        },
+        "armR": {
+         "a": 131.885,
+         "b": 21.509
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.456,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 145.104,
+         "b": 27.705
+        },
+        "armR": {
+         "a": 145.104,
+         "b": 27.705
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.498,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 150,
+         "b": 30
+        },
+        "armR": {
+         "a": 150,
+         "b": 30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 150,
+         "b": 30
+        },
+        "armR": {
+         "a": 150,
+         "b": 30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.79,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 150,
+         "b": 30
+        },
+        "armR": {
+         "a": 150,
+         "b": 30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 150,
+         "b": 30
+        },
+        "armR": {
+         "a": 150,
+         "b": 30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "tremble",
+       "from": 0.5,
+       "amp": 2
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "chair",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "markup": "<rect x=\"-110\" y=\"-520\" width=\"220\" height=\"250\" rx=\"40\" fill=\"#3A3A44\"/><rect x=\"0\" y=\"-520\" width=\"110\" height=\"250\" rx=\"40\" fill=\"#30303A\"/><rect x=\"-130\" y=\"-200\" width=\"260\" height=\"46\" rx=\"18\" fill=\"#3A3A44\"/><rect x=\"-10\" y=\"-160\" width=\"20\" height=\"120\" fill=\"#55555C\"/><path d=\"M-110 0 L110 0 L0 -50Z\" fill=\"#55555C\"/>"
+    },
+    {
+     "type": "thought",
+     "id": "t",
+     "x": 320,
+     "y": 700,
+     "text": "DON'T THINK ABOUT THE BUBBLE.",
+     "w": 540,
+     "h": 230,
+     "size": 46,
+     "max": 18,
+     "dx": -50,
+     "dy": 120,
+     "layer": "front",
+     "keys": [
+      {
+       "t": 0.6,
+       "scale": 1
+      },
+      {
+       "t": 2.4,
+       "scale": 1.3,
+       "ease": "out"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.5,
+     "kind": "whoosh",
+     "gain": 0.4
+    },
+    {
+     "t": 1.3,
+     "kind": "boing",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 11.2,
+   "end": 13.6,
+   "set": {
+    "preset": "office",
+    "wall": "#3A4660"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 330,
+     "y": 950,
+     "zoom": 1.95
+    },
+    {
+     "t": 2.4,
+     "x": 330,
+     "y": 940,
+     "zoom": 2.1
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 22,
+       "b": -30
+      },
+      "armR": {
+       "a": 22,
+       "b": -30
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "face": {
+       "look": [
+        0.8,
+        0
+       ],
+       "turn": 0.4,
+       "mouth": "teeth",
+       "brows": "worried",
+       "eyes": "wide",
+       "blink": 0
+      }
+     },
+     "do": [
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "tremble",
+       "amp": 2.5
+      }
+     ],
+     "keys": [
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.8,
+          0
+         ],
+         "turn": 0.4,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.79,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.8,
+          0
+         ],
+         "turn": 0.4,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.8,
+          0
+         ],
+         "turn": 0.4,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "chair",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "markup": "<rect x=\"-110\" y=\"-520\" width=\"220\" height=\"250\" rx=\"40\" fill=\"#3A3A44\"/><rect x=\"0\" y=\"-520\" width=\"110\" height=\"250\" rx=\"40\" fill=\"#30303A\"/><rect x=\"-130\" y=\"-200\" width=\"260\" height=\"46\" rx=\"18\" fill=\"#3A3A44\"/><rect x=\"-10\" y=\"-160\" width=\"20\" height=\"120\" fill=\"#55555C\"/><path d=\"M-110 0 L110 0 L0 -50Z\" fill=\"#55555C\"/>"
+    },
+    {
+     "type": "thought",
+     "id": "t",
+     "x": 340,
+     "y": 760,
+     "text": "SHE CAN SEE THIS.",
+     "w": 460,
+     "h": 230,
+     "size": 50,
+     "max": 18,
+     "dx": -50,
+     "dy": 120,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 0.14,
+       "scale": 0.01
+      },
+      {
+       "t": 0.35,
+       "scale": 1,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "sweat",
+     "x": 395,
+     "y": 830,
+     "layer": "front",
+     "keys": [
+      {
+       "t": 0.4,
+       "y": 830
+      },
+      {
+       "t": 2.2,
+       "y": 900,
+       "ease": "in"
+      }
+     ],
+     "markup": "<path d=\"M0 -26 Q16 0 12 10 Q0 22 -12 10 Q-16 0 0 -26Z\" fill=\"#8FD0F2\"/><path d=\"M0 -26 Q16 0 12 10 Q6 16 0 16Z\" fill=\"#6BB6DE\"/>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.15,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 0.6,
+     "kind": "heart",
+     "gain": 0.5
+    },
+    {
+     "t": 1.4,
+     "kind": "heart",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 13.6,
+   "end": 16,
+   "set": {
+    "preset": "office",
+    "wall": "#3A4660"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 780,
+     "y": 1000,
+     "zoom": 1.9
+    },
+    {
+     "t": 2.4,
+     "x": 780,
+     "y": 990,
+     "zoom": 2
+    }
+   ],
+   "actors": [
+    {
+     "id": "iris",
+     "x": 800,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 30,
+       "b": -60
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "base": "sit",
+      "face": {
+       "look": [
+        0.5,
+        -1
+       ],
+       "turn": 0.2,
+       "mouth": "flat",
+       "brows": "raised",
+       "blink": 0
+      }
+     },
+     "facing": -1,
+     "keys": [
+      {
+       "t": 0.498,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "smirk",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.331,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "smirk",
+         "brows": "flat",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.498,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "happy",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.998,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.5,
+          -1
+         ],
+         "turn": 0.2,
+         "mouth": "smirk",
+         "eyes": "happy",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "desk",
+     "id": "desk",
+     "x": 800,
+     "y": 1560,
+     "scale": 1.05,
+     "color": "#E3E7EC",
+     "layer": "front"
+    },
+    {
+     "type": "svg",
+     "id": "mug",
+     "x": 640,
+     "y": 1245,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<path d=\"M38 -86 Q78 -86 78 -50 Q78 -18 38 -18\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"14\"/><rect x=\"-50\" y=\"-110\" width=\"96\" height=\"110\" rx=\"12\" fill=\"#E2453C\"/><rect x=\"14\" y=\"-110\" width=\"32\" height=\"110\" rx=\"10\" fill=\"#C23A32\"/><text x=\"-2\" y=\"-46\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"30\" fill=\"#FFFFFF\">#1</text><text x=\"-2\" y=\"-16\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"22\" fill=\"#FFFFFF\">BOSS</text>"
+    },
+    {
+     "type": "svg",
+     "id": "sticky",
+     "x": 930,
+     "y": 1250,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<g transform=\"rotate(-6)\"><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"150\" fill=\"#F7D24A\"/><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"26\" fill=\"#E8BE2E\"/><text x=\"0\" y=\"-92\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">HOW TO</text><text x=\"0\" y=\"-62\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">INTERVIEW</text><text x=\"0\" y=\"-26\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"24\" fill=\"#1E1E22\">1. SMILE</text></g>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.5,
+     "kind": "chuckle",
+     "gain": 0.25
+    },
+    {
+     "t": 2,
+     "kind": "chuckle",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 16,
+   "end": 19.2,
+   "set": {
+    "preset": "office",
+    "wall": "#3A4660"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.15
+    },
+    {
+     "t": 3.2,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.2
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 22,
+       "b": -30
+      },
+      "armR": {
+       "a": 22,
+       "b": -30
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "face": {
+       "look": [
+        0.6,
+        0
+       ],
+       "turn": 0.3,
+       "mouth": "teeth",
+       "brows": "worried",
+       "blink": 0
+      }
+     },
+     "keys": [
+      {
+       "t": 0.415,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.602,
+          -0.021
+         ],
+         "turn": 0.301,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.456,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.621,
+          -0.209
+         ],
+         "turn": 0.31,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.498,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.65,
+          -0.504
+         ],
+         "turn": 0.325,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.54,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.68,
+          -0.798
+         ],
+         "turn": 0.34,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.581,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.698,
+          -0.981
+         ],
+         "turn": 0.349,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          -1
+         ],
+         "turn": 0.35,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          -1
+         ],
+         "turn": 0.35,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.79,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          -1
+         ],
+         "turn": 0.35,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          -1
+         ],
+         "turn": 0.35,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 800,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 30,
+       "b": -60
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "base": "sit",
+      "face": {
+       "look": [
+        0.6,
+        -0.3
+       ],
+       "turn": 0.3,
+       "mouth": "smirk",
+       "blink": 0
+      }
+     },
+     "facing": -1,
+     "keys": [
+      {
+       "t": 0.998,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.6,
+          -0.3
+         ],
+         "turn": 0.3,
+         "mouth": "smirk",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.04,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.497,
+          -0.38
+         ],
+         "turn": 0.266,
+         "mouth": "smirk",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.081,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.258,
+          -0.566
+         ],
+         "turn": 0.186,
+         "mouth": "smirk",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.123,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.018,
+          -0.781
+         ],
+         "turn": 0.094,
+         "mouth": "smirk",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.165,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.235,
+          -0.95
+         ],
+         "turn": 0.022,
+         "mouth": "smirk",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.206,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.3,
+          -1
+         ],
+         "turn": 0,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.373,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 29.909,
+         "b": -61.333
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.286,
+          -0.985
+         ],
+         "turn": 0.005,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.415,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 29.422,
+         "b": -68.479
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.213,
+          -0.904
+         ],
+         "turn": 0.029,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.456,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 28.62,
+         "b": -80.235
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.093,
+          -0.77
+         ],
+         "turn": 0.069,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.498,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 27.626,
+         "b": -94.82
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.056,
+          -0.604
+         ],
+         "turn": 0.119,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.54,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 26.56,
+         "b": -110.454
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.216,
+          -0.427
+         ],
+         "turn": 0.172,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.581,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 25.544,
+         "b": -125.353
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.368,
+          -0.257
+         ],
+         "turn": 0.223,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 24.7,
+         "b": -137.736
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.495,
+          -0.117
+         ],
+         "turn": 0.265,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.665,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 24.148,
+         "b": -145.822
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.578,
+          -0.025
+         ],
+         "turn": 0.293,
+         "mouth": "O",
+         "brows": "up",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 24,
+         "b": -148
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.6,
+          0
+         ],
+         "turn": 0.3,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 24,
+         "b": -148
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.6,
+          0
+         ],
+         "turn": 0.3,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 24,
+         "b": -148
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.6,
+          0
+         ],
+         "turn": 0.3,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.748,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 24,
+         "b": -148
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.6,
+          0
+         ],
+         "turn": 0.3,
+         "mouth": "teeth",
+         "brows": "worried",
+         "eyes": "wide",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "tremble",
+       "from": 1.7,
+       "amp": 1.5
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "chair",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "markup": "<rect x=\"-110\" y=\"-520\" width=\"220\" height=\"250\" rx=\"40\" fill=\"#3A3A44\"/><rect x=\"0\" y=\"-520\" width=\"110\" height=\"250\" rx=\"40\" fill=\"#30303A\"/><rect x=\"-130\" y=\"-200\" width=\"260\" height=\"46\" rx=\"18\" fill=\"#3A3A44\"/><rect x=\"-10\" y=\"-160\" width=\"20\" height=\"120\" fill=\"#55555C\"/><path d=\"M-110 0 L110 0 L0 -50Z\" fill=\"#55555C\"/>"
+    },
+    {
+     "type": "desk",
+     "id": "desk",
+     "x": 800,
+     "y": 1560,
+     "scale": 1.05,
+     "color": "#E3E7EC",
+     "layer": "front"
+    },
+    {
+     "type": "svg",
+     "id": "mug",
+     "x": 640,
+     "y": 1245,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<path d=\"M38 -86 Q78 -86 78 -50 Q78 -18 38 -18\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"14\"/><rect x=\"-50\" y=\"-110\" width=\"96\" height=\"110\" rx=\"12\" fill=\"#E2453C\"/><rect x=\"14\" y=\"-110\" width=\"32\" height=\"110\" rx=\"10\" fill=\"#C23A32\"/><text x=\"-2\" y=\"-46\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"30\" fill=\"#FFFFFF\">#1</text><text x=\"-2\" y=\"-16\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"22\" fill=\"#FFFFFF\">BOSS</text>"
+    },
+    {
+     "type": "svg",
+     "id": "sticky",
+     "x": 930,
+     "y": 1250,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<g transform=\"rotate(-6)\"><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"150\" fill=\"#F7D24A\"/><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"26\" fill=\"#E8BE2E\"/><text x=\"0\" y=\"-92\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">HOW TO</text><text x=\"0\" y=\"-62\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">INTERVIEW</text><text x=\"0\" y=\"-26\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"24\" fill=\"#1E1E22\">1. SMILE</text></g>"
+    },
+    {
+     "type": "thought",
+     "id": "t2",
+     "x": 770,
+     "y": 800,
+     "text": "I STARTED HERE MONDAY.",
+     "w": 480,
+     "h": 230,
+     "size": 46,
+     "max": 18,
+     "dx": 40,
+     "dy": 120,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 0.39,
+       "scale": 0.01
+      },
+      {
+       "t": 0.65,
+       "scale": 1,
+       "ease": "back"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.4,
+     "kind": "pop",
+     "gain": 0.7
+    },
+    {
+     "t": 0.6,
+     "kind": "sting",
+     "gain": 0.5
+    },
+    {
+     "t": 1.7,
+     "kind": "glitch",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 19.2,
+   "end": 22.4,
+   "set": {
+    "preset": "office",
+    "wall": "#3A4660"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.15
+    },
+    {
+     "t": 3.2,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.2
+    }
+   ],
+   "actors": [
+    {
+     "id": "ceo",
+     "x": -60,
+     "y": 1390,
+     "scale": 0.85,
+     "pose": {
+      "body": {
+       "dy": 0,
+       "lean": 0
+      },
+      "armL": {
+       "a": 8,
+       "b": 4
+      },
+      "armR": {
+       "a": 24,
+       "b": -110
+      },
+      "legL": {
+       "a": 3,
+       "b": 0
+      },
+      "legR": {
+       "a": 3,
+       "b": 0
+      },
+      "base": "stand",
+      "face": {
+       "look": [
+        0.6,
+        0
+       ],
+       "turn": 0.35,
+       "mouth": "smile",
+       "brows": "raised",
+       "blink": 0
+      }
+     },
+     "behind": true,
+     "hold": {
+      "R": "coffee"
+     },
+     "do": [
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "walk",
+       "from": 0,
+       "to": 3.2,
+       "dx": 1050,
+       "rate": 1.4,
+       "keepArms": true
+      }
+     ],
+     "keys": [
+      {
+       "t": 2.206,
+       "pose": {
+        "body": {
+         "dy": 0,
+         "lean": 0
+        },
+        "armL": {
+         "a": 8,
+         "b": 4
+        },
+        "armR": {
+         "a": 24,
+         "b": -110
+        },
+        "legL": {
+         "a": 3,
+         "b": 0
+        },
+        "legR": {
+         "a": 3,
+         "b": 0
+        },
+        "base": "stand",
+        "face": {
+         "look": [
+          0.6,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "smile",
+         "brows": "raised",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.29,
+       "pose": {
+        "body": {
+         "dy": 0,
+         "lean": 0
+        },
+        "armL": {
+         "a": 8,
+         "b": 4
+        },
+        "armR": {
+         "a": 24,
+         "b": -110
+        },
+        "legL": {
+         "a": 3,
+         "b": 0
+        },
+        "legR": {
+         "a": 3,
+         "b": 0
+        },
+        "base": "stand",
+        "face": {
+         "look": [
+          0.6,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "smile",
+         "brows": "raised",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.331,
+       "pose": {
+        "body": {
+         "dy": 0,
+         "lean": 0
+        },
+        "armL": {
+         "a": 8,
+         "b": 4
+        },
+        "armR": {
+         "a": 24,
+         "b": -110
+        },
+        "legL": {
+         "a": 3,
+         "b": 0
+        },
+        "legR": {
+         "a": 3,
+         "b": 0
+        },
+        "base": "stand",
+        "face": {
+         "look": [
+          0.6,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "smile",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 22,
+       "b": -30
+      },
+      "armR": {
+       "a": 22,
+       "b": -30
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "face": {
+       "look": [
+        -0.2,
+        -1
+       ],
+       "turn": -0.1,
+       "mouth": "O",
+       "brows": "up",
+       "blink": 0
+      }
+     },
+     "keys": [
+      {
+       "t": 1.123,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          -0.194,
+          -1
+         ],
+         "turn": -0.097,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.165,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          -0.161,
+          -1
+         ],
+         "turn": -0.08,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.206,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          -0.103,
+          -1
+         ],
+         "turn": -0.051,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.248,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          -0.026,
+          -1
+         ],
+         "turn": -0.013,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.29,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.064,
+          -1
+         ],
+         "turn": 0.032,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.331,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.161,
+          -1
+         ],
+         "turn": 0.081,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.373,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.261,
+          -1
+         ],
+         "turn": 0.13,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.415,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.357,
+          -1
+         ],
+         "turn": 0.179,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.456,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.445,
+          -1
+         ],
+         "turn": 0.222,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.498,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.518,
+          -1
+         ],
+         "turn": 0.259,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.54,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.57,
+          -1
+         ],
+         "turn": 0.285,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.581,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.598,
+          -1
+         ],
+         "turn": 0.299,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.6,
+          -1
+         ],
+         "turn": 0.3,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.6,
+          -1
+         ],
+         "turn": 0.3,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.79,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.6,
+          -1
+         ],
+         "turn": 0.3,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.6,
+          -1
+         ],
+         "turn": 0.3,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 800,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 30,
+       "b": -60
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "base": "sit",
+      "face": {
+       "look": [
+        0.8,
+        -1
+       ],
+       "turn": 0.3,
+       "mouth": "O",
+       "brows": "up",
+       "blink": 0
+      }
+     },
+     "facing": -1,
+     "keys": [
+      {
+       "t": 1.123,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.789,
+          -1
+         ],
+         "turn": 0.295,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.165,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.731,
+          -1
+         ],
+         "turn": 0.27,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.206,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.63,
+          -1
+         ],
+         "turn": 0.227,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.248,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.496,
+          -1
+         ],
+         "turn": 0.17,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.29,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.339,
+          -1
+         ],
+         "turn": 0.102,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.331,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.168,
+          -1
+         ],
+         "turn": 0.029,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.373,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.007,
+          -1
+         ],
+         "turn": -0.046,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.415,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.175,
+          -1
+         ],
+         "turn": -0.118,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.456,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.328,
+          -1
+         ],
+         "turn": -0.184,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.498,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.456,
+          -1
+         ],
+         "turn": -0.238,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.54,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.548,
+          -1
+         ],
+         "turn": -0.278,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.581,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.596,
+          -1
+         ],
+         "turn": -0.298,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.6,
+          -1
+         ],
+         "turn": -0.3,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.6,
+          -1
+         ],
+         "turn": -0.3,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.6,
+          -1
+         ],
+         "turn": -0.3,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.748,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.6,
+          -1
+         ],
+         "turn": -0.3,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "door",
+     "x": 120,
+     "y": 1505,
+     "color": "#8E9AA6"
+    },
+    {
+     "type": "svg",
+     "id": "ceoPlate",
+     "x": 120,
+     "y": 960,
+     "markup": "<rect x=\"-70\" y=\"-30\" width=\"140\" height=\"56\" rx=\"8\" fill=\"#2B2B30\"/><text x=\"0\" y=\"12\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"34\" fill=\"#F5C33B\">CEO</text>"
+    },
+    {
+     "type": "svg",
+     "id": "chair",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "markup": "<rect x=\"-110\" y=\"-520\" width=\"220\" height=\"250\" rx=\"40\" fill=\"#3A3A44\"/><rect x=\"0\" y=\"-520\" width=\"110\" height=\"250\" rx=\"40\" fill=\"#30303A\"/><rect x=\"-130\" y=\"-200\" width=\"260\" height=\"46\" rx=\"18\" fill=\"#3A3A44\"/><rect x=\"-10\" y=\"-160\" width=\"20\" height=\"120\" fill=\"#55555C\"/><path d=\"M-110 0 L110 0 L0 -50Z\" fill=\"#55555C\"/>"
+    },
+    {
+     "type": "desk",
+     "id": "desk",
+     "x": 800,
+     "y": 1560,
+     "scale": 1.05,
+     "color": "#E3E7EC",
+     "layer": "front"
+    },
+    {
+     "type": "svg",
+     "id": "mug",
+     "x": 640,
+     "y": 1245,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<path d=\"M38 -86 Q78 -86 78 -50 Q78 -18 38 -18\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"14\"/><rect x=\"-50\" y=\"-110\" width=\"96\" height=\"110\" rx=\"12\" fill=\"#E2453C\"/><rect x=\"14\" y=\"-110\" width=\"32\" height=\"110\" rx=\"10\" fill=\"#C23A32\"/><text x=\"-2\" y=\"-46\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"30\" fill=\"#FFFFFF\">#1</text><text x=\"-2\" y=\"-16\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"22\" fill=\"#FFFFFF\">BOSS</text>"
+    },
+    {
+     "type": "svg",
+     "id": "sticky",
+     "x": 930,
+     "y": 1250,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<g transform=\"rotate(-6)\"><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"150\" fill=\"#F7D24A\"/><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"26\" fill=\"#E8BE2E\"/><text x=\"0\" y=\"-92\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">HOW TO</text><text x=\"0\" y=\"-62\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">INTERVIEW</text><text x=\"0\" y=\"-26\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"24\" fill=\"#1E1E22\">1. SMILE</text></g>"
+    },
+    {
+     "type": "thought",
+     "id": "t3",
+     "x": 0,
+     "y": 640,
+     "text": "WHERE'S THE BATHROOM?",
+     "w": 480,
+     "h": 200,
+     "size": 42,
+     "max": 18,
+     "dx": 10,
+     "dy": 90,
+     "layer": "front",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0
+      },
+      {
+       "t": 3.2,
+       "x": 1050,
+       "ease": "linear"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.1,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 0.6,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 1.1,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 1.6,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 2.1,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 0.4,
+     "kind": "pop",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 22.4,
+   "end": 27.8,
+   "set": {
+    "preset": "office",
+    "wall": "#3A4660"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 1000,
+     "zoom": 1
+    },
+    {
+     "t": 3.6,
+     "x": 540,
+     "y": 1010,
+     "zoom": 1.04
+    },
+    {
+     "t": 5.4,
+     "x": 560,
+     "y": 1150,
+     "zoom": 1.08,
+     "ease": "inOut"
+    }
+   ],
+   "actors": [
+    {
+     "id": "w1",
+     "x": 190,
+     "y": 1300,
+     "scale": 0.75,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 16,
+       "b": -105
+      },
+      "armR": {
+       "a": 22,
+       "b": -96
+      },
+      "legL": {
+       "a": 30,
+       "b": -34,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": -18,
+       "b": 62,
+       "la": 0.55,
+       "lb": 0.86
+      },
+      "head": {
+       "tilt": 8
+      },
+      "face": {
+       "look": [
+        0,
+        1
+       ],
+       "mouth": "flat",
+       "brows": "worried",
+       "blink": 1
+      }
+     },
+     "behind": true,
+     "hold": {
+      "R": "phone"
+     },
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0.04,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 16,
+         "b": -105
+        },
+        "armR": {
+         "a": 22,
+         "b": -96
+        },
+        "legL": {
+         "a": 30,
+         "b": -34,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": -18,
+         "b": 62,
+         "la": 0.55,
+         "lb": 0.86
+        },
+        "head": {
+         "tilt": 8
+        },
+        "face": {
+         "look": [
+          0,
+          1
+         ],
+         "mouth": "flat",
+         "brows": "worried",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.123,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 16,
+         "b": -105
+        },
+        "armR": {
+         "a": 22,
+         "b": -96
+        },
+        "legL": {
+         "a": 30,
+         "b": -34,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": -18,
+         "b": 62,
+         "la": 0.55,
+         "lb": 0.86
+        },
+        "head": {
+         "tilt": 8
+        },
+        "face": {
+         "look": [
+          0,
+          1
+         ],
+         "mouth": "flat",
+         "brows": "worried",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.206,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 16,
+         "b": -105
+        },
+        "armR": {
+         "a": 22,
+         "b": -96
+        },
+        "legL": {
+         "a": 30,
+         "b": -34,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": -18,
+         "b": 62,
+         "la": 0.55,
+         "lb": 0.86
+        },
+        "head": {
+         "tilt": 8
+        },
+        "face": {
+         "look": [
+          0,
+          1
+         ],
+         "mouth": "flat",
+         "brows": "worried",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.248,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 16,
+         "b": -105
+        },
+        "armR": {
+         "a": 22,
+         "b": -96
+        },
+        "legL": {
+         "a": 30,
+         "b": -34,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": -18,
+         "b": 62,
+         "la": 0.55,
+         "lb": 0.86
+        },
+        "head": {
+         "tilt": 8
+        },
+        "face": {
+         "look": [
+          0,
+          1
+         ],
+         "mouth": "flat",
+         "brows": "worried",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ]
+    },
+    {
+     "id": "w2",
+     "x": 540,
+     "y": 1300,
+     "scale": 0.75,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 30,
+       "b": -100
+      },
+      "armR": {
+       "a": 30,
+       "b": -100
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "base": "sit",
+      "face": {
+       "look": [
+        0,
+        0.6
+       ],
+       "mouth": "sad",
+       "brows": "sad",
+       "eyes": "tired",
+       "blink": 0
+      }
+     },
+     "behind": true,
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 2.915,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -100
+        },
+        "armR": {
+         "a": 30,
+         "b": -100
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          0.6
+         ],
+         "mouth": "sad",
+         "brows": "sad",
+         "eyes": "tired",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.04,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -100
+        },
+        "armR": {
+         "a": 30,
+         "b": -100
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0,
+          0.6
+         ],
+         "mouth": "sad",
+         "brows": "sad",
+         "eyes": "tired",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ]
+    },
+    {
+     "id": "w3",
+     "x": 890,
+     "y": 1300,
+     "scale": 0.75,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 22,
+       "b": -30
+      },
+      "armR": {
+       "a": 22,
+       "b": -30
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "face": {
+       "look": [
+        0.6,
+        0
+       ],
+       "mouth": "smile",
+       "brows": "worried",
+       "turn": 0.3,
+       "blink": 0
+      }
+     },
+     "behind": true,
+     "facing": -1,
+     "do": [
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "bob",
+       "amp": 4,
+       "rate": 1.4
+      }
+     ],
+     "keys": [
+      {
+       "t": 2.498,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.6,
+          0
+         ],
+         "mouth": "smile",
+         "brows": "worried",
+         "turn": 0.3,
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.6,
+          0
+         ],
+         "mouth": "smile",
+         "brows": "worried",
+         "turn": 0.3,
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 290,
+     "y": 1730,
+     "scale": 0.85,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 22,
+       "b": -30
+      },
+      "armR": {
+       "a": 22,
+       "b": -30
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "face": {
+       "look": [
+        0.3,
+        -1
+       ],
+       "turn": 0.1,
+       "mouth": "O",
+       "brows": "up",
+       "blink": 0
+      }
+     },
+     "keys": [
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.3,
+          -1
+         ],
+         "turn": 0.1,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.79,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.3,
+          -1
+         ],
+         "turn": 0.1,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.3,
+          -1
+         ],
+         "turn": 0.1,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.04,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.312,
+          -0.969
+         ],
+         "turn": 0.108,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.081,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.345,
+          -0.887
+         ],
+         "turn": 0.128,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.123,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.393,
+          -0.766
+         ],
+         "turn": 0.158,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.165,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.451,
+          -0.622
+         ],
+         "turn": 0.194,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.206,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.513,
+          -0.467
+         ],
+         "turn": 0.233,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.248,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.574,
+          -0.315
+         ],
+         "turn": 0.271,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.29,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.628,
+          -0.179
+         ],
+         "turn": 0.305,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.331,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.671,
+          -0.073
+         ],
+         "turn": 0.332,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.373,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.696,
+          -0.011
+         ],
+         "turn": 0.347,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.415,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 5.29,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 5.373,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 700,
+     "y": 1730,
+     "scale": 0.85,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 30,
+       "b": -60
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "base": "sit",
+      "face": {
+       "look": [
+        -0.3,
+        -1
+       ],
+       "turn": -0.1,
+       "mouth": "O",
+       "brows": "up",
+       "blink": 0
+      }
+     },
+     "facing": -1,
+     "keys": [
+      {
+       "t": 2.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.3,
+          -1
+         ],
+         "turn": -0.1,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.3,
+          -1
+         ],
+         "turn": -0.1,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.748,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.3,
+          -1
+         ],
+         "turn": -0.1,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.206,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.299,
+          -0.999
+         ],
+         "turn": -0.099,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.248,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.256,
+          -0.956
+         ],
+         "turn": -0.08,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.29,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.165,
+          -0.865
+         ],
+         "turn": -0.039,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.331,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          -0.039,
+          -0.739
+         ],
+         "turn": 0.017,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.373,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.109,
+          -0.591
+         ],
+         "turn": 0.084,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.415,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.264,
+          -0.436
+         ],
+         "turn": 0.154,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.456,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.414,
+          -0.286
+         ],
+         "turn": 0.221,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.498,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.545,
+          -0.155
+         ],
+         "turn": 0.28,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.54,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.643,
+          -0.057
+         ],
+         "turn": 0.324,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.581,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.695,
+          -0.005
+         ],
+         "turn": 0.348,
+         "mouth": "O",
+         "brows": "up",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 3.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "flat",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "desk",
+     "id": "d1",
+     "x": 190,
+     "y": 1330,
+     "scale": 0.7,
+     "color": "#E3E7EC",
+     "layer": "back"
+    },
+    {
+     "type": "desk",
+     "id": "d2",
+     "x": 540,
+     "y": 1330,
+     "scale": 0.7,
+     "color": "#E3E7EC",
+     "layer": "back"
+    },
+    {
+     "type": "desk",
+     "id": "d3",
+     "x": 890,
+     "y": 1330,
+     "scale": 0.7,
+     "color": "#E3E7EC",
+     "layer": "back"
+    },
+    {
+     "type": "laptop",
+     "x": 240,
+     "y": 1115,
+     "scale": 0.6
+    },
+    {
+     "type": "laptop",
+     "x": 590,
+     "y": 1115,
+     "scale": 0.6
+    },
+    {
+     "type": "laptop",
+     "x": 940,
+     "y": 1115,
+     "scale": 0.6
+    },
+    {
+     "type": "svg",
+     "id": "chair",
+     "x": 290,
+     "y": 1730,
+     "scale": 0.85,
+     "markup": "<rect x=\"-110\" y=\"-520\" width=\"220\" height=\"250\" rx=\"40\" fill=\"#3A3A44\"/><rect x=\"0\" y=\"-520\" width=\"110\" height=\"250\" rx=\"40\" fill=\"#30303A\"/><rect x=\"-130\" y=\"-200\" width=\"260\" height=\"46\" rx=\"18\" fill=\"#3A3A44\"/><rect x=\"-10\" y=\"-160\" width=\"20\" height=\"120\" fill=\"#55555C\"/><path d=\"M-110 0 L110 0 L0 -50Z\" fill=\"#55555C\"/>"
+    },
+    {
+     "type": "desk",
+     "id": "d4",
+     "x": 700,
+     "y": 1790,
+     "scale": 0.85,
+     "color": "#E3E7EC",
+     "layer": "front"
+    },
+    {
+     "type": "thought",
+     "id": "a",
+     "x": 220,
+     "y": 780,
+     "text": "AM I DOING THIS RIGHT?",
+     "w": 440,
+     "h": 210,
+     "size": 44,
+     "max": 13,
+     "dx": -30,
+     "dy": 110,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 0.39,
+       "scale": 0.01
+      },
+      {
+       "t": 0.65,
+       "scale": 1,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "thought",
+     "id": "b",
+     "x": 560,
+     "y": 520,
+     "text": "EVERYONE IS SMARTER THAN ME.",
+     "w": 500,
+     "h": 220,
+     "size": 44,
+     "max": 15,
+     "dx": -20,
+     "dy": 200,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 1.19,
+       "scale": 0.01
+      },
+      {
+       "t": 1.45,
+       "scale": 1,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "thought",
+     "id": "c",
+     "x": 860,
+     "y": 780,
+     "text": "JUST NOD.",
+     "w": 380,
+     "h": 190,
+     "size": 54,
+     "max": 12,
+     "dx": 30,
+     "dy": 110,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 1.99,
+       "scale": 0.01
+      },
+      {
+       "t": 2.25,
+       "scale": 1,
+       "ease": "back"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.4,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 1.2,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 2,
+     "kind": "pop",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 27.8,
+   "end": 30.6,
+   "set": {
+    "preset": "office",
+    "wall": "#3A4660"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.15
+    },
+    {
+     "t": 2.8,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.19
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 22,
+       "b": -30
+      },
+      "armR": {
+       "a": 22,
+       "b": -30
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "face": {
+       "look": [
+        0.7,
+        0
+       ],
+       "turn": 0.35,
+       "mouth": "flat",
+       "brows": "raised",
+       "blink": 0
+      }
+     },
+     "keys": [
+      {
+       "t": 0.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "happy",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 0.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "grin",
+         "eyes": "happy",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "grin",
+         "eyes": "happy",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.79,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "grin",
+         "eyes": "happy",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "grin",
+         "eyes": "happy",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "laugh",
+       "from": 0.7,
+       "amp": 8,
+       "rate": 6
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 800,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 30,
+       "b": -60
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "base": "sit",
+      "face": {
+       "look": [
+        0.7,
+        0
+       ],
+       "turn": 0.35,
+       "mouth": "flat",
+       "brows": "raised",
+       "blink": 0
+      }
+     },
+     "facing": -1,
+     "keys": [
+      {
+       "t": 1.206,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "flat",
+         "brows": "raised",
+         "eyes": "happy",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.331,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "grin",
+         "eyes": "happy",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "grin",
+         "eyes": "happy",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "grin",
+         "eyes": "happy",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.748,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "grin",
+         "eyes": "happy",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "laugh",
+       "from": 1.3,
+       "amp": 8,
+       "rate": 6
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "chair",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "markup": "<rect x=\"-110\" y=\"-520\" width=\"220\" height=\"250\" rx=\"40\" fill=\"#3A3A44\"/><rect x=\"0\" y=\"-520\" width=\"110\" height=\"250\" rx=\"40\" fill=\"#30303A\"/><rect x=\"-130\" y=\"-200\" width=\"260\" height=\"46\" rx=\"18\" fill=\"#3A3A44\"/><rect x=\"-10\" y=\"-160\" width=\"20\" height=\"120\" fill=\"#55555C\"/><path d=\"M-110 0 L110 0 L0 -50Z\" fill=\"#55555C\"/>"
+    },
+    {
+     "type": "desk",
+     "id": "desk",
+     "x": 800,
+     "y": 1560,
+     "scale": 1.05,
+     "color": "#E3E7EC",
+     "layer": "front"
+    },
+    {
+     "type": "svg",
+     "id": "mug",
+     "x": 640,
+     "y": 1245,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<path d=\"M38 -86 Q78 -86 78 -50 Q78 -18 38 -18\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"14\"/><rect x=\"-50\" y=\"-110\" width=\"96\" height=\"110\" rx=\"12\" fill=\"#E2453C\"/><rect x=\"14\" y=\"-110\" width=\"32\" height=\"110\" rx=\"10\" fill=\"#C23A32\"/><text x=\"-2\" y=\"-46\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"30\" fill=\"#FFFFFF\">#1</text><text x=\"-2\" y=\"-16\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"22\" fill=\"#FFFFFF\">BOSS</text>"
+    },
+    {
+     "type": "svg",
+     "id": "sticky",
+     "x": 930,
+     "y": 1250,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<g transform=\"rotate(-6)\"><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"150\" fill=\"#F7D24A\"/><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"26\" fill=\"#E8BE2E\"/><text x=\"0\" y=\"-92\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">HOW TO</text><text x=\"0\" y=\"-62\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">INTERVIEW</text><text x=\"0\" y=\"-26\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"24\" fill=\"#1E1E22\">1. SMILE</text></g>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.7,
+     "kind": "chuckle",
+     "gain": 0.6
+    },
+    {
+     "t": 1.3,
+     "kind": "chuckle",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 30.6,
+   "end": 33.6,
+   "set": {
+    "preset": "office",
+    "wall": "#3A4660"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.15
+    },
+    {
+     "t": 3,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.19
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 22,
+       "b": -30
+      },
+      "armR": {
+       "a": 22,
+       "b": -30
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "face": {
+       "look": [
+        0.7,
+        0
+       ],
+       "turn": 0.35,
+       "mouth": "smile",
+       "eyes": "happy",
+       "brows": "raised",
+       "blink": 0
+      }
+     },
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "smile",
+         "eyes": "happy",
+         "brows": "raised",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.79,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "smile",
+         "eyes": "happy",
+         "brows": "raised",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "smile",
+         "eyes": "happy",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 800,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 30,
+       "b": -60
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "base": "sit",
+      "face": {
+       "look": [
+        0.7,
+        0
+       ],
+       "turn": 0.35,
+       "mouth": "smile",
+       "eyes": "happy",
+       "brows": "raised",
+       "blink": 0
+      }
+     },
+     "facing": -1,
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 2.623,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "smile",
+         "eyes": "happy",
+         "brows": "raised",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "smile",
+         "eyes": "happy",
+         "brows": "raised",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 2.748,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 30,
+         "b": -60
+        },
+        "armR": {
+         "a": 30,
+         "b": -60
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "base": "sit",
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "smile",
+         "eyes": "happy",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "chair",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "markup": "<rect x=\"-110\" y=\"-520\" width=\"220\" height=\"250\" rx=\"40\" fill=\"#3A3A44\"/><rect x=\"0\" y=\"-520\" width=\"110\" height=\"250\" rx=\"40\" fill=\"#30303A\"/><rect x=\"-130\" y=\"-200\" width=\"260\" height=\"46\" rx=\"18\" fill=\"#3A3A44\"/><rect x=\"-10\" y=\"-160\" width=\"20\" height=\"120\" fill=\"#55555C\"/><path d=\"M-110 0 L110 0 L0 -50Z\" fill=\"#55555C\"/>"
+    },
+    {
+     "type": "desk",
+     "id": "desk",
+     "x": 800,
+     "y": 1560,
+     "scale": 1.05,
+     "color": "#E3E7EC",
+     "layer": "front"
+    },
+    {
+     "type": "svg",
+     "id": "mug",
+     "x": 640,
+     "y": 1245,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<path d=\"M38 -86 Q78 -86 78 -50 Q78 -18 38 -18\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"14\"/><rect x=\"-50\" y=\"-110\" width=\"96\" height=\"110\" rx=\"12\" fill=\"#E2453C\"/><rect x=\"14\" y=\"-110\" width=\"32\" height=\"110\" rx=\"10\" fill=\"#C23A32\"/><text x=\"-2\" y=\"-46\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"30\" fill=\"#FFFFFF\">#1</text><text x=\"-2\" y=\"-16\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"22\" fill=\"#FFFFFF\">BOSS</text>"
+    },
+    {
+     "type": "svg",
+     "id": "sticky",
+     "x": 930,
+     "y": 1250,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<g transform=\"rotate(-6)\"><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"150\" fill=\"#F7D24A\"/><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"26\" fill=\"#E8BE2E\"/><text x=\"0\" y=\"-92\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">HOW TO</text><text x=\"0\" y=\"-62\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">INTERVIEW</text><text x=\"0\" y=\"-26\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"24\" fill=\"#1E1E22\">1. SMILE</text></g>"
+    },
+    {
+     "type": "thought",
+     "id": "tb",
+     "x": 320,
+     "y": 800,
+     "text": "OH. IT'S NOT JUST ME.",
+     "w": 470,
+     "h": 210,
+     "size": 44,
+     "max": 12,
+     "dx": -50,
+     "dy": 120,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 0.19,
+       "scale": 0.01
+      },
+      {
+       "t": 0.45,
+       "scale": 1,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "thought",
+     "id": "ti",
+     "x": 770,
+     "y": 800,
+     "text": "OH. IT'S NOT JUST ME.",
+     "w": 470,
+     "h": 210,
+     "size": 44,
+     "max": 12,
+     "dx": 40,
+     "dy": 120,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 0.49,
+       "scale": 0.01
+      },
+      {
+       "t": 0.75,
+       "scale": 1,
+       "ease": "back"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 0.5,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 1.2,
+     "kind": "heart",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 33.6,
+   "end": 35.4,
+   "set": {
+    "preset": "solid",
+    "color": "#B9875A",
+    "vig": 0.2
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1
+    }
+   ],
+   "shake": [
+    {
+     "from": 0.45,
+     "to": 0.9,
+     "amp": 20
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "resume",
+     "x": 540,
+     "y": 960,
+     "rot": -3,
+     "markup": "<rect x=\"-330\" y=\"-430\" width=\"660\" height=\"860\" rx=\"10\" fill=\"#000\" opacity=\"0.15\" transform=\"translate(14 16)\"/><rect x=\"-330\" y=\"-430\" width=\"660\" height=\"860\" rx=\"10\" fill=\"#FFFDF4\"/><text x=\"-260\" y=\"-320\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"64\" fill=\"#1E1E22\">BEN</text><text x=\"-260\" y=\"-262\" font-family=\"Inter Display\" font-weight=\"700\" font-size=\"32\" fill=\"#8A8A90\">RÉSUMÉ</text><rect x=\"-260\" y=\"-200\" width=\"520\" height=\"18\" rx=\"9\" fill=\"#D9D6CC\"/><rect x=\"-260\" y=\"-130\" width=\"440\" height=\"18\" rx=\"9\" fill=\"#D9D6CC\"/><rect x=\"-260\" y=\"-60\" width=\"480\" height=\"18\" rx=\"9\" fill=\"#D9D6CC\"/><rect x=\"-260\" y=\"10\" width=\"300\" height=\"18\" rx=\"9\" fill=\"#D9D6CC\"/><rect x=\"-260\" y=\"80\" width=\"500\" height=\"18\" rx=\"9\" fill=\"#D9D6CC\"/><rect x=\"-260\" y=\"150\" width=\"420\" height=\"18\" rx=\"9\" fill=\"#D9D6CC\"/><rect x=\"-260\" y=\"220\" width=\"360\" height=\"18\" rx=\"9\" fill=\"#D9D6CC\"/><rect x=\"-260\" y=\"290\" width=\"460\" height=\"18\" rx=\"9\" fill=\"#D9D6CC\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "stamp",
+     "x": 540,
+     "y": 1010,
+     "rot": -14,
+     "scale": 2.6,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0.25,
+       "scale": 2.6,
+       "opacity": 0
+      },
+      {
+       "t": 0.3,
+       "opacity": 1
+      },
+      {
+       "t": 0.45,
+       "scale": 1,
+       "ease": "in"
+      }
+     ],
+     "markup": "<rect x=\"-280\" y=\"-110\" width=\"560\" height=\"220\" rx=\"18\" fill=\"#D8433A\"/><rect x=\"-250\" y=\"-82\" width=\"500\" height=\"164\" rx=\"10\" fill=\"#C23A32\"/><text x=\"0\" y=\"52\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"150\" fill=\"#FFFFFF\">HIRED</text>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "whoosh",
+     "gain": 0.5
+    },
+    {
+     "t": 0.45,
+     "kind": "thud",
+     "gain": 0.9
+    },
+    {
+     "t": 0.5,
+     "kind": "hit",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 35.4,
+   "end": 38,
+   "set": {
+    "preset": "office",
+    "wall": "#3A4660"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.15
+    },
+    {
+     "t": 2.6,
+     "x": 555,
+     "y": 1056,
+     "zoom": 1.19
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 22,
+       "b": -30
+      },
+      "armR": {
+       "a": 22,
+       "b": -30
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "face": {
+       "look": [
+        0.7,
+        0
+       ],
+       "turn": 0.35,
+       "mouth": "grin",
+       "eyes": "open",
+       "brows": "raised",
+       "blink": 0
+      }
+     },
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 1.706,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "grin",
+         "eyes": "open",
+         "brows": "raised",
+         "blink": 1
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.79,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "grin",
+         "eyes": "open",
+         "brows": "raised",
+         "blink": 0.5
+        }
+       },
+       "ease": "step"
+      },
+      {
+       "t": 1.831,
+       "pose": {
+        "body": {
+         "dy": 150,
+         "lean": 0
+        },
+        "armL": {
+         "a": 22,
+         "b": -30
+        },
+        "armR": {
+         "a": 22,
+         "b": -30
+        },
+        "legL": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "legR": {
+         "a": 38,
+         "b": -42,
+         "la": 0.55,
+         "lb": 0.78
+        },
+        "face": {
+         "look": [
+          0.7,
+          0
+         ],
+         "turn": 0.35,
+         "mouth": "grin",
+         "eyes": "open",
+         "brows": "raised",
+         "blink": 0
+        }
+       },
+       "ease": "step"
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 800,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "body": {
+       "dy": 150,
+       "lean": 0
+      },
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 30,
+       "b": -60
+      },
+      "legL": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "legR": {
+       "a": 38,
+       "b": -42,
+       "la": 0.55,
+       "lb": 0.78
+      },
+      "base": "sit",
+      "face": {
+       "look": [
+        0.7,
+        0
+       ],
+       "turn": 0.35,
+       "mouth": "grin",
+       "eyes": "open",
+       "brows": "raised",
+       "blink": 0
+      }
+     },
+     "facing": -1,
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": []
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "chair",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "markup": "<rect x=\"-110\" y=\"-520\" width=\"220\" height=\"250\" rx=\"40\" fill=\"#3A3A44\"/><rect x=\"0\" y=\"-520\" width=\"110\" height=\"250\" rx=\"40\" fill=\"#30303A\"/><rect x=\"-130\" y=\"-200\" width=\"260\" height=\"46\" rx=\"18\" fill=\"#3A3A44\"/><rect x=\"-10\" y=\"-160\" width=\"20\" height=\"120\" fill=\"#55555C\"/><path d=\"M-110 0 L110 0 L0 -50Z\" fill=\"#55555C\"/>"
+    },
+    {
+     "type": "desk",
+     "id": "desk",
+     "x": 800,
+     "y": 1560,
+     "scale": 1.05,
+     "color": "#E3E7EC",
+     "layer": "front"
+    },
+    {
+     "type": "svg",
+     "id": "mug",
+     "x": 640,
+     "y": 1245,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<path d=\"M38 -86 Q78 -86 78 -50 Q78 -18 38 -18\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"14\"/><rect x=\"-50\" y=\"-110\" width=\"96\" height=\"110\" rx=\"12\" fill=\"#E2453C\"/><rect x=\"14\" y=\"-110\" width=\"32\" height=\"110\" rx=\"10\" fill=\"#C23A32\"/><text x=\"-2\" y=\"-46\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"30\" fill=\"#FFFFFF\">#1</text><text x=\"-2\" y=\"-16\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"22\" fill=\"#FFFFFF\">BOSS</text>"
+    },
+    {
+     "type": "svg",
+     "id": "sticky",
+     "x": 930,
+     "y": 1250,
+     "scale": 1,
+     "layer": "front",
+     "markup": "<g transform=\"rotate(-6)\"><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"150\" fill=\"#F7D24A\"/><rect x=\"-90\" y=\"-150\" width=\"180\" height=\"26\" fill=\"#E8BE2E\"/><text x=\"0\" y=\"-92\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">HOW TO</text><text x=\"0\" y=\"-62\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"26\" fill=\"#1E1E22\">INTERVIEW</text><text x=\"0\" y=\"-26\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"24\" fill=\"#1E1E22\">1. SMILE</text></g>"
+    },
+    {
+     "type": "thought",
+     "id": "tb",
+     "x": 320,
+     "y": 800,
+     "text": "PIZZA?",
+     "w": 380,
+     "h": 200,
+     "size": 64,
+     "max": 18,
+     "dx": -50,
+     "dy": 120,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 0.19,
+       "scale": 0.01
+      },
+      {
+       "t": 0.4,
+       "scale": 1,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "thought",
+     "id": "ti",
+     "x": 770,
+     "y": 800,
+     "text": "PIZZA?",
+     "w": 380,
+     "h": 200,
+     "size": 64,
+     "max": 18,
+     "dx": 40,
+     "dy": 120,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 0.29,
+       "scale": 0.01
+      },
+      {
+       "t": 0.5,
+       "scale": 1,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "p1",
+     "x": 450,
+     "y": 590,
+     "rot": 18,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 0.49,
+       "scale": 0.01
+      },
+      {
+       "t": 0.7,
+       "scale": 0.8,
+       "ease": "back"
+      }
+     ],
+     "markup": "<g transform=\"scale(1)\"><path d=\"M-70 -60 Q0 -95 70 -60 L0 80Z\" fill=\"#F5C33B\"/><path d=\"M0 -77 Q35 -73 70 -60 L0 80Z\" fill=\"#E0AC2A\"/><path d=\"M-74 -66 Q0 -104 74 -66 L70 -52 Q0 -86 -70 -52Z\" fill=\"#B9773E\"/><circle cx=\"-20\" cy=\"-30\" r=\"14\" fill=\"#D8433A\"/><circle cx=\"22\" cy=\"-22\" r=\"12\" fill=\"#D8433A\"/><circle cx=\"0\" cy=\"20\" r=\"11\" fill=\"#D8433A\"/></g>"
+    },
+    {
+     "type": "svg",
+     "id": "p2",
+     "x": 920,
+     "y": 590,
+     "rot": -12,
+     "layer": "front",
+     "scale": 0.01,
+     "keys": [
+      {
+       "t": 0.59,
+       "scale": 0.01
+      },
+      {
+       "t": 0.8,
+       "scale": 0.8,
+       "ease": "back"
+      }
+     ],
+     "markup": "<g transform=\"scale(1)\"><path d=\"M-70 -60 Q0 -95 70 -60 L0 80Z\" fill=\"#F5C33B\"/><path d=\"M0 -77 Q35 -73 70 -60 L0 80Z\" fill=\"#E0AC2A\"/><path d=\"M-74 -66 Q0 -104 74 -66 L70 -52 Q0 -86 -70 -52Z\" fill=\"#B9773E\"/><circle cx=\"-20\" cy=\"-30\" r=\"14\" fill=\"#D8433A\"/><circle cx=\"22\" cy=\"-22\" r=\"12\" fill=\"#D8433A\"/><circle cx=\"0\" cy=\"20\" r=\"11\" fill=\"#D8433A\"/></g>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 0.3,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 0.6,
+     "kind": "boing",
+     "gain": 0.5
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "mood": "tense",
+   "a": 0,
+   "b": 8.6
+  },
+  {
+   "mood": "playful",
+   "a": 8.6,
+   "b": 16.2
+  },
+  {
+   "mood": "eerie",
+   "a": 16.2,
+   "b": 22.6,
+   "gain": 0.8
+  },
+  {
+   "mood": "tender",
+   "a": 25.4,
+   "b": 33.4
+  },
+  {
+   "mood": "resolve",
+   "a": 33.4,
+   "b": 37.6
+  }
+ ],
+ "beds": [
+  {
+   "name": "room",
+   "a": 0,
+   "b": 22.6,
+   "gain": 0.3
+  },
+  {
+   "name": "silence",
+   "a": 22.6,
+   "b": 28
+  },
+  {
+   "name": "room",
+   "a": 28,
+   "b": 37.6,
+   "gain": 0.3
+  }
+ ]
+}

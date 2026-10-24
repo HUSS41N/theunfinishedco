@@ -1,0 +1,64 @@
+/* What If — generated from tokens.json by tools/build-tokens.mjs. Do not edit by hand. */
+@font-face { font-family: "InterTight"; src: url("../assets/fonts/Inter-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "WIAccentSerif"; src: url("../assets/fonts/InstrumentSerif-Italic.ttf") format("truetype"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "WIMono"; src: url("../assets/fonts/JetBrainsMono-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter6"; src: url("../assets/fonts/Inter-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter4"; src: url("../assets/fonts/Inter-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("../assets/fonts/InterDisplay-Black.ttf") format("truetype"); font-weight: 900; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("../assets/fonts/InterDisplay-ExtraBold.ttf") format("truetype"); font-weight: 800; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("../assets/fonts/InterDisplay-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("../assets/fonts/InstrumentSerif-Italic.ttf") format("truetype"); font-style: italic; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("../assets/fonts/JetBrainsMono-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("../assets/fonts/Inter-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("../assets/fonts/Inter-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+:root {
+  --wi-stage: #FFFFFF;
+  --wi-ink: #111111;
+  --wi-ink-muted: #5C5C5C;
+  --wi-grey: #8A8A8A;
+  --wi-frozen: #B8B8B8;
+  --wi-line-soft: #E6E6E6;
+  --wi-surface-soft: #F4F4F4;
+  --wi-shadow-cast: rgba(17,17,17,0.20);
+  --wi-dark-shot: #141414;
+  --wi-accent-red: #E5322D;
+  --wi-accent-blue: #1F6FEB;
+  --wi-accent-green: #2E9E5B;
+  --wi-accent-pink: #E8508A;
+  --wi-accent-brick: #B5462E;
+  --wi-accent-yellow: #F2B705;
+  --wi-accent-amber: #C98A00;
+  --wi-accent-gold-text: #8A6200;
+  --wi-accent-orange: #F07C22;
+  --wi-accent-tan: #A8865A;
+  --wi-font-display: "InterTight", "Inter", system-ui, sans-serif;
+  --wi-font-accent: "WIAccentSerif", "Instrument Serif", Georgia, serif;
+  --wi-font-mono: "WIMono", "JetBrains Mono", ui-monospace, monospace;
+  --wi-font-ui: "Inter6", "Inter", system-ui, sans-serif;
+  --wi-font-text: "Inter4", "Inter", system-ui, sans-serif;
+  --wi-font-hand: "Chalkboard SE", "Bradley Hand", "Comic Neue", cursive;
+  --wi-space-1: 8px;
+  --wi-space-2: 16px;
+  --wi-space-3: 24px;
+  --wi-space-4: 40px;
+  --wi-space-5: 64px;
+  --wi-space-6: 112px;
+  --wi-radius-bubble: 30px;
+  --wi-radius-message: 34px;
+  --wi-radius-phone: 84px;
+  --wi-radius-card: 18px;
+  --wi-radius-pill: 999px;
+  --wi-dur-twos: 83ms;
+  --wi-dur-pop: 150ms;
+  --wi-dur-premise: 1300ms;
+  --wi-dur-hook: 2000ms;
+  --wi-dur-blink: 83ms;
+  --wi-dur-shake: 250ms;
+  --wi-dur-silence: 700–1500ms;
+  --wi-ease: cubic-bezier(0.45, 0, 0.55, 1);
+  --wi-ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --wi-web-display: 72px;
+  --wi-web-title: 28px;
+  --wi-web-body: 17px;
+  --wi-web-meta: 13px;
+}

@@ -1,0 +1,56 @@
+
+  "Everyone Has a Number. His Is 4%."
+  33 chars   score 100/100
+    ok              33 characters, inside the 60-character desktop cut
+    ok              carries a concrete figure (4%)
+
+  "Mom 100%. Boss 41%. Himself 4%."
+  31 chars   score 100/100
+    ok              31 characters, inside the 60-character desktop cut
+    ok              carries a concrete figure (100%, 41%, 4%)
+
+  "4% and Rising"
+  13 chars   score 100/100
+    ok              13 characters, inside the 60-character desktop cut
+    ok              carries a concrete figure (4%)
+
+  "The Mirror Said 4%"
+  18 chars   score 100/100
+    ok              18 characters, inside the 60-character desktop cut
+    ok              carries a concrete figure (4%)
+
+  "What If Likes Floated Above Heads?"
+  34 chars   score 94/100
+    x  no-number    no number, date or name - the most reliable single fix
+    ok              34 characters, inside the 60-character desktop cut
+    ok              open question in the title
+
+  "What If You Saw Who Really Likes You?"
+  37 chars   score 94/100
+    x  no-number    no number, date or name - the most reliable single fix
+    ok              37 characters, inside the 60-character desktop cut
+    ok              open question in the title
+
+  "How Much Do You Like Yourself?"
+  30 chars   score 94/100
+    x  no-number    no number, date or name - the most reliable single fix
+    ok              30 characters, inside the 60-character desktop cut
+    ok              open question in the title
+
+  "The Number Above Your Head"
+  26 chars   score 90/100
+    x  no-number    no number, date or name - the most reliable single fix
+    ok              26 characters, inside the 60-character desktop cut
+
+  "He Saw Everyone's Number. Then His."
+  35 chars   score 90/100
+    x  no-number    no number, date or name - the most reliable single fix
+    ok              35 characters, inside the 60-character desktop cut
+
+  "What If You Could See How Much People Like You?"
+  47 chars   score 80/100
+    x  mobile       a mobile feed shows about "What If You Could See How Much People..." - check the subject survives
+    x  no-number    no number, date or name - the most reliable single fix
+    ok              47 characters, inside the 60-character desktop cut
+    ok              open question in the title
+

@@ -1,0 +1,182 @@
+{
+ "voice": "am_michael",
+ "phrases": [
+  {
+   "key": "s1a",
+   "text": "Bro, imagine you're just lying in bed,",
+   "start": 0.35,
+   "end": 2.684
+  },
+  {
+   "key": "s1b",
+   "text": "doing absolutely nothing\u2026",
+   "start": 2.784,
+   "end": 4.338
+  },
+  {
+   "key": "s1c",
+   "text": "and your phone sends you this.",
+   "start": 4.458,
+   "end": 6.083
+  },
+  {
+   "key": "s2a",
+   "text": "Obviously, he thinks it's some dumb prank.",
+   "start": 7.1,
+   "end": 9.342
+  },
+  {
+   "key": "s2b",
+   "text": "He closes the app.",
+   "start": 9.592,
+   "end": 10.845
+  },
+  {
+   "key": "s2c",
+   "text": "Opens it again.",
+   "start": 11.145,
+   "end": 12.304
+  },
+  {
+   "key": "s2d",
+   "text": "Same message.",
+   "start": 12.554,
+   "end": 13.55
+  },
+  {
+   "key": "s2e",
+   "text": "Thirty-six seconds left.",
+   "start": 13.75,
+   "end": 15.272
+  },
+  {
+   "key": "s3a",
+   "text": "So he runs outside.",
+   "start": 15.472,
+   "end": 16.852
+  },
+  {
+   "key": "s3b",
+   "text": "And literally one second later,",
+   "start": 17.102,
+   "end": 18.797
+  },
+  {
+   "key": "s3c",
+   "text": "a flowerpot smashes into the ground",
+   "start": 18.847,
+   "end": 20.967
+  },
+  {
+   "key": "s3d",
+   "text": "right where he was about to step.",
+   "start": 21.017,
+   "end": 22.662
+  },
+  {
+   "key": "s3e",
+   "text": "Okay.",
+   "start": 22.862,
+   "end": 23.521
+  },
+  {
+   "key": "s3f",
+   "text": "Not funny anymore.",
+   "start": 23.871,
+   "end": 25.111
+  },
+  {
+   "key": "s4a",
+   "text": "Now he's running around like a maniac,",
+   "start": 25.311,
+   "end": 27.62
+  },
+  {
+   "key": "s4b",
+   "text": "dodging literally everything.",
+   "start": 27.72,
+   "end": 29.473
+  },
+  {
+   "key": "s4c",
+   "text": "Cars.",
+   "start": 29.773,
+   "end": 30.436
+  },
+  {
+   "key": "s4d",
+   "text": "Buildings.",
+   "start": 30.886,
+   "end": 31.637
+  },
+  {
+   "key": "s4e",
+   "text": "Other people.",
+   "start": 32.087,
+   "end": 32.967
+  },
+  {
+   "key": "s4f",
+   "text": "Then he checks the phone again.",
+   "start": 33.467,
+   "end": 34.959
+  },
+  {
+   "key": "s5a",
+   "text": "Twelve seconds left.",
+   "start": 37.4,
+   "end": 38.662
+  },
+  {
+   "key": "s5b",
+   "text": "He hides in the safest place he can find.",
+   "start": 38.962,
+   "end": 41.551
+  },
+  {
+   "key": "s5c",
+   "text": "Locks the door.",
+   "start": 41.901,
+   "end": 42.892
+  },
+  {
+   "key": "s5d",
+   "text": "Sits down.",
+   "start": 43.292,
+   "end": 44.162
+  },
+  {
+   "key": "s5e",
+   "text": "And just\u2026 waits.",
+   "start": 44.562,
+   "end": 45.596
+  },
+  {
+   "key": "s6a",
+   "text": "Zero.",
+   "start": 49.233,
+   "end": 49.891
+  },
+  {
+   "key": "s6b",
+   "text": "Nothing happens.",
+   "start": 51.091,
+   "end": 52.168
+  },
+  {
+   "key": "s6c",
+   "text": "He starts laughing.",
+   "start": 52.868,
+   "end": 54.007
+  },
+  {
+   "key": "s6d",
+   "text": "Then his phone buzzes again.",
+   "start": 54.807,
+   "end": 56.364
+  }
+ ],
+ "t_notify": 6.233,
+ "zero": 49.233,
+ "n0": 43
+}

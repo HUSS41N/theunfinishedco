@@ -1,0 +1,192 @@
+[
+ {
+  "number": "01",
+  "slug": "01-shadow",
+  "title": "What If Your Shadow Got Tired of You?",
+  "accent": "red",
+  "flat": {
+   "duration": 40.8,
+   "cover": "v2/series2/01-shadow/cover.png",
+   "src": "v2/series2/01-shadow/01-shadow.mp4"
+  },
+  "stick": {
+   "duration": 40.8,
+   "cover": "v2/series2/01-shadow/cover-stick.png",
+   "src": "v2/series2/01-shadow/01-shadow-stick.mp4"
+  },
+  "duration": 40.8,
+  "cover": "v2/series2/01-shadow/cover.png",
+  "src": "v2/series2/01-shadow/01-shadow.mp4"
+ },
+ {
+  "number": "02",
+  "slug": "02-lie-bricks",
+  "title": "What If Every Lie Added a Brick?",
+  "accent": "brick",
+  "flat": {
+   "duration": 44.9,
+   "cover": "v2/series2/02-lie-bricks/cover.png",
+   "src": "v2/series2/02-lie-bricks/02-lie-bricks.mp4"
+  },
+  "stick": {
+   "duration": 44.9,
+   "cover": "v2/series2/02-lie-bricks/cover-stick.png",
+   "src": "v2/series2/02-lie-bricks/02-lie-bricks-stick.mp4"
+  },
+  "duration": 44.9,
+  "cover": "v2/series2/02-lie-bricks/cover.png",
+  "src": "v2/series2/02-lie-bricks/02-lie-bricks.mp4"
+ },
+ {
+  "number": "03",
+  "slug": "03-pause-time",
+  "title": "He Paused Time. He Aged 50 Years.",
+  "accent": "yellow",
+  "flat": {
+   "duration": 44.6,
+   "cover": "v2/series2/03-pause-time/cover.png",
+   "src": "v2/series2/03-pause-time/03-pause-time.mp4"
+  },
+  "stick": {
+   "duration": 44.6,
+   "cover": "v2/series2/03-pause-time/cover-stick.png",
+   "src": "v2/series2/03-pause-time/03-pause-time-stick.mp4"
+  },
+  "duration": 44.6,
+  "cover": "v2/series2/03-pause-time/cover.png",
+  "src": "v2/series2/03-pause-time/03-pause-time.mp4"
+ },
+ {
+  "number": "04",
+  "slug": "04-like-meter",
+  "title": "Everyone Has a Number. His Is 4%.",
+  "accent": "blue",
+  "flat": {
+   "duration": 42.3,
+   "cover": "v2/series2/04-like-meter/cover.png",
+   "src": "v2/series2/04-like-meter/04-like-meter.mp4"
+  },
+  "stick": {
+   "duration": 42.3,
+   "cover": "v2/series2/04-like-meter/cover-stick.png",
+   "src": "v2/series2/04-like-meter/04-like-meter-stick.mp4"
+  },
+  "duration": 42.3,
+  "cover": "v2/series2/04-like-meter/cover.png",
+  "src": "v2/series2/04-like-meter/04-like-meter.mp4"
+ },
+ {
+  "number": "05",
+  "slug": "05-flower-steps",
+  "title": "365 Days. One Loop.",
+  "accent": "pink",
+  "flat": {
+   "duration": 43.8,
+   "cover": "v2/series2/05-flower-steps/cover.png",
+   "src": "v2/series2/05-flower-steps/05-flower-steps.mp4"
+  },
+  "stick": {
+   "duration": 43.8,
+   "cover": "v2/series2/05-flower-steps/cover-stick.png",
+   "src": "v2/series2/05-flower-steps/05-flower-steps-stick.mp4"
+  },
+  "duration": 43.8,
+  "cover": "v2/series2/05-flower-steps/cover.png",
+  "src": "v2/series2/05-flower-steps/05-flower-steps.mp4"
+ },
+ {
+  "number": "06",
+  "slug": "06-word-price",
+  "title": "\"I Love You\" Costs $1,280",
+  "accent": "green",
+  "flat": {
+   "duration": 45,
+   "cover": "v2/series2/06-word-price/cover.png",
+   "src": "v2/series2/06-word-price/06-word-price.mp4"
+  },
+  "stick": {
+   "duration": 45,
+   "cover": "v2/series2/06-word-price/cover-stick.png",
+   "src": "v2/series2/06-word-price/06-word-price-stick.mp4"
+  },
+  "duration": 45,
+  "cover": "v2/series2/06-word-price/cover.png",
+  "src": "v2/series2/06-word-price/06-word-price.mp4"
+ },
+ {
+  "number": "07",
+  "slug": "07-public-thoughts",
+  "title": "What If Your Thoughts Were Public?",
+  "accent": "blue",
+  "flat": {
+   "duration": 44.4,
+   "cover": "v2/series2/07-public-thoughts/cover.png",
+   "src": "v2/series2/07-public-thoughts/07-public-thoughts.mp4"
+  },
+  "stick": {
+   "duration": 44.4,
+   "cover": "v2/series2/07-public-thoughts/cover-stick.png",
+   "src": "v2/series2/07-public-thoughts/07-public-thoughts-stick.mp4"
+  },
+  "duration": 44.4,
+  "cover": "v2/series2/07-public-thoughts/cover.png",
+  "src": "v2/series2/07-public-thoughts/07-public-thoughts.mp4"
+ },
+ {
+  "number": "08",
+  "slug": "08-gravity-break",
+  "title": "What If Gravity Took a 10-Second Break?",
+  "accent": "red",
+  "flat": {
+   "duration": 44.1,
+   "cover": "v2/series2/08-gravity-break/cover.png",
+   "src": "v2/series2/08-gravity-break/08-gravity-break.mp4"
+  },
+  "stick": {
+   "duration": 44.1,
+   "cover": "v2/series2/08-gravity-break/cover-stick.png",
+   "src": "v2/series2/08-gravity-break/08-gravity-break-stick.mp4"
+  },
+  "duration": 44.1,
+  "cover": "v2/series2/08-gravity-break/cover.png",
+  "src": "v2/series2/08-gravity-break/08-gravity-break.mp4"
+ },
+ {
+  "number": "09",
+  "slug": "09-age-eight",
+  "title": "What If You Met Yourself at Age 8?",
+  "accent": "red",
+  "flat": {
+   "duration": 44.8,
+   "cover": "v2/series2/09-age-eight/cover.png",
+   "src": "v2/series2/09-age-eight/09-age-eight.mp4"
+  },
+  "stick": {
+   "duration": 44.8,
+   "cover": "v2/series2/09-age-eight/cover-stick.png",
+   "src": "v2/series2/09-age-eight/09-age-eight-stick.mp4"
+  },
+  "duration": 44.8,
+  "cover": "v2/series2/09-age-eight/cover.png",
+  "src": "v2/series2/09-age-eight/09-age-eight.mp4"
+ },
+ {
+  "number": "10",
+  "slug": "10-future-text",
+  "title": "What If You Got a Text From Yourself?",
+  "accent": "blue",
+  "flat": {
+   "duration": 44.6,
+   "cover": "v2/series2/10-future-text/cover.png",
+   "src": "v2/series2/10-future-text/10-future-text.mp4"
+  },
+  "stick": {
+   "duration": 44.6,
+   "cover": "v2/series2/10-future-text/cover-stick.png",
+   "src": "v2/series2/10-future-text/10-future-text-stick.mp4"
+  },
+  "duration": 44.6,
+  "cover": "v2/series2/10-future-text/cover.png",
+  "src": "v2/series2/10-future-text/10-future-text.mp4"
+ }
+]

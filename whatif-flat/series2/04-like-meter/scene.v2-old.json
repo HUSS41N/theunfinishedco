@@ -1,0 +1,3884 @@
+{
+ "meta": {
+  "title": "Everyone Has a Number. His Is 4%.",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 40
+ },
+ "cast": {
+  "ben": {
+   "skin": "tan",
+   "hair": {
+    "style": "quiff",
+    "color": "black"
+   },
+   "top": {
+    "style": "shirt",
+    "color": "teal"
+   },
+   "bottom": {
+    "style": "pants",
+    "color": "navy"
+   },
+   "shoes": {
+    "color": "brown"
+   }
+  },
+  "mia": {
+   "skin": "peach",
+   "hair": {
+    "style": "long",
+    "color": "ginger"
+   },
+   "top": {
+    "style": "tank",
+    "color": "coral"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "denim"
+   },
+   "shoes": {
+    "color": "white"
+   }
+  },
+  "boss": {
+   "skin": "fair",
+   "build": {
+    "width": 1.12
+   },
+   "hair": {
+    "style": "bald",
+    "color": "grey"
+   },
+   "top": {
+    "style": "jacket",
+    "color": "navy",
+    "detail": "white"
+   },
+   "bottom": {
+    "style": "pants",
+    "color": "charcoal"
+   },
+   "shoes": {
+    "color": "black"
+   },
+   "accessories": [
+    "mustache"
+   ]
+  },
+  "gym": {
+   "skin": "deep",
+   "build": {
+    "width": 1.15
+   },
+   "hair": {
+    "style": "buzz",
+    "color": "black"
+   },
+   "top": {
+    "style": "tank",
+    "color": "grey"
+   },
+   "bottom": {
+    "style": "shorts",
+    "color": "black"
+   },
+   "shoes": {
+    "color": "white"
+   },
+   "accessories": [
+    "headphones"
+   ]
+  }
+ },
+ "shots": [
+  {
+   "start": 0,
+   "end": 2.6,
+   "set": {
+    "preset": "room",
+    "wall": "#E7D5BE",
+    "floor": "#9C6B44",
+    "window": false
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 550,
+     "y": 1030,
+     "zoom": 1.34
+    },
+    {
+     "t": 2.6,
+     "x": 560,
+     "y": 1020,
+     "zoom": 1.46
+    }
+   ],
+   "actors": [
+    {
+     "id": "mia",
+     "x": 740,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 22,
+       "b": -40
+      },
+      "armR": {
+       "a": 30,
+       "b": -120
+      }
+     },
+     "facing": -1,
+     "hold": {
+      "R": {
+       "type": "coffee",
+       "scale": 0.7
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "look": [
+       -1,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.2,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "brows": "raised",
+        "look": [
+         -1,
+         0
+        ]
+       },
+       "dur": 0.1
+      },
+      {
+       "t": 1.8,
+       "face": {
+        "eyes": "bored",
+        "mouth": "flat",
+        "brows": "flat",
+        "look": [
+         -0.4,
+         0.3
+        ]
+       },
+       "dur": 0.1
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 360,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 22,
+       "b": -40
+      },
+      "armR": {
+       "a": 70,
+       "b": -60
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "grin",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.2
+     },
+     "keys": [
+      {
+       "t": 2,
+       "face": {
+        "eyes": "wide",
+        "mouth": "flat",
+        "brows": "worried",
+        "look": [
+         1,
+         -0.6
+        ],
+        "turn": 0.2
+       },
+       "dur": 0.08
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "talk",
+       "from": 0.3,
+       "to": 1.9,
+       "closed": "grin"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "table",
+     "x": 550,
+     "y": 1240,
+     "layer": "front",
+     "markup": "<rect x=\"-330\" y=\"0\" width=\"660\" height=\"34\" rx=\"8\" fill=\"#9C6B44\"/><rect x=\"-330\" y=\"26\" width=\"660\" height=\"14\" fill=\"#7A5232\"/><rect x=\"-290\" y=\"34\" width=\"34\" height=\"300\" fill=\"#7A5232\"/><rect x=\"256\" y=\"34\" width=\"34\" height=\"300\" fill=\"#7A5232\"/><g transform=\"translate(-120 0)\"><path d=\"M-26 -60 L26 -60 L21 0 L-21 0Z\" fill=\"#F2F0EC\"/><rect x=\"-28\" y=\"-68\" width=\"56\" height=\"12\" rx=\"5\" fill=\"#7A5232\"/></g><g transform=\"translate(130 0)\"><path d=\"M-26 -60 L26 -60 L21 0 L-21 0Z\" fill=\"#F2F0EC\"/><rect x=\"-28\" y=\"-68\" width=\"56\" height=\"12\" rx=\"5\" fill=\"#7A5232\"/></g>"
+    },
+    {
+     "type": "tag",
+     "id": "meter",
+     "x": 740,
+     "y": 880,
+     "layer": "front",
+     "text": "72%",
+     "color": "#2E9E5B",
+     "size": 60,
+     "scale": 1,
+     "keys": [
+      {
+       "t": 1.2,
+       "text": "31%",
+       "color": "#E8892E",
+       "ease": "step"
+      },
+      {
+       "t": 1.2,
+       "scale": 1.25,
+       "ease": "step"
+      },
+      {
+       "t": 1.38,
+       "scale": 1
+      },
+      {
+       "t": 1.8,
+       "text": "12%",
+       "color": "#E2453C",
+       "ease": "step"
+      },
+      {
+       "t": 1.8,
+       "scale": 1.25,
+       "ease": "step"
+      },
+      {
+       "t": 1.98,
+       "scale": 1
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "x": 420,
+     "y": 870,
+     "layer": "front",
+     "markup": "<rect x=\"-50\" y=\"-245.6\" width=\"259.20000000000005\" height=\"189.6\" rx=\"40\" fill=\"#FFFFFF\"/><rect x=\"-30\" y=\"-68\" width=\"219.20000000000005\" height=\"12\" rx=\"6\" fill=\"#000\" fill-opacity=\"0.06\"/><path d=\"M-20 -60 L0 0 L50 -60Z\" fill=\"#FFFFFF\"/><text x=\"79.60000000000002\" y=\"-184.39999999999998\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"40\" fill=\"#1E1E22\">SO, I'M</text><text x=\"79.60000000000002\" y=\"-139.59999999999997\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"40\" fill=\"#1E1E22\">INTO</text><text x=\"79.60000000000002\" y=\"-94.79999999999997\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"40\" fill=\"#1E1E22\">CRYPTO–</text>",
+     "opacity": 0,
+     "scale": 0.6,
+     "keys": [
+      {
+       "t": 0.3,
+       "opacity": 0,
+       "scale": 0.6
+      },
+      {
+       "t": 0.48,
+       "opacity": 1,
+       "scale": 1,
+       "ease": "back"
+      },
+      {
+       "t": 2.48,
+       "opacity": 1,
+       "scale": 1
+      },
+      {
+       "t": 2.6,
+       "opacity": 0,
+       "scale": 0.9
+      }
+     ]
+    }
+   ],
+   "text": [
+    {
+     "text": "WHAT IF YOU COULD SEE\nHOW MUCH PEOPLE LIKE YOU?",
+     "x": 540,
+     "y": 250,
+     "size": 66,
+     "font": "display",
+     "from": 0.12,
+     "to": 2.55,
+     "pop": true,
+     "shadow": true
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "pop",
+     "gain": 0.4
+    },
+    {
+     "t": 1.2,
+     "kind": "buzz",
+     "gain": 0.4
+    },
+    {
+     "t": 1.8,
+     "kind": "buzz",
+     "gain": 0.5
+    },
+    {
+     "t": 2,
+     "kind": "hit",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 2.6,
+   "end": 5,
+   "set": {
+    "preset": "room",
+    "wall": "#E7D5BE",
+    "floor": "#9C6B44",
+    "window": false
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 420,
+     "y": 960,
+     "zoom": 1.85
+    },
+    {
+     "t": 1.3,
+     "x": 430,
+     "y": 960,
+     "zoom": 1.9
+    },
+    {
+     "t": 1.5,
+     "x": 660,
+     "y": 950,
+     "zoom": 1.75
+    },
+    {
+     "t": 2.4,
+     "x": 680,
+     "y": 950,
+     "zoom": 1.85
+    }
+   ],
+   "actors": [
+    {
+     "id": "mia",
+     "x": 740,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 22,
+       "b": -40
+      },
+      "armR": {
+       "a": 30,
+       "b": -120
+      }
+     },
+     "facing": -1,
+     "hold": {
+      "R": {
+       "type": "coffee",
+       "scale": 0.7
+      }
+     },
+     "face": {
+      "eyes": "bored",
+      "mouth": "flat",
+      "look": [
+       -1,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.6,
+       "face": {
+        "eyes": "bored",
+        "mouth": "sad",
+        "brows": "worried",
+        "look": [
+         -1,
+         0
+        ]
+       },
+       "dur": 0.1
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 360,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 22,
+       "b": -40
+      },
+      "armR": {
+       "a": 22,
+       "b": -40
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smirk",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.2
+     },
+     "keys": [
+      {
+       "t": 0.4,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 86,
+         "b": -24
+        },
+        "armR": {
+         "a": 86,
+         "b": -24
+        }
+       },
+       "face": {
+        "eyes": "happy",
+        "mouth": "grin",
+        "brows": "raised",
+        "look": [
+         1,
+         0
+        ],
+        "turn": 0.2
+       },
+       "dur": 0.2
+      },
+      {
+       "t": 0.7,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 96,
+         "b": -34
+        },
+        "armR": {
+         "a": 96,
+         "b": -34
+        }
+       },
+       "dur": 0.08
+      },
+      {
+       "t": 0.85,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 86,
+         "b": -24
+        },
+        "armR": {
+         "a": 86,
+         "b": -24
+        }
+       },
+       "dur": 0.08
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "table",
+     "x": 550,
+     "y": 1240,
+     "layer": "front",
+     "markup": "<rect x=\"-330\" y=\"0\" width=\"660\" height=\"34\" rx=\"8\" fill=\"#9C6B44\"/><rect x=\"-330\" y=\"26\" width=\"660\" height=\"14\" fill=\"#7A5232\"/><rect x=\"-290\" y=\"34\" width=\"34\" height=\"300\" fill=\"#7A5232\"/><rect x=\"256\" y=\"34\" width=\"34\" height=\"300\" fill=\"#7A5232\"/><g transform=\"translate(-120 0)\"><path d=\"M-26 -60 L26 -60 L21 0 L-21 0Z\" fill=\"#F2F0EC\"/><rect x=\"-28\" y=\"-68\" width=\"56\" height=\"12\" rx=\"5\" fill=\"#7A5232\"/></g><g transform=\"translate(130 0)\"><path d=\"M-26 -60 L26 -60 L21 0 L-21 0Z\" fill=\"#F2F0EC\"/><rect x=\"-28\" y=\"-68\" width=\"56\" height=\"12\" rx=\"5\" fill=\"#7A5232\"/></g>"
+    },
+    {
+     "type": "tag",
+     "id": "meter",
+     "x": 740,
+     "y": 880,
+     "layer": "front",
+     "text": "12%",
+     "color": "#E2453C",
+     "size": 60,
+     "scale": 1,
+     "keys": [
+      {
+       "t": 1.4,
+       "text": "9%",
+       "color": "#E2453C",
+       "ease": "step"
+      },
+      {
+       "t": 1.4,
+       "scale": 1.25,
+       "ease": "step"
+      },
+      {
+       "t": 1.5799999999999998,
+       "scale": 1
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "pew",
+     "x": 600,
+     "y": 1080,
+     "layer": "front",
+     "opacity": 0,
+     "markup": "<text x=\"0\" y=\"0\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"46\" fill=\"#1E1E22\">PEW PEW</text>",
+     "keys": [
+      {
+       "t": 0.7,
+       "opacity": 0,
+       "scale": 0.6
+      },
+      {
+       "t": 0.8799999999999999,
+       "opacity": 1,
+       "scale": 1,
+       "ease": "back"
+      },
+      {
+       "t": 1.2799999999999998,
+       "opacity": 1,
+       "scale": 1
+      },
+      {
+       "t": 1.4,
+       "opacity": 0,
+       "scale": 0.9
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.7,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 0.85,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 1.4,
+     "kind": "buzz",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 5,
+   "end": 7.6,
+   "set": {
+    "preset": "office"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1050,
+     "zoom": 1.32
+    },
+    {
+     "t": 2.6,
+     "x": 560,
+     "y": 1040,
+     "zoom": 1.38
+    }
+   ],
+   "actors": [
+    {
+     "id": "boss",
+     "x": 780,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "stand",
+      "armL": {
+       "a": 40,
+       "b": -95
+      },
+      "armR": {
+       "a": 24,
+       "b": -120
+      }
+     },
+     "facing": -1,
+     "hold": {
+      "R": "coffee"
+     },
+     "face": {
+      "eyes": "bored",
+      "mouth": "flat",
+      "look": [
+       -1,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.4,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "brows": "raised",
+        "look": [
+         -1,
+         0
+        ]
+       },
+       "dur": 0.1
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 360,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 60,
+       "b": 90
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "brows": "raised",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.2
+     },
+     "keys": [
+      {
+       "t": 1.5,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "brows": "raised",
+        "look": [
+         0.6,
+         -1
+        ],
+        "turn": 0.2
+       },
+       "dur": 0.1
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "talk",
+       "from": 0.2,
+       "to": 1,
+       "closed": "grin"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "tag",
+     "id": "meter",
+     "x": 780,
+     "y": 740,
+     "layer": "front",
+     "text": "41%",
+     "color": "#E8892E",
+     "size": 60,
+     "scale": 1,
+     "keys": [
+      {
+       "t": 1.4,
+       "text": "43%",
+       "color": "#E8892E",
+       "ease": "step"
+      },
+      {
+       "t": 1.4,
+       "scale": 1.25,
+       "ease": "step"
+      },
+      {
+       "t": 1.5799999999999998,
+       "scale": 1
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "x": 420,
+     "y": 760,
+     "layer": "front",
+     "markup": "<rect x=\"-50\" y=\"-217.76\" width=\"356.48\" height=\"161.76\" rx=\"40\" fill=\"#FFFFFF\"/><rect x=\"-30\" y=\"-68\" width=\"316.48\" height=\"12\" rx=\"6\" fill=\"#000\" fill-opacity=\"0.06\"/><path d=\"M-20 -60 L0 0 L50 -60Z\" fill=\"#FFFFFF\"/><text x=\"128.24\" y=\"-150.32\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"48\" fill=\"#1E1E22\">LOVE THE</text><text x=\"128.24\" y=\"-96.55999999999999\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"48\" fill=\"#1E1E22\">TIE, SIR!</text>",
+     "opacity": 0,
+     "scale": 0.6,
+     "keys": [
+      {
+       "t": 0.2,
+       "opacity": 0,
+       "scale": 0.6
+      },
+      {
+       "t": 0.38,
+       "opacity": 1,
+       "scale": 1,
+       "ease": "back"
+      },
+      {
+       "t": 1.2799999999999998,
+       "opacity": 1,
+       "scale": 1
+      },
+      {
+       "t": 1.4,
+       "opacity": 0,
+       "scale": 0.9
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "pop",
+     "gain": 0.4
+    },
+    {
+     "t": 1.4,
+     "kind": "ping",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 7.6,
+   "end": 10,
+   "set": {
+    "preset": "solid",
+    "color": "#CCD6E0",
+    "vig": 0.15
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1050,
+     "zoom": 1.32
+    },
+    {
+     "t": 2.4,
+     "x": 560,
+     "y": 1040,
+     "zoom": 1.4
+    }
+   ],
+   "actors": [
+    {
+     "id": "gym",
+     "x": 790,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "stand",
+      "armL": {
+       "a": 24,
+       "b": -40
+      },
+      "armR": {
+       "a": 24,
+       "b": -40
+      }
+     },
+     "facing": -1,
+     "face": {
+      "eyes": "bored",
+      "mouth": "flat",
+      "look": [
+       -1,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.3,
+       "face": {
+        "eyes": "bored",
+        "mouth": "smirk",
+        "brows": "raised",
+        "look": [
+         -1,
+         0.2
+        ]
+       },
+       "dur": 0.1
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 360,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "stand",
+     "face": {
+      "eyes": "open",
+      "mouth": "grin",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.2
+     },
+     "keys": [
+      {
+       "t": 0.5,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 100,
+         "b": -110
+        },
+        "armR": {
+         "a": 100,
+         "b": -110
+        }
+       },
+       "face": {
+        "eyes": "angry",
+        "mouth": "teeth",
+        "brows": "angry",
+        "look": [
+         1,
+         0
+        ],
+        "turn": 0.2
+       },
+       "dur": 0.25
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "tremble",
+       "from": 0.7,
+       "amp": 3
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "gym",
+     "x": 0,
+     "y": 0,
+     "markup": "<rect x=\"-600\" y=\"1500\" width=\"2400\" height=\"600\" fill=\"#5C6470\"/><rect x=\"-600\" y=\"1500\" width=\"2400\" height=\"14\" fill=\"#48505C\"/><rect x=\"40\" y=\"1080\" width=\"1000\" height=\"16\" fill=\"#3A3A40\"/><g transform=\"translate(120 1060)\"><rect x=\"-40\" y=\"-8\" width=\"80\" height=\"16\" fill=\"#55555C\"/><rect x=\"-60\" y=\"-30\" width=\"24\" height=\"60\" rx=\"6\" fill=\"#2B2B30\"/><rect x=\"36\" y=\"-30\" width=\"24\" height=\"60\" rx=\"6\" fill=\"#2B2B30\"/></g><g transform=\"translate(290 1060)\"><rect x=\"-40\" y=\"-8\" width=\"80\" height=\"16\" fill=\"#55555C\"/><rect x=\"-60\" y=\"-30\" width=\"24\" height=\"60\" rx=\"6\" fill=\"#2B2B30\"/><rect x=\"36\" y=\"-30\" width=\"24\" height=\"60\" rx=\"6\" fill=\"#2B2B30\"/></g><g transform=\"translate(460 1060)\"><rect x=\"-40\" y=\"-8\" width=\"80\" height=\"16\" fill=\"#55555C\"/><rect x=\"-60\" y=\"-30\" width=\"24\" height=\"60\" rx=\"6\" fill=\"#2B2B30\"/><rect x=\"36\" y=\"-30\" width=\"24\" height=\"60\" rx=\"6\" fill=\"#2B2B30\"/></g><g transform=\"translate(630 1060)\"><rect x=\"-40\" y=\"-8\" width=\"80\" height=\"16\" fill=\"#55555C\"/><rect x=\"-60\" y=\"-30\" width=\"24\" height=\"60\" rx=\"6\" fill=\"#2B2B30\"/><rect x=\"36\" y=\"-30\" width=\"24\" height=\"60\" rx=\"6\" fill=\"#2B2B30\"/></g><g transform=\"translate(800 1060)\"><rect x=\"-40\" y=\"-8\" width=\"80\" height=\"16\" fill=\"#55555C\"/><rect x=\"-60\" y=\"-30\" width=\"24\" height=\"60\" rx=\"6\" fill=\"#2B2B30\"/><rect x=\"36\" y=\"-30\" width=\"24\" height=\"60\" rx=\"6\" fill=\"#2B2B30\"/></g><g transform=\"translate(970 1060)\"><rect x=\"-40\" y=\"-8\" width=\"80\" height=\"16\" fill=\"#55555C\"/><rect x=\"-60\" y=\"-30\" width=\"24\" height=\"60\" rx=\"6\" fill=\"#2B2B30\"/><rect x=\"36\" y=\"-30\" width=\"24\" height=\"60\" rx=\"6\" fill=\"#2B2B30\"/></g><text x=\"540\" y=\"560\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"90\" fill=\"#B3BFCC\">GYM</text>"
+    },
+    {
+     "type": "tag",
+     "id": "meter",
+     "x": 790,
+     "y": 740,
+     "layer": "front",
+     "text": "3%",
+     "color": "#E2453C",
+     "size": 60,
+     "scale": 1,
+     "keys": [
+      {
+       "t": 1.3,
+       "text": "1%",
+       "color": "#E2453C",
+       "ease": "step"
+      },
+      {
+       "t": 1.3,
+       "scale": 1.25,
+       "ease": "step"
+      },
+      {
+       "t": 1.48,
+       "scale": 1
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.5,
+     "kind": "whoosh",
+     "gain": 0.4
+    },
+    {
+     "t": 1.3,
+     "kind": "buzz",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 10,
+   "end": 12,
+   "set": {
+    "preset": "room",
+    "wall": "#DDE3D6",
+    "floor": "#B98E62",
+    "window": false
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1020,
+     "zoom": 1.15
+    },
+    {
+     "t": 2,
+     "x": 600,
+     "y": 1020,
+     "zoom": 1.18
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 120,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "stand",
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       1,
+       0.4
+      ],
+      "turn": 0.3
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "walk",
+       "from": 0,
+       "to": 2,
+       "dx": 900,
+       "rate": 1.8
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "mirror",
+     "id": "mirror",
+     "x": 760,
+     "y": 1490,
+     "w": 380,
+     "h": 900,
+     "glass": "#D9ECF2"
+    },
+    {
+     "type": "svg",
+     "id": "mirror-shine",
+     "x": 760,
+     "y": 1490,
+     "layer": "front",
+     "markup": "<path d=\"M-170 -860 L-90 -860 L-170 -700Z\" fill=\"#FFFFFF\" fill-opacity=\"0.35\"/>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 0.55,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 0.9,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 1.25,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 1.6,
+     "kind": "step",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 12,
+   "end": 15,
+   "set": {
+    "preset": "room",
+    "wall": "#E9E2D6",
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1080,
+     "zoom": 1.3
+    },
+    {
+     "t": 3,
+     "x": 580,
+     "y": 1070,
+     "zoom": 1.38
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 400,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "sitSprawl"
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "sad",
+      "brows": "sad",
+      "look": [
+       1,
+       0.5
+      ],
+      "turn": 0.2
+     },
+     "keys": [
+      {
+       "t": 1.6,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "brows": "raised",
+        "look": [
+         1,
+         0.5
+        ],
+        "turn": 0.2
+       },
+       "pose": {
+        "base": "sitSprawl",
+        "armR": {
+         "a": 60,
+         "b": -20
+        }
+       },
+       "dur": 0.2
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "sofa",
+     "x": 400,
+     "y": 1500,
+     "scale": 0.8,
+     "color": "#3E6FB8"
+    },
+    {
+     "type": "svg",
+     "id": "dog-tail",
+     "x": 650,
+     "y": 1410,
+     "markup": "<path d=\"M0 0 Q-40 -20 -70 -80\" stroke=\"#C98A4B\" stroke-width=\"22\" stroke-linecap=\"round\" fill=\"none\"/>",
+     "rot": -20,
+     "keys": [
+      {
+       "t": 0,
+       "rot": -25
+      },
+      {
+       "t": 0.12,
+       "rot": 25
+      },
+      {
+       "t": 0.24,
+       "rot": -25
+      },
+      {
+       "t": 0.36,
+       "rot": 25
+      },
+      {
+       "t": 0.48,
+       "rot": -25
+      },
+      {
+       "t": 0.6,
+       "rot": 25
+      },
+      {
+       "t": 0.72,
+       "rot": -25
+      },
+      {
+       "t": 0.84,
+       "rot": 25
+      },
+      {
+       "t": 0.96,
+       "rot": -25
+      },
+      {
+       "t": 1.08,
+       "rot": 25
+      },
+      {
+       "t": 1.2,
+       "rot": -25
+      },
+      {
+       "t": 1.3199999999999998,
+       "rot": 25
+      },
+      {
+       "t": 1.44,
+       "rot": -25
+      },
+      {
+       "t": 1.56,
+       "rot": 25
+      },
+      {
+       "t": 1.68,
+       "rot": -25
+      },
+      {
+       "t": 1.7999999999999998,
+       "rot": 25
+      },
+      {
+       "t": 1.92,
+       "rot": -25
+      },
+      {
+       "t": 2.04,
+       "rot": 25
+      },
+      {
+       "t": 2.16,
+       "rot": -25
+      },
+      {
+       "t": 2.28,
+       "rot": 25
+      },
+      {
+       "t": 2.4,
+       "rot": -25
+      },
+      {
+       "t": 2.52,
+       "rot": 25
+      },
+      {
+       "t": 2.6399999999999997,
+       "rot": -25
+      },
+      {
+       "t": 2.76,
+       "rot": 25
+      },
+      {
+       "t": 2.88,
+       "rot": -25
+      },
+      {
+       "t": 3,
+       "rot": 25
+      },
+      {
+       "t": 3.12,
+       "rot": -25
+      },
+      {
+       "t": 3.2399999999999998,
+       "rot": 25
+      },
+      {
+       "t": 3.36,
+       "rot": -25
+      },
+      {
+       "t": 3.48,
+       "rot": 25
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "dog",
+     "x": 760,
+     "y": 1520,
+     "markup": "<rect x=\"-80\" y=\"-80\" width=\"26\" height=\"80\" rx=\"10\" fill=\"#A86E36\"/><rect x=\"40\" y=\"-80\" width=\"26\" height=\"80\" rx=\"10\" fill=\"#A86E36\"/><ellipse cx=\"0\" cy=\"-100\" rx=\"120\" ry=\"62\" fill=\"#C98A4B\"/><ellipse cx=\"10\" cy=\"-72\" rx=\"96\" ry=\"26\" fill=\"#A86E36\"/><rect x=\"-60\" y=\"-80\" width=\"26\" height=\"80\" rx=\"10\" fill=\"#C98A4B\"/><rect x=\"60\" y=\"-80\" width=\"26\" height=\"80\" rx=\"10\" fill=\"#C98A4B\"/><circle cx=\"110\" cy=\"-170\" r=\"62\" fill=\"#C98A4B\"/><ellipse cx=\"70\" cy=\"-200\" rx=\"22\" ry=\"44\" fill=\"#7A4A2A\" transform=\"rotate(20 70 -200)\"/><ellipse cx=\"152\" cy=\"-200\" rx=\"22\" ry=\"44\" fill=\"#7A4A2A\" transform=\"rotate(-20 152 -200)\"/><ellipse cx=\"118\" cy=\"-140\" rx=\"34\" ry=\"24\" fill=\"#F2D2A8\"/><circle cx=\"118\" cy=\"-152\" r=\"10\" fill=\"#1C1A1E\"/><circle cx=\"92\" cy=\"-180\" r=\"8\" fill=\"#1C1A1E\"/><circle cx=\"134\" cy=\"-180\" r=\"8\" fill=\"#1C1A1E\"/><circle cx=\"95\" cy=\"-183\" r=\"3\" fill=\"#FFFFFF\"/><circle cx=\"137\" cy=\"-183\" r=\"3\" fill=\"#FFFFFF\"/><path d=\"M108 -128 Q118 -112 128 -128Z\" fill=\"#E8566A\"/>",
+     "keys": [
+      {
+       "t": 0,
+       "y": 1520
+      },
+      {
+       "t": 0.24,
+       "y": 1510
+      },
+      {
+       "t": 0.48,
+       "y": 1520
+      },
+      {
+       "t": 0.72,
+       "y": 1510
+      },
+      {
+       "t": 0.96,
+       "y": 1520
+      },
+      {
+       "t": 1.2,
+       "y": 1510
+      },
+      {
+       "t": 1.44,
+       "y": 1520
+      },
+      {
+       "t": 1.68,
+       "y": 1510
+      },
+      {
+       "t": 1.92,
+       "y": 1520
+      },
+      {
+       "t": 2.16,
+       "y": 1510
+      },
+      {
+       "t": 2.4,
+       "y": 1520
+      },
+      {
+       "t": 2.6399999999999997,
+       "y": 1510
+      },
+      {
+       "t": 2.88,
+       "y": 1520
+      },
+      {
+       "t": 3.12,
+       "y": 1510
+      },
+      {
+       "t": 3.36,
+       "y": 1520
+      }
+     ]
+    },
+    {
+     "type": "tag",
+     "id": "dog-meter",
+     "x": 870,
+     "y": 1270,
+     "layer": "front",
+     "text": "100%",
+     "color": "#2E9E5B",
+     "size": 54,
+     "scale": 1,
+     "keys": []
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "thud",
+     "gain": 0.4
+    },
+    {
+     "t": 0.8,
+     "kind": "boing",
+     "gain": 0.3
+    },
+    {
+     "t": 1.6,
+     "kind": "chuckle",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 15,
+   "end": 17.6,
+   "set": {
+    "preset": "room",
+    "wall": "#DDE3D6",
+    "floor": "#B98E62",
+    "window": false
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 580,
+     "y": 1020,
+     "zoom": 1.18
+    },
+    {
+     "t": 2.6,
+     "x": 600,
+     "y": 960,
+     "zoom": 1.4
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 800,
+     "y": 1440,
+     "scale": 0.8,
+     "pose": "stand",
+     "facing": -1,
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       -1,
+       0.3
+      ],
+      "turn": -0.3
+     },
+     "keys": [
+      {
+       "t": 1.1,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "look": [
+         -1,
+         0
+        ],
+        "turn": -0.3
+       },
+       "dur": 0.1
+      },
+      {
+       "t": 1.8,
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         -1,
+         0
+        ],
+        "turn": -0.3
+       },
+       "dur": 0.1
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "walk",
+       "from": 0,
+       "to": 1,
+       "dx": -40,
+       "rate": 1.8
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 280,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "stand",
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       1,
+       0.3
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 1.1,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "look": [
+         1,
+         0
+        ],
+        "turn": 0.3
+       },
+       "dur": 0.1
+      },
+      {
+       "t": 1.8,
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         1,
+         0
+        ],
+        "turn": 0.3
+       },
+       "dur": 0.1
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "walk",
+       "from": 0,
+       "to": 1,
+       "dx": 40,
+       "rate": 1.8
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "mirror",
+     "id": "mirror",
+     "x": 760,
+     "y": 1490,
+     "w": 380,
+     "h": 900,
+     "glass": "#D9ECF2"
+    },
+    {
+     "type": "svg",
+     "id": "mirror-shine",
+     "x": 760,
+     "y": 1490,
+     "layer": "front",
+     "markup": "<path d=\"M-170 -860 L-90 -860 L-170 -700Z\" fill=\"#FFFFFF\" fill-opacity=\"0.35\"/>"
+    },
+    {
+     "type": "tag",
+     "id": "mirror-meter",
+     "x": 760,
+     "y": 780,
+     "layer": "front",
+     "text": "4%",
+     "color": "#E2453C",
+     "size": 64,
+     "scale": 1,
+     "keys": []
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 0.6,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 1.8,
+     "kind": "sting",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 17.6,
+   "end": 20.4,
+   "set": {
+    "preset": "room",
+    "wall": "#DDE3D6",
+    "floor": "#B98E62",
+    "window": false
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 640,
+     "y": 940,
+     "zoom": 1.7
+    },
+    {
+     "t": 2.8,
+     "x": 660,
+     "y": 930,
+     "zoom": 1.85
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 800,
+     "y": 1440,
+     "scale": 0.8,
+     "pose": "stand",
+     "facing": -1,
+     "face": {
+      "eyes": "open",
+      "mouth": "flat",
+      "brows": "sad",
+      "look": [
+       -1,
+       0
+      ],
+      "turn": -0.3
+     },
+     "keys": [
+      {
+       "t": 1,
+       "face": {
+        "eyes": "tired",
+        "mouth": "sad",
+        "brows": "sad",
+        "look": [
+         1,
+         0.8
+        ],
+        "turn": 0.4
+       },
+       "pose": {
+        "base": "stand",
+        "head": {
+         "tilt": -10
+        }
+       },
+       "dur": 0.6
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 280,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "stand",
+     "face": {
+      "eyes": "wide",
+      "mouth": "O",
+      "brows": "up",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 1.8,
+       "face": {
+        "eyes": "open",
+        "mouth": "sad",
+        "brows": "sad",
+        "look": [
+         1,
+         0.2
+        ],
+        "turn": 0.3
+       },
+       "dur": 0.3
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "mirror",
+     "id": "mirror",
+     "x": 760,
+     "y": 1490,
+     "w": 380,
+     "h": 900,
+     "glass": "#D9ECF2"
+    },
+    {
+     "type": "svg",
+     "id": "mirror-shine",
+     "x": 760,
+     "y": 1490,
+     "layer": "front",
+     "markup": "<path d=\"M-170 -860 L-90 -860 L-170 -700Z\" fill=\"#FFFFFF\" fill-opacity=\"0.35\"/>"
+    },
+    {
+     "type": "tag",
+     "id": "mirror-meter",
+     "x": 760,
+     "y": 780,
+     "layer": "front",
+     "text": "4%",
+     "color": "#E2453C",
+     "size": 64,
+     "scale": 1,
+     "keys": []
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1,
+     "kind": "swipe",
+     "gain": 0.2
+    }
+   ]
+  },
+  {
+   "start": 20.4,
+   "end": 22.6,
+   "set": {
+    "preset": "room",
+    "wall": "#E9E2D6",
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1050,
+     "zoom": 1.45
+    },
+    {
+     "t": 2.2,
+     "x": 560,
+     "y": 1040,
+     "zoom": 1.5
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 400,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "stand",
+     "face": {
+      "eyes": "tired",
+      "mouth": "sad",
+      "brows": "sad",
+      "look": [
+       1,
+       0.5
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 0.7,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 70,
+         "b": -10
+        }
+       },
+       "dur": 0.25
+      },
+      {
+       "t": 1.2,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "brows": "raised",
+        "look": [
+         1,
+         0.2
+        ],
+        "turn": 0.3
+       },
+       "dur": 0.15
+      },
+      {
+       "t": 1.6,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": 8
+        }
+       },
+       "dur": 0.2
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "bob",
+       "from": 1.6,
+       "amp": 6,
+       "rate": 2
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "radio",
+     "x": 640,
+     "y": 1500,
+     "markup": "<rect x=\"-90\" y=\"-300\" width=\"180\" height=\"300\" fill=\"#9C6B44\"/><rect x=\"-60\" y=\"-300\" width=\"20\" height=\"300\" fill=\"#7A5232\" fill-opacity=\"0.6\"/><rect x=\"-110\" y=\"-470\" width=\"220\" height=\"170\" rx=\"22\" fill=\"#D8433A\"/><rect x=\"40\" y=\"-470\" width=\"70\" height=\"170\" rx=\"22\" fill=\"#B23A30\"/><circle cx=\"-40\" cy=\"-385\" r=\"55\" fill=\"#2B2B30\"/><circle cx=\"-40\" cy=\"-385\" r=\"20\" fill=\"#55555C\"/><rect x=\"30\" y=\"-440\" width=\"60\" height=\"30\" rx=\"6\" fill=\"#F2F0EC\"/><rect x=\"40\" y=\"-380\" width=\"40\" height=\"40\" rx=\"20\" fill=\"#F5C33B\"/><rect x=\"60\" y=\"-560\" width=\"8\" height=\"100\" fill=\"#3A3A40\" transform=\"rotate(20 60 -470)\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "notes",
+     "x": 620,
+     "y": 960,
+     "layer": "front",
+     "opacity": 0,
+     "markup": "<path d=\"M0 0 L0 -80 L40 -95 L40 -15\" stroke=\"#1E1E22\" stroke-width=\"8\" fill=\"none\"/><ellipse cx=\"-10\" cy=\"0\" rx=\"16\" ry=\"12\" fill=\"#1E1E22\"/><ellipse cx=\"30\" cy=\"-15\" rx=\"16\" ry=\"12\" fill=\"#1E1E22\"/><path d=\"M90 -60 L90 -130\" stroke=\"#1E1E22\" stroke-width=\"8\"/><ellipse cx=\"80\" cy=\"-60\" rx=\"16\" ry=\"12\" fill=\"#1E1E22\"/>",
+     "keys": [
+      {
+       "t": 1,
+       "opacity": 0,
+       "scale": 0.6
+      },
+      {
+       "t": 1.18,
+       "opacity": 1,
+       "scale": 1,
+       "ease": "back"
+      },
+      {
+       "t": 2.2,
+       "y": 900
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.95,
+     "kind": "click",
+     "gain": 0.8
+    }
+   ]
+  },
+  {
+   "start": 22.6,
+   "end": 25.2,
+   "set": {
+    "preset": "room",
+    "wall": "#DDE3D6",
+    "floor": "#B98E62",
+    "window": false
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1000,
+     "zoom": 1.2
+    },
+    {
+     "t": 2.6,
+     "x": 580,
+     "y": 990,
+     "zoom": 1.28
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 800,
+     "y": 1440,
+     "scale": 0.8,
+     "pose": "stand",
+     "facing": -1,
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin"
+     },
+     "keys": [
+      {
+       "t": 0.2,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 150,
+         "b": 18
+        },
+        "armR": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": -10
+        },
+        "body": {
+         "lean": -6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 0.52,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "armR": {
+         "a": 150,
+         "b": 18
+        },
+        "head": {
+         "tilt": 10
+        },
+        "body": {
+         "lean": 6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 0.8400000000000001,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 120,
+         "b": -80
+        },
+        "armR": {
+         "a": 120,
+         "b": -80
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.16,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 90,
+         "b": 60
+        },
+        "armR": {
+         "a": 20,
+         "b": -30
+        },
+        "head": {
+         "tilt": 14
+        },
+        "body": {
+         "lean": 4
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.48,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 150,
+         "b": 18
+        },
+        "armR": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": -10
+        },
+        "body": {
+         "lean": -6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.8,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "armR": {
+         "a": 150,
+         "b": 18
+        },
+        "head": {
+         "tilt": 10
+        },
+        "body": {
+         "lean": 6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 2.12,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 120,
+         "b": -80
+        },
+        "armR": {
+         "a": 120,
+         "b": -80
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 2.4400000000000004,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 90,
+         "b": 60
+        },
+        "armR": {
+         "a": 20,
+         "b": -30
+        },
+        "head": {
+         "tilt": 14
+        },
+        "body": {
+         "lean": 4
+        }
+       },
+       "dur": 0.14
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "jump",
+       "from": 1,
+       "dur": 0.35,
+       "height": 50
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 280,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "stand",
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin"
+     },
+     "keys": [
+      {
+       "t": 0.2,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 150,
+         "b": 18
+        },
+        "armR": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": -10
+        },
+        "body": {
+         "lean": -6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 0.52,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "armR": {
+         "a": 150,
+         "b": 18
+        },
+        "head": {
+         "tilt": 10
+        },
+        "body": {
+         "lean": 6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 0.8400000000000001,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 120,
+         "b": -80
+        },
+        "armR": {
+         "a": 120,
+         "b": -80
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.16,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 90,
+         "b": 60
+        },
+        "armR": {
+         "a": 20,
+         "b": -30
+        },
+        "head": {
+         "tilt": 14
+        },
+        "body": {
+         "lean": 4
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.48,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 150,
+         "b": 18
+        },
+        "armR": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": -10
+        },
+        "body": {
+         "lean": -6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.8,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "armR": {
+         "a": 150,
+         "b": 18
+        },
+        "head": {
+         "tilt": 10
+        },
+        "body": {
+         "lean": 6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 2.12,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 120,
+         "b": -80
+        },
+        "armR": {
+         "a": 120,
+         "b": -80
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 2.4400000000000004,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 90,
+         "b": 60
+        },
+        "armR": {
+         "a": 20,
+         "b": -30
+        },
+        "head": {
+         "tilt": 14
+        },
+        "body": {
+         "lean": 4
+        }
+       },
+       "dur": 0.14
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "jump",
+       "from": 1,
+       "dur": 0.35,
+       "height": 60
+      },
+      {
+       "act": "laugh",
+       "from": 1.6,
+       "amp": 6,
+       "rate": 6
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "mirror",
+     "id": "mirror",
+     "x": 760,
+     "y": 1490,
+     "w": 380,
+     "h": 900,
+     "glass": "#D9ECF2"
+    },
+    {
+     "type": "svg",
+     "id": "mirror-shine",
+     "x": 760,
+     "y": 1490,
+     "layer": "front",
+     "markup": "<path d=\"M-170 -860 L-90 -860 L-170 -700Z\" fill=\"#FFFFFF\" fill-opacity=\"0.35\"/>"
+    },
+    {
+     "type": "tag",
+     "id": "mirror-meter",
+     "x": 760,
+     "y": 780,
+     "layer": "front",
+     "text": "4%",
+     "color": "#E2453C",
+     "size": 64,
+     "scale": 1,
+     "keys": [
+      {
+       "t": 1.3,
+       "text": "9%",
+       "color": "#E2453C",
+       "ease": "step"
+      },
+      {
+       "t": 1.3,
+       "scale": 1.25,
+       "ease": "step"
+      },
+      {
+       "t": 1.48,
+       "scale": 1
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1.3,
+     "kind": "ping",
+     "gain": 0.5
+    },
+    {
+     "t": 1.7,
+     "kind": "chuckle",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 25.2,
+   "end": 27.8,
+   "set": {
+    "preset": "room",
+    "wall": "#DDE3D6",
+    "floor": "#B98E62",
+    "window": false
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 660,
+     "y": 930,
+     "zoom": 1.6
+    },
+    {
+     "t": 2.6,
+     "x": 660,
+     "y": 920,
+     "zoom": 1.7
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 800,
+     "y": 1440,
+     "scale": 0.8,
+     "pose": "stand",
+     "facing": -1,
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin"
+     },
+     "keys": [
+      {
+       "t": 0.2,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 150,
+         "b": 18
+        },
+        "armR": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": -10
+        },
+        "body": {
+         "lean": -6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 0.52,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "armR": {
+         "a": 150,
+         "b": 18
+        },
+        "head": {
+         "tilt": 10
+        },
+        "body": {
+         "lean": 6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 0.8400000000000001,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 120,
+         "b": -80
+        },
+        "armR": {
+         "a": 120,
+         "b": -80
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.16,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 90,
+         "b": 60
+        },
+        "armR": {
+         "a": 20,
+         "b": -30
+        },
+        "head": {
+         "tilt": 14
+        },
+        "body": {
+         "lean": 4
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.48,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 150,
+         "b": 18
+        },
+        "armR": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": -10
+        },
+        "body": {
+         "lean": -6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.8,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "armR": {
+         "a": 150,
+         "b": 18
+        },
+        "head": {
+         "tilt": 10
+        },
+        "body": {
+         "lean": 6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 2.12,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 120,
+         "b": -80
+        },
+        "armR": {
+         "a": 120,
+         "b": -80
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 2.4400000000000004,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 90,
+         "b": 60
+        },
+        "armR": {
+         "a": 20,
+         "b": -30
+        },
+        "head": {
+         "tilt": 14
+        },
+        "body": {
+         "lean": 4
+        }
+       },
+       "dur": 0.14
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "laugh",
+       "from": 0.8,
+       "amp": 6,
+       "rate": 6
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 280,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "stand",
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin"
+     },
+     "keys": [
+      {
+       "t": 0.2,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 150,
+         "b": 18
+        },
+        "armR": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": -10
+        },
+        "body": {
+         "lean": -6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 0.52,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "armR": {
+         "a": 150,
+         "b": 18
+        },
+        "head": {
+         "tilt": 10
+        },
+        "body": {
+         "lean": 6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 0.8400000000000001,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 120,
+         "b": -80
+        },
+        "armR": {
+         "a": 120,
+         "b": -80
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.16,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 90,
+         "b": 60
+        },
+        "armR": {
+         "a": 20,
+         "b": -30
+        },
+        "head": {
+         "tilt": 14
+        },
+        "body": {
+         "lean": 4
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.48,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 150,
+         "b": 18
+        },
+        "armR": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": -10
+        },
+        "body": {
+         "lean": -6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.8,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "armR": {
+         "a": 150,
+         "b": 18
+        },
+        "head": {
+         "tilt": 10
+        },
+        "body": {
+         "lean": 6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 2.12,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 120,
+         "b": -80
+        },
+        "armR": {
+         "a": 120,
+         "b": -80
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 2.4400000000000004,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 90,
+         "b": 60
+        },
+        "armR": {
+         "a": 20,
+         "b": -30
+        },
+        "head": {
+         "tilt": 14
+        },
+        "body": {
+         "lean": 4
+        }
+       },
+       "dur": 0.14
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "laugh",
+       "amp": 6,
+       "rate": 6
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "mirror",
+     "id": "mirror",
+     "x": 760,
+     "y": 1490,
+     "w": 380,
+     "h": 900,
+     "glass": "#D9ECF2"
+    },
+    {
+     "type": "svg",
+     "id": "mirror-shine",
+     "x": 760,
+     "y": 1490,
+     "layer": "front",
+     "markup": "<path d=\"M-170 -860 L-90 -860 L-170 -700Z\" fill=\"#FFFFFF\" fill-opacity=\"0.35\"/>"
+    },
+    {
+     "type": "tag",
+     "id": "mirror-meter",
+     "x": 760,
+     "y": 780,
+     "layer": "front",
+     "text": "9%",
+     "color": "#E2453C",
+     "size": 64,
+     "scale": 1,
+     "keys": [
+      {
+       "t": 0.8,
+       "text": "14%",
+       "color": "#E2453C",
+       "ease": "step"
+      },
+      {
+       "t": 0.8,
+       "scale": 1.25,
+       "ease": "step"
+      },
+      {
+       "t": 0.98,
+       "scale": 1
+      },
+      {
+       "t": 1.6,
+       "text": "22%",
+       "color": "#E2453C",
+       "ease": "step"
+      },
+      {
+       "t": 1.6,
+       "scale": 1.25,
+       "ease": "step"
+      },
+      {
+       "t": 1.78,
+       "scale": 1
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.8,
+     "kind": "ping",
+     "gain": 0.5
+    },
+    {
+     "t": 1.6,
+     "kind": "chime",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 27.8,
+   "end": 30.6,
+   "set": {
+    "preset": "solid",
+    "color": "#2A2B2E",
+    "vig": 0.35
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 930,
+     "zoom": 1.32
+    },
+    {
+     "t": 2.8,
+     "x": 540,
+     "y": 940,
+     "zoom": 1.4
+    }
+   ],
+   "props": [
+    {
+     "type": "phoneUI",
+     "id": "phone",
+     "x": 540,
+     "y": 1350,
+     "scale": 0.88,
+     "header": "Mia",
+     "accent": "#E8508A",
+     "messages": [],
+     "banner": null,
+     "keys": [
+      {
+       "t": 0.3,
+       "banner": "Mia: Fun dancing video?"
+      },
+      {
+       "t": 1.3,
+       "banner": null,
+       "messages": [
+        {
+         "text": "Saw your story",
+         "from": "them"
+        },
+        {
+         "text": "Fun dancing video?",
+         "from": "them"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "notif",
+     "gain": 0.7
+    },
+    {
+     "t": 1.3,
+     "kind": "swipe",
+     "gain": 0.4
+    },
+    {
+     "t": 1.5,
+     "kind": "notif",
+     "gain": 0.5
+    }
+   ],
+   "actors": []
+  },
+  {
+   "start": 30.6,
+   "end": 33.4,
+   "set": {
+    "preset": "room",
+    "wall": "#E7D5BE",
+    "floor": "#9C6B44",
+    "window": false
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 550,
+     "y": 1030,
+     "zoom": 1.34
+    },
+    {
+     "t": 2.8,
+     "x": 560,
+     "y": 1020,
+     "zoom": 1.42
+    }
+   ],
+   "actors": [
+    {
+     "id": "mia",
+     "x": 740,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 22,
+       "b": -40
+      },
+      "armR": {
+       "a": 30,
+       "b": -120
+      }
+     },
+     "facing": -1,
+     "hold": {
+      "R": {
+       "type": "coffee",
+       "scale": 0.7
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "brows": "raised",
+      "look": [
+       -1,
+       0
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "laugh",
+       "from": 1,
+       "amp": 6,
+       "rate": 6
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 360,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 22,
+       "b": -40
+      },
+      "armR": {
+       "a": 22,
+       "b": -40
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin"
+     },
+     "keys": [
+      {
+       "t": 0.2,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 150,
+         "b": 18
+        },
+        "armR": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": -10
+        },
+        "body": {
+         "lean": -6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 0.52,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "armR": {
+         "a": 150,
+         "b": 18
+        },
+        "head": {
+         "tilt": 10
+        },
+        "body": {
+         "lean": 6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 0.8400000000000001,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 120,
+         "b": -80
+        },
+        "armR": {
+         "a": 120,
+         "b": -80
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.16,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 90,
+         "b": 60
+        },
+        "armR": {
+         "a": 20,
+         "b": -30
+        },
+        "head": {
+         "tilt": 14
+        },
+        "body": {
+         "lean": 4
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.48,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 150,
+         "b": 18
+        },
+        "armR": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": -10
+        },
+        "body": {
+         "lean": -6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 1.8,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "armR": {
+         "a": 150,
+         "b": 18
+        },
+        "head": {
+         "tilt": 10
+        },
+        "body": {
+         "lean": 6
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 2.12,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 120,
+         "b": -80
+        },
+        "armR": {
+         "a": 120,
+         "b": -80
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.14
+      },
+      {
+       "t": 2.4400000000000004,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 90,
+         "b": 60
+        },
+        "armR": {
+         "a": 20,
+         "b": -30
+        },
+        "head": {
+         "tilt": 14
+        },
+        "body": {
+         "lean": 4
+        }
+       },
+       "dur": 0.14
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "cafe-window",
+     "x": 0,
+     "y": 0,
+     "markup": "<rect x=\"520\" y=\"380\" width=\"520\" height=\"880\" rx=\"12\" fill=\"#F2F0EC\"/><rect x=\"540\" y=\"400\" width=\"480\" height=\"840\" fill=\"#2B3550\"/><rect x=\"774\" y=\"400\" width=\"12\" height=\"840\" fill=\"#F2F0EC\"/><circle cx=\"640\" cy=\"480\" r=\"4\" fill=\"#F7E7C9\"/><circle cx=\"930\" cy=\"520\" r=\"3\" fill=\"#F7E7C9\"/><path d=\"M560 420 L640 420 L560 560Z\" fill=\"#FFFFFF\" fill-opacity=\"0.08\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "table",
+     "x": 550,
+     "y": 1240,
+     "layer": "front",
+     "markup": "<rect x=\"-330\" y=\"0\" width=\"660\" height=\"34\" rx=\"8\" fill=\"#9C6B44\"/><rect x=\"-330\" y=\"26\" width=\"660\" height=\"14\" fill=\"#7A5232\"/><rect x=\"-290\" y=\"34\" width=\"34\" height=\"300\" fill=\"#7A5232\"/><rect x=\"256\" y=\"34\" width=\"34\" height=\"300\" fill=\"#7A5232\"/><g transform=\"translate(-120 0)\"><path d=\"M-26 -60 L26 -60 L21 0 L-21 0Z\" fill=\"#F2F0EC\"/><rect x=\"-28\" y=\"-68\" width=\"56\" height=\"12\" rx=\"5\" fill=\"#7A5232\"/></g><g transform=\"translate(130 0)\"><path d=\"M-26 -60 L26 -60 L21 0 L-21 0Z\" fill=\"#F2F0EC\"/><rect x=\"-28\" y=\"-68\" width=\"56\" height=\"12\" rx=\"5\" fill=\"#7A5232\"/></g>"
+    },
+    {
+     "type": "tag",
+     "id": "meter",
+     "x": 740,
+     "y": 880,
+     "layer": "front",
+     "text": "22%",
+     "color": "#E2453C",
+     "size": 60,
+     "scale": 1,
+     "keys": [
+      {
+       "t": 0.9,
+       "text": "54%",
+       "color": "#E8892E",
+       "ease": "step"
+      },
+      {
+       "t": 0.9,
+       "scale": 1.25,
+       "ease": "step"
+      },
+      {
+       "t": 1.08,
+       "scale": 1
+      },
+      {
+       "t": 1.7,
+       "text": "89%",
+       "color": "#2E9E5B",
+       "ease": "step"
+      },
+      {
+       "t": 1.7,
+       "scale": 1.25,
+       "ease": "step"
+      },
+      {
+       "t": 1.88,
+       "scale": 1
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.9,
+     "kind": "ping",
+     "gain": 0.5
+    },
+    {
+     "t": 1,
+     "kind": "chuckle",
+     "gain": 0.6
+    },
+    {
+     "t": 1.7,
+     "kind": "chime",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 33.4,
+   "end": 36.4,
+   "set": {
+    "preset": "room",
+    "wall": "#E7D5BE",
+    "floor": "#9C6B44",
+    "window": false
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 620,
+     "y": 960,
+     "zoom": 1.5
+    },
+    {
+     "t": 1.2,
+     "x": 640,
+     "y": 960,
+     "zoom": 1.55
+    },
+    {
+     "t": 2.4,
+     "x": 800,
+     "y": 760,
+     "zoom": 1.7
+    }
+   ],
+   "actors": [
+    {
+     "id": "mia",
+     "x": 880,
+     "y": 1240,
+     "scale": 0.62,
+     "pose": {
+      "base": "sit",
+      "armR": {
+       "a": 30,
+       "b": -120
+      }
+     },
+     "facing": 1,
+     "silhouette": "#7F93B8",
+     "opacity": 0.55,
+     "behind": false,
+     "z": -1,
+     "shadow": false,
+     "do": [],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.55
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "x": 740,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 22,
+       "b": -40
+      },
+      "armR": {
+       "a": 30,
+       "b": -120
+      }
+     },
+     "facing": -1,
+     "hold": {
+      "R": {
+       "type": "coffee",
+       "scale": 0.7
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "look": [
+       -1,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.6,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 22,
+         "b": -40
+        },
+        "armR": {
+         "a": 30,
+         "b": -120
+        },
+        "head": {
+         "tilt": -8,
+         "dx": -12
+        }
+       },
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "brows": "raised",
+        "look": [
+         -1,
+         0
+        ]
+       },
+       "dur": 0.3
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 360,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 22,
+       "b": -40
+      },
+      "armR": {
+       "a": 22,
+       "b": -40
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.2
+     },
+     "keys": [
+      {
+       "t": 1.6,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "brows": "raised",
+        "look": [
+         1,
+         -0.8
+        ],
+        "turn": 0.3
+       },
+       "dur": 0.15
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "cafe-window",
+     "x": 0,
+     "y": 0,
+     "markup": "<rect x=\"520\" y=\"380\" width=\"520\" height=\"880\" rx=\"12\" fill=\"#F2F0EC\"/><rect x=\"540\" y=\"400\" width=\"480\" height=\"840\" fill=\"#2B3550\"/><rect x=\"774\" y=\"400\" width=\"12\" height=\"840\" fill=\"#F2F0EC\"/><circle cx=\"640\" cy=\"480\" r=\"4\" fill=\"#F7E7C9\"/><circle cx=\"930\" cy=\"520\" r=\"3\" fill=\"#F7E7C9\"/><path d=\"M560 420 L640 420 L560 560Z\" fill=\"#FFFFFF\" fill-opacity=\"0.08\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "table",
+     "x": 550,
+     "y": 1240,
+     "layer": "front",
+     "markup": "<rect x=\"-330\" y=\"0\" width=\"660\" height=\"34\" rx=\"8\" fill=\"#9C6B44\"/><rect x=\"-330\" y=\"26\" width=\"660\" height=\"14\" fill=\"#7A5232\"/><rect x=\"-290\" y=\"34\" width=\"34\" height=\"300\" fill=\"#7A5232\"/><rect x=\"256\" y=\"34\" width=\"34\" height=\"300\" fill=\"#7A5232\"/><g transform=\"translate(-120 0)\"><path d=\"M-26 -60 L26 -60 L21 0 L-21 0Z\" fill=\"#F2F0EC\"/><rect x=\"-28\" y=\"-68\" width=\"56\" height=\"12\" rx=\"5\" fill=\"#7A5232\"/></g><g transform=\"translate(130 0)\"><path d=\"M-26 -60 L26 -60 L21 0 L-21 0Z\" fill=\"#F2F0EC\"/><rect x=\"-28\" y=\"-68\" width=\"56\" height=\"12\" rx=\"5\" fill=\"#7A5232\"/></g>"
+    },
+    {
+     "type": "tag",
+     "id": "meter",
+     "x": 740,
+     "y": 880,
+     "layer": "front",
+     "text": "89%",
+     "color": "#2E9E5B",
+     "size": 60,
+     "scale": 1,
+     "keys": []
+    },
+    {
+     "type": "tag",
+     "id": "window-meter",
+     "x": 880,
+     "y": 760,
+     "layer": "front",
+     "text": "6%",
+     "color": "#E2453C",
+     "size": 52,
+     "scale": 1,
+     "keys": [
+      {
+       "t": 1.5,
+       "opacity": 0,
+       "scale": 0.6
+      },
+      {
+       "t": 1.68,
+       "opacity": 1,
+       "scale": 1,
+       "ease": "back"
+      }
+     ],
+     "opacity": 0
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1.5,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 1.7,
+     "kind": "sting",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 36.4,
+   "end": 40,
+   "set": {
+    "preset": "room",
+    "wall": "#E7D5BE",
+    "floor": "#9C6B44",
+    "window": false
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1030,
+     "zoom": 1.4
+    },
+    {
+     "t": 2,
+     "x": 600,
+     "y": 1080,
+     "zoom": 1.55
+    },
+    {
+     "t": 3.6,
+     "x": 640,
+     "y": 1060,
+     "zoom": 1.65
+    }
+   ],
+   "actors": [
+    {
+     "id": "mia",
+     "x": 880,
+     "y": 1240,
+     "scale": 0.62,
+     "pose": {
+      "base": "sit",
+      "armR": {
+       "a": 30,
+       "b": -120
+      }
+     },
+     "facing": 1,
+     "silhouette": "#7F93B8",
+     "opacity": 0.55,
+     "z": -1,
+     "shadow": false,
+     "do": [],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.55
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "x": 740,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 22,
+       "b": -40
+      },
+      "armR": {
+       "a": 30,
+       "b": -120
+      }
+     },
+     "facing": -1,
+     "hold": {
+      "R": {
+       "type": "coffee",
+       "scale": 0.7
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "flat",
+      "brows": "flat",
+      "look": [
+       -0.3,
+       0.6
+      ]
+     },
+     "keys": [
+      {
+       "t": 2.2,
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         -0.6,
+         0.8
+        ]
+       },
+       "dur": 0.1
+      },
+      {
+       "t": 2.9,
+       "face": {
+        "eyes": "happy",
+        "mouth": "grin",
+        "brows": "raised",
+        "look": [
+         -1,
+         0
+        ]
+       },
+       "dur": 0.15
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 360,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 22,
+       "b": -40
+      },
+      "armR": {
+       "a": 22,
+       "b": -40
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.2
+     },
+     "keys": [
+      {
+       "t": 0.6,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 22,
+         "b": -40
+        },
+        "armR": {
+         "a": 70,
+         "b": -20
+        }
+       },
+       "dur": 0.3
+      },
+      {
+       "t": 2,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 22,
+         "b": -40
+        },
+        "armR": {
+         "a": 22,
+         "b": -40
+        }
+       },
+       "face": {
+        "eyes": "open",
+        "mouth": "smirk",
+        "brows": "raised",
+        "look": [
+         1,
+         0
+        ],
+        "turn": 0.2
+       },
+       "dur": 0.3
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "cafe-window",
+     "x": 0,
+     "y": 0,
+     "markup": "<rect x=\"520\" y=\"380\" width=\"520\" height=\"880\" rx=\"12\" fill=\"#F2F0EC\"/><rect x=\"540\" y=\"400\" width=\"480\" height=\"840\" fill=\"#2B3550\"/><rect x=\"774\" y=\"400\" width=\"12\" height=\"840\" fill=\"#F2F0EC\"/><circle cx=\"640\" cy=\"480\" r=\"4\" fill=\"#F7E7C9\"/><circle cx=\"930\" cy=\"520\" r=\"3\" fill=\"#F7E7C9\"/><path d=\"M560 420 L640 420 L560 560Z\" fill=\"#FFFFFF\" fill-opacity=\"0.08\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "table",
+     "x": 550,
+     "y": 1240,
+     "layer": "front",
+     "markup": "<rect x=\"-330\" y=\"0\" width=\"660\" height=\"34\" rx=\"8\" fill=\"#9C6B44\"/><rect x=\"-330\" y=\"26\" width=\"660\" height=\"14\" fill=\"#7A5232\"/><rect x=\"-290\" y=\"34\" width=\"34\" height=\"300\" fill=\"#7A5232\"/><rect x=\"256\" y=\"34\" width=\"34\" height=\"300\" fill=\"#7A5232\"/><g transform=\"translate(-120 0)\"><path d=\"M-26 -60 L26 -60 L21 0 L-21 0Z\" fill=\"#F2F0EC\"/><rect x=\"-28\" y=\"-68\" width=\"56\" height=\"12\" rx=\"5\" fill=\"#7A5232\"/></g><g transform=\"translate(130 0)\"><path d=\"M-26 -60 L26 -60 L21 0 L-21 0Z\" fill=\"#F2F0EC\"/><rect x=\"-28\" y=\"-68\" width=\"56\" height=\"12\" rx=\"5\" fill=\"#7A5232\"/></g>"
+    },
+    {
+     "type": "tag",
+     "id": "window-meter",
+     "x": 880,
+     "y": 760,
+     "layer": "front",
+     "text": "6%",
+     "color": "#E2453C",
+     "size": 52,
+     "scale": 1,
+     "keys": [
+      {
+       "t": 3,
+       "text": "7%",
+       "color": "#E2453C",
+       "ease": "step"
+      },
+      {
+       "t": 3,
+       "scale": 1.25,
+       "ease": "step"
+      },
+      {
+       "t": 3.18,
+       "scale": 1
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "napkin",
+     "x": 470,
+     "y": 1245,
+     "layer": "front",
+     "markup": "<rect x=\"-90\" y=\"-16\" width=\"180\" height=\"16\" rx=\"3\" fill=\"#FFFDF4\"/><rect x=\"-90\" y=\"-16\" width=\"180\" height=\"5\" fill=\"#E8E2D2\"/>",
+     "keys": [
+      {
+       "t": 0.8,
+       "x": 470
+      },
+      {
+       "t": 1.8,
+       "x": 650,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "note",
+     "x": 560,
+     "y": 1150,
+     "layer": "front",
+     "opacity": 0,
+     "markup": "<rect x=\"-150\" y=\"-110\" width=\"300\" height=\"200\" rx=\"8\" fill=\"#FFFDF4\"/><rect x=\"-150\" y=\"70\" width=\"300\" height=\"20\" fill=\"#E8E2D2\"/><text x=\"0\" y=\"20\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"72\" fill=\"#1E1E22\">DANCE?</text>",
+     "keys": [
+      {
+       "t": 1.9,
+       "opacity": 0,
+       "scale": 0.372
+      },
+      {
+       "t": 2.08,
+       "opacity": 1,
+       "scale": 0.62,
+       "ease": "back"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.9,
+     "kind": "paper",
+     "gain": 0.6
+    },
+    {
+     "t": 1.9,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 2.9,
+     "kind": "chime",
+     "gain": 0.5
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "mood": "playful",
+   "a": 0,
+   "b": 15
+  },
+  {
+   "mood": "eerie",
+   "a": 15,
+   "b": 21.349999999999998
+  },
+  {
+   "mood": "playful",
+   "a": 21.349999999999998,
+   "b": 27.8,
+   "gain": 1.1
+  },
+  {
+   "mood": "tender",
+   "a": 27.8,
+   "b": 33.4
+  },
+  {
+   "mood": "resolve",
+   "a": 33.4,
+   "b": 40
+  }
+ ],
+ "beds": [
+  {
+   "name": "crowd",
+   "a": 0,
+   "b": 5,
+   "gain": 0.3
+  },
+  {
+   "name": "crowd",
+   "a": 30.6,
+   "b": 40,
+   "gain": 0.3
+  },
+  {
+   "name": "silence",
+   "a": 17.6,
+   "b": 21.299999999999997,
+   "gain": 1
+  }
+ ]
+}

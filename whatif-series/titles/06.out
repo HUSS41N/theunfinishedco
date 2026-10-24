@@ -1,0 +1,55 @@
+
+  ""I Love You" Costs $1,280"
+  25 chars   score 100/100
+    ok              25 characters, inside the 60-character desktop cut
+    ok              carries a concrete figure (1,280)
+
+  "He Saved 60 Days for 3 Words"
+  28 chars   score 100/100
+    ok              28 characters, inside the 60-character desktop cut
+    ok              carries a concrete figure (60, 3)
+
+  "$0 Left. Worth It."
+  18 chars   score 100/100
+    ok              18 characters, inside the 60-character desktop cut
+    ok              carries a concrete figure (0)
+
+  "60 Days of Silence for 3 Words"
+  30 chars   score 100/100
+    ok              30 characters, inside the 60-character desktop cut
+    ok              carries a concrete figure (60, 3)
+
+  "Hello $1. I Love You $1,280."
+  28 chars   score 100/100
+    ok              28 characters, inside the 60-character desktop cut
+    ok              carries a concrete figure (1., 1,280.)
+
+  "What If Every Word Cost Money?"
+  30 chars   score 94/100
+    x  no-number    no number, date or name - the most reliable single fix
+    ok              30 characters, inside the 60-character desktop cut
+    ok              open question in the title
+
+  "What If Talking Cost Money?"
+  27 chars   score 94/100
+    x  no-number    no number, date or name - the most reliable single fix
+    ok              27 characters, inside the 60-character desktop cut
+    ok              open question in the title
+
+  "What If Words Had Price Tags?"
+  29 chars   score 94/100
+    x  no-number    no number, date or name - the most reliable single fix
+    ok              29 characters, inside the 60-character desktop cut
+    ok              open question in the title
+
+  "The Most Expensive Words"
+  24 chars   score 90/100
+    x  no-number    no number, date or name - the most reliable single fix
+    ok              24 characters, inside the 60-character desktop cut
+
+  "He Stopped Talking to Afford One Sentence"
+  41 chars   score 76/100
+    x  mobile       a mobile feed shows about "He Stopped Talking to Afford One..." - check the subject survives
+    x  no-number    no number, date or name - the most reliable single fix
+    ok              41 characters, inside the 60-character desktop cut
+

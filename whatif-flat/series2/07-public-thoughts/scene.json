@@ -1,0 +1,1886 @@
+{
+ "meta": {
+  "title": "What If Your Thoughts Were Public?",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 44.4,
+  "style": "flat"
+ },
+ "cast": {
+  "ben": {
+   "skin": "orange",
+   "hair": {
+    "style": "spiky",
+    "color": "black"
+   },
+   "top": {
+    "style": "shirt",
+    "color": "mustard"
+   },
+   "bottom": {
+    "style": "pants",
+    "color": "charcoal"
+   },
+   "shoes": {
+    "color": "brown"
+   }
+  },
+  "iris": {
+   "build": "woman",
+   "skin": "deep",
+   "hair": {
+    "style": "bun",
+    "color": "black"
+   },
+   "top": {
+    "style": "jacket",
+    "color": "teal",
+    "detail": "white"
+   },
+   "bottom": {
+    "style": "skirt",
+    "color": "navy"
+   },
+   "shoes": {
+    "color": "black"
+   },
+   "accessories": [
+    "glasses",
+    "earrings"
+   ],
+   "bow": false
+  },
+  "ceo": {
+   "skin": "fair",
+   "build": {
+    "height": 1.05
+   },
+   "hair": {
+    "style": "quiff",
+    "color": "grey"
+   },
+   "top": {
+    "style": "jacket",
+    "color": "charcoal",
+    "detail": "white"
+   },
+   "bottom": {
+    "style": "pants",
+    "color": "charcoal"
+   },
+   "shoes": {
+    "color": "black"
+   },
+   "accessories": [
+    "beard"
+   ]
+  },
+  "w1": {
+   "build": "woman",
+   "skin": "tan",
+   "hair": {
+    "style": "long",
+    "color": "brown"
+   },
+   "top": {
+    "style": "hoodie",
+    "color": "purple"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "denim"
+   }
+  },
+  "w2": {
+   "skin": "olive",
+   "hair": {
+    "style": "buzz",
+    "color": "black"
+   },
+   "top": {
+    "style": "tee",
+    "color": "yellow"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "navy"
+   },
+   "accessories": [
+    "headphones"
+   ]
+  },
+  "w3": {
+   "skin": "fair",
+   "hair": {
+    "style": "curly",
+    "color": "blonde"
+   },
+   "top": {
+    "style": "stripes",
+    "color": "red",
+    "detail": "white"
+   },
+   "bottom": {
+    "style": "pants",
+    "color": "grey"
+   },
+   "accessories": [
+    "glasses"
+   ]
+  }
+ },
+ "shots": [
+  {
+   "start": 0,
+   "end": 3.8,
+   "set": {
+    "preset": "office"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 592,
+     "y": 960,
+     "zoom": 1.12
+    },
+    {
+     "t": 3.8,
+     "x": 592,
+     "y": 955,
+     "zoom": 1.18
+    }
+   ],
+   "props": [
+    {
+     "type": "chair",
+     "x": 300,
+     "y": 1500
+    },
+    {
+     "type": "chair",
+     "x": 885,
+     "y": 1500
+    },
+    {
+     "type": "desk",
+     "x": 595,
+     "y": 1500,
+     "w": 400,
+     "layer": "front"
+    },
+    {
+     "type": "mug",
+     "id": "mug",
+     "x": 715,
+     "y": 1148,
+     "scale": 1.1
+    },
+    {
+     "type": "svg",
+     "id": "bosslabel",
+     "x": 715,
+     "y": 1136,
+     "scale": 1.1,
+     "markup": "<rect x=\"-34\" y=\"-30\" width=\"68\" height=\"26\" rx=\"4\" fill=\"#E2453C\"/><text x=\"0\" y=\"-11\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"19\" fill=\"#FFFFFF\">#1 BOSS</text>"
+    },
+    {
+     "type": "note",
+     "id": "note",
+     "x": 560,
+     "y": 1148,
+     "scale": 0.62,
+     "rot": -5,
+     "label": "1. SMILE"
+    },
+    {
+     "type": "plant",
+     "x": 1230,
+     "y": 1500,
+     "scale": 0.9
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "facing": 1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.35,
+      "mouth": "smile",
+      "brows": "flat"
+     },
+     "keys": [
+      {
+       "t": 1,
+       "dur": 0.3,
+       "face": {
+        "turn": 0.35,
+        "mouth": "flat",
+        "brows": "worried",
+        "look": [
+         0.3,
+         0
+        ]
+       }
+      }
+     ],
+     "say": [
+      {
+       "from": 0.45,
+       "to": 3.66,
+       "text": "I HAVE NO IDEA WHAT I'M DOING.",
+       "kind": "think"
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 885,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.35,
+      "mouth": "flat"
+     },
+     "keys": [
+      {
+       "t": 1.7,
+       "dur": 0.35,
+       "face": {
+        "turn": 0.35,
+        "mouth": "flat",
+        "brows": "raised",
+        "look": [
+         -0.5,
+         -1
+        ]
+       },
+       "pose": {
+        "base": "sit",
+        "head": {
+         "tilt": -6
+        }
+       }
+      }
+     ]
+    }
+   ],
+   "text": [
+    {
+     "text": "WHAT IF YOUR THOUGHTS\nWERE PUBLIC?",
+     "y": 380,
+     "size": 96,
+     "from": 0,
+     "to": 3.3,
+     "anim": "pop"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.45,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 1.7,
+     "kind": "sting",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 3.8,
+   "end": 9,
+   "set": {
+    "preset": "office"
+   },
+   "in": {
+    "type": "zoom",
+    "dur": 0.4
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 320,
+     "y": 900,
+     "zoom": 1.55
+    },
+    {
+     "t": 5.2,
+     "x": 320,
+     "y": 890,
+     "zoom": 1.7
+    }
+   ],
+   "props": [
+    {
+     "type": "chair",
+     "x": 300,
+     "y": 1500
+    },
+    {
+     "type": "chair",
+     "x": 885,
+     "y": 1500
+    },
+    {
+     "type": "desk",
+     "x": 595,
+     "y": 1500,
+     "w": 400,
+     "layer": "front"
+    },
+    {
+     "type": "mug",
+     "id": "mug",
+     "x": 715,
+     "y": 1148,
+     "scale": 1.1
+    },
+    {
+     "type": "svg",
+     "id": "bosslabel",
+     "x": 715,
+     "y": 1136,
+     "scale": 1.1,
+     "markup": "<rect x=\"-34\" y=\"-30\" width=\"68\" height=\"26\" rx=\"4\" fill=\"#E2453C\"/><text x=\"0\" y=\"-11\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"19\" fill=\"#FFFFFF\">#1 BOSS</text>"
+    },
+    {
+     "type": "note",
+     "id": "note",
+     "x": 560,
+     "y": 1148,
+     "scale": 0.62,
+     "rot": -5,
+     "label": "1. SMILE"
+    },
+    {
+     "type": "plant",
+     "x": 1230,
+     "y": 1500,
+     "scale": 0.9
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "facing": 1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.15,
+      "mouth": "flat",
+      "brows": "worried",
+      "look": [
+       0.2,
+       -0.3
+      ]
+     },
+     "keys": [
+      {
+       "t": 3.1,
+       "dur": 0.3,
+       "face": {
+        "turn": 0.15,
+        "mouth": "sad",
+        "brows": "sad",
+        "look": [
+         0,
+         0.4
+        ]
+       },
+       "pose": {
+        "base": "sit",
+        "head": {
+         "tilt": 5
+        }
+       }
+      }
+     ],
+     "say": [
+      {
+       "from": 0.45,
+       "to": 2.54,
+       "text": "I NEED THIS JOB.",
+       "kind": "think",
+       "size": 68
+      },
+      {
+       "from": 3.1,
+       "to": 5.19,
+       "text": "MY FRIDGE: ONE KETCHUP.",
+       "kind": "think",
+       "size": 68
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 885,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.35,
+      "mouth": "flat"
+     }
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.45,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 3.1,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 3.7,
+     "kind": "breath",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 9,
+   "end": 14,
+   "set": {
+    "preset": "office"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 592,
+     "y": 960,
+     "zoom": 1.15
+    },
+    {
+     "t": 5,
+     "x": 592,
+     "y": 950,
+     "zoom": 1.22
+    }
+   ],
+   "props": [
+    {
+     "type": "chair",
+     "x": 300,
+     "y": 1500
+    },
+    {
+     "type": "chair",
+     "x": 885,
+     "y": 1500
+    },
+    {
+     "type": "desk",
+     "x": 595,
+     "y": 1500,
+     "w": 400,
+     "layer": "front"
+    },
+    {
+     "type": "mug",
+     "id": "mug",
+     "x": 715,
+     "y": 1148,
+     "scale": 1.1
+    },
+    {
+     "type": "svg",
+     "id": "bosslabel",
+     "x": 715,
+     "y": 1136,
+     "scale": 1.1,
+     "markup": "<rect x=\"-34\" y=\"-30\" width=\"68\" height=\"26\" rx=\"4\" fill=\"#E2453C\"/><text x=\"0\" y=\"-11\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"19\" fill=\"#FFFFFF\">#1 BOSS</text>"
+    },
+    {
+     "type": "note",
+     "id": "note",
+     "x": 560,
+     "y": 1148,
+     "scale": 0.62,
+     "rot": -5,
+     "label": "1. SMILE"
+    },
+    {
+     "type": "plant",
+     "x": 1230,
+     "y": 1500,
+     "scale": 0.9
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "facing": 1,
+     "pose": {
+      "base": "sit",
+      "body": {
+       "lean": -2
+      }
+     },
+     "face": {
+      "turn": 0.35,
+      "mouth": "flat",
+      "brows": "angry",
+      "eyes": "open"
+     },
+     "keys": [
+      {
+       "t": 2.8,
+       "dur": 0.2,
+       "face": {
+        "turn": 0.35,
+        "mouth": "O",
+        "brows": "up",
+        "eyes": "wide"
+       }
+      }
+     ],
+     "say": [
+      {
+       "from": 0.55,
+       "to": 2.73,
+       "text": "PROFESSIONAL. PROFESSIONAL.",
+       "kind": "think"
+      },
+      {
+       "from": 2.8133333333333335,
+       "to": 4.9,
+       "text": "PIZZA.",
+       "kind": "think",
+       "size": 72
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 885,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.35,
+      "mouth": "flat",
+      "brows": "raised",
+      "look": [
+       -0.5,
+       -1
+      ]
+     },
+     "keys": [
+      {
+       "t": 3.4,
+       "dur": 0.25,
+       "face": {
+        "turn": 0.35,
+        "mouth": "smirk",
+        "brows": "raised",
+        "look": [
+         -0.5,
+         -1
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.55,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 2.82,
+     "kind": "boing",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 14,
+   "end": 19.6,
+   "set": {
+    "preset": "office"
+   },
+   "in": {
+    "type": "whip",
+    "dur": 0.3,
+    "dir": "left"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 310,
+     "y": 860,
+     "zoom": 1.5
+    },
+    {
+     "t": 5.6,
+     "x": 310,
+     "y": 860,
+     "zoom": 1.62
+    }
+   ],
+   "props": [
+    {
+     "type": "chair",
+     "x": 300,
+     "y": 1500
+    },
+    {
+     "type": "chair",
+     "x": 885,
+     "y": 1500
+    },
+    {
+     "type": "desk",
+     "x": 595,
+     "y": 1500,
+     "w": 400,
+     "layer": "front"
+    },
+    {
+     "type": "mug",
+     "id": "mug",
+     "x": 715,
+     "y": 1148,
+     "scale": 1.1
+    },
+    {
+     "type": "svg",
+     "id": "bosslabel",
+     "x": 715,
+     "y": 1136,
+     "scale": 1.1,
+     "markup": "<rect x=\"-34\" y=\"-30\" width=\"68\" height=\"26\" rx=\"4\" fill=\"#E2453C\"/><text x=\"0\" y=\"-11\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"19\" fill=\"#FFFFFF\">#1 BOSS</text>"
+    },
+    {
+     "type": "note",
+     "id": "note",
+     "x": 560,
+     "y": 1148,
+     "scale": 0.62,
+     "rot": -5,
+     "label": "1. SMILE"
+    },
+    {
+     "type": "plant",
+     "x": 1230,
+     "y": 1500,
+     "scale": 0.9
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "facing": 1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.1,
+      "mouth": "teeth",
+      "brows": "worried",
+      "eyes": "wide",
+      "look": [
+       0,
+       -1
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.45,
+       "dur": 0.45,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 150,
+         "b": 40
+        },
+        "armR": {
+         "a": 150,
+         "b": 40
+        },
+        "head": {
+         "tilt": 0
+        }
+       }
+      },
+      {
+       "t": 2.9,
+       "dur": 0.4,
+       "pose": "sit",
+       "face": {
+        "turn": 0.4,
+        "mouth": "teeth",
+        "brows": "worried",
+        "eyes": "wide",
+        "look": [
+         1,
+         0
+        ]
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "tremble",
+       "from": 3.4,
+       "to": 5.6,
+       "amp": 2
+      }
+     ],
+     "say": [
+      {
+       "from": 0.5,
+       "to": 2.96,
+       "text": "DON'T THINK ABOUT THE BUBBLE.",
+       "kind": "think",
+       "size": 64
+      },
+      {
+       "from": 3.5,
+       "to": 5.59,
+       "text": "SHE CAN SEE THIS.",
+       "kind": "think",
+       "size": 84
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 885,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.35,
+      "mouth": "flat"
+     }
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.5,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 0.55,
+     "kind": "whoosh",
+     "gain": 0.3
+    },
+    {
+     "t": 3.5,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 3.9,
+     "kind": "heart",
+     "gain": 0.6
+    },
+    {
+     "t": 4.7,
+     "kind": "heart",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 19.6,
+   "end": 24,
+   "set": {
+    "preset": "office"
+   },
+   "in": {
+    "type": "whip",
+    "dur": 0.3,
+    "dir": "left"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 860,
+     "y": 960,
+     "zoom": 1.45
+    },
+    {
+     "t": 4.4,
+     "x": 860,
+     "y": 950,
+     "zoom": 1.6
+    }
+   ],
+   "props": [
+    {
+     "type": "chair",
+     "x": 300,
+     "y": 1500
+    },
+    {
+     "type": "chair",
+     "x": 885,
+     "y": 1500
+    },
+    {
+     "type": "desk",
+     "x": 595,
+     "y": 1500,
+     "w": 400,
+     "layer": "front"
+    },
+    {
+     "type": "note",
+     "id": "note",
+     "x": 560,
+     "y": 1148,
+     "scale": 0.62,
+     "rot": -5,
+     "label": "1. SMILE"
+    },
+    {
+     "type": "plant",
+     "x": 1230,
+     "y": 1500,
+     "scale": 0.9
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "facing": 1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.35,
+      "mouth": "flat",
+      "brows": "worried"
+     }
+    },
+    {
+     "id": "iris",
+     "x": 885,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": {
+      "base": "sit",
+      "armR": {
+       "a": 24,
+       "b": -140
+      }
+     },
+     "face": {
+      "turn": 0.25,
+      "mouth": "smirk",
+      "brows": "flat"
+     },
+     "hold": {
+      "R": "mug"
+     },
+     "keys": [
+      {
+       "t": 1.1,
+       "dur": 0.4,
+       "pose": "sit",
+       "face": {
+        "turn": 0.25,
+        "mouth": "flat",
+        "brows": "worried",
+        "look": [
+         0,
+         -0.6
+        ]
+       }
+      },
+      {
+       "t": 3,
+       "dur": 0.3,
+       "face": {
+        "turn": 0.35,
+        "mouth": "teeth",
+        "brows": "worried",
+        "look": [
+         -1,
+         0
+        ]
+       }
+      }
+     ],
+     "say": [
+      {
+       "from": 1.3,
+       "to": 3.69,
+       "text": "I STARTED HERE MONDAY.",
+       "kind": "think"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "chuckle",
+     "gain": 0.4
+    },
+    {
+     "t": 1.3,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 1.45,
+     "kind": "sting",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 24,
+   "end": 28.6,
+   "set": {
+    "preset": "office"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 570,
+     "y": 900,
+     "zoom": 1
+    },
+    {
+     "t": 4.6,
+     "x": 600,
+     "y": 900,
+     "zoom": 1.04
+    }
+   ],
+   "props": [
+    {
+     "type": "chair",
+     "x": 300,
+     "y": 1500
+    },
+    {
+     "type": "chair",
+     "x": 885,
+     "y": 1500
+    },
+    {
+     "type": "desk",
+     "x": 595,
+     "y": 1500,
+     "w": 400,
+     "layer": "front"
+    },
+    {
+     "type": "mug",
+     "id": "mug",
+     "x": 715,
+     "y": 1148,
+     "scale": 1.1
+    },
+    {
+     "type": "svg",
+     "id": "bosslabel",
+     "x": 715,
+     "y": 1136,
+     "scale": 1.1,
+     "markup": "<rect x=\"-34\" y=\"-30\" width=\"68\" height=\"26\" rx=\"4\" fill=\"#E2453C\"/><text x=\"0\" y=\"-11\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"19\" fill=\"#FFFFFF\">#1 BOSS</text>"
+    },
+    {
+     "type": "note",
+     "id": "note",
+     "x": 560,
+     "y": 1148,
+     "scale": 0.62,
+     "rot": -5,
+     "label": "1. SMILE"
+    },
+    {
+     "type": "plant",
+     "x": 1230,
+     "y": 1500,
+     "scale": 0.9
+    }
+   ],
+   "actors": [
+    {
+     "id": "ceo",
+     "x": -560,
+     "y": 1330,
+     "scale": 0.92,
+     "facing": 1,
+     "z": -1,
+     "behind": true,
+     "pose": "stand",
+     "face": {
+      "mouth": "flat",
+      "brows": "worried",
+      "turn": 0.3
+     },
+     "do": [
+      {
+       "act": "walk",
+       "from": 0.2,
+       "to": 4.5,
+       "dx": 2100
+      }
+     ],
+     "say": [
+      {
+       "from": 1,
+       "to": 2.82,
+       "text": "WHERE'S THE BATHROOM?",
+       "kind": "think"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "facing": 1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.35,
+      "mouth": "O",
+      "brows": "up",
+      "eyes": "wide",
+      "look": [
+       0,
+       -1
+      ]
+     }
+    },
+    {
+     "id": "iris",
+     "x": 885,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.35,
+      "mouth": "O",
+      "brows": "up",
+      "look": [
+       0,
+       -1
+      ]
+     }
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.5,
+     "kind": "step",
+     "gain": 0.35
+    },
+    {
+     "t": 1,
+     "kind": "step",
+     "gain": 0.35
+    },
+    {
+     "t": 1.5,
+     "kind": "step",
+     "gain": 0.35
+    },
+    {
+     "t": 2,
+     "kind": "step",
+     "gain": 0.35
+    },
+    {
+     "t": 2.5,
+     "kind": "step",
+     "gain": 0.35
+    },
+    {
+     "t": 3,
+     "kind": "step",
+     "gain": 0.35
+    },
+    {
+     "t": 3.5,
+     "kind": "step",
+     "gain": 0.35
+    },
+    {
+     "t": 4,
+     "kind": "step",
+     "gain": 0.35
+    },
+    {
+     "t": 1,
+     "kind": "pop",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 28.6,
+   "end": 35.4,
+   "set": {
+    "preset": "office"
+   },
+   "in": {
+    "type": "crossfade",
+    "dur": 0.4
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 570,
+     "y": 1010,
+     "zoom": 0.66
+    },
+    {
+     "t": 5.6,
+     "x": 570,
+     "y": 1010,
+     "zoom": 0.71
+    },
+    {
+     "t": 6.8,
+     "x": 580,
+     "y": 990,
+     "zoom": 0.84
+    }
+   ],
+   "props": [
+    {
+     "type": "chair",
+     "x": 300,
+     "y": 1500
+    },
+    {
+     "type": "chair",
+     "x": 885,
+     "y": 1500
+    },
+    {
+     "type": "desk",
+     "x": 595,
+     "y": 1500,
+     "w": 400,
+     "layer": "front"
+    },
+    {
+     "type": "mug",
+     "id": "mug",
+     "x": 715,
+     "y": 1148,
+     "scale": 1.1
+    },
+    {
+     "type": "svg",
+     "id": "bosslabel",
+     "x": 715,
+     "y": 1136,
+     "scale": 1.1,
+     "markup": "<rect x=\"-34\" y=\"-30\" width=\"68\" height=\"26\" rx=\"4\" fill=\"#E2453C\"/><text x=\"0\" y=\"-11\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"19\" fill=\"#FFFFFF\">#1 BOSS</text>"
+    },
+    {
+     "type": "note",
+     "id": "note",
+     "x": 560,
+     "y": 1148,
+     "scale": 0.62,
+     "rot": -5,
+     "label": "1. SMILE"
+    },
+    {
+     "type": "plant",
+     "x": -380,
+     "y": 1330,
+     "scale": 0.8
+    },
+    {
+     "type": "plant",
+     "x": 1500,
+     "y": 1330,
+     "scale": 0.8
+    }
+   ],
+   "actors": [
+    {
+     "id": "w1",
+     "x": -60,
+     "y": 1330,
+     "scale": 0.9,
+     "facing": 1,
+     "z": -1,
+     "behind": true,
+     "pose": "stand",
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "turn": 0.3,
+      "mouth": "flat",
+      "brows": "worried"
+     },
+     "say": [
+      {
+       "from": 0.4,
+       "to": 2.86,
+       "text": "AM I DOING THIS RIGHT?",
+       "kind": "think"
+      }
+     ]
+    },
+    {
+     "id": "w2",
+     "x": 1130,
+     "y": 1330,
+     "scale": 0.9,
+     "facing": -1,
+     "z": -1,
+     "behind": true,
+     "pose": "stand",
+     "hold": {
+      "R": "coffee"
+     },
+     "face": {
+      "turn": 0.3,
+      "mouth": "sad",
+      "brows": "sad"
+     },
+     "say": [
+      {
+       "from": 3.4,
+       "to": 5.86,
+       "text": "EVERYONE IS SMARTER THAN ME.",
+       "kind": "think"
+      }
+     ]
+    },
+    {
+     "id": "w3",
+     "x": 560,
+     "y": 1330,
+     "scale": 0.9,
+     "facing": 1,
+     "z": -1,
+     "behind": true,
+     "pose": "stand",
+     "face": {
+      "turn": 0,
+      "mouth": "flat",
+      "brows": "flat",
+      "look": [
+       0,
+       0
+      ]
+     },
+     "do": [
+      {
+       "act": "bob",
+       "from": 4.2,
+       "to": 5.9,
+       "amp": 6,
+       "rate": 1.6
+      }
+     ],
+     "say": [
+      {
+       "from": 4.1,
+       "to": 5.89,
+       "text": "JUST NOD.",
+       "kind": "think"
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "facing": 1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.2,
+      "mouth": "O",
+      "brows": "up",
+      "look": [
+       -0.6,
+       -0.5
+      ]
+     },
+     "keys": [
+      {
+       "t": 3.4,
+       "dur": 0.6,
+       "face": {
+        "turn": 0.2,
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         0.6,
+         -0.5
+        ]
+       }
+      },
+      {
+       "t": 6.1,
+       "dur": 0.5,
+       "face": {
+        "turn": 0.35,
+        "mouth": "flat",
+        "brows": "flat",
+        "look": [
+         1,
+         0
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 885,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.2,
+      "mouth": "O",
+      "brows": "up",
+      "look": [
+       0.6,
+       -0.5
+      ]
+     },
+     "keys": [
+      {
+       "t": 3.4,
+       "dur": 0.6,
+       "face": {
+        "turn": 0.2,
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         -0.6,
+         -0.5
+        ]
+       }
+      },
+      {
+       "t": 6.1,
+       "dur": 0.5,
+       "face": {
+        "turn": 0.35,
+        "mouth": "flat",
+        "brows": "flat",
+        "look": [
+         -1,
+         0
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.4,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 3.4,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 4.1,
+     "kind": "pop",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 35.4,
+   "end": 39.2,
+   "set": {
+    "preset": "office"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 592,
+     "y": 960,
+     "zoom": 1.12
+    },
+    {
+     "t": 3.8,
+     "x": 592,
+     "y": 960,
+     "zoom": 1.18
+    }
+   ],
+   "props": [
+    {
+     "type": "chair",
+     "x": 300,
+     "y": 1500
+    },
+    {
+     "type": "chair",
+     "x": 885,
+     "y": 1500
+    },
+    {
+     "type": "desk",
+     "x": 595,
+     "y": 1500,
+     "w": 400,
+     "layer": "front"
+    },
+    {
+     "type": "mug",
+     "id": "mug",
+     "x": 715,
+     "y": 1148,
+     "scale": 1.1
+    },
+    {
+     "type": "svg",
+     "id": "bosslabel",
+     "x": 715,
+     "y": 1136,
+     "scale": 1.1,
+     "markup": "<rect x=\"-34\" y=\"-30\" width=\"68\" height=\"26\" rx=\"4\" fill=\"#E2453C\"/><text x=\"0\" y=\"-11\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"19\" fill=\"#FFFFFF\">#1 BOSS</text>"
+    },
+    {
+     "type": "note",
+     "id": "note",
+     "x": 560,
+     "y": 1148,
+     "scale": 0.62,
+     "rot": -5,
+     "label": "1. SMILE"
+    },
+    {
+     "type": "plant",
+     "x": 1230,
+     "y": 1500,
+     "scale": 0.9
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "facing": 1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.35,
+      "mouth": "smile",
+      "brows": "flat"
+     },
+     "do": [
+      {
+       "act": "laugh",
+       "from": 0.2,
+       "to": 1.5,
+       "amp": 8
+      }
+     ],
+     "keys": [
+      {
+       "t": 0.9,
+       "dur": 0.6,
+       "pose": "stand",
+       "face": {
+        "turn": 0.35,
+        "mouth": "grin",
+        "brows": "up",
+        "eyes": "happy"
+       }
+      }
+     ],
+     "say": [
+      {
+       "from": 1.1,
+       "to": 3.19,
+       "text": "IT'S NOT JUST ME.",
+       "kind": "think",
+       "w": 700,
+       "size": 52
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 885,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.35,
+      "mouth": "smile",
+      "brows": "flat"
+     },
+     "do": [
+      {
+       "act": "laugh",
+       "from": 0.45,
+       "to": 1.6,
+       "amp": 8
+      }
+     ],
+     "keys": [
+      {
+       "t": 1.6,
+       "dur": 0.3,
+       "face": {
+        "turn": 0.35,
+        "mouth": "smile",
+        "brows": "up",
+        "eyes": "happy"
+       }
+      }
+     ],
+     "say": [
+      {
+       "from": 1.3,
+       "to": 3.39,
+       "text": "IT'S NOT\nJUST ME.",
+       "kind": "think",
+       "size": 52
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "chuckle",
+     "gain": 0.6
+    },
+    {
+     "t": 0.5,
+     "kind": "chuckle",
+     "gain": 0.6
+    },
+    {
+     "t": 1,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 1.15,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 1.6,
+     "kind": "heart",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 39.2,
+   "end": 41.6,
+   "set": {
+    "preset": "solid",
+    "color": "#B9875A",
+    "vig": 0.2
+   },
+   "in": {
+    "type": "whip",
+    "dur": 0.3,
+    "dir": "up"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1
+    },
+    {
+     "t": 2.4,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.06
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "paper",
+     "x": 540,
+     "y": 900,
+     "scale": 1.25,
+     "markup": "<g><rect x=\"-300\" y=\"-400\" width=\"600\" height=\"800\" rx=\"10\" fill=\"#F7F5EF\" stroke=\"#2A2522\" stroke-width=\"5\"/><text x=\"-240\" y=\"-300\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"64\" fill=\"#1E1E22\">BEN</text><text x=\"-240\" y=\"-250\" font-family=\"Inter\" font-weight=\"600\" font-size=\"30\" fill=\"#8A8780\">RÉSUMÉ</text><rect x=\"-240\" y=\"-170\" width=\"460\" height=\"18\" rx=\"9\" fill=\"#D9D5CC\"/><rect x=\"-240\" y=\"-120\" width=\"420\" height=\"18\" rx=\"9\" fill=\"#D9D5CC\"/><rect x=\"-240\" y=\"-70\" width=\"300\" height=\"18\" rx=\"9\" fill=\"#D9D5CC\"/><rect x=\"-240\" y=\"0\" width=\"460\" height=\"18\" rx=\"9\" fill=\"#D9D5CC\"/><rect x=\"-240\" y=\"50\" width=\"380\" height=\"18\" rx=\"9\" fill=\"#D9D5CC\"/><rect x=\"-240\" y=\"100\" width=\"440\" height=\"18\" rx=\"9\" fill=\"#D9D5CC\"/><rect x=\"-240\" y=\"170\" width=\"260\" height=\"18\" rx=\"9\" fill=\"#D9D5CC\"/><rect x=\"-240\" y=\"220\" width=\"400\" height=\"18\" rx=\"9\" fill=\"#D9D5CC\"/></g>"
+    },
+    {
+     "type": "svg",
+     "id": "stamp",
+     "x": 560,
+     "y": 980,
+     "scale": 2.2,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0.3,
+       "scale": 2.2,
+       "opacity": 0
+      },
+      {
+       "t": 0.32,
+       "opacity": 1
+      },
+      {
+       "t": 0.45,
+       "scale": 1.3,
+       "ease": "inQuad"
+      }
+     ],
+     "markup": "<g transform=\"rotate(-12)\"><rect x=\"-230\" y=\"-80\" width=\"460\" height=\"160\" rx=\"18\" fill=\"none\" stroke=\"#E2453C\" stroke-width=\"16\"/><text x=\"0\" y=\"42\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"120\" fill=\"#E2453C\">HIRED</text></g>"
+    }
+   ],
+   "shake": [
+    {
+     "from": 0.45,
+     "to": 0.85,
+     "amp": 7,
+     "freq": 3
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.15,
+     "kind": "whoosh",
+     "gain": 0.4
+    },
+    {
+     "t": 0.45,
+     "kind": "thud",
+     "gain": 0.8
+    },
+    {
+     "t": 0.47,
+     "kind": "hit",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 41.6,
+   "end": 44.4,
+   "set": {
+    "preset": "office"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 592,
+     "y": 960,
+     "zoom": 1.15
+    },
+    {
+     "t": 2.8,
+     "x": 592,
+     "y": 960,
+     "zoom": 1.22
+    }
+   ],
+   "props": [
+    {
+     "type": "chair",
+     "x": 300,
+     "y": 1500
+    },
+    {
+     "type": "chair",
+     "x": 885,
+     "y": 1500
+    },
+    {
+     "type": "desk",
+     "x": 595,
+     "y": 1500,
+     "w": 400,
+     "layer": "front"
+    },
+    {
+     "type": "mug",
+     "id": "mug",
+     "x": 715,
+     "y": 1148,
+     "scale": 1.1
+    },
+    {
+     "type": "svg",
+     "id": "bosslabel",
+     "x": 715,
+     "y": 1136,
+     "scale": 1.1,
+     "markup": "<rect x=\"-34\" y=\"-30\" width=\"68\" height=\"26\" rx=\"4\" fill=\"#E2453C\"/><text x=\"0\" y=\"-11\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"19\" fill=\"#FFFFFF\">#1 BOSS</text>"
+    },
+    {
+     "type": "note",
+     "id": "note",
+     "x": 560,
+     "y": 1148,
+     "scale": 0.62,
+     "rot": -5,
+     "label": "1. SMILE"
+    },
+    {
+     "type": "plant",
+     "x": 1230,
+     "y": 1500,
+     "scale": 0.9
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 300,
+     "y": 1500,
+     "scale": 1,
+     "facing": 1,
+     "pose": "stand",
+     "face": {
+      "turn": 0.35,
+      "mouth": "grin",
+      "brows": "up",
+      "eyes": "happy"
+     },
+     "say": [
+      {
+       "from": 0.3,
+       "to": 2.69,
+       "text": "PIZZA?",
+       "kind": "think",
+       "size": 72
+      }
+     ]
+    },
+    {
+     "id": "iris",
+     "x": 885,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": "sit",
+     "face": {
+      "turn": 0.35,
+      "mouth": "grin",
+      "brows": "up",
+      "eyes": "happy"
+     },
+     "say": [
+      {
+       "from": 0.4,
+       "to": 2.69,
+       "text": "PIZZA?",
+       "kind": "think",
+       "size": 72
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 0.4,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 0.7,
+     "kind": "boing",
+     "gain": 0.6
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "mood": "tense",
+   "a": 0,
+   "b": 9
+  },
+  {
+   "mood": "playful",
+   "a": 9,
+   "b": 19.6
+  },
+  {
+   "mood": "eerie",
+   "a": 19.6,
+   "b": 28.6,
+   "gain": 0.8
+  },
+  {
+   "mood": "tender",
+   "a": 35.4,
+   "b": 39.2
+  },
+  {
+   "mood": "resolve",
+   "a": 39.2,
+   "b": 44.4
+  }
+ ],
+ "beds": [
+  {
+   "name": "room",
+   "a": 0,
+   "b": 28.6,
+   "gain": 0.3
+  },
+  {
+   "name": "silence",
+   "a": 28.6,
+   "b": 35.4
+  },
+  {
+   "name": "room",
+   "a": 35.4,
+   "b": 44.4,
+   "gain": 0.3
+  }
+ ]
+}

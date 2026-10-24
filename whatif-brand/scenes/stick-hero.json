@@ -1,0 +1,26 @@
+{
+ "meta": {"title": "v1 hero: the stick style on the v3 engine", "width": 1080, "height": 1920, "fps": 24, "duration": 10, "style": "stick"},
+ "cast": {
+  "mia": {"hair": {"style": "ponytail"}, "top": {"style": "dress", "color": "coral"}, "shoes": {"color": "white"}, "bow": "red"},
+  "sam": {"top": {"style": "hoodie", "color": "teal"}, "bottom": {"style": "jeans", "color": "denim"}, "shoes": {"color": "white"}, "accessories": [{"type": "cap", "color": "mustard"}]}
+ },
+ "shots": [
+  {
+   "start": 0, "end": 10,
+   "set": {"preset": "livingRoom"},
+   "camera": [{"t": 0, "x": 520, "y": 1130, "zoom": 0.74}, {"t": 10, "x": 560, "y": 1110, "zoom": 0.82}],
+   "actors": [
+    {"id": "mia", "x": 760, "y": 1500, "facing": -1, "pose": "stand", "face": {"mouth": "smile", "turn": -0.3},
+     "keys": [{"t": 2.4, "dur": 0.5, "pose": "handsHips", "face": {"mouth": "flat", "brows": "up", "turn": -0.3}},
+              {"t": 7.2, "dur": 0.5, "pose": "stand", "face": {"mouth": "grin", "eyes": "happy", "turn": -0.3}}],
+     "do": [{"act": "blink"}, {"act": "laugh", "from": 7.4, "to": 9.2}],
+     "say": [{"from": 3.0, "to": 5.0, "text": "You're late. Again."}]},
+    {"id": "sam", "x": -120, "y": 1500, "pose": "relaxed", "face": {"mouth": "smile", "turn": 0.3},
+     "do": [{"act": "blink"}, {"act": "walk", "from": 0.2, "to": 2.3, "dx": 470}, {"act": "wave", "arm": "R", "from": 2.4, "to": 3.8},
+            {"act": "talk", "from": 5.3, "to": 7.0}],
+     "say": [{"from": 5.2, "to": 8.2, "text": "What if I'm early for tomorrow?"}]}
+   ],
+   "text": [{"text": "WHAT IF *TIME* RAN LATE?", "y": 400, "size": 104, "from": 0, "to": 2.9, "anim": "pop"}]
+  }
+ ]
+}

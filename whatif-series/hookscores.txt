@@ -1,0 +1,553 @@
+
+  What if you met yourself at age 8?
+  ----------------------------------
+    SPECIFICITY   56  ###########
+    ADDRESS       96  ###################
+    STAKES        36  #######
+    CURIOSITY     59  ###########
+    BREVITY       89  #################
+    VERDICT       55  WORKABLE
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  What if pausing time cost you your time?
+  ----------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       96  ###################
+    STAKES        48  #########
+    CURIOSITY     59  ###########
+    BREVITY       89  #################
+    VERDICT       53  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      SPECIFICITY - swap one adjective for a number, a name or a date
+
+  What if you could pause time, but only you aged?
+  ------------------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       96  ###################
+    STAKES        22  ####
+    CURIOSITY     76  ###############
+    BREVITY      100  ####################
+    VERDICT       48  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  What if you could see how much everyone likes you?
+  --------------------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       96  ###################
+    STAKES        22  ####
+    CURIOSITY     76  ###############
+    BREVITY      100  ####################
+    VERDICT       48  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  What if you got a text from yourself?
+  -------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       96  ###################
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY       89  #################
+    VERDICT       45  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  What if your future self could warn you?
+  ----------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       96  ###################
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY       89  #################
+    VERDICT       45  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  What if every step you took grew a flower?
+  ------------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       76  ###############
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY      100  ####################
+    VERDICT       44  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  What if your shadow stopped copying you?
+  ----------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       96  ###################
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY       78  ###############
+    VERDICT       43  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  What if your shadow wanted your life?
+  -------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       96  ###################
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY       78  ###############
+    VERDICT       43  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  What if your footprints showed your routine?
+  --------------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       96  ###################
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY       78  ###############
+    VERDICT       43  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  Your shadow has been waiting for you to look away.
+  --------------------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       96  ###################
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY      100  ####################
+    VERDICT       42  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  He paused the world for 5 minutes. He aged 40 years.
+  ----------------------------------------------------
+    SPECIFICITY   84  ################
+    ADDRESS       26  #####
+    STAKES        36  #######
+    CURIOSITY     24  ####
+    BREVITY      100  ####################
+    VERDICT       42  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      CURIOSITY - cut the half of the sentence that answers itself
+
+  What if gravity switched off for 10 seconds?
+  --------------------------------------------
+    SPECIFICITY   56  ###########
+    ADDRESS       26  #####
+    STAKES        36  #######
+    CURIOSITY     59  ###########
+    BREVITY       89  #################
+    VERDICT       42  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      ADDRESS - say 'you' in the first six words
+
+  What if gravity took a 10-second break?
+  ---------------------------------------
+    SPECIFICITY   56  ###########
+    ADDRESS       26  #####
+    STAKES        36  #######
+    CURIOSITY     59  ###########
+    BREVITY       89  #################
+    VERDICT       42  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      ADDRESS - say 'you' in the first six words
+
+  What if everyone could read your thoughts?
+  ------------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       76  ###############
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY       78  ###############
+    VERDICT       41  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  10 seconds without gravity. 10. 9. 8.
+  -------------------------------------
+    SPECIFICITY  100  ####################
+    ADDRESS       26  #####
+    STAKES        36  #######
+    CURIOSITY     24  ####
+    BREVITY       78  ###############
+    VERDICT       41  WEAK
+    formula      The List  (1 pattern matched)
+    weakest      CURIOSITY - cut the half of the sentence that answers itself
+
+  What if your lies were visible?
+  -------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       76  ###############
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY       67  #############
+    VERDICT       40  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  Mom: 100%. Boss: 41%. Himself: 4%.
+  ----------------------------------
+    SPECIFICITY  100  ####################
+    ADDRESS       26  #####
+    STAKES        36  #######
+    CURIOSITY     24  ####
+    BREVITY       67  #############
+    VERDICT       40  WEAK
+    formula      The Statistic  (1 pattern matched)
+    weakest      CURIOSITY - cut the half of the sentence that answers itself
+
+  What if words were the most expensive thing you own?
+  ----------------------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       46  #########
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY      100  ####################
+    VERDICT       40  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  What if your thoughts were public?
+  ----------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       76  ###############
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY       67  #############
+    VERDICT       40  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  Gravity returns in 3. 2. 1.
+  ---------------------------
+    SPECIFICITY  100  ####################
+    ADDRESS       26  #####
+    STAKES        36  #######
+    CURIOSITY     24  ####
+    BREVITY       67  #############
+    VERDICT       40  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      CURIOSITY - cut the half of the sentence that answers itself
+
+  What if your childhood self visited?
+  ------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       76  ###############
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY       67  #############
+    VERDICT       40  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  "Hello" costs $1. He has $3 left.
+  ---------------------------------
+    SPECIFICITY   84  ################
+    ADDRESS       26  #####
+    STAKES        36  #######
+    CURIOSITY     24  ####
+    BREVITY       78  ###############
+    VERDICT       39  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      CURIOSITY - cut the half of the sentence that answers itself
+
+  An 8-year-old him knocks on the door.
+  -------------------------------------
+    SPECIFICITY   56  ###########
+    ADDRESS       26  #####
+    STAKES        36  #######
+    CURIOSITY     24  ####
+    BREVITY      100  ####################
+    VERDICT       39  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      CURIOSITY - cut the half of the sentence that answers itself
+
+  He opened the door to himself, 20 years younger.
+  ------------------------------------------------
+    SPECIFICITY   56  ###########
+    ADDRESS       26  #####
+    STAKES        36  #######
+    CURIOSITY     24  ####
+    BREVITY      100  ####################
+    VERDICT       39  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      CURIOSITY - cut the half of the sentence that answers itself
+
+  Everyone has a number now. His is 3%.
+  -------------------------------------
+    SPECIFICITY   62  ############
+    ADDRESS       26  #####
+    STAKES        36  #######
+    CURIOSITY     24  ####
+    BREVITY       89  #################
+    VERDICT       38  WEAK
+    formula      The Statistic  (1 pattern matched)
+    weakest      CURIOSITY - cut the half of the sentence that answers itself
+
+  What if every word cost money?
+  ------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       26  #####
+    STAKES        48  #########
+    CURIOSITY     59  ###########
+    BREVITY       67  #############
+    VERDICT       38  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      ADDRESS - say 'you' in the first six words
+
+  Every lie you tell adds one brick.
+  ----------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       76  ###############
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY       78  ###############
+    VERDICT       37  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  14 lies today. 14 bricks.
+  -------------------------
+    SPECIFICITY   78  ###############
+    ADDRESS       26  #####
+    STAKES        36  #######
+    CURIOSITY     24  ####
+    BREVITY       56  ###########
+    VERDICT       36  WEAK
+    formula      The List  (1 pattern matched)
+    weakest      CURIOSITY - cut the half of the sentence that answers itself
+
+  He hit pause. He never hit play.
+  --------------------------------
+    SPECIFICITY   40  ########
+    ADDRESS       26  #####
+    STAKES        48  #########
+    CURIOSITY     24  ####
+    BREVITY       78  ###############
+    VERDICT       36  WEAK
+    formula      The Impossible Claim  (1 pattern matched)
+    weakest      CURIOSITY - cut the half of the sentence that answers itself
+
+  His younger self asked one question: did we make it?
+  ----------------------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     42  ########
+    BREVITY      100  ####################
+    VERDICT       36  WEAK
+    formula      The Question  (1 pattern matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  What if every lie built a wall?
+  -------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY       78  ###############
+    VERDICT       35  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  What if likes floated above our heads?
+  --------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     59  ###########
+    BREVITY       78  ###############
+    VERDICT       35  WEAK
+    formula      The Question  (2 patterns matched)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  Everyone can see the number. Except their own.
+  ----------------------------------------------
+    SPECIFICITY   40  ########
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     41  ########
+    BREVITY       89  #################
+    VERDICT       35  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  Every step leaves a flower. His only go in circles.
+  ---------------------------------------------------
+    SPECIFICITY   40  ########
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY      100  ####################
+    VERDICT       34  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  His thoughts appear above his head. So do everyone's.
+  -----------------------------------------------------
+    SPECIFICITY   35  #######
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY      100  ####################
+    VERDICT       34  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  In the interview, his thought bubble said: no idea.
+  ---------------------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY      100  ####################
+    VERDICT       34  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  "Don't open the door." Sent from: Me, tomorrow.
+  -----------------------------------------------
+    SPECIFICITY   46  #########
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY       89  #################
+    VERDICT       34  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  He looked down. His path was a circle.
+  --------------------------------------
+    SPECIFICITY   40  ########
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY       89  #################
+    VERDICT       33  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  365 days. One loop.
+  --------------------
+    SPECIFICITY   62  ############
+    ADDRESS       26  #####
+    STAKES        36  #######
+    CURIOSITY     24  ####
+    BREVITY       45  #########
+    VERDICT       33  WEAK
+    formula      The List  (1 pattern matched)
+    weakest      CURIOSITY - cut the half of the sentence that answers itself
+
+  The text came from his own number. Tomorrow.
+  --------------------------------------------
+    SPECIFICITY   40  ########
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY       89  #################
+    VERDICT       33  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  His shadow waves back one second late.
+  --------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY       78  ###############
+    VERDICT       31  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  Everyone froze. Except his clock.
+  ---------------------------------
+    SPECIFICITY   40  ########
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     41  ########
+    BREVITY       56  ###########
+    VERDICT       31  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  Every word has a price tag now.
+  -------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY       78  ###############
+    VERDICT       31  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  His future self texted: don't answer it.
+  ----------------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY       78  ###############
+    VERDICT       31  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  He stopped. His shadow kept walking.
+  ------------------------------------
+    SPECIFICITY   40  ########
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY       67  #############
+    VERDICT       30  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  He said "I'm fine." Another brick.
+  ----------------------------------
+    SPECIFICITY   40  ########
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY       67  #############
+    VERDICT       30  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  He stopped talking to save money.
+  ---------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY       67  #############
+    VERDICT       30  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  Everything floated. He held on.
+  -------------------------------
+    SPECIFICITY   40  ########
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY       56  ###########
+    VERDICT       29  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  Everyone's thinking the same thing.
+  -----------------------------------
+    SPECIFICITY   34  ######
+    ADDRESS       26  #####
+    STAKES        22  ####
+    CURIOSITY     24  ####
+    BREVITY       56  ###########
+    VERDICT       28  WEAK
+    formula      Unclassified  (no formula matched - that is usually a summary, not a hook)
+    weakest      STAKES - name what it costs them to keep doing it the current way
+
+  winner: What if you met yourself at age 8?  (55, WORKABLE)
+

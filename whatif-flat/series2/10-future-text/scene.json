@@ -1,0 +1,1790 @@
+{
+ "meta": {
+  "title": "What If You Got a Text From Yourself?",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 44.6,
+  "style": "flat"
+ },
+ "cast": {
+  "him": {
+   "build": "man",
+   "skin": "tan",
+   "hair": {
+    "style": "spiky",
+    "color": "black"
+   },
+   "top": {
+    "style": "hoodie",
+    "color": "mustard"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "denim"
+   },
+   "shoes": {
+    "color": "white"
+   }
+  },
+  "future": {
+   "build": "man",
+   "skin": "tan",
+   "hair": {
+    "style": "spiky",
+    "color": "black"
+   },
+   "top": {
+    "style": "hoodie",
+    "color": "mustard"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "denim"
+   },
+   "shoes": {
+    "color": "white"
+   }
+  }
+ },
+ "shots": [
+  {
+   "start": 0.0,
+   "end": 3.4,
+   "set": {
+    "preset": "spotlight",
+    "color": "#151820"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 3.4,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.05
+    }
+   ],
+   "shake": [
+    {
+     "from": 0.9,
+     "to": 1.15,
+     "amp": 5,
+     "freq": 3
+    },
+    {
+     "from": 1.15,
+     "to": 1.4,
+     "amp": 5,
+     "freq": 3
+    },
+    {
+     "from": 2.2,
+     "to": 2.45,
+     "amp": 5,
+     "freq": 3
+    },
+    {
+     "from": 2.45,
+     "to": 2.7,
+     "amp": 5,
+     "freq": 3
+    }
+   ],
+   "props": [
+    {
+     "type": "phoneUI",
+     "x": 504,
+     "y": 1900,
+     "scale": 1.65,
+     "w": 520,
+     "h": 700,
+     "header": "Me",
+     "accent": "#3F6FD8",
+     "messages": [
+      {
+       "from": "them",
+       "text": "Don't open the door."
+      }
+     ],
+     "typing": false
+    },
+    {
+     "type": "svg",
+     "x": 504,
+     "y": 1900,
+     "scale": 1.65,
+     "markup": "<text x=\"0\" y=\"-516\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"24\" fill=\"#8A8A94\">Tomorrow, 9:14 PM</text>"
+    }
+   ],
+   "text": [
+    {
+     "text": "WHAT IF FUTURE\nYOU TEXTED?",
+     "y": 380,
+     "size": 100,
+     "from": 0,
+     "to": 3.4,
+     "anim": "pop"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.05,
+     "kind": "notif",
+     "gain": 0.7
+    },
+    {
+     "t": 0.9,
+     "kind": "knock",
+     "gain": 0.8
+    },
+    {
+     "t": 1.15,
+     "kind": "knock",
+     "gain": 0.8
+    },
+    {
+     "t": 2.2,
+     "kind": "knock",
+     "gain": 0.8
+    },
+    {
+     "t": 2.45,
+     "kind": "knock",
+     "gain": 0.8
+    }
+   ]
+  },
+  {
+   "start": 3.4,
+   "end": 6.8,
+   "set": {
+    "preset": "livingRoom",
+    "night": true,
+    "wall": "#2E3346",
+    "floor": "#3A332E",
+    "sofaX": 5200
+   },
+   "in": {
+    "type": "whip",
+    "dir": "left"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 380,
+     "y": 1080,
+     "zoom": 0.92
+    },
+    {
+     "t": 3.4,
+     "x": 420,
+     "y": 1080,
+     "zoom": 1.0
+    }
+   ],
+   "shake": [
+    {
+     "from": 0.2,
+     "to": 0.55,
+     "amp": 6
+    },
+    {
+     "from": 0.9,
+     "to": 1.3,
+     "amp": 7
+    }
+   ],
+   "props": [
+    {
+     "type": "door",
+     "x": 100,
+     "y": 1500,
+     "open": 0,
+     "keys": [
+      {
+       "t": 0.2,
+       "ease": "hold",
+       "open": 0.04
+      },
+      {
+       "t": 0.3,
+       "ease": "hold",
+       "open": 0
+      },
+      {
+       "t": 0.45,
+       "ease": "hold",
+       "open": 0.04
+      },
+      {
+       "t": 0.55,
+       "ease": "hold",
+       "open": 0
+      },
+      {
+       "t": 0.95,
+       "ease": "hold",
+       "open": 0.06
+      },
+      {
+       "t": 1.05,
+       "ease": "hold",
+       "open": 0
+      },
+      {
+       "t": 1.2,
+       "ease": "hold",
+       "open": 0.06
+      },
+      {
+       "t": 1.3,
+       "ease": "hold",
+       "open": 0
+      }
+     ]
+    },
+    {
+     "type": "window",
+     "x": 1050,
+     "y": 1070,
+     "night": true
+    }
+   ],
+   "actors": [
+    {
+     "id": "him",
+     "x": 560,
+     "y": 1500,
+     "facing": -1,
+     "pose": "phone",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "O",
+      "brows": "worried"
+     },
+     "do": [
+      {
+       "act": "walk",
+       "from": 1.0,
+       "to": 2.2,
+       "dx": 170,
+       "keepArms": true
+      },
+      {
+       "act": "tremble",
+       "from": 0.2,
+       "to": 2.4,
+       "amp": 0.6
+      }
+     ],
+     "keys": [
+      {
+       "t": 2.7,
+       "dur": 0.5,
+       "face": {
+        "eyes": "closed",
+        "mouth": "flat",
+        "brows": "flat"
+       }
+      },
+      {
+       "t": 3.25,
+       "dur": 0.15,
+       "face": {
+        "eyes": "open",
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         0.2,
+         0.7
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "text": [
+    {
+     "text": "KNOCK KNOCK",
+     "x": 504,
+     "y": 470,
+     "size": 96,
+     "color": "#E2453C",
+     "from": 0.55,
+     "to": 2.6,
+     "anim": "words"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "knock",
+     "gain": 0.9
+    },
+    {
+     "t": 0.45,
+     "kind": "knock",
+     "gain": 0.9
+    },
+    {
+     "t": 0.95,
+     "kind": "knock",
+     "gain": 1.0
+    },
+    {
+     "t": 1.2,
+     "kind": "knock",
+     "gain": 1.0
+    },
+    {
+     "t": 3.15,
+     "kind": "buzz",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 6.8,
+   "end": 10.2,
+   "set": {
+    "preset": "spotlight",
+    "color": "#151820"
+   },
+   "in": {
+    "type": "zoom",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 3.4,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.04
+    }
+   ],
+   "props": [
+    {
+     "type": "phoneUI",
+     "x": 504,
+     "y": 1590,
+     "scale": 1.65,
+     "w": 520,
+     "h": 700,
+     "header": "Me",
+     "accent": "#3F6FD8",
+     "messages": [
+      {
+       "from": "them",
+       "text": "Don't open the door."
+      }
+     ],
+     "typing": true,
+     "keys": [
+      {
+       "t": 0.35,
+       "ease": "hold",
+       "typing": false,
+       "messages": [
+        {
+         "from": "them",
+         "text": "Don't open the door."
+        },
+        {
+         "from": "them",
+         "text": "Good."
+        }
+       ]
+      },
+      {
+       "t": 1.35,
+       "ease": "hold",
+       "typing": true
+      },
+      {
+       "t": 1.7,
+       "ease": "hold",
+       "typing": false,
+       "messages": [
+        {
+         "from": "them",
+         "text": "Don't open the door."
+        },
+        {
+         "from": "them",
+         "text": "Good."
+        },
+        {
+         "from": "them",
+         "text": "Get behind the sofa."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.35,
+     "kind": "notif",
+     "gain": 0.6
+    },
+    {
+     "t": 1.7,
+     "kind": "notif",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 10.2,
+   "end": 13.2,
+   "set": {
+    "preset": "livingRoom",
+    "night": true,
+    "wall": "#2E3346",
+    "floor": "#3A332E",
+    "sofaX": 5200
+   },
+   "in": {
+    "type": "push",
+    "dir": "up",
+    "dur": 0.4
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 820,
+     "y": 1120,
+     "zoom": 0.95
+    },
+    {
+     "t": 3.0,
+     "x": 840,
+     "y": 1120,
+     "zoom": 1.0
+    }
+   ],
+   "props": [
+    {
+     "type": "window",
+     "x": 1050,
+     "y": 1070,
+     "night": true
+    },
+    {
+     "type": "door",
+     "x": 100,
+     "y": 1500
+    },
+    {
+     "type": "sofa",
+     "x": 640,
+     "y": 1500,
+     "color": "teal",
+     "layer": "front"
+    },
+    {
+     "type": "svg",
+     "x": 1050,
+     "y": 790,
+     "rot": -18,
+     "opacity": 0,
+     "layer": "front",
+     "markup": "<path d=\"M0 0 L-760 700 L-380 760Z\" fill=\"#FFF3B0\" fill-opacity=\"0.30\"/><path d=\"M0 0 L-640 720 L-470 745Z\" fill=\"#FFF8D6\" fill-opacity=\"0.30\"/><circle cx=\"0\" cy=\"0\" r=\"26\" fill=\"#FFF8D6\"/>",
+     "keys": [
+      {
+       "t": 0.5,
+       "opacity": 0,
+       "ease": "hold"
+      },
+      {
+       "t": 0.7,
+       "opacity": 1,
+       "rot": -14
+      },
+      {
+       "t": 2.4,
+       "rot": 22,
+       "ease": "inOutSine"
+      },
+      {
+       "t": 2.7,
+       "opacity": 0
+      }
+     ]
+    }
+   ],
+   "actors": [
+    {
+     "id": "him",
+     "x": 700,
+     "y": 1500,
+     "facing": 1,
+     "pose": "crouch",
+     "face": {
+      "eyes": "wide",
+      "mouth": "flat",
+      "brows": "worried",
+      "look": [
+       0.8,
+       -0.3
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.3,
+       "dur": 0.4,
+       "pose": {
+        "base": "crouch",
+        "body": {
+         "dy": 70
+        }
+       },
+       "face": {
+        "eyes": "closed",
+        "mouth": "flat",
+        "brows": "worried"
+       }
+      },
+      {
+       "t": 2.9,
+       "dur": 0.3,
+       "pose": "crouch",
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         0.8,
+         -0.3
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.6,
+     "kind": "click",
+     "gain": 0.5
+    },
+    {
+     "t": 1.4,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 1.9,
+     "kind": "step",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 13.2,
+   "end": 15.4,
+   "set": {
+    "preset": "spotlight",
+    "color": "#151820"
+   },
+   "in": {
+    "type": "zoom",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 2.2,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.04
+    }
+   ],
+   "props": [
+    {
+     "type": "phoneUI",
+     "x": 504,
+     "y": 1590,
+     "scale": 1.65,
+     "w": 520,
+     "h": 700,
+     "header": "Me",
+     "accent": "#3F6FD8",
+     "messages": [
+      {
+       "from": "them",
+       "text": "Good."
+      },
+      {
+       "from": "them",
+       "text": "Get behind the sofa."
+      }
+     ],
+     "typing": true,
+     "keys": [
+      {
+       "t": 0.3,
+       "ease": "hold",
+       "typing": false,
+       "messages": [
+        {
+         "from": "them",
+         "text": "Good."
+        },
+        {
+         "from": "them",
+         "text": "Get behind the sofa."
+        },
+        {
+         "from": "them",
+         "text": "Unplug the toaster."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "notif",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 15.4,
+   "end": 18.2,
+   "set": {
+    "preset": "kitchen",
+    "wall": "#3A3F52",
+    "floor": "#4A4038"
+   },
+   "in": {
+    "type": "whip",
+    "dir": "right"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 520,
+     "y": 1060,
+     "zoom": 1.2
+    },
+    {
+     "t": 2.8,
+     "x": 540,
+     "y": 1060,
+     "zoom": 1.26
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "x": 560,
+     "y": 1050,
+     "markup": "<g stroke-linejoin=\"round\"><path d=\"M-110 -150 Q-110 -172 -88 -172 L88 -172 Q110 -172 110 -150 L110 0 L-110 0Z\" fill=\"#C9D2DC\" stroke=\"#59616B\" stroke-width=\"5\"/><path d=\"M40 -170 L88 -170 Q108 -170 108 -150 L108 -2 L40 -2Z\" fill=\"#A9B4C0\"/><rect x=\"-72\" y=\"-186\" width=\"44\" height=\"18\" rx=\"6\" fill=\"#55575E\"/><rect x=\"2\" y=\"-186\" width=\"44\" height=\"18\" rx=\"6\" fill=\"#55575E\"/><rect x=\"112\" y=\"-110\" width=\"18\" height=\"40\" rx=\"5\" fill=\"#55575E\"/></g>"
+    },
+    {
+     "type": "svg",
+     "x": 760,
+     "y": 900,
+     "markup": "<g><rect x=\"-36\" y=\"-52\" width=\"72\" height=\"104\" rx=\"12\" fill=\"#E9E2D6\" stroke=\"#6C665E\" stroke-width=\"5\"/><circle cx=\"0\" cy=\"-16\" r=\"7\" fill=\"#2B2B30\"/><circle cx=\"0\" cy=\"18\" r=\"7\" fill=\"#2B2B30\"/></g>"
+    },
+    {
+     "type": "svg",
+     "x": 760,
+     "y": 900,
+     "markup": "<path d=\"M-150 100 Q-80 120 -10 60 L0 10\" fill=\"none\" stroke=\"#2B2B30\" stroke-width=\"9\" stroke-linecap=\"round\"/><rect x=\"-16\" y=\"-24\" width=\"32\" height=\"44\" rx=\"8\" fill=\"#2B2B30\"/>",
+     "keys": [
+      {
+       "t": 1.0,
+       "ease": "hold",
+       "opacity": 0
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "x": 760,
+     "y": 900,
+     "opacity": 0,
+     "markup": "<path transform=\"translate(0 0) rotate(0)\" d=\"M0 0 l14 -30 l6 22 l18 -10 l-12 28 l-8 -16Z\" fill=\"#F7D24A\" stroke=\"#B8761A\" stroke-width=\"3\"/><path transform=\"translate(-40 -30) rotate(40)\" d=\"M0 0 l14 -30 l6 22 l18 -10 l-12 28 l-8 -16Z\" fill=\"#F7D24A\" stroke=\"#B8761A\" stroke-width=\"3\"/><path transform=\"translate(40 -40) rotate(-30)\" d=\"M0 0 l14 -30 l6 22 l18 -10 l-12 28 l-8 -16Z\" fill=\"#F7D24A\" stroke=\"#B8761A\" stroke-width=\"3\"/><path transform=\"translate(-20 40) rotate(160)\" d=\"M0 0 l14 -30 l6 22 l18 -10 l-12 28 l-8 -16Z\" fill=\"#F7D24A\" stroke=\"#B8761A\" stroke-width=\"3\"/><path transform=\"translate(36 26) rotate(110)\" d=\"M0 0 l14 -30 l6 22 l18 -10 l-12 28 l-8 -16Z\" fill=\"#F7D24A\" stroke=\"#B8761A\" stroke-width=\"3\"/>",
+     "keys": [
+      {
+       "t": 1.0,
+       "ease": "hold",
+       "opacity": 1,
+       "scale": 0.8
+      },
+      {
+       "t": 1.5,
+       "scale": 1.4
+      },
+      {
+       "t": 1.7,
+       "opacity": 0
+      }
+     ]
+    }
+   ],
+   "overlay": [
+    {
+     "type": "flash",
+     "from": 1.0,
+     "to": 1.15,
+     "color": "#FFF4C2"
+    }
+   ],
+   "shake": [
+    {
+     "from": 1.0,
+     "to": 1.35,
+     "amp": 7
+    }
+   ],
+   "actors": [
+    {
+     "id": "him",
+     "x": 450,
+     "y": 1500,
+     "facing": 1,
+     "pose": "stand",
+     "face": {
+      "eyes": "open",
+      "mouth": "flat",
+      "brows": "worried",
+      "look": [
+       0.8,
+       -0.2
+      ]
+     },
+     "do": [
+      {
+       "act": "reach",
+       "arm": "R",
+       "from": 0.15,
+       "to": 1.15,
+       "target": [
+        300,
+        -600
+       ]
+      }
+     ],
+     "keys": [
+      {
+       "t": 1.3,
+       "dur": 0.25,
+       "pose": "scared",
+       "x": 380,
+       "face": {
+        "eyes": "wide",
+        "mouth": "scream",
+        "brows": "up"
+       }
+      },
+      {
+       "t": 2.4,
+       "dur": 0.6,
+       "pose": "stand",
+       "face": {
+        "eyes": "closed",
+        "mouth": "smile",
+        "brows": "flat"
+       }
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.95,
+     "kind": "click",
+     "gain": 0.6
+    },
+    {
+     "t": 1.0,
+     "kind": "glitch",
+     "gain": 0.8
+    },
+    {
+     "t": 1.05,
+     "kind": "buzz",
+     "gain": 0.5
+    },
+    {
+     "t": 2.3,
+     "kind": "breath",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 18.2,
+   "end": 23.2,
+   "set": {
+    "preset": "spotlight",
+    "color": "#151820"
+   },
+   "in": {
+    "type": "zoom",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 5.0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.06
+    }
+   ],
+   "props": [
+    {
+     "type": "phoneUI",
+     "x": 504,
+     "y": 1590,
+     "scale": 1.65,
+     "w": 520,
+     "h": 700,
+     "header": "Me",
+     "accent": "#3F6FD8",
+     "messages": [
+      {
+       "from": "them",
+       "text": "Unplug the toaster."
+      }
+     ],
+     "typing": false,
+     "keys": [
+      {
+       "t": 0.25,
+       "ease": "hold",
+       "messages": [
+        {
+         "from": "them",
+         "text": "Unplug the toaster."
+        },
+        {
+         "from": "me",
+         "text": "Thank you."
+        }
+       ]
+      },
+      {
+       "t": 1.0,
+       "ease": "hold",
+       "typing": true
+      },
+      {
+       "t": 1.35,
+       "ease": "hold",
+       "typing": false,
+       "messages": [
+        {
+         "from": "them",
+         "text": "Unplug the toaster."
+        },
+        {
+         "from": "me",
+         "text": "Thank you."
+        },
+        {
+         "from": "them",
+         "text": "Anytime."
+        }
+       ]
+      },
+      {
+       "t": 2.3,
+       "ease": "hold",
+       "banner": "Sam: Pizza Friday? 8pm"
+      },
+      {
+       "t": 3.0,
+       "ease": "hold",
+       "typing": true
+      },
+      {
+       "t": 3.3,
+       "ease": "hold",
+       "typing": false,
+       "messages": [
+        {
+         "from": "me",
+         "text": "Thank you."
+        },
+        {
+         "from": "them",
+         "text": "Anytime."
+        },
+        {
+         "from": "them",
+         "text": "Delete Sam's number."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.25,
+     "kind": "swipe",
+     "gain": 0.5
+    },
+    {
+     "t": 1.35,
+     "kind": "notif",
+     "gain": 0.6
+    },
+    {
+     "t": 2.3,
+     "kind": "ping",
+     "gain": 0.6
+    },
+    {
+     "t": 3.3,
+     "kind": "notif",
+     "gain": 0.7
+    }
+   ]
+  },
+  {
+   "start": 23.2,
+   "end": 25.4,
+   "set": {
+    "preset": "livingRoom",
+    "night": true,
+    "wall": "#2E3346",
+    "floor": "#3A332E",
+    "sofaX": 5200
+   },
+   "in": {
+    "type": "crossfade",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 860,
+     "zoom": 1.8
+    },
+    {
+     "t": 2.2,
+     "x": 560,
+     "y": 870,
+     "zoom": 1.95
+    }
+   ],
+   "props": [
+    {
+     "type": "window",
+     "x": 1050,
+     "y": 1070,
+     "night": true
+    }
+   ],
+   "actors": [
+    {
+     "id": "him",
+     "x": 540,
+     "y": 1500,
+     "facing": 1,
+     "pose": "phone",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "flat",
+      "brows": "worried",
+      "look": [
+       0.2,
+       0.7
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.9,
+       "dur": 0.6,
+       "pose": {
+        "base": "phone",
+        "head": {
+         "tilt": 8
+        }
+       },
+       "face": {
+        "eyes": "tired",
+        "mouth": "sad",
+        "brows": "sad",
+        "look": [
+         0.2,
+         0.7
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.4,
+     "kind": "heart",
+     "gain": 0.5
+    },
+    {
+     "t": 1.2,
+     "kind": "heart",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 25.4,
+   "end": 28.2,
+   "set": {
+    "preset": "spotlight",
+    "color": "#151820"
+   },
+   "in": {
+    "type": "crossfade",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 2.8,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.04
+    }
+   ],
+   "props": [
+    {
+     "type": "phoneUI",
+     "x": 504,
+     "y": 1590,
+     "scale": 1.65,
+     "w": 520,
+     "h": 700,
+     "header": "Sam",
+     "accent": "#E0A030",
+     "messages": [
+      {
+       "from": "them",
+       "text": "Pizza Friday? 8pm"
+      },
+      {
+       "from": "me",
+       "text": "Always."
+      }
+     ],
+     "typing": false,
+     "keys": [
+      {
+       "t": 1.4,
+       "ease": "hold",
+       "banner": "Contact deleted."
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1.4,
+     "kind": "swipe",
+     "gain": 0.6
+    },
+    {
+     "t": 1.45,
+     "kind": "cut",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 28.2,
+   "end": 31.4,
+   "set": {
+    "preset": "spotlight",
+    "color": "#151820"
+   },
+   "in": {
+    "type": "push",
+    "dir": "left",
+    "dur": 0.35
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 3.2,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.04
+    }
+   ],
+   "props": [
+    {
+     "type": "phoneUI",
+     "x": 504,
+     "y": 1590,
+     "scale": 1.65,
+     "w": 520,
+     "h": 700,
+     "header": "Me",
+     "accent": "#3F6FD8",
+     "messages": [
+      {
+       "from": "them",
+       "text": "Delete Sam's number."
+      }
+     ],
+     "typing": true,
+     "keys": [
+      {
+       "t": 0.3,
+       "ease": "hold",
+       "typing": false,
+       "messages": [
+        {
+         "from": "them",
+         "text": "Delete Sam's number."
+        },
+        {
+         "from": "them",
+         "text": "Cancel Friday."
+        }
+       ]
+      },
+      {
+       "t": 1.3,
+       "ease": "hold",
+       "typing": true
+      },
+      {
+       "t": 1.6,
+       "ease": "hold",
+       "typing": false,
+       "messages": [
+        {
+         "from": "them",
+         "text": "Delete Sam's number."
+        },
+        {
+         "from": "them",
+         "text": "Cancel Friday."
+        },
+        {
+         "from": "them",
+         "text": "Stay inside."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "notif",
+     "gain": 0.6
+    },
+    {
+     "t": 1.6,
+     "kind": "notif",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 31.4,
+   "end": 34.0,
+   "set": {
+    "preset": "livingRoom",
+    "night": true,
+    "wall": "#2E3346",
+    "floor": "#3A332E",
+    "sofaX": 5200
+   },
+   "in": {
+    "type": "fade",
+    "dur": 0.5
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 640,
+     "y": 1060,
+     "zoom": 0.8
+    },
+    {
+     "t": 2.6,
+     "x": 640,
+     "y": 1000,
+     "zoom": 0.55
+    }
+   ],
+   "props": [
+    {
+     "type": "window",
+     "x": 1150,
+     "y": 1070,
+     "night": true
+    },
+    {
+     "type": "svg",
+     "x": 1150,
+     "y": 1000,
+     "markup": "<rect x=\"59\" y=\"-145\" width=\"5\" height=\"54\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"212\" y=\"-146\" width=\"5\" height=\"58\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-226\" y=\"-299\" width=\"5\" height=\"58\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"72\" y=\"-55\" width=\"5\" height=\"33\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-15\" y=\"-422\" width=\"5\" height=\"46\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"35\" y=\"-553\" width=\"5\" height=\"37\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-106\" y=\"-47\" width=\"5\" height=\"53\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-163\" y=\"-114\" width=\"5\" height=\"34\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"56\" y=\"-489\" width=\"5\" height=\"30\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"178\" y=\"-443\" width=\"5\" height=\"36\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"232\" y=\"-71\" width=\"5\" height=\"39\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"222\" y=\"-258\" width=\"5\" height=\"50\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-142\" y=\"-33\" width=\"5\" height=\"51\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"224\" y=\"-60\" width=\"5\" height=\"39\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-67\" y=\"-467\" width=\"5\" height=\"34\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-209\" y=\"-391\" width=\"5\" height=\"48\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-238\" y=\"-180\" width=\"5\" height=\"40\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-91\" y=\"-102\" width=\"5\" height=\"44\" rx=\"2.5\" fill=\"#9FD3EA\"/>",
+     "keys": [
+      {
+       "t": 2.6,
+       "y": 1060,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "door",
+     "x": 100,
+     "y": 1500
+    },
+    {
+     "type": "sofa",
+     "x": 640,
+     "y": 1500,
+     "color": "teal"
+    }
+   ],
+   "actors": [
+    {
+     "id": "him",
+     "x": 640,
+     "y": 1480,
+     "facing": 1,
+     "pose": "sitPhone",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "sad",
+      "brows": "sad",
+      "look": [
+       0.2,
+       0.7
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "start": 34.0,
+   "end": 36.6,
+   "set": {
+    "preset": "livingRoom",
+    "night": true,
+    "wall": "#2E3346",
+    "floor": "#3A332E",
+    "sofaX": 5200
+   },
+   "in": {
+    "type": "crossfade",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 380,
+     "y": 1060,
+     "zoom": 1.0
+    },
+    {
+     "t": 2.6,
+     "x": 300,
+     "y": 1060,
+     "zoom": 1.1
+    }
+   ],
+   "props": [
+    {
+     "type": "door",
+     "x": 100,
+     "y": 1500
+    }
+   ],
+   "actors": [
+    {
+     "id": "him",
+     "x": 700,
+     "y": 1500,
+     "facing": -1,
+     "pose": "stand",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "flat",
+      "brows": "up"
+     },
+     "do": [
+      {
+       "act": "walk",
+       "from": 0.7,
+       "to": 2.3,
+       "dx": -380
+      }
+     ]
+    }
+   ],
+   "text": [
+    {
+     "text": "knock.",
+     "font": "serif",
+     "size": 76,
+     "x": 300,
+     "y": 560,
+     "from": 0.1,
+     "to": 1.9
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.1,
+     "kind": "knock",
+     "gain": 0.35
+    },
+    {
+     "t": 0.9,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 1.5,
+     "kind": "step",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 36.6,
+   "end": 40.4,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "in": {
+    "type": "iris",
+    "cx": 540,
+    "cy": 880,
+    "dur": 0.5
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 1080,
+     "zoom": 1.3
+    },
+    {
+     "t": 3.8,
+     "x": 540,
+     "y": 1060,
+     "zoom": 1.42
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "x": 540,
+     "y": 1270,
+     "layer": "front",
+     "markup": "<g stroke-linejoin=\"round\"><path d=\"M-250 -320 L250 -312 L244 0 L-246 -6Z\" fill=\"#C49A6C\" stroke=\"#7A5232\" stroke-width=\"6\"/><path d=\"M140 -314 L250 -312 L244 0 L136 -2Z\" fill=\"#B08454\"/><ellipse cx=\"-120\" cy=\"-60\" rx=\"60\" ry=\"26\" fill=\"#A87E52\"/><ellipse cx=\"90\" cy=\"-250\" rx=\"40\" ry=\"18\" fill=\"#A87E52\"/><text x=\"0\" y=\"-228\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"72\" fill=\"#1E1E22\" transform=\"rotate(-1.5 0 -228)\">THOSE TEXTS</text><text x=\"0\" y=\"-140\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"72\" fill=\"#1E1E22\" transform=\"rotate(-0.5 0 -140)\">AREN'T</text><text x=\"0\" y=\"-52\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"72\" fill=\"#1E1E22\" transform=\"rotate(0.5 0 -52)\">FROM ME.</text></g>"
+    },
+    {
+     "type": "svg",
+     "x": 540,
+     "y": 900,
+     "markup": "<rect x=\"-37\" y=\"-564\" width=\"5\" height=\"34\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"367\" y=\"-894\" width=\"5\" height=\"45\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"398\" y=\"-827\" width=\"5\" height=\"47\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"117\" y=\"-863\" width=\"5\" height=\"41\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"203\" y=\"-493\" width=\"5\" height=\"52\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-343\" y=\"-686\" width=\"5\" height=\"33\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"6\" y=\"-69\" width=\"5\" height=\"48\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"274\" y=\"-555\" width=\"5\" height=\"52\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-398\" y=\"-638\" width=\"5\" height=\"50\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"226\" y=\"-520\" width=\"5\" height=\"33\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-233\" y=\"-711\" width=\"5\" height=\"38\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"310\" y=\"-720\" width=\"5\" height=\"57\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"379\" y=\"-851\" width=\"5\" height=\"41\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-8\" y=\"-879\" width=\"5\" height=\"43\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"406\" y=\"-799\" width=\"5\" height=\"48\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-379\" y=\"-379\" width=\"5\" height=\"57\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-297\" y=\"-893\" width=\"5\" height=\"33\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"40\" y=\"-884\" width=\"5\" height=\"33\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-3\" y=\"-71\" width=\"5\" height=\"43\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-102\" y=\"-325\" width=\"5\" height=\"33\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"80\" y=\"-745\" width=\"5\" height=\"48\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"458\" y=\"-851\" width=\"5\" height=\"47\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"106\" y=\"-766\" width=\"5\" height=\"38\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"495\" y=\"-2\" width=\"5\" height=\"34\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"205\" y=\"-44\" width=\"5\" height=\"37\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"111\" y=\"-861\" width=\"5\" height=\"41\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"174\" y=\"-369\" width=\"5\" height=\"53\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-413\" y=\"-588\" width=\"5\" height=\"56\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"84\" y=\"-494\" width=\"5\" height=\"42\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"486\" y=\"-383\" width=\"5\" height=\"31\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"299\" y=\"-604\" width=\"5\" height=\"43\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-287\" y=\"-500\" width=\"5\" height=\"40\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"-411\" y=\"-333\" width=\"5\" height=\"33\" rx=\"2.5\" fill=\"#9FD3EA\"/><rect x=\"284\" y=\"-877\" width=\"5\" height=\"53\" rx=\"2.5\" fill=\"#9FD3EA\"/>",
+     "keys": [
+      {
+       "t": 0.5,
+       "y": 1150,
+       "ease": "linear"
+      },
+      {
+       "t": 0.51,
+       "ease": "hold",
+       "y": 900
+      },
+      {
+       "t": 1.0,
+       "y": 1150,
+       "ease": "linear"
+      },
+      {
+       "t": 1.01,
+       "ease": "hold",
+       "y": 900
+      },
+      {
+       "t": 1.5,
+       "y": 1150,
+       "ease": "linear"
+      },
+      {
+       "t": 1.51,
+       "ease": "hold",
+       "y": 900
+      },
+      {
+       "t": 2.0,
+       "y": 1150,
+       "ease": "linear"
+      },
+      {
+       "t": 2.01,
+       "ease": "hold",
+       "y": 900
+      },
+      {
+       "t": 2.5,
+       "y": 1150,
+       "ease": "linear"
+      },
+      {
+       "t": 2.51,
+       "ease": "hold",
+       "y": 900
+      },
+      {
+       "t": 3.0,
+       "y": 1150,
+       "ease": "linear"
+      },
+      {
+       "t": 3.01,
+       "ease": "hold",
+       "y": 900
+      },
+      {
+       "t": 3.5,
+       "y": 1150,
+       "ease": "linear"
+      },
+      {
+       "t": 3.51,
+       "ease": "hold",
+       "y": 900
+      },
+      {
+       "t": 4.0,
+       "y": 1150,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "x": 540,
+     "y": 760,
+     "markup": "<ellipse cx=\"-60\" cy=\"0\" rx=\"7\" ry=\"12\" fill=\"#9FD3EA\"/><ellipse cx=\"40\" cy=\"-20\" rx=\"7\" ry=\"12\" fill=\"#9FD3EA\"/><ellipse cx=\"80\" cy=\"30\" rx=\"7\" ry=\"12\" fill=\"#9FD3EA\"/><ellipse cx=\"-20\" cy=\"40\" rx=\"7\" ry=\"12\" fill=\"#9FD3EA\"/><ellipse cx=\"10\" cy=\"-50\" rx=\"7\" ry=\"12\" fill=\"#9FD3EA\"/>"
+    }
+   ],
+   "actors": [
+    {
+     "id": "future",
+     "x": 540,
+     "y": 1500,
+     "facing": 1,
+     "pose": {
+      "base": "hold",
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 30,
+       "b": -60
+      }
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "sad",
+      "brows": "sad",
+      "look": [
+       0,
+       0
+      ]
+     },
+     "do": [
+      {
+       "act": "tremble",
+       "from": 0,
+       "to": 3.8,
+       "amp": 0.4
+      }
+     ]
+    }
+   ],
+   "overlay": [
+    {
+     "type": "peephole",
+     "from": 0,
+     "to": 3.8,
+     "r": 470,
+     "cx": 520,
+     "cy": 860
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "sting",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 40.4,
+   "end": 41.8,
+   "set": {
+    "preset": "livingRoom",
+    "night": true,
+    "wall": "#2E3346",
+    "floor": "#3A332E",
+    "sofaX": 5200
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 300,
+     "y": 880,
+     "zoom": 1.9
+    },
+    {
+     "t": 1.4,
+     "x": 300,
+     "y": 880,
+     "zoom": 2.0
+    }
+   ],
+   "props": [
+    {
+     "type": "door",
+     "x": -280,
+     "y": 1500
+    }
+   ],
+   "actors": [
+    {
+     "id": "him",
+     "x": 300,
+     "y": 1500,
+     "facing": -1,
+     "pose": "stand",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "O",
+      "brows": "up"
+     },
+     "keys": [
+      {
+       "t": 0.8,
+       "dur": 0.3,
+       "face": {
+        "eyes": "wide",
+        "mouth": "flat",
+        "brows": "worried",
+        "look": [
+         -0.3,
+         0.8
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.55,
+     "kind": "buzz",
+     "gain": 0.8
+    }
+   ]
+  },
+  {
+   "start": 41.8,
+   "end": 44.6,
+   "set": {
+    "preset": "spotlight",
+    "color": "#151820"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.04
+    },
+    {
+     "t": 2.8,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.1
+    }
+   ],
+   "props": [
+    {
+     "type": "phoneUI",
+     "x": 504,
+     "y": 1590,
+     "scale": 1.65,
+     "w": 520,
+     "h": 700,
+     "header": "Me",
+     "accent": "#3F6FD8",
+     "messages": [
+      {
+       "from": "them",
+       "text": "Cancel Friday."
+      },
+      {
+       "from": "them",
+       "text": "Stay inside."
+      }
+     ],
+     "typing": true,
+     "keys": [
+      {
+       "t": 0.3,
+       "ease": "hold",
+       "typing": false,
+       "messages": [
+        {
+         "from": "them",
+         "text": "Cancel Friday."
+        },
+        {
+         "from": "them",
+         "text": "Stay inside."
+        },
+        {
+         "from": "them",
+         "text": "Don't read the sign."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "overlay": [
+    {
+     "type": "fadeOut",
+     "from": 2.35,
+     "to": 2.42,
+     "color": "#000000"
+    },
+    {
+     "type": "peephole",
+     "from": 2.42,
+     "to": 2.8,
+     "r": 0.5,
+     "cx": -50,
+     "cy": -50,
+     "color": "#000000"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "notif",
+     "gain": 0.8
+    },
+    {
+     "t": 2.35,
+     "kind": "cut",
+     "gain": 0.8
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "mood": "tense",
+   "a": 0,
+   "b": 6.8
+  },
+  {
+   "mood": "playful",
+   "a": 6.8,
+   "b": 18.2,
+   "gain": 0.7
+  },
+  {
+   "mood": "eerie",
+   "a": 18.2,
+   "b": 34.0
+  },
+  {
+   "mood": "tense",
+   "a": 34.0,
+   "b": 44.15
+  }
+ ],
+ "beds": [
+  {
+   "name": "hum",
+   "a": 0,
+   "b": 44.15,
+   "gain": 0.5
+  },
+  {
+   "name": "rain",
+   "a": 31.4,
+   "b": 40.4,
+   "gain": 0.5
+  }
+ ]
+}

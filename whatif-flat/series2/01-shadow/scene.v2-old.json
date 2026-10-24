@@ -1,0 +1,4200 @@
+{
+ "meta": {
+  "title": "What If Your Shadow Got Tired of You?",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 39.9
+ },
+ "cast": {
+  "hero": {
+   "skin": "tan",
+   "hair": {
+    "style": "short",
+    "color": "black"
+   },
+   "top": {
+    "style": "hoodie",
+    "color": "mustard"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "charcoal"
+   },
+   "shoes": {
+    "color": "white"
+   },
+   "accessories": [
+    "glasses"
+   ]
+  },
+  "her": {
+   "skin": "brown",
+   "build": {
+    "width": 0.92
+   },
+   "hair": {
+    "style": "bun",
+    "color": "black"
+   },
+   "top": {
+    "style": "jacket",
+    "color": "teal",
+    "detail": "white"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "navy"
+   },
+   "shoes": {
+    "color": "red"
+   }
+  }
+ },
+ "shots": [
+  {
+   "start": 0,
+   "end": 2.8,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 430,
+     "y": 830,
+     "zoom": 1.24
+    },
+    {
+     "t": 2.8,
+     "x": 440,
+     "y": 810,
+     "zoom": 1.34
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 470,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "sitPhone"
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      },
+      {
+       "t": 0.75,
+       "pose": "stand",
+       "dur": 0.6
+      },
+      {
+       "t": 1.55,
+       "pose": "cheer",
+       "dur": 0.45
+      },
+      {
+       "t": 2.05,
+       "pose": {
+        "base": "stand",
+        "head": {
+         "tilt": -22
+        }
+       },
+       "dur": 0.22
+      },
+      {
+       "t": 2.4,
+       "pose": {
+        "base": "stand",
+        "head": {
+         "tilt": 20
+        }
+       },
+       "dur": 0.22
+      },
+      {
+       "t": 2.7,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "armR": {
+         "a": 40,
+         "b": -95
+        }
+       },
+       "dur": 0.25
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 330,
+     "y": 1500,
+     "scale": 1,
+     "pose": "sitPhone",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       0,
+       0.8
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    }
+   ],
+   "text": [
+    {
+     "text": "WHAT IF YOUR SHADOW\nGOT TIRED OF YOU?",
+     "x": 540,
+     "y": 250,
+     "size": 80,
+     "font": "display",
+     "from": 0.12,
+     "to": 2.75,
+     "pop": true,
+     "shadow": true
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.15,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 0.2,
+     "kind": "whoosh",
+     "gain": 0.5
+    },
+    {
+     "t": 1.2,
+     "kind": "swipe",
+     "gain": 0.4
+    },
+    {
+     "t": 2,
+     "kind": "click",
+     "gain": 0.9
+    },
+    {
+     "t": 2.36,
+     "kind": "click",
+     "gain": 0.9
+    }
+   ]
+  },
+  {
+   "start": 2.8,
+   "end": 5.4,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 410,
+     "y": 760,
+     "zoom": 1.7
+    },
+    {
+     "t": 2.6,
+     "x": 410,
+     "y": 750,
+     "zoom": 1.8
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 470,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "stand",
+      "armL": {
+       "a": 40,
+       "b": -95
+      },
+      "armR": {
+       "a": 40,
+       "b": -95
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      },
+      {
+       "t": 1.4,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "armR": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": 12
+        }
+       },
+       "dur": 0.4
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 330,
+     "y": 1500,
+     "scale": 1,
+     "pose": "sitPhone",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       0,
+       0.8
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.5,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "look": [
+         0.7,
+         -1
+        ],
+        "turn": 0.25
+       },
+       "dur": 0.2
+      },
+      {
+       "t": 1,
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         0.8,
+         -1
+        ],
+        "turn": 0.3
+       },
+       "pose": {
+        "base": "sitPhone",
+        "head": {
+         "tilt": -4
+        }
+       },
+       "dur": 0.15
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "tremble",
+       "from": 1,
+       "amp": 2.5
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1,
+     "kind": "sting",
+     "gain": 0.55
+    }
+   ]
+  },
+  {
+   "start": 5.4,
+   "end": 8.6,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 580,
+     "y": 960,
+     "zoom": 1.1
+    },
+    {
+     "t": 3.2,
+     "x": 580,
+     "y": 950,
+     "zoom": 1.16
+    }
+   ],
+   "actors": [
+    {
+     "id": "her",
+     "x": 900,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "hold": {
+      "R": "book"
+     },
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 470,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "stand",
+      "armL": {
+       "a": 40,
+       "b": -95
+      },
+      "armR": {
+       "a": 40,
+       "b": -95
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      },
+      {
+       "t": 0.6,
+       "pose": "point",
+       "dur": 0.35
+      },
+      {
+       "t": 1.5,
+       "facing": -1,
+       "pose": {
+        "base": "point",
+        "head": {
+         "tilt": -8
+        }
+       },
+       "dur": 0.25
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 330,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 44,
+       "b": -112
+      },
+      "armR": {
+       "a": 44,
+       "b": -112
+      }
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "teeth",
+      "brows": "worried",
+      "look": [
+       0.6,
+       -0.6
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.9,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 44,
+         "b": -112
+        },
+        "armR": {
+         "a": 44,
+         "b": -112
+        },
+        "head": {
+         "tilt": -14
+        }
+       },
+       "face": {
+        "eyes": "wide",
+        "mouth": "teeth",
+        "brows": "worried",
+        "look": [
+         -0.2,
+         0
+        ]
+       },
+       "dur": 0.15
+      },
+      {
+       "t": 2.1,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 44,
+         "b": -112
+        },
+        "armR": {
+         "a": 44,
+         "b": -112
+        },
+        "head": {
+         "tilt": 14
+        }
+       },
+       "dur": 0.18
+      },
+      {
+       "t": 2.3,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 44,
+         "b": -112
+        },
+        "armR": {
+         "a": 44,
+         "b": -112
+        },
+        "head": {
+         "tilt": -14
+        }
+       },
+       "dur": 0.18
+      },
+      {
+       "t": 2.5,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 44,
+         "b": -112
+        },
+        "armR": {
+         "a": 44,
+         "b": -112
+        },
+        "head": {
+         "tilt": 14
+        }
+       },
+       "dur": 0.18
+      },
+      {
+       "t": 2.7,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 44,
+         "b": -112
+        },
+        "armR": {
+         "a": 44,
+         "b": -112
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.15
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "look": [
+       0,
+       0.8
+      ],
+      "mouth": "smile",
+      "eyes": "tired"
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    }
+   ],
+   "text": [
+    {
+     "text": "EVERY NIGHT · 11:40 PM",
+     "x": 540,
+     "y": 240,
+     "size": 46,
+     "font": "mono",
+     "from": 0.2,
+     "to": 3.2,
+     "color": "#FFFFFF",
+     "pop": true,
+     "shadow": true
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.6,
+     "kind": "swipe",
+     "gain": 0.4
+    },
+    {
+     "t": 1,
+     "kind": "paper",
+     "gain": 0.35
+    },
+    {
+     "t": 1.5,
+     "kind": "swipe",
+     "gain": 0.4
+    },
+    {
+     "t": 1.95,
+     "kind": "boing",
+     "gain": 0.25
+    }
+   ]
+  },
+  {
+   "start": 8.6,
+   "end": 11.4,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 760,
+     "zoom": 1.4
+    },
+    {
+     "t": 2.4,
+     "x": 700,
+     "y": 740,
+     "zoom": 1.45,
+     "ease": "inOut"
+    }
+   ],
+   "actors": [
+    {
+     "id": "her",
+     "x": 900,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "hold": {
+      "R": "book"
+     },
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 470,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": "stand",
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "do": [
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "walk",
+       "from": 0.2,
+       "to": 2,
+       "dx": 150,
+       "rate": 1.6
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 330,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 44,
+       "b": -112
+      },
+      "armR": {
+       "a": 44,
+       "b": -112
+      }
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "teeth",
+      "brows": "worried",
+      "look": [
+       0.9,
+       -0.5
+      ],
+      "turn": 0.3
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "look": [
+       0,
+       0.8
+      ],
+      "mouth": "smile",
+      "eyes": "tired"
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.25,
+     "kind": "whoosh",
+     "gain": 0.35
+    },
+    {
+     "t": 0.5,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 0.9,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 1.3,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 1.7,
+     "kind": "step",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 11.4,
+   "end": 14,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 760,
+     "y": 660,
+     "zoom": 1.5
+    },
+    {
+     "t": 2.6,
+     "x": 760,
+     "y": 640,
+     "zoom": 1.6
+    }
+   ],
+   "actors": [
+    {
+     "id": "her",
+     "x": 900,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "hold": {
+      "R": "book"
+     },
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      },
+      {
+       "t": 1,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 24,
+         "b": -40
+        },
+        "armR": {
+         "a": 24,
+         "b": -40
+        },
+        "head": {
+         "tilt": -8
+        }
+       },
+       "hold": {},
+       "dur": 0.3
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "laugh",
+       "from": 1.3,
+       "amp": 8,
+       "rate": 6
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 620,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": "stand",
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      },
+      {
+       "t": 0.5,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 72,
+         "b": -14
+        },
+        "head": {
+         "tilt": 10
+        }
+       },
+       "hold": {
+        "R": {
+         "type": "rose",
+         "scale": 1.1
+        }
+       },
+       "dur": 0.35
+      },
+      {
+       "t": 1.7,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 72,
+         "b": -14
+        },
+        "armL": {
+         "a": 40,
+         "b": -95
+        },
+        "head": {
+         "tilt": 14
+        }
+       },
+       "dur": 0.3
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 330,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 44,
+       "b": -112
+      },
+      "armR": {
+       "a": 44,
+       "b": -112
+      }
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "teeth",
+      "brows": "worried",
+      "look": [
+       0.9,
+       -0.5
+      ],
+      "turn": 0.3
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "look": [
+       0,
+       0.8
+      ],
+      "mouth": "smile",
+      "eyes": "tired"
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    },
+    {
+     "type": "svg",
+     "id": "heart",
+     "x": 770,
+     "y": 420,
+     "layer": "front",
+     "opacity": 0,
+     "scale": 0.5,
+     "markup": "<path d=\"M0 30 C-70 -20 -50 -80 0 -50 C50 -80 70 -20 0 30Z\" fill=\"#E2453C\"/><path d=\"M0 30 C40 0 58 -30 46 -56 C60 -30 40 0 0 30Z\" fill=\"#B82F2A\"/>",
+     "keys": [
+      {
+       "t": 1.4,
+       "opacity": 0,
+       "scale": 0.6
+      },
+      {
+       "t": 1.5799999999999998,
+       "opacity": 1,
+       "scale": 1,
+       "ease": "back"
+      },
+      {
+       "t": 2.6,
+       "y": 380
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.5,
+     "kind": "pop",
+     "gain": 0.5
+    },
+    {
+     "t": 1.3,
+     "kind": "chuckle",
+     "gain": 0.6
+    },
+    {
+     "t": 1.45,
+     "kind": "heart",
+     "gain": 0.5
+    },
+    {
+     "t": 1.7,
+     "kind": "chuckle",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 14,
+   "end": 16.4,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 570,
+     "y": 980,
+     "zoom": 1.24
+    },
+    {
+     "t": 2.4,
+     "x": 570,
+     "y": 970,
+     "zoom": 1.3
+    }
+   ],
+   "actors": [
+    {
+     "id": "her",
+     "x": 900,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 24,
+       "b": -40
+      },
+      "armR": {
+       "a": 24,
+       "b": -40
+      },
+      "head": {
+       "tilt": -8
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "hold": {},
+     "do": [
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "laugh",
+       "amp": 8,
+       "rate": 6
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 620,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 72,
+       "b": -14
+      },
+      "armL": {
+       "a": 40,
+       "b": -95
+      },
+      "head": {
+       "tilt": 14
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "hold": {
+      "R": {
+       "type": "rose",
+       "scale": 1.1
+      }
+     },
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 330,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 44,
+       "b": -112
+      },
+      "armR": {
+       "a": 44,
+       "b": -112
+      }
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "scream",
+      "brows": "up",
+      "look": [
+       0.9,
+       -0.5
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 0.5,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 150,
+         "b": 10
+        },
+        "armR": {
+         "a": 150,
+         "b": 10
+        }
+       },
+       "dur": 0.2
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "wave",
+       "arm": "L",
+       "from": 0.7,
+       "rate": 4
+      },
+      {
+       "act": "wave",
+       "arm": "R",
+       "from": 0.75,
+       "rate": 4
+      },
+      {
+       "act": "tremble",
+       "amp": 2
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "look": [
+       0,
+       0.8
+      ],
+      "mouth": "smile",
+      "eyes": "tired"
+     },
+     "keys": [
+      {
+       "t": 0.4,
+       "face": {
+        "look": [
+         -0.4,
+         -0.6
+        ],
+        "brows": "raised",
+        "mouth": "flat"
+       },
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 34,
+         "b": -118
+        },
+        "armR": {
+         "a": 30,
+         "b": -112
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.2
+      },
+      {
+       "t": 1.3,
+       "face": {
+        "look": [
+         0.7,
+         -1
+        ],
+        "turn": 0.2,
+        "brows": "up",
+        "mouth": "O",
+        "eyes": "wide"
+       },
+       "dur": 0.2
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    },
+    {
+     "type": "svg",
+     "x": 300,
+     "y": 770,
+     "layer": "front",
+     "markup": "<rect x=\"-50\" y=\"-172\" width=\"474.24\" height=\"116\" rx=\"40\" fill=\"#FFFFFF\"/><rect x=\"-30\" y=\"-68\" width=\"434.24\" height=\"12\" rx=\"6\" fill=\"#000\" fill-opacity=\"0.06\"/><path d=\"M-20 -60 L0 0 L50 -60Z\" fill=\"#FFFFFF\"/><text x=\"187.12\" y=\"-98.32\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"56\" fill=\"#1E1E22\">NO! NO! NO!</text>",
+     "opacity": 0,
+     "scale": 0.6,
+     "keys": [
+      {
+       "t": 0.7,
+       "opacity": 0,
+       "scale": 0.6
+      },
+      {
+       "t": 0.8799999999999999,
+       "opacity": 1,
+       "scale": 1,
+       "ease": "back"
+      },
+      {
+       "t": 2.28,
+       "opacity": 1,
+       "scale": 1
+      },
+      {
+       "t": 2.4,
+       "opacity": 0,
+       "scale": 0.9
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.4,
+     "kind": "pop",
+     "gain": 0.3
+    },
+    {
+     "t": 0.7,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 1.3,
+     "kind": "boing",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 16.4,
+   "end": 18.8,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 980,
+     "zoom": 1.04
+    },
+    {
+     "t": 2.4,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.1
+    }
+   ],
+   "actors": [
+    {
+     "id": "her",
+     "x": 900,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 24,
+       "b": -40
+      },
+      "armR": {
+       "a": 24,
+       "b": -40
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "hold": {},
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 620,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": "stand",
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      },
+      {
+       "t": 0.4,
+       "pose": {
+        "base": "stand",
+        "head": {
+         "tilt": -10
+        }
+       },
+       "opacity": 0.85,
+       "dur": 0.2
+      },
+      {
+       "t": 2.4,
+       "opacity": 0.6
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 330,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 14,
+       "b": -24
+      },
+      "armR": {
+       "a": 14,
+       "b": -24
+      }
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "O",
+      "brows": "worried",
+      "look": [
+       -0.6,
+       -1
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 24,
+       "b": -40
+      },
+      "armR": {
+       "a": 24,
+       "b": -40
+      }
+     },
+     "hold": {},
+     "face": {
+      "look": [
+       -0.8,
+       -1
+      ],
+      "brows": "raised",
+      "mouth": "flat"
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true,
+     "keys": [
+      {
+       "t": 0.3,
+       "lit": false
+      },
+      {
+       "t": 0.45,
+       "lit": true
+      },
+      {
+       "t": 0.9,
+       "lit": false
+      },
+      {
+       "t": 1.05,
+       "lit": true
+      },
+      {
+       "t": 1.5,
+       "lit": false
+      },
+      {
+       "t": 1.75,
+       "lit": true
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    }
+   ],
+   "overlay": [
+    {
+     "type": "flash",
+     "color": "#05060A",
+     "from": 0.3,
+     "to": 0.45
+    },
+    {
+     "type": "flash",
+     "color": "#05060A",
+     "from": 0.9,
+     "to": 1.05
+    },
+    {
+     "type": "flash",
+     "color": "#05060A",
+     "from": 1.5,
+     "to": 1.75
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "buzz",
+     "gain": 0.6
+    },
+    {
+     "t": 0.9,
+     "kind": "glitch",
+     "gain": 0.4
+    },
+    {
+     "t": 1.5,
+     "kind": "buzz",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 18.8,
+   "end": 21.6,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 660,
+     "y": 700,
+     "zoom": 1.45
+    },
+    {
+     "t": 2.8,
+     "x": 660,
+     "y": 680,
+     "zoom": 1.55
+    }
+   ],
+   "actors": [
+    {
+     "id": "her",
+     "x": 900,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 24,
+       "b": -40
+      },
+      "armR": {
+       "a": 24,
+       "b": -40
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "hold": {},
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 620,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": "stand",
+     "silhouette": "#1A1B20",
+     "opacity": 0.6,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.6
+      },
+      {
+       "t": 0.01,
+       "opacity": 0.6
+      },
+      {
+       "t": 0.4,
+       "facing": -1,
+       "pose": {
+        "base": "stand",
+        "head": {
+         "tilt": -8
+        }
+       },
+       "dur": 0.2
+      },
+      {
+       "t": 0.9,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 62,
+         "b": -112
+        },
+        "armR": {
+         "a": 30,
+         "b": -128
+        },
+        "head": {
+         "tilt": -8
+        }
+       },
+       "dur": 0.3
+      },
+      {
+       "t": 1.15,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 62,
+         "b": -112
+        },
+        "armR": {
+         "a": 36,
+         "b": -118
+        },
+        "head": {
+         "tilt": -8
+        }
+       },
+       "dur": 0.12
+      },
+      {
+       "t": 1.35,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 62,
+         "b": -112
+        },
+        "armR": {
+         "a": 30,
+         "b": -128
+        },
+        "head": {
+         "tilt": -8
+        }
+       },
+       "dur": 0.12
+      },
+      {
+       "t": 1.55,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 62,
+         "b": -112
+        },
+        "armR": {
+         "a": 36,
+         "b": -118
+        },
+        "head": {
+         "tilt": -8
+        }
+       },
+       "dur": 0.12
+      },
+      {
+       "t": 1.75,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 62,
+         "b": -112
+        },
+        "armR": {
+         "a": 30,
+         "b": -128
+        },
+        "head": {
+         "tilt": -8
+        }
+       },
+       "dur": 0.12
+      },
+      {
+       "t": 2.3,
+       "pose": {
+        "base": "point",
+        "head": {
+         "tilt": 6
+        }
+       },
+       "facing": 1,
+       "dur": 0.3
+      },
+      {
+       "t": 2.8,
+       "opacity": 0.32
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 330,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 14,
+       "b": -24
+      },
+      "armR": {
+       "a": 14,
+       "b": -24
+      }
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "flat",
+      "brows": "worried",
+      "look": [
+       0.8,
+       -1
+      ],
+      "turn": 0.25
+     },
+     "keys": [
+      {
+       "t": 1.2,
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "worried",
+        "look": [
+         0.8,
+         -1
+        ],
+        "turn": 0.25
+       },
+       "dur": 0.1
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 24,
+       "b": -40
+      },
+      "armR": {
+       "a": 24,
+       "b": -40
+      }
+     },
+     "hold": {},
+     "face": {
+      "look": [
+       -0.6,
+       -1
+      ],
+      "brows": "raised",
+      "mouth": "flat"
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1.15,
+     "kind": "tick",
+     "gain": 0.8
+    },
+    {
+     "t": 1.35,
+     "kind": "tick",
+     "gain": 0.8
+    },
+    {
+     "t": 1.55,
+     "kind": "tick",
+     "gain": 0.8
+    },
+    {
+     "t": 1.75,
+     "kind": "tick",
+     "gain": 0.8
+    },
+    {
+     "t": 2.3,
+     "kind": "swipe",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 21.6,
+   "end": 24.2,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 380,
+     "y": 900,
+     "zoom": 1.85
+    },
+    {
+     "t": 1.6,
+     "x": 380,
+     "y": 900,
+     "zoom": 1.9
+    },
+    {
+     "t": 2.4,
+     "x": 380,
+     "y": 780,
+     "zoom": 1.7
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 620,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": "point",
+     "silhouette": "#1A1B20",
+     "opacity": 0.3,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.3
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 330,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 14,
+       "b": -24
+      },
+      "armR": {
+       "a": 14,
+       "b": -24
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "flat",
+      "brows": "worried",
+      "look": [
+       0.7,
+       -0.8
+      ],
+      "turn": 0.2
+     },
+     "keys": [
+      {
+       "t": 0.7,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "brows": "sad",
+        "look": [
+         1,
+         0.1
+        ],
+        "turn": 0.4
+       },
+       "dur": 0.3
+      },
+      {
+       "t": 1.4,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "brows": "angry",
+        "look": [
+         1,
+         0
+        ],
+        "turn": 0.3
+       },
+       "dur": 0.15
+      },
+      {
+       "t": 2.1,
+       "pose": "stand",
+       "dur": 0.5
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "tremble",
+       "from": 0,
+       "to": 0.7,
+       "amp": 1.5
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.1,
+     "kind": "heart",
+     "gain": 0.6
+    },
+    {
+     "t": 1,
+     "kind": "heart",
+     "gain": 0.7
+    },
+    {
+     "t": 1.7,
+     "kind": "whoosh",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 24.2,
+   "end": 26.8,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 990,
+     "zoom": 1.18
+    },
+    {
+     "t": 2.6,
+     "x": 600,
+     "y": 970,
+     "zoom": 1.26
+    }
+   ],
+   "actors": [
+    {
+     "id": "her",
+     "x": 900,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "hold": {
+      "R": "book"
+     },
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 620,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": "stand",
+     "silhouette": "#1A1B20",
+     "opacity": 0.25,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "facing": -1,
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.25
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 330,
+     "y": 1500,
+     "scale": 1,
+     "pose": "stand",
+     "face": {
+      "eyes": "open",
+      "mouth": "flat",
+      "brows": "angry",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 2,
+       "face": {
+        "eyes": "wide",
+        "mouth": "flat",
+        "brows": "worried",
+        "look": [
+         1,
+         0.4
+        ],
+        "turn": 0.3
+       },
+       "dur": 0.1
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "walk",
+       "from": 0.2,
+       "to": 1.8,
+       "dx": 190,
+       "rate": 1.7
+      },
+      {
+       "act": "tremble",
+       "from": 1.9,
+       "amp": 2
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "look": [
+       0,
+       0.8
+      ],
+      "mouth": "smile",
+      "eyes": "tired"
+     },
+     "keys": [
+      {
+       "t": 1.6,
+       "face": {
+        "look": [
+         -0.5,
+         -0.2
+        ],
+        "mouth": "flat",
+        "brows": "raised"
+       },
+       "dur": 0.2
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.4,
+     "kind": "step",
+     "gain": 0.4
+    },
+    {
+     "t": 0.8,
+     "kind": "step",
+     "gain": 0.4
+    },
+    {
+     "t": 1.2,
+     "kind": "step",
+     "gain": 0.4
+    },
+    {
+     "t": 1.6,
+     "kind": "step",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 26.8,
+   "end": 29.2,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 650,
+     "y": 860,
+     "zoom": 1.55
+    },
+    {
+     "t": 2.4,
+     "x": 650,
+     "y": 850,
+     "zoom": 1.62
+    }
+   ],
+   "actors": [
+    {
+     "id": "her",
+     "x": 900,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "hold": {
+      "R": "book"
+     },
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 660,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": "stand",
+     "silhouette": "#1A1B20",
+     "opacity": 0.25,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.25
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 520,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "stand",
+      "armL": {
+       "a": 14,
+       "b": -30
+      },
+      "armR": {
+       "a": 12,
+       "b": -10
+      }
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "flat",
+      "brows": "worried",
+      "look": [
+       1,
+       0.4
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 0.6,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "brows": "worried",
+        "look": [
+         1,
+         0.5
+        ],
+        "turn": 0.3
+       },
+       "dur": 0.1
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "tremble",
+       "amp": 1.5
+      },
+      {
+       "act": "talk",
+       "from": 0.6,
+       "to": 0.9
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "look": [
+       0,
+       0.8
+      ],
+      "mouth": "smile",
+      "eyes": "tired"
+     },
+     "keys": [
+      {
+       "t": 1,
+       "face": {
+        "look": [
+         -0.7,
+         -0.7
+        ],
+        "mouth": "flat",
+        "brows": "raised",
+        "eyes": "open"
+       },
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 34,
+         "b": -118
+        },
+        "armR": {
+         "a": 30,
+         "b": -112
+        },
+        "head": {
+         "tilt": -4
+        }
+       },
+       "dur": 0.25
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    },
+    {
+     "type": "svg",
+     "x": 470,
+     "y": 690,
+     "layer": "front",
+     "markup": "<rect x=\"-168.24\" y=\"-188\" width=\"218.24\" height=\"132\" rx=\"40\" fill=\"#FFFFFF\"/><rect x=\"-148.24\" y=\"-68\" width=\"178.24\" height=\"12\" rx=\"6\" fill=\"#000\" fill-opacity=\"0.06\"/><path d=\"M-50 -60 L0 0 L20 -60Z\" fill=\"#FFFFFF\"/><text x=\"-59.120000000000005\" y=\"-101.84\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"72\" fill=\"#1E1E22\">Hi.</text>",
+     "opacity": 0,
+     "scale": 0.6,
+     "keys": [
+      {
+       "t": 0.6,
+       "opacity": 0,
+       "scale": 0.6
+      },
+      {
+       "t": 0.78,
+       "opacity": 1,
+       "scale": 1,
+       "ease": "back"
+      },
+      {
+       "t": 2.28,
+       "opacity": 1,
+       "scale": 1
+      },
+      {
+       "t": 2.4,
+       "opacity": 0,
+       "scale": 0.9
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.6,
+     "kind": "pop",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "start": 29.2,
+   "end": 31.8,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 690,
+     "y": 840,
+     "zoom": 1.5
+    },
+    {
+     "t": 2.6,
+     "x": 690,
+     "y": 830,
+     "zoom": 1.56
+    }
+   ],
+   "actors": [
+    {
+     "id": "her",
+     "x": 900,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "hold": {
+      "R": "book"
+     },
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      },
+      {
+       "t": 0.5,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 24,
+         "b": -40
+        },
+        "armR": {
+         "a": 24,
+         "b": -40
+        }
+       },
+       "hold": {},
+       "dur": 0.25
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 660,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": "stand",
+     "silhouette": "#1A1B20",
+     "opacity": 0.2,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.2
+      },
+      {
+       "t": 1.2,
+       "opacity": 0.2
+      },
+      {
+       "t": 2.2,
+       "opacity": 0.85
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 520,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "stand",
+      "armL": {
+       "a": 14,
+       "b": -30
+      },
+      "armR": {
+       "a": 12,
+       "b": -10
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "brows": "worried",
+      "look": [
+       1,
+       0.5
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 1.3,
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         1,
+         0.5
+        ],
+        "turn": 0.3
+       },
+       "dur": 0.1
+      },
+      {
+       "t": 2,
+       "face": {
+        "eyes": "happy",
+        "mouth": "grin",
+        "brows": "raised",
+        "look": [
+         1,
+         0.5
+        ],
+        "turn": 0.3
+       },
+       "dur": 0.1
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 34,
+       "b": -118
+      },
+      "armR": {
+       "a": 30,
+       "b": -112
+      },
+      "head": {
+       "tilt": 6
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "look": [
+       -0.7,
+       -0.7
+      ],
+      "mouth": "flat",
+      "brows": "raised"
+     },
+     "keys": [
+      {
+       "t": 0.5,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 24,
+         "b": -40
+        },
+        "armR": {
+         "a": 24,
+         "b": -40
+        }
+       },
+       "hold": {},
+       "dur": 0.25
+      },
+      {
+       "t": 0.9,
+       "face": {
+        "look": [
+         -0.7,
+         -0.7
+        ],
+        "mouth": "smirk",
+        "brows": "flat",
+        "eyes": "open",
+        "turn": -0.2
+       },
+       "dur": 0.1
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "talk",
+       "from": 1,
+       "to": 1.4,
+       "closed": "smirk"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    },
+    {
+     "type": "book",
+     "id": "closed-book",
+     "x": 860,
+     "y": 1318,
+     "rot": -90,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 0.5,
+       "opacity": 0
+      },
+      {
+       "t": 0.55,
+       "opacity": 1
+      }
+     ]
+    },
+    {
+     "type": "svg",
+     "x": 950,
+     "y": 800,
+     "layer": "front",
+     "markup": "<rect x=\"-326.96\" y=\"-174\" width=\"376.96\" height=\"118\" rx=\"40\" fill=\"#FFFFFF\"/><rect x=\"-306.96\" y=\"-68\" width=\"336.96\" height=\"12\" rx=\"6\" fill=\"#000\" fill-opacity=\"0.06\"/><path d=\"M-50 -60 L0 0 L20 -60Z\" fill=\"#FFFFFF\"/><text x=\"-138.48\" y=\"-98.75999999999999\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"800\" font-size=\"58\" fill=\"#1E1E22\">Finally.</text>",
+     "opacity": 0,
+     "scale": 0.6,
+     "keys": [
+      {
+       "t": 1,
+       "opacity": 0,
+       "scale": 0.6
+      },
+      {
+       "t": 1.18,
+       "opacity": 1,
+       "scale": 1,
+       "ease": "back"
+      },
+      {
+       "t": 2.48,
+       "opacity": 1,
+       "scale": 1
+      },
+      {
+       "t": 2.6,
+       "opacity": 0,
+       "scale": 0.9
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.5,
+     "kind": "thud",
+     "gain": 0.4
+    },
+    {
+     "t": 1,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 1.3,
+     "kind": "hit",
+     "gain": 0.3
+    },
+    {
+     "t": 2,
+     "kind": "chime",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 31.8,
+   "end": 34.2,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 600,
+     "y": 980,
+     "zoom": 1.12
+    },
+    {
+     "t": 2.4,
+     "x": 600,
+     "y": 980,
+     "zoom": 1.08
+    }
+   ],
+   "actors": [
+    {
+     "id": "her",
+     "x": 900,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 24,
+       "b": -40
+      },
+      "armR": {
+       "a": 24,
+       "b": -40
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "hold": {},
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 660,
+     "y": 1270,
+     "scale": 1.15,
+     "pose": "stand",
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "z": -1,
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 520,
+     "y": 1500,
+     "scale": 1,
+     "pose": "stand",
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "look": [
+       1,
+       0.5
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 0.6,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "look": [
+         1,
+         0
+        ],
+        "turn": 0.4
+       },
+       "dur": 0.2
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 24,
+       "b": -40
+      },
+      "armR": {
+       "a": 24,
+       "b": -40
+      }
+     },
+     "hold": {},
+     "face": {
+      "look": [
+       -0.7,
+       -0.6
+      ],
+      "mouth": "smile"
+     },
+     "keys": [
+      {
+       "t": 0.6,
+       "face": {
+        "look": [
+         1,
+         0
+        ],
+        "mouth": "smile",
+        "turn": 0.3
+       },
+       "dur": 0.2
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "wall-texture",
+     "x": 0,
+     "y": 0,
+     "markup": "<path d=\"M-544 -400 L-536 -400 L-536 1440 L-544 1440Z M-274 -400 L-266 -400 L-266 1440 L-274 1440Z M-4 -400 L4 -400 L4 1440 L-4 1440Z M266 -400 L274 -400 L274 1440 L266 1440Z M536 -400 L544 -400 L544 1440 L536 1440Z M806 -400 L814 -400 L814 1440 L806 1440Z M1076 -400 L1084 -400 L1084 1440 L1076 1440Z M1346 -400 L1354 -400 L1354 1440 L1346 1440Z M1616 -400 L1624 -400 L1624 1440 L1616 1440Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M-1200 1440 L2400 1440 L2400 1500 L-1200 1500Z\" fill=\"#000000\" fill-opacity=\"0.18\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    },
+    {
+     "type": "book",
+     "id": "closed-book",
+     "x": 860,
+     "y": 1318,
+     "rot": -90
+    },
+    {
+     "type": "svg",
+     "id": "bus",
+     "layer": "front",
+     "x": 1700,
+     "y": 1560,
+     "markup": "<circle cx=\"10\" cy=\"-170\" r=\"210\" fill=\"#FFF4C8\" fill-opacity=\"0.25\"/><path d=\"M0 -100 L0 -560 Q0 -640 80 -640 L1500 -640 L1500 -100Z\" fill=\"#D9A23A\"/><rect x=\"0\" y=\"-250\" width=\"1500\" height=\"150\" fill=\"#B07F22\"/><rect x=\"30\" y=\"-560\" width=\"150\" height=\"300\" rx=\"16\" fill=\"#2E3A5C\"/><rect x=\"220\" y=\"-560\" width=\"250\" height=\"230\" rx=\"18\" fill=\"#FFE9A8\"/><rect x=\"220\" y=\"-560\" width=\"80\" height=\"230\" rx=\"18\" fill=\"#FFFFFF\" fill-opacity=\"0.35\"/><rect x=\"520\" y=\"-560\" width=\"250\" height=\"230\" rx=\"18\" fill=\"#FFE9A8\"/><rect x=\"520\" y=\"-560\" width=\"80\" height=\"230\" rx=\"18\" fill=\"#FFFFFF\" fill-opacity=\"0.35\"/><rect x=\"820\" y=\"-560\" width=\"250\" height=\"230\" rx=\"18\" fill=\"#FFE9A8\"/><rect x=\"820\" y=\"-560\" width=\"80\" height=\"230\" rx=\"18\" fill=\"#FFFFFF\" fill-opacity=\"0.35\"/><rect x=\"1120\" y=\"-560\" width=\"250\" height=\"230\" rx=\"18\" fill=\"#FFE9A8\"/><rect x=\"1120\" y=\"-560\" width=\"80\" height=\"230\" rx=\"18\" fill=\"#FFFFFF\" fill-opacity=\"0.35\"/><circle cx=\"40\" cy=\"-170\" r=\"34\" fill=\"#FFF8DC\"/><circle cx=\"40\" cy=\"-170\" r=\"70\" fill=\"#FFF4C8\" fill-opacity=\"0.4\"/><circle cx=\"300\" cy=\"-90\" r=\"74\" fill=\"#26262B\"/><circle cx=\"300\" cy=\"-90\" r=\"30\" fill=\"#8C8780\"/><circle cx=\"1200\" cy=\"-90\" r=\"74\" fill=\"#26262B\"/><circle cx=\"1200\" cy=\"-90\" r=\"30\" fill=\"#8C8780\"/><text x=\"760\" y=\"-600\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"40\" fill=\"#7A5A1C\">NIGHT LINE 11</text>",
+     "keys": [
+      {
+       "t": 0.2,
+       "x": 1700
+      },
+      {
+       "t": 1.5,
+       "x": 80,
+       "ease": "out"
+      }
+     ]
+    }
+   ],
+   "overlay": [
+    {
+     "type": "flash",
+     "color": "#FFF4C8",
+     "from": 1.05,
+     "to": 1.6
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.1,
+     "kind": "car",
+     "gain": 0.7
+    },
+    {
+     "t": 1.1,
+     "kind": "whoosh",
+     "gain": 0.5
+    },
+    {
+     "t": 1.7,
+     "kind": "dooropen",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 34.2,
+   "end": 37,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1
+    },
+    {
+     "t": 0.9,
+     "x": 540,
+     "y": 960,
+     "zoom": 1
+    },
+    {
+     "t": 2.8,
+     "x": 560,
+     "y": 700,
+     "zoom": 1.7
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 440,
+     "y": 990,
+     "scale": 0.5,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 34,
+       "b": 2
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "do": [],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 652,
+     "y": 990,
+     "scale": 0.5,
+     "pose": {
+      "base": "stand",
+      "armL": {
+       "a": 34,
+       "b": 2
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "do": [],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 400,
+     "y": 2020,
+     "scale": 1.15,
+     "pose": {
+      "base": "sit",
+      "armR": {
+       "a": 30,
+       "b": -20
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "look": [
+       1,
+       0
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 0.6,
+       "pose": {
+        "base": "sit",
+        "armR": {
+         "a": 30,
+         "b": -20
+        },
+        "head": {
+         "tilt": 8
+        }
+       },
+       "dur": 0.3
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 660,
+     "y": 2020,
+     "scale": 1.15,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -20
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "smile",
+      "look": [
+       -1,
+       0
+      ],
+      "turn": -0.3
+     },
+     "keys": [
+      {
+       "t": 0.6,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 30,
+         "b": -20
+        },
+        "head": {
+         "tilt": -10,
+         "dx": -10
+        }
+       },
+       "dur": 0.3
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "stop-far",
+     "x": 540,
+     "y": 1050,
+     "markup": "<rect x=\"-700\" y=\"0\" width=\"1400\" height=\"400\" fill=\"#2C3042\"/><rect x=\"-97\" y=\"-153.5\" width=\"308.88\" height=\"16.900000000000002\" rx=\"5\" fill=\"#1A1B20\" fill-opacity=\"0.5\"/><rect x=\"-143\" y=\"-97.5\" width=\"286\" height=\"16.900000000000002\" rx=\"5\" fill=\"#7A5A44\"/><rect x=\"-143\" y=\"-143\" width=\"286\" height=\"14.3\" rx=\"5\" fill=\"#5E4434\"/><rect x=\"-130\" y=\"-80.60000000000001\" width=\"8\" height=\"80.60000000000001\" fill=\"#3A3A40\"/><rect x=\"119.60000000000001\" y=\"-80.60000000000001\" width=\"8\" height=\"80.60000000000001\" fill=\"#3A3A40\"/><rect x=\"-245\" y=\"-460\" width=\"10\" height=\"460\" fill=\"#3A3A40\"/><ellipse cx=\"-195\" cy=\"-438\" rx=\"14\" ry=\"6\" fill=\"#FFE9A8\"/><path d=\"M-240 -460 Q-240 -490 -200 -490 L-180 -490\" stroke=\"#3A3A40\" stroke-width=\"10\" fill=\"none\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bus-interior",
+     "x": 0,
+     "y": 0,
+     "markup": "<path fill-rule=\"evenodd\" d=\"M-1000 -1000 H3000 V3000 H-1000Z M110 330 Q110 260 180 260 L900 260 Q970 260 970 330 L970 1060 Q970 1130 900 1130 L180 1130 Q110 1130 110 1060Z\" fill=\"#27304A\"/><rect x=\"-1000\" y=\"1250\" width=\"4000\" height=\"2000\" fill=\"#1F2640\"/><rect x=\"-1000\" y=\"1130\" width=\"4000\" height=\"40\" fill=\"#3A4466\"/><rect x=\"70\" y=\"230\" width=\"940\" height=\"30\" rx=\"12\" fill=\"#3A4466\"/><rect x=\"40\" y=\"0\" width=\"22\" height=\"1700\" fill=\"#E0B13C\"/><rect x=\"1020\" y=\"0\" width=\"22\" height=\"1700\" fill=\"#E0B13C\"/><path d=\"M120 1060 L960 1060 L960 1125 L120 1125Z\" fill=\"#FFFFFF\" fill-opacity=\"0.05\"/><path d=\"M140 300 L320 300 L140 520Z\" fill=\"#FFFFFF\" fill-opacity=\"0.08\"/><rect x=\"160\" y=\"1600\" width=\"320\" height=\"400\" rx=\"40\" fill=\"#B83A35\"/><rect x=\"600\" y=\"1600\" width=\"320\" height=\"400\" rx=\"40\" fill=\"#B83A35\"/>",
+     "keys": []
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "car",
+     "gain": 0.3
+    },
+    {
+     "t": 1.4,
+     "kind": "whoosh",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 37,
+   "end": 39.9,
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A4058",
+    "floorY": 1500
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 580,
+     "y": 860,
+     "zoom": 1.32
+    },
+    {
+     "t": 2.9,
+     "x": 560,
+     "y": 840,
+     "zoom": 1.42
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 470,
+     "y": 1270,
+     "scale": 0.9,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 36,
+       "b": 2
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      },
+      {
+       "t": 1.2,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 36,
+         "b": 2
+        },
+        "armL": {
+         "a": 60,
+         "b": 90
+        },
+        "head": {
+         "tilt": -10
+        }
+       },
+       "dur": 0.35
+      }
+     ],
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 852,
+     "y": 1270,
+     "scale": 0.9,
+     "pose": {
+      "base": "stand",
+      "armL": {
+       "a": 36,
+       "b": 2
+      },
+      "head": {
+       "tilt": -8
+      }
+     },
+     "silhouette": "#1A1B20",
+     "opacity": 0.85,
+     "behind": true,
+     "shadow": false,
+     "do": [
+      {
+       "act": "breathe"
+      }
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.85
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "svg",
+     "id": "lamp-glow",
+     "x": 160,
+     "y": 640,
+     "opacity": 0.18,
+     "markup": "<path d=\"M-30 0 L-260 860 L560 860 L30 0Z\" fill=\"#FFE9A8\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 680,
+     "y": 1270,
+     "opacity": 0.55,
+     "markup": "<rect x=\"-328.9\" y=\"-224.24999999999997\" width=\"657.8\" height=\"38.870000000000005\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-328.9\" y=\"-328.9\" width=\"657.8\" height=\"32.89\" rx=\"8\" fill=\"#1A1B20\"/><rect x=\"-299\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/><rect x=\"275.08\" y=\"-185.38\" width=\"23.919999999999998\" height=\"185.38\" fill=\"#1A1B20\"/>"
+    },
+    {
+     "type": "bench",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.3,
+     "color": "#7A5A44"
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": 70,
+     "y": 1500,
+     "scale": 1.05,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus-sign",
+     "x": 1060,
+     "y": 1500,
+     "markup": "<rect x=\"-7\" y=\"-620\" width=\"14\" height=\"620\" fill=\"#2A2C34\"/><circle cx=\"0\" cy=\"-660\" r=\"58\" fill=\"#3E6FB8\"/><path d=\"M0 -718 A58 58 0 0 1 0 -602Z\" fill=\"#2E5592\"/><text x=\"0\" y=\"-645\" text-anchor=\"middle\" font-family=\"Inter Display\" font-weight=\"900\" font-size=\"38\" fill=\"#FFFFFF\">BUS</text>"
+    },
+    {
+     "type": "svg",
+     "id": "thumb",
+     "x": 254,
+     "y": 721,
+     "scale": 0.9,
+     "opacity": 0,
+     "markup": "<rect x=\"-11\" y=\"-46\" width=\"22\" height=\"50\" rx=\"11\" fill=\"#1A1B20\"/>",
+     "keys": [
+      {
+       "t": 1.4,
+       "opacity": 0
+      },
+      {
+       "t": 1.55,
+       "opacity": 0.85
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1.3,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 1.5,
+     "kind": "ping",
+     "gain": 0.5
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "mood": "eerie",
+   "a": 0,
+   "b": 8.6,
+   "gain": 0.8
+  },
+  {
+   "mood": "playful",
+   "a": 8.6,
+   "b": 16.4
+  },
+  {
+   "mood": "eerie",
+   "a": 16.4,
+   "b": 21.6
+  },
+  {
+   "mood": "tense",
+   "a": 21.6,
+   "b": 26.8
+  },
+  {
+   "mood": "tender",
+   "a": 26.8,
+   "b": 34.2
+  },
+  {
+   "mood": "resolve",
+   "a": 34.2,
+   "b": 39.9
+  }
+ ],
+ "beds": [
+  {
+   "name": "wind",
+   "a": 0,
+   "b": 39.9,
+   "gain": 0.35
+  },
+  {
+   "name": "hum",
+   "a": 0,
+   "b": 34.2,
+   "gain": 0.4
+  }
+ ]
+}

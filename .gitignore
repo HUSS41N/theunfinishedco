@@ -1,0 +1,11 @@
+# dependencies
+node_modules/
+.venv/
+__pycache__/
+# render intermediates: stills, sheets, per-style render folders, frame dumps, logs (final MP4s and covers are kept)
+build/
+out/
+*.log
+# OS / editor
+.DS_Store
+*.swp

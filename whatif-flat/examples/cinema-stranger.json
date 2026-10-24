@@ -1,0 +1,903 @@
+{
+ "meta": {
+  "title": "What If the Guy Behind You at the Movies\u2026",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 14
+ },
+ "cast": {
+  "dad": {
+   "skin": "orange",
+   "hair": {
+    "style": "quiff",
+    "color": "brown"
+   },
+   "top": {
+    "style": "tee",
+    "color": "green"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "navy"
+   },
+   "shoes": {
+    "color": "charcoal"
+   }
+  },
+  "kid": {
+   "skin": "orange",
+   "build": {
+    "height": 0.66,
+    "head": 0.95,
+    "width": 0.78,
+    "limbs": 0.85
+   },
+   "hair": {
+    "style": "curly",
+    "color": "blonde"
+   },
+   "top": {
+    "style": "tee",
+    "color": "yellow"
+   },
+   "bottom": {
+    "style": "shorts",
+    "color": "olive"
+   },
+   "shoes": {
+    "color": "red"
+   },
+   "face": {
+    "blush": true
+   }
+  },
+  "mom": {
+   "skin": "orange",
+   "build": {
+    "width": 0.9
+   },
+   "hair": {
+    "style": "bob",
+    "color": "blonde"
+   },
+   "top": {
+    "style": "tank",
+    "color": "coral"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "teal"
+   },
+   "shoes": {
+    "color": "white"
+   }
+  },
+  "stranger": {
+   "skin": "peach",
+   "build": {
+    "height": 1.08,
+    "width": 0.95
+   },
+   "hair": {
+    "style": "short",
+    "color": "black"
+   },
+   "top": {
+    "style": "jacket",
+    "color": "charcoal",
+    "detail": "grey"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "denim"
+   },
+   "shoes": {
+    "color": "brown"
+   },
+   "accessories": [
+    "mask"
+   ]
+  }
+ },
+ "shots": [
+  {
+   "start": 0,
+   "end": 3.4,
+   "set": {
+    "preset": "cinema",
+    "seatX": [
+     250,
+     540,
+     830
+    ],
+    "rowY": 1340
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 545,
+     "y": 1150,
+     "zoom": 1.32
+    },
+    {
+     "t": 3.4,
+     "x": 545,
+     "y": 1140,
+     "zoom": 1.4
+    }
+   ],
+   "actors": [
+    {
+     "id": "stranger",
+     "x": 690,
+     "y": 1330,
+     "scale": 0.78,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 8,
+       "b": 2
+      },
+      "armL": {
+       "a": 8,
+       "b": 2
+      }
+     },
+     "face": {
+      "look": [
+       -0.8,
+       0.3
+      ]
+     },
+     "behind": true
+    },
+    {
+     "id": "kid",
+     "x": 250,
+     "y": 1500,
+     "scale": 0.92,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 40,
+       "b": -150
+      }
+     },
+     "hold": {
+      "L": {
+       "type": "popcorn",
+       "scale": 0.7
+      }
+     },
+     "face": {
+      "mouth": "grin",
+      "eyes": "happy"
+     },
+     "do": [
+      {
+       "act": "laugh",
+       "amp": 6,
+       "rate": 6
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "dad",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "sitEat",
+     "hold": {
+      "L": "popcorn"
+     },
+     "face": {
+      "mouth": "chew",
+      "look": [
+       0,
+       -0.2
+      ]
+     },
+     "do": [
+      {
+       "act": "chew"
+      },
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    },
+    {
+     "id": "mom",
+     "x": 830,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "sitPhone",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       0,
+       1
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "popcornSpill",
+     "x": 540,
+     "y": 1560,
+     "layer": "front"
+    },
+    {
+     "type": "glasses3d",
+     "x": 700,
+     "y": 1520,
+     "layer": "front",
+     "rot": -8,
+     "scale": 0.9
+    }
+   ],
+   "text": [
+    {
+     "text": "WHAT IF\u2026",
+     "x": 540,
+     "y": 300,
+     "size": 170,
+     "from": 0.3
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "pop",
+     "gain": 0.6
+    },
+    {
+     "t": 1.0,
+     "kind": "paper",
+     "gain": 0.3
+    },
+    {
+     "t": 2.0,
+     "kind": "paper",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 3.4,
+   "end": 6.0,
+   "set": {
+    "preset": "cinema",
+    "seatX": [
+     250,
+     540,
+     830
+    ],
+    "rowY": 1340
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 580,
+     "y": 1000,
+     "zoom": 1.95
+    },
+    {
+     "t": 2.6,
+     "x": 610,
+     "y": 980,
+     "zoom": 2.1
+    }
+   ],
+   "actors": [
+    {
+     "id": "stranger",
+     "x": 690,
+     "y": 1330,
+     "scale": 0.78,
+     "pose": "stand",
+     "face": {
+      "look": [
+       -0.8,
+       0.3
+      ]
+     },
+     "behind": true
+    },
+    {
+     "id": "dad",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "sitEat",
+     "hold": {
+      "L": "popcorn"
+     },
+     "face": {
+      "mouth": "chew",
+      "look": [
+       0,
+       -0.2
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.9,
+       "face": {
+        "mouth": "chew",
+        "look": [
+         1,
+         0
+        ],
+        "turn": 0.15
+       }
+      },
+      {
+       "t": 1.5,
+       "face": {
+        "mouth": "flat",
+        "look": [
+         1,
+         -0.1
+        ],
+        "turn": 0.3,
+        "brows": "worried"
+       }
+      },
+      {
+       "t": 2.1,
+       "face": {
+        "mouth": "O",
+        "eyes": "wide",
+        "look": [
+         1,
+         -0.2
+        ],
+        "turn": 0.35,
+        "brows": "up"
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "chew",
+       "to": 1.5
+      },
+      {
+       "act": "breathe"
+      }
+     ]
+    }
+   ],
+   "text": [
+    {
+     "text": "\u2026THE GUY BEHIND YOU",
+     "x": 540,
+     "y": 330,
+     "size": 96,
+     "from": 0.2
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1.5,
+     "kind": "hit",
+     "gain": 0.6
+    },
+    {
+     "t": 2.1,
+     "kind": "sting",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 6.0,
+   "end": 8.4,
+   "set": {
+    "preset": "cinema",
+    "seatX": [
+     250,
+     540,
+     830
+    ],
+    "rowY": 1340
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 740,
+     "y": 960,
+     "zoom": 1.75
+    },
+    {
+     "t": 2.4,
+     "x": 740,
+     "y": 940,
+     "zoom": 1.9
+    }
+   ],
+   "actors": [
+    {
+     "id": "stranger",
+     "x": 690,
+     "y": 1330,
+     "scale": 0.78,
+     "pose": "stand",
+     "face": {
+      "look": [
+       -0.8,
+       0.3
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.6,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 40,
+         "b": -120
+        }
+       },
+       "dur": 0.5
+      },
+      {
+       "t": 1.4,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 100,
+         "b": -40
+        }
+       },
+       "hold": {
+        "R": {
+         "type": "sign",
+         "label": "HI :)",
+         "scale": 0.8
+        }
+       },
+       "dur": 0.4
+      }
+     ],
+     "do": [
+      {
+       "act": "tremble",
+       "from": 0,
+       "to": 0.6,
+       "amp": 2
+      }
+     ],
+     "behind": true
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.6,
+     "kind": "whoosh",
+     "gain": 0.4
+    },
+    {
+     "t": 1.4,
+     "kind": "pop",
+     "gain": 0.7
+    }
+   ]
+  },
+  {
+   "start": 8.4,
+   "end": 11.2,
+   "set": {
+    "preset": "cinema",
+    "seatX": [
+     250,
+     540,
+     830
+    ],
+    "rowY": 1340
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 545,
+     "y": 1130,
+     "zoom": 1.34
+    }
+   ],
+   "shake": [
+    {
+     "from": 0,
+     "to": 0.5,
+     "amp": 16
+    }
+   ],
+   "actors": [
+    {
+     "id": "stranger",
+     "x": 690,
+     "y": 1330,
+     "scale": 0.78,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "a": 100,
+       "b": -40
+      }
+     },
+     "hold": {
+      "R": {
+       "type": "sign",
+       "label": "HI :)",
+       "scale": 0.8
+      }
+     },
+     "face": {
+      "look": [
+       -0.8,
+       0.3
+      ]
+     },
+     "do": [
+      {
+       "act": "wave",
+       "arm": "L",
+       "from": 1.0
+      }
+     ],
+     "behind": true
+    },
+    {
+     "id": "kid",
+     "x": 250,
+     "y": 1500,
+     "scale": 0.92,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 40,
+       "b": -150
+      }
+     },
+     "hold": {
+      "L": {
+       "type": "popcorn",
+       "scale": 0.7
+      }
+     },
+     "face": {
+      "mouth": "grin",
+      "eyes": "happy"
+     },
+     "do": [
+      {
+       "act": "laugh",
+       "amp": 10,
+       "rate": 8
+      }
+     ]
+    },
+    {
+     "id": "dad",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "sitScream",
+     "face": {
+      "mouth": "scream",
+      "eyes": "wide",
+      "brows": "up",
+      "look": [
+       1,
+       -0.2
+      ]
+     },
+     "do": [
+      {
+       "act": "jump",
+       "dur": 0.4,
+       "height": 90
+      },
+      {
+       "act": "tremble",
+       "from": 0.4,
+       "amp": 3
+      }
+     ]
+    },
+    {
+     "id": "mom",
+     "x": 830,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "sitPhone",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       0,
+       1
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "popcornSpill",
+     "x": 540,
+     "y": 1560,
+     "layer": "front"
+    },
+    {
+     "id": "flying-tub",
+     "type": "popcorn",
+     "x": 600,
+     "y": 1300,
+     "layer": "front",
+     "keys": [
+      {
+       "t": 0.0,
+       "x": 600,
+       "y": 1300,
+       "rot": 0
+      },
+      {
+       "t": 0.6,
+       "x": 760,
+       "y": 760,
+       "rot": 160,
+       "ease": "out"
+      },
+      {
+       "t": 1.4,
+       "x": 860,
+       "y": 1580,
+       "rot": 330,
+       "ease": "in"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.0,
+     "kind": "glitch",
+     "gain": 0.5
+    },
+    {
+     "t": 0.05,
+     "kind": "boing",
+     "gain": 0.6
+    },
+    {
+     "t": 1.4,
+     "kind": "crumble",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 11.2,
+   "end": 14.0,
+   "set": {
+    "preset": "cinema",
+    "seatX": [
+     250,
+     540,
+     830
+    ],
+    "rowY": 1340
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 545,
+     "y": 1070,
+     "zoom": 1.32
+    },
+    {
+     "t": 2.8,
+     "x": 545,
+     "y": 1060,
+     "zoom": 1.4
+    }
+   ],
+   "actors": [
+    {
+     "id": "stranger",
+     "x": 690,
+     "y": 1330,
+     "scale": 0.78,
+     "pose": "think",
+     "face": {
+      "look": [
+       -1,
+       0.4
+      ],
+      "mouth": "flat"
+     },
+     "behind": true
+    },
+    {
+     "id": "kid",
+     "x": 250,
+     "y": 1500,
+     "scale": 0.92,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -60
+      },
+      "armR": {
+       "a": 140,
+       "b": 20
+      }
+     },
+     "hold": {
+      "L": {
+       "type": "popcorn",
+       "scale": 0.7
+      }
+     },
+     "face": {
+      "mouth": "grin",
+      "eyes": "happy"
+     },
+     "do": [
+      {
+       "act": "wave",
+       "arm": "R"
+      }
+     ]
+    },
+    {
+     "id": "dad",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 40,
+       "b": -100
+      },
+      "armR": {
+       "a": 40,
+       "b": -100
+      }
+     },
+     "face": {
+      "mouth": "flat",
+      "eyes": "wide",
+      "look": [
+       1,
+       -0.1
+      ],
+      "brows": "worried"
+     },
+     "do": [
+      {
+       "act": "tremble",
+       "amp": 2
+      }
+     ]
+    },
+    {
+     "id": "mom",
+     "x": 830,
+     "y": 1500,
+     "scale": 0.9,
+     "pose": "sitPhone",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       0,
+       1
+      ]
+     },
+     "do": [
+      {
+       "act": "blink"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "popcornSpill",
+     "x": 540,
+     "y": 1560,
+     "layer": "front"
+    },
+    {
+     "type": "popcornSpill",
+     "x": 820,
+     "y": 1590,
+     "layer": "front"
+    }
+   ],
+   "text": [
+    {
+     "text": "SHE NEVER\nLOOKED UP.",
+     "x": 540,
+     "y": 215,
+     "size": 96,
+     "from": 0.6
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.6,
+     "kind": "pop",
+     "gain": 0.6
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "mood": "playful",
+   "a": 0,
+   "b": 3.4
+  },
+  {
+   "mood": "tense",
+   "a": 3.4,
+   "b": 8.4
+  },
+  {
+   "mood": "playful",
+   "a": 8.6,
+   "b": 14
+  }
+ ],
+ "beds": [
+  {
+   "name": "crowd",
+   "a": 0,
+   "b": 14,
+   "gain": 0.4
+  }
+ ]
+}

@@ -1,0 +1,1331 @@
+{
+ "version": 1,
+ "style": "B1",
+ "width": 1080,
+ "height": 1920,
+ "fps": 30,
+ "font": "/System/Library/Fonts/Supplemental/ChalkboardSE.ttc",
+ "captionSize": 48,
+ "voice": {
+  "path": "narration.wav",
+  "lead": 0.3,
+  "tail": 0.8
+ },
+ "captions": [
+  {
+   "start": 0.3,
+   "end": 2.016,
+   "text": "That task you keep putting off?"
+  },
+  {
+   "start": 2.286,
+   "end": 3.535,
+   "text": "It's not too big."
+  },
+  {
+   "start": 3.755,
+   "end": 5.383,
+   "text": "Starting is just hard."
+  },
+  {
+   "start": 5.753,
+   "end": 7.506,
+   "text": "So try the two-minute rule."
+  },
+  {
+   "start": 7.876,
+   "end": 9.748,
+   "text": "If it takes less than two minutes,"
+  },
+  {
+   "start": 9.788,
+   "end": 10.652,
+   "text": "do it now."
+  },
+  {
+   "start": 11.022,
+   "end": 11.974,
+   "text": "If it's bigger,"
+  },
+  {
+   "start": 12.014,
+   "end": 13.701,
+   "text": "just do the first two minutes."
+  },
+  {
+   "start": 14.071,
+   "end": 15.331,
+   "text": "Don't read the book."
+  },
+  {
+   "start": 15.401,
+   "end": 16.644,
+   "text": "Read one page."
+  },
+  {
+   "start": 16.964,
+   "end": 18.204,
+   "text": "Don't go for a run."
+  },
+  {
+   "start": 18.274,
+   "end": 19.42,
+   "text": "Put on your shoes."
+  },
+  {
+   "start": 19.79,
+   "end": 21.152,
+   "text": "Don't clean the kitchen."
+  },
+  {
+   "start": 21.222,
+   "end": 22.43,
+   "text": "Wash one plate."
+  },
+  {
+   "start": 22.8,
+   "end": 23.858,
+   "text": "Once you start,"
+  },
+  {
+   "start": 23.898,
+   "end": 25.395,
+   "text": "you usually keep going."
+  },
+  {
+   "start": 25.815,
+   "end": 26.665,
+   "text": "Two minutes."
+  },
+  {
+   "start": 26.835,
+   "end": 27.783,
+   "text": "Start now."
+  }
+ ],
+ "shots": [
+  {
+   "start": 0,
+   "end": 2.166,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s1a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "to": 1.15
+    },
+    {
+     "type": "image",
+     "path": "art/s1b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.15
+    },
+    {
+     "type": "image",
+     "path": "art/note.png",
+     "x": 110,
+     "y": 580,
+     "w": 300,
+     "keys": [
+      {
+       "t": 0.2,
+       "x": -320,
+       "alpha": 0,
+       "angle": -0.2
+      },
+      {
+       "t": 0.65,
+       "x": 110,
+       "alpha": 1,
+       "angle": -0.05
+      },
+      {
+       "t": 1.3,
+       "w": 470,
+       "y": 520
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "THAT ONE TASK…",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true
+    }
+   ]
+  },
+  {
+   "start": 2.166,
+   "end": 3.635,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s2a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100
+    },
+    {
+     "type": "image",
+     "path": "art/note.png",
+     "x": 110,
+     "y": 520,
+     "w": 470,
+     "keys": [
+      {
+       "t": 0.15,
+       "w": 470,
+       "y": 520,
+       "x": 110
+      },
+      {
+       "t": 0.7,
+       "w": 170,
+       "y": 940,
+       "x": 260
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "NOT TOO BIG.",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true
+    }
+   ]
+  },
+  {
+   "start": 3.635,
+   "end": 5.633,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s2b1.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0,
+     "to": 0.3
+    },
+    {
+     "type": "image",
+     "path": "art/s2b2.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.3,
+     "to": 0.6
+    },
+    {
+     "type": "image",
+     "path": "art/s2b1.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.6,
+     "to": 0.9
+    },
+    {
+     "type": "image",
+     "path": "art/s2b2.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.9,
+     "to": 1.2
+    },
+    {
+     "type": "image",
+     "path": "art/s2b1.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.2,
+     "to": 1.5
+    },
+    {
+     "type": "image",
+     "path": "art/s2b2.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.5,
+     "to": 1.8
+    },
+    {
+     "type": "image",
+     "path": "art/s2b1.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.8
+    },
+    {
+     "type": "text",
+     "text": "STARTING",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true
+    },
+    {
+     "type": "text",
+     "text": "IS HARD.",
+     "x": 90,
+     "y": 320,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "color": "#EC4338"
+    }
+   ]
+  },
+  {
+   "start": 5.633,
+   "end": 7.756,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s3a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0,
+     "to": 0.4
+    },
+    {
+     "type": "image",
+     "path": "art/s3b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.4,
+     "to": 0.8
+    },
+    {
+     "type": "image",
+     "path": "art/s3c.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.8,
+     "to": 1.2
+    },
+    {
+     "type": "image",
+     "path": "art/s3d.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.2,
+     "to": 1.6
+    },
+    {
+     "type": "image",
+     "path": "art/s3a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.6,
+     "to": 2
+    },
+    {
+     "type": "image",
+     "path": "art/s3b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 2
+    },
+    {
+     "type": "text",
+     "text": "THE 2-MINUTE",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true
+    },
+    {
+     "type": "text",
+     "text": "RULE.",
+     "x": 90,
+     "y": 320,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "color": "#EC4338"
+    },
+    {
+     "type": "underline",
+     "x": 90,
+     "y": 450,
+     "w": 330,
+     "color": "#F6C945",
+     "lineWidth": 12,
+     "keys": [
+      {
+       "t": 0.3,
+       "progress": 0
+      },
+      {
+       "t": 0.8,
+       "progress": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 7.756,
+   "end": 10.902,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s4a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "to": 0.95
+    },
+    {
+     "type": "image",
+     "path": "art/s4b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.95,
+     "to": 1.982
+    },
+    {
+     "type": "image",
+     "path": "art/s4c.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.982
+    },
+    {
+     "type": "image",
+     "path": "art/ball.png",
+     "x": 640,
+     "y": 1150,
+     "w": 80,
+     "from": 0.95,
+     "keys": [
+      {
+       "t": 0.95,
+       "x": 640,
+       "y": 1150
+      },
+      {
+       "t": 1.2999999999999998,
+       "x": 820,
+       "y": 960
+      },
+      {
+       "t": 1.7,
+       "x": 935,
+       "y": 1530
+      }
+     ],
+     "to": 1.75
+    },
+    {
+     "type": "text",
+     "text": "UNDER 2 MIN?",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "to": 1.932
+    },
+    {
+     "type": "text",
+     "text": "DO IT NOW.",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "from": 1.932,
+     "color": "#3FA466"
+    },
+    {
+     "type": "line",
+     "x": 820,
+     "y": 230,
+     "points": [
+      [
+       0,
+       40
+      ],
+      [
+       35,
+       80
+      ],
+      [
+       110,
+       -20
+      ]
+     ],
+     "color": "#3FA466",
+     "lineWidth": 14,
+     "from": 2.032,
+     "keys": [
+      {
+       "t": 2.032,
+       "progress": 0
+      },
+      {
+       "t": 2.382,
+       "progress": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 10.902,
+   "end": 13.951,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s5a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "to": 1.112
+    },
+    {
+     "type": "image",
+     "path": "art/s5b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.112,
+     "to": 1.862
+    },
+    {
+     "type": "image",
+     "path": "art/s5c.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.862
+    },
+    {
+     "type": "text",
+     "text": "BIGGER?",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "to": 1.012
+    },
+    {
+     "type": "text",
+     "text": "JUST THE",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "from": 1.012
+    },
+    {
+     "type": "text",
+     "text": "FIRST 2 MIN.",
+     "x": 90,
+     "y": 320,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "from": 1.012,
+     "color": "#EC4338"
+    }
+   ]
+  },
+  {
+   "start": 13.951,
+   "end": 15.281,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s6a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100
+    },
+    {
+     "type": "line",
+     "x": 0,
+     "y": 0,
+     "points": [
+      [
+       260,
+       780
+      ],
+      [
+       1020,
+       1640
+      ]
+     ],
+     "color": "#EC4338",
+     "lineWidth": 18,
+     "keys": [
+      {
+       "t": 0.35,
+       "progress": 0
+      },
+      {
+       "t": 0.6,
+       "progress": 1
+      }
+     ]
+    },
+    {
+     "type": "line",
+     "x": 0,
+     "y": 0,
+     "points": [
+      [
+       1020,
+       780
+      ],
+      [
+       260,
+       1640
+      ]
+     ],
+     "color": "#EC4338",
+     "lineWidth": 18,
+     "keys": [
+      {
+       "t": 0.6,
+       "progress": 0
+      },
+      {
+       "t": 0.85,
+       "progress": 1
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "NOT THE BOOK.",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true
+    }
+   ]
+  },
+  {
+   "start": 15.281,
+   "end": 16.844,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s6b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0,
+     "to": 0.5
+    },
+    {
+     "type": "image",
+     "path": "art/s6c.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.5,
+     "to": 1
+    },
+    {
+     "type": "image",
+     "path": "art/s6b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1,
+     "to": 1.5
+    },
+    {
+     "type": "image",
+     "path": "art/s6c.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.5
+    },
+    {
+     "type": "text",
+     "text": "ONE PAGE.",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "color": "#3FA466"
+    }
+   ]
+  },
+  {
+   "start": 16.844,
+   "end": 18.154,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s7a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100
+    },
+    {
+     "type": "line",
+     "x": 0,
+     "y": 0,
+     "points": [
+      [
+       260,
+       780
+      ],
+      [
+       1020,
+       1640
+      ]
+     ],
+     "color": "#EC4338",
+     "lineWidth": 18,
+     "keys": [
+      {
+       "t": 0.35,
+       "progress": 0
+      },
+      {
+       "t": 0.6,
+       "progress": 1
+      }
+     ]
+    },
+    {
+     "type": "line",
+     "x": 0,
+     "y": 0,
+     "points": [
+      [
+       1020,
+       780
+      ],
+      [
+       260,
+       1640
+      ]
+     ],
+     "color": "#EC4338",
+     "lineWidth": 18,
+     "keys": [
+      {
+       "t": 0.6,
+       "progress": 0
+      },
+      {
+       "t": 0.85,
+       "progress": 1
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "NOT THE RUN.",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true
+    }
+   ]
+  },
+  {
+   "start": 18.154,
+   "end": 19.67,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s7b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0,
+     "to": 0.35
+    },
+    {
+     "type": "image",
+     "path": "art/s7c.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.35,
+     "to": 0.7
+    },
+    {
+     "type": "image",
+     "path": "art/s7b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.7,
+     "to": 1.05
+    },
+    {
+     "type": "image",
+     "path": "art/s7c.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.05,
+     "to": 1.4
+    },
+    {
+     "type": "image",
+     "path": "art/s7b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.4
+    },
+    {
+     "type": "text",
+     "text": "JUST THE SHOES.",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "color": "#3FA466"
+    }
+   ]
+  },
+  {
+   "start": 19.67,
+   "end": 21.102,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s8a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100
+    },
+    {
+     "type": "line",
+     "x": 0,
+     "y": 0,
+     "points": [
+      [
+       260,
+       780
+      ],
+      [
+       1020,
+       1640
+      ]
+     ],
+     "color": "#EC4338",
+     "lineWidth": 18,
+     "keys": [
+      {
+       "t": 0.35,
+       "progress": 0
+      },
+      {
+       "t": 0.6,
+       "progress": 1
+      }
+     ]
+    },
+    {
+     "type": "line",
+     "x": 0,
+     "y": 0,
+     "points": [
+      [
+       1020,
+       780
+      ],
+      [
+       260,
+       1640
+      ]
+     ],
+     "color": "#EC4338",
+     "lineWidth": 18,
+     "keys": [
+      {
+       "t": 0.6,
+       "progress": 0
+      },
+      {
+       "t": 0.85,
+       "progress": 1
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "NOT THE KITCHEN.",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true
+    }
+   ]
+  },
+  {
+   "start": 21.102,
+   "end": 22.68,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s8b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0,
+     "to": 0.3
+    },
+    {
+     "type": "image",
+     "path": "art/s8c.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.3,
+     "to": 0.6
+    },
+    {
+     "type": "image",
+     "path": "art/s8b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.6,
+     "to": 0.9
+    },
+    {
+     "type": "image",
+     "path": "art/s8c.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.9,
+     "to": 1.2
+    },
+    {
+     "type": "image",
+     "path": "art/s8b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.2,
+     "to": 1.5
+    },
+    {
+     "type": "image",
+     "path": "art/s8c.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.5
+    },
+    {
+     "type": "text",
+     "text": "ONE PLATE.",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "color": "#3FA466"
+    }
+   ]
+  },
+  {
+   "start": 22.68,
+   "end": 25.695,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s9a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0,
+     "to": 0.16
+    },
+    {
+     "type": "image",
+     "path": "art/s9b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.16,
+     "to": 0.32
+    },
+    {
+     "type": "image",
+     "path": "art/s9a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.32,
+     "to": 0.48
+    },
+    {
+     "type": "image",
+     "path": "art/s9b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.48,
+     "to": 0.64
+    },
+    {
+     "type": "image",
+     "path": "art/s9a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.64,
+     "to": 0.8
+    },
+    {
+     "type": "image",
+     "path": "art/s9b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.8,
+     "to": 0.96
+    },
+    {
+     "type": "image",
+     "path": "art/s9a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 0.96,
+     "to": 1.12
+    },
+    {
+     "type": "image",
+     "path": "art/s9b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.12,
+     "to": 1.28
+    },
+    {
+     "type": "image",
+     "path": "art/s9a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.28,
+     "to": 1.44
+    },
+    {
+     "type": "image",
+     "path": "art/s9b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.44,
+     "to": 1.6
+    },
+    {
+     "type": "image",
+     "path": "art/s9a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.6,
+     "to": 1.76
+    },
+    {
+     "type": "image",
+     "path": "art/s9b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.76,
+     "to": 1.92
+    },
+    {
+     "type": "image",
+     "path": "art/s9a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.92,
+     "to": 2.08
+    },
+    {
+     "type": "image",
+     "path": "art/s9b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 2.08,
+     "to": 2.24
+    },
+    {
+     "type": "image",
+     "path": "art/s9a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 2.24,
+     "to": 2.4
+    },
+    {
+     "type": "image",
+     "path": "art/s9b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 2.4,
+     "to": 2.56
+    },
+    {
+     "type": "image",
+     "path": "art/s9a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 2.56,
+     "to": 2.72
+    },
+    {
+     "type": "image",
+     "path": "art/s9b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 2.72,
+     "to": 2.88
+    },
+    {
+     "type": "image",
+     "path": "art/s9a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 2.88
+    },
+    {
+     "type": "text",
+     "text": "ONCE YOU START…",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "to": 1.118
+    },
+    {
+     "type": "text",
+     "text": "YOU KEEP",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "from": 1.1179999999999999
+    },
+    {
+     "type": "text",
+     "text": "GOING.",
+     "x": 90,
+     "y": 320,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "from": 1.1179999999999999,
+     "color": "#EC4338"
+    }
+   ]
+  },
+  {
+   "start": 25.695,
+   "end": 28.503,
+   "layers": [
+    {
+     "type": "image",
+     "path": "art/s10a.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "to": 1.14
+    },
+    {
+     "type": "image",
+     "path": "art/s10b.png",
+     "x": 90,
+     "y": 500,
+     "w": 1100,
+     "from": 1.14
+    },
+    {
+     "type": "text",
+     "text": "2 MINUTES.",
+     "x": 90,
+     "y": 190,
+     "w": 1100,
+     "size": 104,
+     "bold": true
+    },
+    {
+     "type": "text",
+     "text": "START NOW.",
+     "x": 90,
+     "y": 320,
+     "w": 1100,
+     "size": 104,
+     "bold": true,
+     "from": 1.0899999999999999,
+     "color": "#EC4338"
+    },
+    {
+     "type": "underline",
+     "x": 90,
+     "y": 450,
+     "w": 560,
+     "color": "#EC4338",
+     "lineWidth": 12,
+     "from": 1.14,
+     "keys": [
+      {
+       "t": 1.14,
+       "progress": 0
+      },
+      {
+       "t": 1.5899999999999999,
+       "progress": 1
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "time": 0.55,
+   "kind": "paper",
+   "gain": 0.03
+  },
+  {
+   "time": 2.766,
+   "kind": "pop",
+   "gain": 0.03
+  },
+  {
+   "time": 3.835,
+   "kind": "tap",
+   "gain": 0.03
+  },
+  {
+   "time": 5.883,
+   "kind": "chime",
+   "gain": 0.03
+  },
+  {
+   "time": 8.706,
+   "kind": "paper",
+   "gain": 0.025
+  },
+  {
+   "time": 9.456,
+   "kind": "tap",
+   "gain": 0.035
+  },
+  {
+   "time": 9.888,
+   "kind": "pop",
+   "gain": 0.03
+  },
+  {
+   "time": 12.764,
+   "kind": "tap",
+   "gain": 0.03
+  },
+  {
+   "time": 14.351,
+   "kind": "tap",
+   "gain": 0.03
+  },
+  {
+   "time": 15.581,
+   "kind": "paper",
+   "gain": 0.025
+  },
+  {
+   "time": 17.244,
+   "kind": "tap",
+   "gain": 0.03
+  },
+  {
+   "time": 18.454,
+   "kind": "tap",
+   "gain": 0.025
+  },
+  {
+   "time": 20.07,
+   "kind": "tap",
+   "gain": 0.03
+  },
+  {
+   "time": 21.402,
+   "kind": "pop",
+   "gain": 0.025
+  },
+  {
+   "time": 22.88,
+   "kind": "tap",
+   "gain": 0.02
+  },
+  {
+   "time": 23.2,
+   "kind": "tap",
+   "gain": 0.02
+  },
+  {
+   "time": 23.52,
+   "kind": "tap",
+   "gain": 0.02
+  },
+  {
+   "time": 26.885,
+   "kind": "chime",
+   "gain": 0.03
+  }
+ ]
+}

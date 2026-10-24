@@ -1,0 +1,217 @@
+{
+ "meta": {
+  "title": "Park hello (engine test)",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 7
+ },
+ "cast": {
+  "ana": {
+   "skin": "brown",
+   "hair": {
+    "style": "long",
+    "color": "black"
+   },
+   "top": {
+    "style": "shirt",
+    "color": "purple"
+   },
+   "bottom": {
+    "style": "skirt",
+    "color": "mustard"
+   },
+   "shoes": {
+    "color": "white"
+   }
+  },
+  "ben": {
+   "skin": "fair",
+   "hair": {
+    "style": "spiky",
+    "color": "ginger"
+   },
+   "top": {
+    "style": "hoodie",
+    "color": "red"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "denim"
+   },
+   "accessories": [
+    {
+     "type": "cap",
+     "color": "blue"
+    },
+    "glasses"
+   ]
+  }
+ },
+ "shots": [
+  {
+   "start": 0,
+   "end": 7,
+   "set": {
+    "preset": "park"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 1100,
+     "zoom": 1.15
+    },
+    {
+     "t": 7,
+     "x": 600,
+     "y": 1080,
+     "zoom": 1.25
+    }
+   ],
+   "actors": [
+    {
+     "id": "ana",
+     "x": 200,
+     "y": 1560,
+     "scale": 0.95,
+     "pose": "stand",
+     "face": {
+      "mouth": "smile",
+      "turn": 0.4,
+      "look": [
+       1,
+       0
+      ]
+     },
+     "do": [
+      {
+       "act": "walk",
+       "from": 0,
+       "to": 3.2,
+       "dx": 280
+      },
+      {
+       "act": "blink"
+      },
+      {
+       "act": "wave",
+       "arm": "R",
+       "from": 3.4,
+       "to": 5.2
+      }
+     ]
+    },
+    {
+     "id": "ben",
+     "x": 860,
+     "y": 1580,
+     "scale": 0.95,
+     "facing": -1,
+     "pose": "relaxed",
+     "face": {
+      "mouth": "flat",
+      "turn": 0.4,
+      "look": [
+       1,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 3.6,
+       "face": {
+        "mouth": "grin",
+        "eyes": "happy",
+        "turn": 0.4
+       }
+      },
+      {
+       "t": 5.4,
+       "pose": "point",
+       "face": {
+        "mouth": "open",
+        "turn": 0.3,
+        "brows": "up"
+       },
+       "dur": 0.3
+      }
+     ],
+     "do": [
+      {
+       "act": "blink"
+      },
+      {
+       "act": "breathe"
+      },
+      {
+       "act": "talk",
+       "from": 5.6,
+       "to": 6.8
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "bubble",
+     "x": 760,
+     "y": 820,
+     "text": "HEY!",
+     "w": 280,
+     "h": 140,
+     "tail": "right",
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0
+      },
+      {
+       "t": 5.5,
+       "opacity": 0
+      },
+      {
+       "t": 5.7,
+       "opacity": 1
+      }
+     ],
+     "layer": "front"
+    }
+   ],
+   "text": [
+    {
+     "text": "WHAT IF\u2026",
+     "y": 280,
+     "size": 150,
+     "from": 0.2,
+     "to": 2.6
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.2,
+     "kind": "pop"
+    },
+    {
+     "t": 5.6,
+     "kind": "pop"
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "mood": "playful",
+   "a": 0,
+   "b": 7
+  }
+ ],
+ "beds": [
+  {
+   "name": "wind",
+   "a": 0,
+   "b": 7,
+   "gain": 0.5
+  }
+ ]
+}

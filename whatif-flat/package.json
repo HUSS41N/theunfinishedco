@@ -1,0 +1,1 @@
+{"name":"whatif-flat","version":"0.1.0","private":true,"type":"module","description":"What If v2 flat-vector SVG layer engine","dependencies":{"@resvg/resvg-js":"^2.7.0-alpha.2"}}

@@ -1,0 +1,3545 @@
+{
+ "meta": {
+  "title": "What If Your Shadow Got Tired of You?",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 40.8,
+  "style": "flat"
+ },
+ "cast": {
+  "hero": {
+   "skin": "tan",
+   "hair": {
+    "style": "short",
+    "color": "black"
+   },
+   "top": {
+    "style": "hoodie",
+    "color": "mustard"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "charcoal"
+   },
+   "shoes": {
+    "color": "white"
+   },
+   "accessories": [
+    "glasses"
+   ]
+  },
+  "her": {
+   "build": "woman",
+   "skin": "brown",
+   "hair": {
+    "style": "bun",
+    "color": "black"
+   },
+   "top": {
+    "style": "jacket",
+    "color": "teal",
+    "detail": "white"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "navy"
+   },
+   "shoes": {
+    "color": "red"
+   },
+   "face": {
+    "lashes": true
+   }
+  },
+  "heroShadow": {
+   "skin": "tan",
+   "hair": {
+    "style": "short",
+    "color": "black"
+   },
+   "top": {
+    "style": "hoodie",
+    "color": "mustard"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "charcoal"
+   },
+   "shoes": {
+    "color": "white"
+   },
+   "accessories": [
+    "glasses"
+   ]
+  },
+  "herShadow": {
+   "build": "woman",
+   "skin": "brown",
+   "hair": {
+    "style": "bun",
+    "color": "black"
+   },
+   "top": {
+    "style": "jacket",
+    "color": "teal",
+    "detail": "white"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "navy"
+   },
+   "shoes": {
+    "color": "red"
+   },
+   "face": {
+    "lashes": true
+   }
+  }
+ },
+ "shots": [
+  {
+   "start": 0,
+   "end": 3.2,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 600,
+     "y": 730,
+     "zoom": 0.74
+    },
+    {
+     "t": 3.2,
+     "x": 600,
+     "y": 720,
+     "zoom": 0.8
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 380,
+     "y": 1560,
+     "scale": 1,
+     "pose": "sitPhone",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       0.2,
+       0.8
+      ]
+     }
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "look": [
+       -0.1,
+       0.9
+      ],
+      "turn": -0.15
+     },
+     "facing": -1
+    },
+    {
+     "id": "herShadow",
+     "x": 960,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "facing": -1
+    },
+    {
+     "id": "heroShadow",
+     "x": 580,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": "sitPhone",
+     "hold": {
+      "R": "phone"
+     },
+     "keys": [
+      {
+       "t": 0.55,
+       "pose": "stand",
+       "dur": 0.7
+      },
+      {
+       "t": 1.55,
+       "pose": "stretch",
+       "dur": 0.6
+      },
+      {
+       "t": 2.3,
+       "pose": {
+        "base": "stand",
+        "head": {
+         "tilt": -16
+        }
+       },
+       "dur": 0.35
+      },
+      {
+       "t": 2.75,
+       "pose": {
+        "base": "handsHips",
+        "head": {
+         "tilt": 14
+        }
+       },
+       "dur": 0.35
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    }
+   ],
+   "text": [
+    {
+     "text": "WHAT IF YOUR\nSHADOW *QUIT*?",
+     "y": 400,
+     "size": 112,
+     "from": 0,
+     "to": 3.2,
+     "anim": "pop",
+     "highlight": "word",
+     "exit": "none"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.05,
+     "kind": "whoosh",
+     "gain": 0.45
+    },
+    {
+     "t": 0.6,
+     "kind": "swipe",
+     "gain": 0.35
+    },
+    {
+     "t": 2.3,
+     "kind": "click",
+     "gain": 0.8
+    },
+    {
+     "t": 2.72,
+     "kind": "click",
+     "gain": 0.8
+    }
+   ]
+  },
+  {
+   "start": 3.2,
+   "end": 5.4,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "in": {
+    "type": "zoom",
+    "dur": 0.35
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 430,
+     "y": 880,
+     "zoom": 1.8
+    },
+    {
+     "t": 2.2,
+     "x": 430,
+     "y": 860,
+     "zoom": 1.9
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 380,
+     "y": 1560,
+     "scale": 1,
+     "pose": "sitPhone",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "tired",
+      "mouth": "flat",
+      "look": [
+       0.2,
+       0.8
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.55,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "look": [
+         0.6,
+         -0.9
+        ],
+        "turn": 0.35
+       },
+       "pose": {
+        "base": "sitPhone",
+        "head": {
+         "tilt": 8
+        }
+       },
+       "dur": 0.3
+      },
+      {
+       "t": 1,
+       "face": {
+        "eyes": "wide",
+        "mouth": "O",
+        "brows": "up",
+        "look": [
+         0.7,
+         -1
+        ],
+        "turn": 0.4
+       },
+       "dur": 0.15
+      }
+     ],
+     "do": [
+      {
+       "act": "tremble",
+       "from": 1.05,
+       "to": 2.2,
+       "amp": 2
+      }
+     ]
+    },
+    {
+     "id": "heroShadow",
+     "x": 580,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "handsHips",
+      "head": {
+       "tilt": 18
+      }
+     }
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1,
+     "kind": "sting",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 5.4,
+   "end": 8.8,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "in": {
+    "type": "crossfade",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 600,
+     "y": 1120,
+     "zoom": 1.02
+    },
+    {
+     "t": 3.4,
+     "x": 600,
+     "y": 1110,
+     "zoom": 1.08
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 380,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -100
+      },
+      "armR": {
+       "a": 30,
+       "b": -100
+      }
+     },
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "teeth",
+      "brows": "worried",
+      "look": [
+       0.6,
+       -0.6
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 2,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 30,
+         "b": -100
+        },
+        "armR": {
+         "a": 30,
+         "b": -100
+        },
+        "head": {
+         "tilt": -12
+        }
+       },
+       "face": {
+        "eyes": "wide",
+        "mouth": "teeth",
+        "brows": "worried",
+        "look": [
+         -0.3,
+         0
+        ],
+        "turn": 0
+       },
+       "dur": 0.25
+      },
+      {
+       "t": 2.4,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 30,
+         "b": -100
+        },
+        "armR": {
+         "a": 30,
+         "b": -100
+        },
+        "head": {
+         "tilt": 12
+        }
+       },
+       "dur": 0.35
+      },
+      {
+       "t": 2.8,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 30,
+         "b": -100
+        },
+        "armR": {
+         "a": 30,
+         "b": -100
+        },
+        "head": {
+         "tilt": -10
+        }
+       },
+       "dur": 0.35
+      },
+      {
+       "t": 3.2,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 30,
+         "b": -100
+        },
+        "armR": {
+         "a": 30,
+         "b": -100
+        },
+        "head": {
+         "tilt": 0
+        }
+       },
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "look": [
+       -0.1,
+       0.9
+      ],
+      "turn": -0.15
+     },
+     "facing": -1
+    },
+    {
+     "id": "herShadow",
+     "x": 960,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "facing": -1
+    },
+    {
+     "id": "heroShadow",
+     "x": 580,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": "handsHips",
+     "keys": [
+      {
+       "t": 0.7,
+       "pose": "point",
+       "dur": 0.45
+      },
+      {
+       "t": 1.9,
+       "facing": -1,
+       "pose": {
+        "base": "point",
+        "head": {
+         "tilt": -8
+        }
+       },
+       "dur": 0.3
+      },
+      {
+       "t": 3.2,
+       "pose": {
+        "base": "point",
+        "armR": {
+         "a": 92,
+         "b": -14
+        }
+       },
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    }
+   ],
+   "text": [
+    {
+     "text": "EVERY NIGHT · 11:40 PM",
+     "font": "mono",
+     "size": 52,
+     "y": 350,
+     "from": 0.3,
+     "to": 3.3,
+     "anim": "type",
+     "plate": true
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.7,
+     "kind": "swipe",
+     "gain": 0.35
+    },
+    {
+     "t": 1.9,
+     "kind": "swipe",
+     "gain": 0.35
+    },
+    {
+     "t": 2.1,
+     "kind": "boing",
+     "gain": 0.25
+    }
+   ]
+  },
+  {
+   "start": 8.8,
+   "end": 12.4,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "in": {
+    "type": "push",
+    "dir": "left",
+    "dur": 0.4
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1000,
+     "zoom": 0.9
+    },
+    {
+     "t": 2.2,
+     "x": 700,
+     "y": 980,
+     "zoom": 0.95
+    },
+    {
+     "t": 3.6,
+     "x": 720,
+     "y": 970,
+     "zoom": 1
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 380,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -100
+      },
+      "armR": {
+       "a": 30,
+       "b": -100
+      }
+     },
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "flat",
+      "brows": "worried",
+      "look": [
+       0.9,
+       -0.6
+      ],
+      "turn": 0.3
+     }
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "look": [
+       -0.1,
+       0.9
+      ],
+      "turn": -0.15
+     },
+     "facing": -1
+    },
+    {
+     "id": "herShadow",
+     "x": 960,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "facing": -1,
+     "do": [
+      {
+       "act": "laugh",
+       "from": 2.2,
+       "to": 3.5,
+       "amp": 10
+      }
+     ]
+    },
+    {
+     "id": "heroShadow",
+     "x": 580,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": "stand",
+     "do": [
+      {
+       "act": "walk",
+       "from": 0.3,
+       "to": 1.9,
+       "dx": 100
+      }
+     ],
+     "keys": [
+      {
+       "t": 2.15,
+       "pose": {
+        "base": "stand",
+        "body": {
+         "lean": 9
+        },
+        "head": {
+         "tilt": 12
+        },
+        "armR": {
+         "a": 60,
+         "b": -60
+        }
+       },
+       "dur": 0.3
+      },
+      {
+       "t": 3.5,
+       "pose": {
+        "base": "relaxed",
+        "body": {
+         "lean": 4
+        }
+       },
+       "dur": 0.5
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "heart",
+     "x": 800,
+     "y": 760,
+     "scale": 0.01,
+     "layer": "front",
+     "keys": [
+      {
+       "t": 2.4,
+       "scale": 0.01
+      },
+      {
+       "t": 2.6999999999999997,
+       "scale": 1.15,
+       "ease": "outBack"
+      },
+      {
+       "t": 2.9,
+       "scale": 1
+      },
+      {
+       "t": 3.8,
+       "y": 670
+      }
+     ],
+     "markup": "<path d=\"M0 30 C-70 -20 -60 -80 -18 -80 C-6 -80 0 -70 0 -60 C0 -70 6 -80 18 -80 C60 -80 70 -20 0 30Z\" fill=\"#E8445A\" transform=\"scale(1.6)\"/>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "step",
+     "gain": 0.25
+    },
+    {
+     "t": 0.8,
+     "kind": "step",
+     "gain": 0.25
+    },
+    {
+     "t": 1.3,
+     "kind": "step",
+     "gain": 0.25
+    },
+    {
+     "t": 2.2,
+     "kind": "chuckle",
+     "gain": 0.5
+    },
+    {
+     "t": 2.4,
+     "kind": "heart",
+     "gain": 0.5
+    },
+    {
+     "t": 2.9,
+     "kind": "chuckle",
+     "gain": 0.45
+    }
+   ]
+  },
+  {
+   "start": 12.4,
+   "end": 14.6,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 760,
+     "y": 900,
+     "zoom": 1.75
+    },
+    {
+     "t": 2.2,
+     "x": 770,
+     "y": 890,
+     "zoom": 1.85
+    }
+   ],
+   "actors": [
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "look": [
+       -0.1,
+       0.9
+      ],
+      "turn": -0.15
+     },
+     "facing": -1,
+     "keys": [
+      {
+       "t": 0.5,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 30,
+         "b": -122
+        },
+        "armR": {
+         "a": 26,
+         "b": -116
+        },
+        "head": {
+         "tilt": -6
+        }
+       },
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "brows": "raised",
+        "look": [
+         0.6,
+         -1
+        ],
+        "turn": 0.35
+       },
+       "dur": 0.35
+      },
+      {
+       "t": 1.4,
+       "face": {
+        "eyes": "open",
+        "mouth": "smirk",
+        "brows": "raised",
+        "look": [
+         -0.8,
+         -0.2
+        ],
+        "turn": -0.3
+       },
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "herShadow",
+     "x": 960,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "facing": -1,
+     "do": [
+      {
+       "act": "laugh",
+       "from": 0,
+       "to": 1,
+       "amp": 8
+      }
+     ]
+    },
+    {
+     "id": "heroShadow",
+     "x": 680,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "relaxed",
+      "body": {
+       "lean": 4
+      }
+     }
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.5,
+     "kind": "paper",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 14.6,
+   "end": 16.8,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "in": {
+    "type": "whip",
+    "dir": "right",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 470,
+     "y": 980,
+     "zoom": 1.3
+    },
+    {
+     "t": 2.2,
+     "x": 470,
+     "y": 980,
+     "zoom": 1.36
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 380,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 150,
+       "b": 18
+      },
+      "armR": {
+       "a": 150,
+       "b": 18
+      }
+     },
+     "hold": {},
+     "face": {
+      "eyes": "wide",
+      "mouth": "scream",
+      "brows": "worried",
+      "look": [
+       0.5,
+       -0.4
+      ],
+      "turn": 0.25
+     },
+     "do": [
+      {
+       "act": "wave",
+       "arm": "R",
+       "from": 0.1,
+       "to": 2.1,
+       "a": 150,
+       "rate": 3,
+       "amp": 18
+      },
+      {
+       "act": "wave",
+       "arm": "L",
+       "from": 0.1,
+       "to": 2.1,
+       "a": 150,
+       "rate": 3,
+       "amp": 18
+      }
+     ],
+     "say": [
+      {
+       "from": 0.15,
+       "to": 2.1,
+       "text": "NO NO NO!",
+       "kind": "shout"
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smirk",
+      "look": [
+       -0.9,
+       0
+      ],
+      "turn": -0.4
+     },
+     "facing": -1
+    },
+    {
+     "id": "heroShadow",
+     "x": 680,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "relaxed",
+      "body": {
+       "lean": 4
+      }
+     }
+    },
+    {
+     "id": "herShadow",
+     "x": 960,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "facing": -1
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.15,
+     "kind": "boing",
+     "gain": 0.35
+    }
+   ]
+  },
+  {
+   "start": 16.8,
+   "end": 19.6,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "in": {
+    "type": "crossfade",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 520,
+     "y": 1000,
+     "zoom": 0.62
+    },
+    {
+     "t": 2.8,
+     "x": 470,
+     "y": 1010,
+     "zoom": 0.66
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 380,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -100
+      },
+      "armR": {
+       "a": 30,
+       "b": -100
+      }
+     },
+     "hold": {},
+     "face": {
+      "eyes": "wide",
+      "mouth": "O",
+      "brows": "worried",
+      "look": [
+       0.6,
+       -0.6
+      ],
+      "turn": 0.3
+     }
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "flat",
+      "look": [
+       -0.6,
+       -0.3
+      ],
+      "turn": -0.3
+     },
+     "facing": -1
+    },
+    {
+     "id": "herShadow",
+     "x": 960,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "facing": -1,
+     "keys": [
+      {
+       "t": 0.3,
+       "opacity": 0.2,
+       "ease": "hold"
+      },
+      {
+       "t": 0.42,
+       "opacity": 0.55,
+       "ease": "hold"
+      },
+      {
+       "t": 0.7,
+       "opacity": 0.2,
+       "ease": "hold"
+      },
+      {
+       "t": 0.9,
+       "opacity": 0.55,
+       "ease": "hold"
+      }
+     ]
+    },
+    {
+     "id": "heroShadow",
+     "x": 680,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": "relaxed",
+     "facing": -1,
+     "keys": [
+      {
+       "t": 0.3,
+       "opacity": 0.2,
+       "ease": "hold"
+      },
+      {
+       "t": 0.42,
+       "opacity": 0.55,
+       "ease": "hold"
+      },
+      {
+       "t": 0.7,
+       "opacity": 0.2,
+       "ease": "hold"
+      },
+      {
+       "t": 0.9,
+       "opacity": 0.5,
+       "ease": "hold"
+      },
+      {
+       "t": 2.8,
+       "opacity": 0.42
+      }
+     ],
+     "do": [
+      {
+       "act": "walk",
+       "from": 1,
+       "to": 2.8,
+       "dx": -322.5
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.16
+      },
+      {
+       "t": 0.3,
+       "opacity": 0.02,
+       "ease": "hold"
+      },
+      {
+       "t": 0.42,
+       "opacity": 0.16,
+       "ease": "hold"
+      },
+      {
+       "t": 0.7,
+       "opacity": 0.02,
+       "ease": "hold"
+      },
+      {
+       "t": 0.9,
+       "opacity": 0.16,
+       "ease": "hold"
+      },
+      {
+       "t": 1.4,
+       "opacity": 0.03,
+       "ease": "hold"
+      },
+      {
+       "t": 1.5,
+       "opacity": 0.14,
+       "ease": "hold"
+      }
+     ],
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true,
+     "keys": [
+      {
+       "t": 0.3,
+       "lit": false
+      },
+      {
+       "t": 0.42,
+       "lit": true
+      },
+      {
+       "t": 0.7,
+       "lit": false
+      },
+      {
+       "t": 0.9,
+       "lit": true
+      },
+      {
+       "t": 1.4,
+       "lit": false
+      },
+      {
+       "t": 1.5,
+       "lit": true
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "kind": "buzz",
+     "gain": 0.4
+    },
+    {
+     "t": 0.7,
+     "kind": "glitch",
+     "gain": 0.35
+    },
+    {
+     "t": 1.4,
+     "kind": "buzz",
+     "gain": 0.35
+    },
+    {
+     "t": 1.1,
+     "kind": "step",
+     "gain": 0.2
+    },
+    {
+     "t": 1.7,
+     "kind": "step",
+     "gain": 0.2
+    }
+   ]
+  },
+  {
+   "start": 19.6,
+   "end": 22.6,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 400,
+     "y": 770,
+     "zoom": 1.02
+    },
+    {
+     "t": 3,
+     "x": 400,
+     "y": 760,
+     "zoom": 1.08
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 380,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -100
+      },
+      "armR": {
+       "a": 30,
+       "b": -100
+      }
+     },
+     "hold": {},
+     "face": {
+      "eyes": "wide",
+      "mouth": "flat",
+      "brows": "worried",
+      "look": [
+       0.3,
+       -0.8
+      ],
+      "turn": 0.2
+     }
+    },
+    {
+     "id": "heroShadow",
+     "x": 357.5,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.42,
+     "shadow": false,
+     "z": -1,
+     "pose": "relaxed",
+     "facing": -1,
+     "keys": [
+      {
+       "t": 0.5,
+       "facing": 1,
+       "pose": {
+        "base": "relaxed",
+        "head": {
+         "tilt": 6
+        }
+       },
+       "dur": 0.35
+      },
+      {
+       "t": 1,
+       "pose": {
+        "base": "stand",
+        "armL": {
+         "a": 40,
+         "b": -112
+        },
+        "armR": {
+         "a": -18,
+         "b": -96
+        },
+        "head": {
+         "tilt": -6
+        }
+       },
+       "dur": 0.35
+      },
+      {
+       "t": 2.9,
+       "opacity": 0.32
+      }
+     ],
+     "do": [
+      {
+       "act": "bob",
+       "from": 1.1,
+       "to": 2.3,
+       "amp": 4,
+       "rate": 2.5
+      }
+     ],
+     "say": [
+      {
+       "from": 1,
+       "to": 2.95,
+       "text": "Now or never.",
+       "kind": "think"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1.1,
+     "kind": "tick",
+     "gain": 0.5
+    },
+    {
+     "t": 1.6,
+     "kind": "tick",
+     "gain": 0.5
+    },
+    {
+     "t": 2.1,
+     "kind": "tick",
+     "gain": 0.5
+    },
+    {
+     "t": 2.6,
+     "kind": "tick",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 22.6,
+   "end": 24.8,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "in": {
+    "type": "zoom",
+    "dur": 0.35
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 400,
+     "y": 890,
+     "zoom": 1.85
+    },
+    {
+     "t": 2.2,
+     "x": 400,
+     "y": 880,
+     "zoom": 2
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 380,
+     "y": 1560,
+     "scale": 1,
+     "pose": "sitPhone",
+     "hold": {
+      "R": "phone"
+     },
+     "face": {
+      "eyes": "wide",
+      "mouth": "flat",
+      "brows": "worried",
+      "look": [
+       0,
+       0.6
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.7,
+       "face": {
+        "eyes": "closed",
+        "mouth": "flat",
+        "brows": "worried"
+       },
+       "dur": 0.15
+      },
+      {
+       "t": 1.25,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 30,
+         "b": -100
+        },
+        "armR": {
+         "a": 30,
+         "b": -100
+        }
+       },
+       "hold": {},
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "brows": "angry",
+        "look": [
+         0.6,
+         0
+        ],
+        "turn": 0.3
+       },
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "heroShadow",
+     "x": 357.5,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.32,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "stand",
+      "armL": {
+       "a": 40,
+       "b": -112
+      },
+      "armR": {
+       "a": -18,
+       "b": -96
+      },
+      "head": {
+       "tilt": -6
+      }
+     }
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.7,
+     "kind": "breath",
+     "gain": 0.6
+    },
+    {
+     "t": 1.2,
+     "kind": "swipe",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 24.8,
+   "end": 27.8,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "in": {
+    "type": "crossfade",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 520,
+     "y": 1060,
+     "zoom": 0.9
+    },
+    {
+     "t": 3,
+     "x": 600,
+     "y": 1040,
+     "zoom": 0.98
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 380,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -100
+      },
+      "armR": {
+       "a": 30,
+       "b": -100
+      }
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "flat",
+      "brows": "angry",
+      "look": [
+       0.6,
+       0
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 0.75,
+       "pose": "stand",
+       "dur": 0.6,
+       "ease": "anticipate"
+      },
+      {
+       "t": 2.6,
+       "face": {
+        "eyes": "wide",
+        "mouth": "flat",
+        "brows": "worried",
+        "look": [
+         0.7,
+         0.2
+        ],
+        "turn": 0.4
+       },
+       "dur": 0.2
+      }
+     ],
+     "do": [
+      {
+       "act": "walk",
+       "from": 0.95,
+       "to": 2.5,
+       "dx": 140
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "look": [
+       -0.1,
+       0.9
+      ],
+      "turn": -0.15
+     },
+     "facing": -1
+    },
+    {
+     "id": "herShadow",
+     "x": 960,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "facing": -1
+    },
+    {
+     "id": "heroShadow",
+     "x": 357.5,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.32,
+     "shadow": false,
+     "z": -1,
+     "pose": "relaxed",
+     "keys": [
+      {
+       "t": 2.7,
+       "opacity": 0.4
+      }
+     ],
+     "do": [
+      {
+       "act": "walk",
+       "from": 1,
+       "to": 2.6,
+       "dx": 362.5
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.75,
+     "kind": "swipe",
+     "gain": 0.3
+    },
+    {
+     "t": 1.1,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 1.6,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 2.1,
+     "kind": "step",
+     "gain": 0.3
+    },
+    {
+     "t": 2.6,
+     "kind": "heart",
+     "gain": 0.45
+    }
+   ]
+  },
+  {
+   "start": 27.8,
+   "end": 30.4,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 640,
+     "y": 1060,
+     "zoom": 1.16
+    },
+    {
+     "t": 2.6,
+     "x": 640,
+     "y": 1050,
+     "zoom": 1.22
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 520,
+     "y": 1560,
+     "scale": 1,
+     "pose": "stand",
+     "face": {
+      "eyes": "open",
+      "mouth": "flat",
+      "brows": "worried",
+      "look": [
+       0.6,
+       0.4
+      ],
+      "turn": 0.4
+     },
+     "keys": [
+      {
+       "t": 0.3,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "a": 30,
+         "b": 80
+        }
+       },
+       "dur": 0.35
+      },
+      {
+       "t": 1.5,
+       "pose": "stand",
+       "dur": 0.4
+      },
+      {
+       "t": 1.9,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "brows": "up",
+        "look": [
+         0.7,
+         0.5
+        ],
+        "turn": 0.4
+       },
+       "dur": 0.2
+      }
+     ],
+     "do": [
+      {
+       "act": "wave",
+       "arm": "R",
+       "from": 0.3,
+       "to": 1.4,
+       "a": 135,
+       "b": 30,
+       "rate": 2,
+       "amp": 12
+      }
+     ],
+     "say": [
+      {
+       "from": 0.3,
+       "to": 2.4,
+       "text": "Hi."
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "look": [
+       -0.1,
+       0.9
+      ],
+      "turn": -0.15
+     },
+     "facing": -1,
+     "keys": [
+      {
+       "t": 0.9,
+       "face": {
+        "eyes": "open",
+        "mouth": "flat",
+        "brows": "up",
+        "look": [
+         -0.6,
+         -0.8
+        ],
+        "turn": -0.4
+       },
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 30,
+         "b": -122
+        },
+        "armR": {
+         "a": 26,
+         "b": -116
+        },
+        "head": {
+         "tilt": -4
+        }
+       },
+       "dur": 0.3
+      },
+      {
+       "t": 1.6,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 20,
+         "b": -40
+        },
+        "armR": {
+         "a": 20,
+         "b": -40
+        },
+        "head": {
+         "tilt": -4
+        }
+       },
+       "hold": {},
+       "dur": 0.35
+      }
+     ]
+    },
+    {
+     "id": "herShadow",
+     "x": 960,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 30,
+       "b": -122
+      },
+      "armR": {
+       "a": 26,
+       "b": -116
+      },
+      "head": {
+       "tilt": 8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "facing": -1,
+     "keys": [
+      {
+       "t": 1.6,
+       "pose": {
+        "base": "sit",
+        "armL": {
+         "a": 20,
+         "b": -40
+        },
+        "armR": {
+         "a": 20,
+         "b": -40
+        }
+       },
+       "hold": {},
+       "dur": 0.35
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    },
+    {
+     "type": "book",
+     "id": "closed-book",
+     "x": 640,
+     "y": 1346,
+     "scale": 1.2,
+     "opacity": 0,
+     "keys": [
+      {
+       "t": 1.7,
+       "opacity": 1,
+       "ease": "hold"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1.7,
+     "kind": "thud",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "start": 30.4,
+   "end": 32.8,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "in": {
+    "type": "whip",
+    "dir": "left",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 740,
+     "y": 860,
+     "zoom": 1.5
+    },
+    {
+     "t": 2.4,
+     "x": 740,
+     "y": 860,
+     "zoom": 1.58
+    }
+   ],
+   "actors": [
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 20,
+       "b": -40
+      },
+      "armR": {
+       "a": 20,
+       "b": -40
+      },
+      "head": {
+       "tilt": -4
+      }
+     },
+     "facing": -1,
+     "face": {
+      "eyes": "open",
+      "mouth": "smile",
+      "brows": "raised",
+      "look": [
+       0.6,
+       -0.6
+      ],
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 1.9,
+       "face": {
+        "eyes": "happy",
+        "mouth": "grin",
+        "brows": "flat",
+        "look": [
+         0.6,
+         -0.5
+        ],
+        "turn": 0.3
+       },
+       "dur": 0.2
+      }
+     ],
+     "say": [
+      {
+       "from": 0.3,
+       "to": 2.3,
+       "text": "Finally."
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "x": 520,
+     "y": 1560,
+     "scale": 1,
+     "pose": "stand",
+     "face": {
+      "eyes": "wide",
+      "mouth": "O",
+      "brows": "up",
+      "look": [
+       0.7,
+       0.5
+      ],
+      "turn": 0.4
+     }
+    },
+    {
+     "id": "heroShadow",
+     "x": 720,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": "stand"
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    },
+    {
+     "type": "book",
+     "id": "closed-book",
+     "x": 640,
+     "y": 1346,
+     "scale": 1.2
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1.9,
+     "kind": "chime",
+     "gain": 0.45
+    }
+   ]
+  },
+  {
+   "start": 32.8,
+   "end": 35,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "in": {
+    "type": "crossfade",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 620,
+     "y": 1000,
+     "zoom": 0.6
+    },
+    {
+     "t": 2.2,
+     "x": 640,
+     "y": 1000,
+     "zoom": 0.63
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 520,
+     "y": 1560,
+     "scale": 1,
+     "pose": "stand",
+     "face": {
+      "eyes": "happy",
+      "mouth": "smile",
+      "look": [
+       0.7,
+       0.3
+      ],
+      "turn": 0.4
+     },
+     "keys": [
+      {
+       "t": 1,
+       "face": {
+        "eyes": "open",
+        "mouth": "smile",
+        "look": [
+         1,
+         0
+        ],
+        "turn": 0.5
+       },
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 760,
+     "y": 1560,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 20,
+       "b": -40
+      },
+      "armR": {
+       "a": 20,
+       "b": -40
+      }
+     },
+     "facing": -1,
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin"
+     },
+     "keys": [
+      {
+       "t": 1.1,
+       "pose": "stand",
+       "facing": 1,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "herShadow",
+     "x": 960,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 20,
+       "b": -40
+      },
+      "armR": {
+       "a": 20,
+       "b": -40
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "facing": -1,
+     "keys": [
+      {
+       "t": 1.1,
+       "pose": "stand",
+       "facing": 1,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "heroShadow",
+     "x": 720,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": "stand"
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus",
+     "x": 3600,
+     "y": 1890,
+     "layer": "front",
+     "keys": [
+      {
+       "t": 0.1,
+       "x": 3600
+      },
+      {
+       "t": 1.4,
+       "x": 1020,
+       "ease": "outCubic"
+      }
+     ],
+     "markup": "<rect x=\"0\" y=\"-1330\" width=\"5640\" height=\"1210\" rx=\"70\" fill=\"#E3A93A\"/><rect x=\"0\" y=\"-560\" width=\"5640\" height=\"120\" fill=\"#C98E25\"/><rect x=\"60\" y=\"-1240\" width=\"460\" height=\"560\" rx=\"40\" fill=\"#24324A\"/><rect x=\"700\" y=\"-1180\" width=\"640\" height=\"440\" rx=\"24\" fill=\"#2E3E5C\"/><rect x=\"740\" y=\"-1150\" width=\"200\" height=\"380\" rx=\"16\" fill=\"#3D5078\"/><rect x=\"1450\" y=\"-1180\" width=\"640\" height=\"440\" rx=\"24\" fill=\"#2E3E5C\"/><rect x=\"1490\" y=\"-1150\" width=\"200\" height=\"380\" rx=\"16\" fill=\"#3D5078\"/><rect x=\"2200\" y=\"-1180\" width=\"640\" height=\"440\" rx=\"24\" fill=\"#2E3E5C\"/><rect x=\"2240\" y=\"-1150\" width=\"200\" height=\"380\" rx=\"16\" fill=\"#3D5078\"/><rect x=\"2950\" y=\"-1180\" width=\"640\" height=\"440\" rx=\"24\" fill=\"#2E3E5C\"/><rect x=\"2990\" y=\"-1150\" width=\"200\" height=\"380\" rx=\"16\" fill=\"#3D5078\"/><rect x=\"3700\" y=\"-1180\" width=\"640\" height=\"440\" rx=\"24\" fill=\"#2E3E5C\"/><rect x=\"3740\" y=\"-1150\" width=\"200\" height=\"380\" rx=\"16\" fill=\"#3D5078\"/><rect x=\"4450\" y=\"-1180\" width=\"640\" height=\"440\" rx=\"24\" fill=\"#2E3E5C\"/><rect x=\"4490\" y=\"-1150\" width=\"200\" height=\"380\" rx=\"16\" fill=\"#3D5078\"/><rect x=\"120\" y=\"-1320\" width=\"1000\" height=\"90\" rx=\"20\" fill=\"#1E2738\"/><text x=\"620\" y=\"-1257\" text-anchor=\"middle\" font-family=\"JetBrains Mono\" font-weight=\"600\" font-size=\"56\" fill=\"#FFB938\">NIGHT 11</text><circle cx=\"70\" cy=\"-330\" r=\"60\" fill=\"#FFF4C8\"/><circle cx=\"900\" cy=\"-110\" r=\"140\" fill=\"#24242A\"/><circle cx=\"900\" cy=\"-110\" r=\"56\" fill=\"#8A8A92\"/><circle cx=\"4600\" cy=\"-110\" r=\"140\" fill=\"#24242A\"/><circle cx=\"4600\" cy=\"-110\" r=\"56\" fill=\"#8A8A92\"/>"
+    }
+   ],
+   "overlay": [
+    {
+     "type": "flash",
+     "from": 1.2,
+     "to": 1.6,
+     "color": "#FFF6D8"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.1,
+     "kind": "car",
+     "gain": 0.6
+    },
+    {
+     "t": 1.3,
+     "kind": "whoosh",
+     "gain": 0.4
+    },
+    {
+     "t": 1.6,
+     "kind": "dooropen",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 35,
+   "end": 37.4,
+   "set": {
+    "preset": "bus",
+    "night": true
+   },
+   "in": {
+    "type": "whip",
+    "dir": "left",
+    "dur": 0.3
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 560,
+     "y": 1000,
+     "zoom": 1.12
+    },
+    {
+     "t": 2.4,
+     "x": 560,
+     "y": 990,
+     "zoom": 1.2
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "x": 450,
+     "y": 1500,
+     "scale": 1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 20,
+       "b": -40
+      },
+      "armR": {
+       "a": 20,
+       "b": -40
+      }
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "look": [
+       0.6,
+       0
+      ],
+      "turn": 0.3
+     },
+     "do": [
+      {
+       "act": "laugh",
+       "from": 0.8,
+       "to": 2,
+       "amp": 6
+      }
+     ]
+    },
+    {
+     "id": "her",
+     "x": 690,
+     "y": 1500,
+     "scale": 1,
+     "facing": -1,
+     "pose": {
+      "base": "sit",
+      "armL": {
+       "a": 20,
+       "b": -40
+      },
+      "armR": {
+       "a": 20,
+       "b": -40
+      },
+      "body": {
+       "lean": -5
+      },
+      "head": {
+       "tilt": -8
+      }
+     },
+     "hold": {
+      "R": "book"
+     },
+     "face": {
+      "eyes": "happy",
+      "mouth": "grin",
+      "turn": 0.3
+     },
+     "do": [
+      {
+       "act": "laugh",
+       "from": 0.5,
+       "to": 1.9,
+       "amp": 8
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.6,
+     "kind": "chuckle",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 37.4,
+   "end": 40.8,
+   "set": {
+    "preset": "street",
+    "night": true
+   },
+   "in": {
+    "type": "crossfade",
+    "dur": 0.35
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 620,
+     "y": 1000,
+     "zoom": 0.95
+    },
+    {
+     "t": 3,
+     "x": 640,
+     "y": 960,
+     "zoom": 1.05
+    }
+   ],
+   "actors": [
+    {
+     "id": "heroShadow",
+     "x": 520,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "reach": [
+        118,
+        -400
+       ]
+      }
+     },
+     "keys": [
+      {
+       "t": 1.7,
+       "pose": {
+        "base": "stand",
+        "armR": {
+         "reach": [
+          118,
+          -400
+         ]
+        },
+        "head": {
+         "tilt": -6
+        }
+       },
+       "dur": 0.4
+      }
+     ],
+     "do": [
+      {
+       "act": "wave",
+       "arm": "L",
+       "from": 1.6,
+       "to": 3.4,
+       "a": 150,
+       "rate": 2.2,
+       "amp": 20
+      }
+     ]
+    },
+    {
+     "id": "herShadow",
+     "x": 860,
+     "y": 1525,
+     "scale": 1.5,
+     "silhouette": "#14151E",
+     "opacity": 0.55,
+     "shadow": false,
+     "z": -1,
+     "facing": -1,
+     "pose": {
+      "base": "stand",
+      "armR": {
+       "reach": [
+        122,
+        -400
+       ]
+      },
+      "head": {
+       "tilt": -8
+      }
+     }
+    }
+   ],
+   "props": [
+    {
+     "type": "building",
+     "id": "wall",
+     "x": 520,
+     "y": 1525,
+     "w": 4200,
+     "h": 1320,
+     "floors": 1,
+     "shop": false,
+     "lit": 0,
+     "night": true,
+     "kind": "plaster",
+     "color": "#7A7FA6"
+    },
+    {
+     "type": "svg",
+     "id": "bench-shadow",
+     "x": 770,
+     "y": 1525,
+     "opacity": 0.5,
+     "markup": "<rect x=\"-640\" y=\"-640\" width=\"1280\" height=\"56\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-480\" width=\"1280\" height=\"48\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-640\" y=\"-330\" width=\"1280\" height=\"52\" rx=\"12\" fill=\"#14151E\"/><rect x=\"-600\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/><rect x=\"560\" y=\"-330\" width=\"40\" height=\"330\" fill=\"#14151E\"/>"
+    },
+    {
+     "type": "svg",
+     "id": "lamp-cone",
+     "x": 95,
+     "y": -520,
+     "opacity": 0.16,
+     "markup": "<path d=\"M-40 0 L40 0 L700 2080 L-560 2080Z\" fill=\"#FFE7A6\"/>"
+    },
+    {
+     "type": "busStop",
+     "id": "shelter",
+     "x": 2050,
+     "y": 1560
+    },
+    {
+     "type": "bench",
+     "id": "bench",
+     "x": 570,
+     "y": 1560
+    },
+    {
+     "type": "lampPost",
+     "id": "lamp",
+     "x": -120,
+     "y": 1600,
+     "lit": true
+    },
+    {
+     "type": "svg",
+     "id": "bus",
+     "x": 1020,
+     "y": 1890,
+     "layer": "front",
+     "keys": [
+      {
+       "t": 0,
+       "x": 1020
+      },
+      {
+       "t": 1.1,
+       "x": -5900,
+       "ease": "inCubic"
+      }
+     ],
+     "markup": "<rect x=\"0\" y=\"-1330\" width=\"5640\" height=\"1210\" rx=\"70\" fill=\"#E3A93A\"/><rect x=\"0\" y=\"-560\" width=\"5640\" height=\"120\" fill=\"#C98E25\"/><rect x=\"60\" y=\"-1240\" width=\"460\" height=\"560\" rx=\"40\" fill=\"#24324A\"/><rect x=\"700\" y=\"-1180\" width=\"640\" height=\"440\" rx=\"24\" fill=\"#2E3E5C\"/><rect x=\"740\" y=\"-1150\" width=\"200\" height=\"380\" rx=\"16\" fill=\"#3D5078\"/><rect x=\"1450\" y=\"-1180\" width=\"640\" height=\"440\" rx=\"24\" fill=\"#2E3E5C\"/><rect x=\"1490\" y=\"-1150\" width=\"200\" height=\"380\" rx=\"16\" fill=\"#3D5078\"/><rect x=\"2200\" y=\"-1180\" width=\"640\" height=\"440\" rx=\"24\" fill=\"#2E3E5C\"/><rect x=\"2240\" y=\"-1150\" width=\"200\" height=\"380\" rx=\"16\" fill=\"#3D5078\"/><rect x=\"2950\" y=\"-1180\" width=\"640\" height=\"440\" rx=\"24\" fill=\"#2E3E5C\"/><rect x=\"2990\" y=\"-1150\" width=\"200\" height=\"380\" rx=\"16\" fill=\"#3D5078\"/><rect x=\"3700\" y=\"-1180\" width=\"640\" height=\"440\" rx=\"24\" fill=\"#2E3E5C\"/><rect x=\"3740\" y=\"-1150\" width=\"200\" height=\"380\" rx=\"16\" fill=\"#3D5078\"/><rect x=\"4450\" y=\"-1180\" width=\"640\" height=\"440\" rx=\"24\" fill=\"#2E3E5C\"/><rect x=\"4490\" y=\"-1150\" width=\"200\" height=\"380\" rx=\"16\" fill=\"#3D5078\"/><rect x=\"120\" y=\"-1320\" width=\"1000\" height=\"90\" rx=\"20\" fill=\"#1E2738\"/><text x=\"620\" y=\"-1257\" text-anchor=\"middle\" font-family=\"JetBrains Mono\" font-weight=\"600\" font-size=\"56\" fill=\"#FFB938\">NIGHT 11</text><circle cx=\"70\" cy=\"-330\" r=\"60\" fill=\"#FFF4C8\"/><circle cx=\"900\" cy=\"-110\" r=\"140\" fill=\"#24242A\"/><circle cx=\"900\" cy=\"-110\" r=\"56\" fill=\"#8A8A92\"/><circle cx=\"4600\" cy=\"-110\" r=\"140\" fill=\"#24242A\"/><circle cx=\"4600\" cy=\"-110\" r=\"56\" fill=\"#8A8A92\"/>"
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.1,
+     "kind": "car",
+     "gain": 0.45
+    },
+    {
+     "t": 0.5,
+     "kind": "whoosh",
+     "gain": 0.4
+    },
+    {
+     "t": 1.75,
+     "kind": "ping",
+     "gain": 0.6
+    },
+    {
+     "t": 1.8,
+     "kind": "pop",
+     "gain": 0.4
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "mood": "eerie",
+   "a": 0,
+   "b": 8.8,
+   "gain": 0.75
+  },
+  {
+   "mood": "playful",
+   "a": 8.8,
+   "b": 16.8,
+   "gain": 0.8
+  },
+  {
+   "mood": "eerie",
+   "a": 16.8,
+   "b": 24.8,
+   "gain": 0.8
+  },
+  {
+   "mood": "tense",
+   "a": 24.8,
+   "b": 27.8,
+   "gain": 0.7
+  },
+  {
+   "mood": "tender",
+   "a": 27.8,
+   "b": 35,
+   "gain": 0.8
+  },
+  {
+   "mood": "resolve",
+   "a": 35,
+   "b": 40.8,
+   "gain": 0.85
+  }
+ ],
+ "beds": [
+  {
+   "name": "wind",
+   "a": 0,
+   "b": 35,
+   "gain": 0.3
+  },
+  {
+   "name": "hum",
+   "a": 0,
+   "b": 35,
+   "gain": 0.3
+  },
+  {
+   "name": "hum",
+   "a": 35,
+   "b": 37.4,
+   "gain": 0.5
+  },
+  {
+   "name": "wind",
+   "a": 37.4,
+   "b": 40.8,
+   "gain": 0.35
+  }
+ ]
+}

@@ -1,0 +1,150 @@
+{
+  "fingerprint": "ebe3294b277e0b324345c3fadc0e0b21c931b7bd8526457d79b51a7ceec6d8ec",
+  "preview_seconds": 28.503,
+  "output": "/Users/hussain/dev/stickman-videos/two-minute-rule/output/preview.mp4",
+  "output_sha256": "3c98905a47b1c1111c2cde3bf4182c7e939574821e015203ea518a9acc19cd62",
+  "original_voice_sha256": "aa1b54c27b29e9de576efa98801bd1af1daee0c9680948cbc09786f8faa4913e",
+  "original_voice_duration": 27.403125,
+  "voice_rate": "unchanged; leading/trailing padding only",
+  "frames": 856,
+  "duration": 28.533333,
+  "cache_hits": 0,
+  "shot_count": 14,
+  "full_decode": "pass",
+  "caption_count": 18,
+  "human_review": "required; technical checks are not acceptance",
+  "inputs": [
+    {
+      "path": "/System/Library/Fonts/Supplemental/ChalkboardSE.ttc",
+      "sha256": "2f115e259dbd66e39a5891fe1fb49fa18b20b8d2db08a1e43b3b1360ca0e0bbe"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-video-director/skills/directing-stickman-videos/assets/fonts/NotoSans.ttf",
+      "sha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/ball.png",
+      "sha256": "74075c7ece52877bf9ecc1e01989ffce8b69bccf1b9016421d2024c81139dfb0"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/note.png",
+      "sha256": "a0eb5b752a79c52f0926412939b4167885aaabd4b3cb3a8b48c12151968e32e2"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s10a.png",
+      "sha256": "32e9e1f3791e70bdd649e1b31291f233f9c8cf4d1129dab08e28f47333254b27"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s10b.png",
+      "sha256": "73870dbd8b854776e22114c1e828c528d0d1b8d7bf4aac8c976c6e72ae076186"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s1a.png",
+      "sha256": "8b588e011a6849eddee37a8a8862c5d95462ea19997cdd758d090e129f5d0195"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s1b.png",
+      "sha256": "d5ecaa31b7cc452b5ed49282797672deb66800156555e383e913a7f73a4bcfd8"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s2a.png",
+      "sha256": "a820f36f94c9d95802b16a4c03fa7df5af64ee314a0b4da120fc0d281f01d802"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s2b1.png",
+      "sha256": "5a717daecd3721c525725e10190204d07fc063d8795137fb2d08d28156a832ed"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s2b2.png",
+      "sha256": "3730c505cfcbed6bd4bcb18a4e5955f6ecc1a9d98e5dbb9ff3bf32b67e191e9b"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s3a.png",
+      "sha256": "71f48e69d34e7af28d38469d9236dea9ef6a67cdce521f9e878fcddcdfccdf6e"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s3b.png",
+      "sha256": "0fb482b2066727555cc47d646efe6bf42e0f7f4404c3daf34ee4d08f6b934082"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s3c.png",
+      "sha256": "983ece3d00936f81816e27678ae81dd6410045209b9d0829dd0b5527368a5ecb"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s3d.png",
+      "sha256": "407483173e5a50c2329158a8be7977941f3095fc7c40d41dc4531427fa2db253"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s4a.png",
+      "sha256": "f87bfb5ca7f734caebd0746fe2d423022ad11e7b88aab6bccbd526b00eb15b96"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s4b.png",
+      "sha256": "54f277f8ca47a1f0aec2d834f5f08ebbb884e7508ab95608e5949cf340ce1d8d"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s4c.png",
+      "sha256": "930c835204352035f94e493328e4ee1a8c0b40b7b32e50ba9362a2323330fbd4"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s5a.png",
+      "sha256": "c1fa4867455586cc867513db022fa1f5d0e0c46597ffb1d7631c9a1ad19f3774"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s5b.png",
+      "sha256": "2b7730b0298ec6afb3aba25d5f5793f6d255e4330d427c91d2de386f1ac99598"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s5c.png",
+      "sha256": "b1654fada2311ea9c61528e17371197af89dc309feb639a96513efd37e238348"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s6a.png",
+      "sha256": "e8d7c6eb607d37a017bbbfbea5575248ce38e2b1cab22624f96442182c0aee7f"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s6b.png",
+      "sha256": "5ce0d5765dbde89439f42286e5b86ce0628259b63d9b5a199043b6bfbba3f82e"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s6c.png",
+      "sha256": "2f96cf2f0c2a2e7d55085b7ff8b681d32277fd387071c66b196cff53afd0c71b"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s7a.png",
+      "sha256": "9c61c5e047f26201caea006153be8c8e77b1dfb296749007ac7b3a0fde33633b"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s7b.png",
+      "sha256": "6b3e95638ad45a3fc754783f9e5e1b710427f26f3eef1264b53f99b04891d196"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s7c.png",
+      "sha256": "ef892e953e98b7f06a796f88cdad0e26428b251959a6d5459f7bb7b1407f8c95"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s8a.png",
+      "sha256": "4932b304253ee14027a5c7d2639ba1fb648fa8b260f92609ad741be0075c472e"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s8b.png",
+      "sha256": "6baaa50139c5aabf0f7a31e4d80cd9c4e9077f59827e7a9b1fb04e904e5aa7ea"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s8c.png",
+      "sha256": "2c83764f54b8b05c55219ca10b9f7170440bc727bf11b3632b93d3643c1e8b72"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s9a.png",
+      "sha256": "b97c442c66deea74878ce8e23cae75100470400eac734ea6f94600de6c4d0730"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/art/s9b.png",
+      "sha256": "1e82ce1e64ae7efa173971ffff70ccfe5db48db8fa1dd11d4b4b613186f39aac"
+    },
+    {
+      "path": "/Users/hussain/dev/stickman-videos/two-minute-rule/narration.wav",
+      "sha256": "aa1b54c27b29e9de576efa98801bd1af1daee0c9680948cbc09786f8faa4913e"
+    }
+  ]
+}

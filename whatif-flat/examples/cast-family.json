@@ -1,0 +1,6 @@
+{
+  "dad":      {"skin": "orange", "hair": {"style": "quiff", "color": "brown"}, "top": {"style": "tee", "color": "green"}, "bottom": {"style": "jeans", "color": "navy"}, "shoes": {"color": "charcoal"}},
+  "kid":      {"skin": "orange", "build": {"height": 0.66, "head": 0.95, "width": 0.78, "limbs": 0.85}, "hair": {"style": "curly", "color": "blonde"}, "top": {"style": "tee", "color": "yellow"}, "bottom": {"style": "shorts", "color": "olive"}, "shoes": {"color": "red"}, "face": {"blush": true}},
+  "mom":      {"skin": "orange", "build": {"width": 0.9}, "hair": {"style": "bob", "color": "blonde"}, "top": {"style": "tank", "color": "coral"}, "bottom": {"style": "jeans", "color": "teal"}, "shoes": {"color": "white"}},
+  "stranger": {"skin": "peach", "build": {"height": 1.08, "width": 0.95}, "hair": {"style": "short", "color": "black"}, "top": {"style": "jacket", "color": "charcoal", "detail": "grey"}, "bottom": {"style": "jeans", "color": "denim"}, "shoes": {"color": "brown"}, "accessories": ["mask"]}
+}

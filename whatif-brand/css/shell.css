@@ -1,0 +1,122 @@
+/* What If: page shell shared by both pages. A left sidebar (sections), a top-right control pill
+   (v1 Stick | v2 Flat, light/dark), and the dark theme. The theme is stamped on <html data-theme> before paint
+   by the inline script in each page's <head>; js/shell.js wires the toggle, the drawer and the current-section highlight. */
+
+/* ---------- page accents (the v1 brand is red, v2 is the flat style's orange) ---------- */
+body { --page-accent: var(--wi-accent-red); --page-accent-ink: #FFFFFF; --side-w: 248px; --side-bg: var(--wi-stage); }
+body.v2 { --page-accent: #E8692F; --page-accent-ink: #1D1D1F; --eng-accent: #E8692F; --eng-hl: #E8692F; }
+
+/* ---------- dark theme (both pages) ---------- */
+html[data-theme="dark"] body {
+  --wi-stage: #232427; --wi-ink: #F3F1EC; --wi-ink-muted: #B4B1AA; --wi-line-soft: #3A3B40; --wi-surface-soft: #2D2E32;
+  --eng-card: #2A2B2F; --eng-well: #34353A; --eng-line: #3A3B40; --eng-code-bg: #1C1D20; --eng-code-ink: #D8D5CE;
+  --eng-select: #232427; --eng-select-line: #4A4B52; --eng-chip: #34353A; --eng-tree-dim: #6E6F76; --eng-bg-layer: #8FB7E8;
+  --side-bg: #1E1F22;
+  color-scheme: dark;
+  background: radial-gradient(ellipse 80% 50% at 60% 0%, #303136 0%, var(--wi-stage) 60%) fixed, var(--wi-stage);
+}
+html[data-theme="light"] body { color-scheme: light; }
+
+/* ---------- layout ---------- */
+html { scroll-padding-top: 24px; }
+main, .footer { margin-left: var(--side-w); padding-inline: max(24px, calc((100vw - var(--side-w) - 1160px) / 2)); }
+main { padding-top: 56px; }   /* room for the control pill */
+
+/* ---------- sidebar ---------- */
+.side {
+  position: fixed; inset: 0 auto 0 0; z-index: 30; width: var(--side-w); display: flex; flex-direction: column;
+  background: var(--side-bg); border-right: 1px solid var(--wi-line-soft); padding: 20px 14px 16px;
+}
+.side__brand { display: flex; align-items: center; gap: 8px; padding: 4px 10px 18px; text-decoration: none; color: var(--wi-ink); font: 600 20px/1 var(--wi-font-display); letter-spacing: -0.03em; white-space: nowrap; }
+.side__brand em, .mbar__brand em, .footer em, .hero__word em { font-family: var(--wi-font-accent); font-style: italic; font-weight: 400; font-size: 1.1em; letter-spacing: -0.01em; }
+.side__brand:hover { color: var(--wi-ink); }
+.side__style { font: 600 10px/1 var(--wi-font-mono); letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 7px; border-radius: 999px; background: var(--page-accent); color: var(--page-accent-ink); margin-left: 2px; }
+.side__nav { flex: 1 1 auto; overflow-y: auto; scrollbar-width: thin; margin: 0 -6px; padding: 0 6px; }
+.side__group { margin: 0 0 14px; }
+.side__label { font: 600 10.5px/1 var(--wi-font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--wi-ink-muted); opacity: 0.75; padding: 8px 10px 6px; margin: 0; }
+.side__nav a {
+  display: block; position: relative; padding: 7px 10px; border-radius: 8px; text-decoration: none;
+  color: var(--wi-ink-muted); font: 500 14.5px/1.25 var(--wi-font-text);
+}
+.side__nav a:hover { color: var(--wi-ink); background: var(--wi-surface-soft); }
+.side__nav a.is-current { color: var(--wi-ink); background: var(--wi-surface-soft); font-weight: 600; }
+.side__nav a.is-current::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 3px; border-radius: 2px; background: var(--page-accent); }
+.side__foot { border-top: 1px solid var(--wi-line-soft); padding-top: 14px; display: grid; gap: 8px; }
+.side__foot .wi-btn { justify-content: center; min-height: 42px; font-size: 14px; }
+
+/* ---------- top-right controls ---------- */
+.ctrl { position: fixed; top: 14px; right: 16px; z-index: 40; display: flex; align-items: center; gap: 8px; }
+.seg, .theme-btn { background: color-mix(in srgb, var(--wi-stage) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--wi-line-soft); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+.seg { display: flex; padding: 3px; border-radius: 999px; }
+.seg a { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 14px; border-radius: 999px; text-decoration: none;
+  color: var(--wi-ink-muted); font: 600 13px/1 var(--wi-font-display); letter-spacing: -0.01em; white-space: nowrap; }
+.seg a b { font: 600 10.5px/1 var(--wi-font-mono); letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8; }
+.seg a:hover { color: var(--wi-ink); }
+.seg a[aria-current="page"] { background: var(--wi-ink); color: var(--wi-stage); }
+.theme-btn { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; color: var(--wi-ink); padding: 0; }
+.theme-btn:hover { color: var(--page-accent); }
+.theme-btn svg { width: 19px; height: 19px; }
+.theme-btn .i-sun { display: none; }
+html[data-theme="dark"] .theme-btn .i-sun { display: block; }
+html[data-theme="dark"] .theme-btn .i-moon { display: none; }
+
+/* ---------- mobile: sidebar becomes a drawer ---------- */
+.mbar { display: none; }
+.scrim { display: none; }
+@media (max-width: 1000px) {
+  body { --side-w: 0px; }
+  html { scroll-padding-top: 76px; }
+  main { padding-top: 76px; }
+  main, .footer { padding-inline: 16px; }
+  .side { width: min(300px, 84vw); transform: translateX(-102%); transition: transform 0.24s cubic-bezier(.2,.8,.2,1); box-shadow: 0 0 40px rgba(0,0,0,0.25); }
+  body.side-open .side { transform: none; }
+  body.side-open .scrim { display: block; position: fixed; inset: 0; z-index: 25; background: rgba(0,0,0,0.38); }
+  .mbar { display: flex; align-items: center; gap: 10px; position: fixed; top: 0; left: 0; right: 0; z-index: 20; height: 66px; padding: 0 16px;
+    background: color-mix(in srgb, var(--wi-stage) 90%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--wi-line-soft); }
+  .mbar__menu { width: 42px; height: 42px; border-radius: 12px; border: 1px solid var(--wi-line-soft); background: transparent; color: var(--wi-ink); display: grid; place-items: center; cursor: pointer; padding: 0; }
+  .mbar__menu svg { width: 20px; height: 20px; }
+  .mbar__brand { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--wi-ink); font: 600 19px/1 var(--wi-font-display); letter-spacing: -0.03em; }
+  .mbar__brand em { font-family: var(--wi-font-accent); font-style: italic; font-weight: 400; font-size: 1.1em; }
+  .ctrl { top: 12px; right: 12px; }
+  .seg, .theme-btn { box-shadow: none; }
+}
+@media (max-width: 560px) {
+  .mbar__brand span { display: none; }   /* the mark alone; the pill carries v1/v2 */
+  .seg a { padding: 0 11px; }
+  .seg a .seg__long { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .side { transition: none; } }
+
+/* ---------- dark-theme fixes for the shared page parts ---------- */
+html[data-theme="dark"] .section__head::after { filter: invert(1) opacity(0.7); }
+html[data-theme="dark"] .card { border-color: var(--wi-line-soft); background: var(--eng-card); }
+html[data-theme="dark"] .wi-btn { background: transparent; color: var(--wi-ink); border-color: var(--wi-ink); }
+html[data-theme="dark"] .wi-btn--ghost { border-color: transparent; }
+html[data-theme="dark"] .wi-btn--primary { background: var(--page-accent); border-color: var(--page-accent); color: var(--page-accent-ink); }
+html[data-theme="dark"] .wi-btn--primary:hover { filter: brightness(1.08); color: var(--page-accent-ink); }
+html[data-theme="dark"] a:hover { color: var(--page-accent); }
+html[data-theme="dark"] code { background: #34353A; color: var(--wi-ink); }
+html[data-theme="dark"] .ep__cover { border-color: var(--wi-line-soft); }
+html[data-theme="dark"] .ep__dur { background: #232427; color: var(--wi-ink); border-color: var(--wi-line-soft); }
+html[data-theme="dark"] .ep__play { background: rgba(35,36,39,0.4); }
+html[data-theme="dark"] .phone { border-color: #111114; background: #111; box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px #3A3B40; }
+html[data-theme="dark"] label.check { color: var(--wi-ink); }
+html[data-theme="dark"] .player__close { background: #F3F1EC; color: #1D1D1F; }
+
+/* v1 hero wordmark: theunfinishedco is long, so the hero sets it smaller than the old two-word mark */
+.hero__title .hero__word { font-size: 0.56em; letter-spacing: -0.035em; white-space: nowrap; }
+.hero__title .hero__word em { font-size: 1.12em; }
+@media (max-width: 560px) { .hero__title .hero__word { font-size: 0.42em; } }
+.hero__title:has(.hero__word) { align-items: center; gap: 0.08em; }
+.hero__title:has(.hero__word) .hero__mark { width: 0.6em; height: 0.6em; margin: 0; }
+
+/* logo section: dark tiles for the dark-ground marks, banner preview, download buttons */
+.tile--dark { background: #232427 !important; }
+.tile--light { background: #FFFFFF !important; }   /* the light-ground assets keep a light ground in dark mode too */
+.tile--light figcaption { color: #5C5C5C; } .tile--dark figcaption { color: #B4B1AA; }
+.banner-dl { margin: var(--wi-space-3) 0 0; padding: 12px; }
+.banner-dl img { width: 100%; border-radius: 10px; }
+.banner-dl figcaption { font-size: 13px; color: var(--wi-ink-muted); margin-top: 10px; }
+.downloads-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: var(--wi-space-3); }
+.downloads-grid .wi-btn { min-height: 40px; font-size: 14px; padding: 0 16px; }

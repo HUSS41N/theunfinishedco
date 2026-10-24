@@ -1,0 +1,305 @@
+{
+ "meta": {
+  "title": "Motion demo (v3 motion QA)",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 10.4
+ },
+ "cast": {
+  "ana": {
+   "skin": "brown",
+   "hair": {
+    "style": "long",
+    "color": "black"
+   },
+   "top": {
+    "style": "shirt",
+    "color": "purple"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "denim"
+   },
+   "shoes": {
+    "color": "white"
+   }
+  },
+  "ben": {
+   "skin": "fair",
+   "hair": {
+    "style": "spiky",
+    "color": "ginger"
+   },
+   "top": {
+    "style": "hoodie",
+    "color": "red"
+   },
+   "bottom": {
+    "style": "jeans",
+    "color": "navy"
+   },
+   "accessories": [
+    {
+     "type": "cap",
+     "color": "blue"
+    }
+   ]
+  }
+ },
+ "shots": [
+  {
+   "start": 0,
+   "end": 6.6,
+   "set": {
+    "preset": "spotlight",
+    "color": "#2A2B2E"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 520,
+     "y": 1080,
+     "zoom": 1.0
+    },
+    {
+     "t": 2.6,
+     "x": 540,
+     "y": 1060,
+     "zoom": 1.06
+    },
+    {
+     "t": 4.6,
+     "x": 760,
+     "y": 1060,
+     "zoom": 1.06
+    },
+    {
+     "t": 6.6,
+     "x": 800,
+     "y": 1000,
+     "zoom": 1.16
+    }
+   ],
+   "shake": [
+    {
+     "from": 4.5,
+     "to": 5.1,
+     "amp": 5
+    }
+   ],
+   "actors": [
+    {
+     "id": "ana",
+     "x": 330,
+     "y": 1500,
+     "scale": 0.95,
+     "facing": 1,
+     "pose": "stand",
+     "face": {
+      "mouth": "smile",
+      "turn": 0.3
+     },
+     "keys": [
+      {
+       "t": 0.9,
+       "dur": 0.55,
+       "pose": "shrug",
+       "face": {
+        "mouth": "open",
+        "brows": "up",
+        "turn": 0.3
+       }
+      },
+      {
+       "t": 1.5,
+       "pose": "stand",
+       "dur": 0.45,
+       "face": {
+        "mouth": "smile",
+        "brows": "flat",
+        "turn": 0.3
+       }
+      }
+     ],
+     "do": [
+      {
+       "act": "wave",
+       "arm": "R",
+       "from": 1.6,
+       "to": 3.0
+      },
+      {
+       "act": "walk",
+       "from": 3.1,
+       "to": 4.9,
+       "dx": 520
+      },
+      {
+       "act": "turn",
+       "from": 5.0,
+       "dur": 0.3
+      },
+      {
+       "act": "reach",
+       "arm": "R",
+       "from": 5.4,
+       "to": 6.6,
+       "target": [
+        190,
+        -730
+       ]
+      },
+      {
+       "act": "talk",
+       "from": 0.9,
+       "to": 1.4
+      }
+     ]
+    }
+   ],
+   "text": [
+    {
+     "text": "MOTION",
+     "y": 380,
+     "size": 120,
+     "from": 0.2,
+     "to": 2.8
+    }
+   ],
+   "sfx": [
+    {
+     "t": 4.5,
+     "kind": "thud",
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "start": 6.6,
+   "end": 8.6,
+   "in": {
+    "type": "push",
+    "dur": 0.45,
+    "dir": "left"
+   },
+   "set": {
+    "preset": "spotlight",
+    "color": "#2B3A4A"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 1080,
+     "zoom": 1.05
+    },
+    {
+     "t": 2,
+     "x": 540,
+     "y": 1040,
+     "zoom": 1.12
+    }
+   ],
+   "actors": [
+    {
+     "id": "ben",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.95,
+     "pose": "relaxed",
+     "face": {
+      "mouth": "grin",
+      "turn": -0.2
+     },
+     "do": [
+      {
+       "act": "laugh",
+       "from": 0.5,
+       "to": 1.8,
+       "amp": 10
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0,
+     "kind": "whoosh",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "start": 8.6,
+   "end": 10.4,
+   "in": {
+    "type": "whip",
+    "dur": 0.3,
+    "dir": "left"
+   },
+   "set": {
+    "preset": "spotlight",
+    "color": "#3A2B3E"
+   },
+   "camera": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.5
+    },
+    {
+     "t": 1.8,
+     "x": 540,
+     "y": 940,
+     "zoom": 1.6
+    }
+   ],
+   "actors": [
+    {
+     "id": "ana",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.95,
+     "pose": "stand",
+     "face": {
+      "mouth": "grin",
+      "eyes": "happy",
+      "turn": 0.1
+     },
+     "keys": [
+      {
+       "t": 0.7,
+       "dur": 0.4,
+       "pose": "cheer"
+      }
+     ],
+     "do": [
+      {
+       "act": "jump",
+       "from": 0.8,
+       "dur": 0.55,
+       "height": 90
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0,
+     "kind": "swipe",
+     "gain": 0.6
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "mood": "playful",
+   "a": 0,
+   "b": 10.4,
+   "gain": 0.6
+  }
+ ]
+}

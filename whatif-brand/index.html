@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>/* theme before paint: the stored choice, else this page's default */
+    (function () { var t; try { t = localStorage.getItem('wi-theme'); } catch (e) {} document.documentElement.dataset.theme = t === 'dark' || t === 'light' ? t : 'light'; })();</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>theunfinishedco — Brand & Video System</title>
+  <link rel="icon" href="assets/brand/theunfinishedco-mark.svg">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/engine.css">
+  <link rel="stylesheet" href="css/shell.css">
+</head>
+<body class="v1">
+  <aside class="side" id="side" aria-label="Sections">
+    <a class="side__brand" href="#top" aria-label="theunfinishedco, top of page"><img src="assets/brand/theunfinishedco-mark.svg" alt="" width="30" height="30"><span>the<em>unfinished</em>co</span></a>
+    <nav class="side__nav">
+      <div class="side__group"><p class="side__label">Brand</p><a href="#logo">Logo</a><a href="#color">Colour</a><a href="#type">Type</a></div>
+      <div class="side__group"><p class="side__label">Characters</p><a href="#builder">Character builder</a><a href="#layers">Layers</a><a href="#faces">Faces &amp; poses</a><a href="#palette">Palette</a></div>
+      <div class="side__group"><p class="side__label">World</p><a href="#sets">Sets</a><a href="#props">Props</a><a href="#loops">Motion loops</a></div>
+      <div class="side__group"><p class="side__label">Production</p><a href="#motion">Motion</a><a href="#text">Text &amp; safe zones</a><a href="#web-components">Web components</a><a href="#tokens">Tokens</a></div>
+      <div class="side__group"><p class="side__label">Videos</p><a href="#series2">Series 2</a><a href="#episodes">Series 1 (archive)</a><a href="#assets">Banners</a></div>
+    </nav>
+    <div class="side__foot"><a class="wi-btn wi-btn--primary" href="#series2">Watch Series 2</a></div>
+  </aside>
+  <div class="scrim" aria-hidden="true"></div>
+  <header class="mbar">
+    <button class="mbar__menu" type="button" data-menu aria-controls="side" aria-expanded="false" aria-label="Open sections"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a class="mbar__brand" href="#top"><img src="assets/brand/theunfinishedco-mark.svg" alt="" width="28" height="28"><span>the<em>unfinished</em>co</span></a>
+  </header>
+  <div class="ctrl">
+    <nav class="seg" aria-label="Art style">
+      <a href="index.html" aria-current="page"><b>v1</b><span class="seg__long">Stick</span></a>
+      <a href="v2.html"><b>v2</b><span class="seg__long">Flat</span></a>
+    </nav>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow">Brand &amp; video system · v1 stick · <a href="v2.html">v2 flat →</a></p>
+        <h1 class="hero__title"><img class="hero__mark" src="assets/brand/theunfinishedco-mark.svg" alt="" width="132" height="132"><span class="hero__word">the<em>unfinished</em>co</span></h1>
+        <p class="hero__tagline">One stickman. One <em>strange</em> possibility.</p>
+        <p class="lede">Silent, minimalist stickman Shorts and Reels about hypotheticals, twists and thought experiments.
+          White round heads and black ink, now with a little colour: clothes, a bow for the women, soft outlined sets. Every frame is
+          drawn in code by the <code>whatif-flat</code> engine in its <b>stick</b> style; the same scene file renders in the v2 flat look.
+          The player on the right is that engine, running in your browser.</p>
+        <div class="hero__actions">
+          <a class="wi-btn wi-btn--primary" href="#series2">Watch Series 2</a>
+          <a class="wi-btn" href="#builder">Build a character</a>
+          <a class="wi-btn wi-btn--ghost" href="tokens.json" download>Download tokens.json</a>
+        </div>
+      </div>
+      <figure class="hero__stage">
+        <div class="phone phone--engine"><div class="svgstage" id="hero-player" role="img" aria-label="Live scene: a man in a beanie walks into a living room and waves; a woman with a bow says he is late again"></div></div>
+        <figcaption><span class="mono-chip" id="hero-time">0.0 s</span> <code>scenes/stick-hero.json</code> rendered live by <code>v2/engine/scene.mjs</code>, stick style</figcaption>
+      </figure>
+    </section>
+
+    <section class="section" id="logo">
+      <header class="section__head"><h2>The <em>mark</em></h2><p>A stickman's head that is still being drawn: the ink outline stops short, a red pencil is mid-stroke, and a dotted guide shows the part that isn't finished yet. The brand in one picture: stories still being drawn.</p></header>
+      <div class="logo-grid">
+        <figure class="tile tile--hero tile--light"><img src="assets/brand/theunfinishedco-lockup.png" alt="theunfinishedco lockup: the unfinished head mark beside the wordmark and the line Stories still being drawn"><figcaption>Lockup · primary</figcaption></figure>
+        <figure class="tile tile--light"><img src="assets/brand/theunfinishedco-mark.svg" alt="theunfinishedco mark"><figcaption>Mark · light grounds</figcaption></figure>
+        <figure class="tile tile--dark"><img src="assets/brand/theunfinishedco-mark-dark.svg" alt="theunfinishedco mark for dark grounds"><figcaption>Mark · dark grounds</figcaption></figure>
+        <figure class="tile tile--dark"><img src="assets/brand/theunfinishedco-lockup-dark.png" alt="theunfinishedco lockup on dark"><figcaption>Lockup · dark</figcaption></figure>
+        <figure class="tile"><img class="avatar-crop" src="assets/brand/theunfinishedco-avatar.png" alt="Profile picture cropped to a circle"><figcaption>Profile picture (circle crop)</figcaption></figure>
+      </div>
+      <figure class="card banner-dl"><img src="assets/brand/youtube-banner-2560x1440.png" alt="YouTube channel banner: the unfinished head mark and the theunfinishedco wordmark with stick characters at both sides"><figcaption>YouTube channel banner · 2560×1440 · logo, name and tagline sit inside the 1546×423 area every device shows; the characters live outside it (TV and desktop only)</figcaption></figure>
+      <div class="rules">
+        <div><h3>Clear space</h3><p>Keep empty space around the mark equal to half the head's diameter. Minimum size: 32 px for the mark, 160 px wide for the lockup.</p></div>
+        <div><h3>Colour</h3><p>Ink outline and face, white head, red pencil: the only red in the mark. On dark grounds use the dark mark (cream ink, charcoal head).</p></div>
+        <div><h3>Don't</h3><p>Don't close the circle, move the pencil off the stroke end, recolour the pencil per episode, or put the mark inside a video frame. Videos end on a hard cut, with no logo sting.</p></div>
+      </div>
+      <div class="downloads-grid">
+        <a class="wi-btn" href="assets/brand/theunfinishedco-mark.svg" download>Mark · SVG</a><a class="wi-btn" href="assets/brand/theunfinishedco-mark.png" download>Mark · PNG</a><a class="wi-btn" href="assets/brand/theunfinishedco-mark-dark.svg" download>Mark dark · SVG</a>
+        <a class="wi-btn" href="assets/brand/theunfinishedco-lockup.svg" download>Lockup · SVG</a><a class="wi-btn" href="assets/brand/theunfinishedco-lockup.png" download>Lockup · PNG</a><a class="wi-btn" href="assets/brand/theunfinishedco-lockup-dark.png" download>Lockup dark · PNG</a>
+        <a class="wi-btn" href="assets/brand/theunfinishedco-avatar.png" download>Profile picture · PNG</a><a class="wi-btn wi-btn--primary" href="assets/brand/youtube-banner-2560x1440.png" download>YouTube banner · PNG</a><a class="wi-btn" href="assets/brand/youtube-banner-2560x1440.svg" download>YouTube banner · SVG</a>
+      </div>
+    </section>
+
+    <section class="section" id="color">
+      <header class="section__head"><h2><em>One</em> accent</h2><p>White stage, black ink, and one accent per episode, spent on the thing that matters: the countdown, the bricks, the highlighted word. These are the brand and UI colours; the characters' clothes and the soft sets have their own palette, further down.</p></header>
+      <h3 class="sub">Stage &amp; ink</h3>
+      <div class="swatches" id="swatches-base"></div>
+      <h3 class="sub">Episode accents</h3>
+      <div class="swatches" id="swatches-accent"></div>
+      <p class="note">The badge shows contrast on white: <b>Text</b> means any size, <b>24px+</b> means large text only, <b>Fill</b> means never use it for text.</p>
+    </section>
+
+    <section class="section" id="type">
+      <header class="section__head"><h2>Type, <em>quietly</em></h2><p>Headlines in Inter 600 with tight tracking, one phrase in <em>Instrument Serif italic</em>, labels in JetBrains Mono: the same system as hussnakhtr.com. On screen in the videos, the engine draws heavy Inter Display headlines; its sizes are pixels on the 1080 × 1920 frame, with the minimums from the safe-zone research.</p></header>
+      <div class="type-list" id="type-list"></div>
+    </section>
+    <section class="section" id="builder">
+      <header class="section__head"><h2>Character <em>builder</em></h2><p>The v1 stickman, dressed: a tee, hoodie, robe or apron in a soft colour, trousers or a skirt, shoes, a beanie or glasses. Long hair, a bob, a bun, a ponytail or pigtails make a woman or girl with a little bow (turn it off or recolour it). Heads stay white and hair stays ink. Copy the JSON straight into a scene file.</p></header>
+      <div class="builder">
+        <div class="card builder__stage"><div class="svgstage svgstage--char" id="builder-stage" role="img" aria-label="The character you are building"></div></div>
+        <form class="card builder__controls" id="builder-form" autocomplete="off">
+          <div class="builder__fields" id="builder-fields"></div>
+          <button class="wi-btn wi-btn--primary" type="button" id="b-random">Surprise me</button>
+          <button class="wi-btn" type="button" id="b-copy">Copy cast JSON</button>
+          <pre class="json-out" id="b-json" aria-live="polite"></pre>
+        </form>
+      </div>
+    </section>
+    <section class="section" id="layers">
+      <header class="section__head"><h2>Every frame is <em>layers</em></h2><p>One frame of the hero scene, as the engine built it. Hover a layer to find it; untick it to hide it. The same file exports to Illustrator, Figma or Inkscape with <code>--layers</code>.</p></header>
+      <div class="explorer">
+        <div class="card explorer__stage"><div class="svgstage" id="layer-stage" role="img" aria-label="One frame of the hero scene"></div></div>
+        <div class="card explorer__tree"><div class="tree-tools"><button class="wi-btn" type="button" id="tree-all">Show all</button><button class="wi-btn" type="button" id="tree-chars">Characters only</button><span class="mono-chip" id="layer-count"></span></div><ul class="tree" id="layer-tree"></ul></div>
+      </div>
+    </section>
+    <section class="section" id="faces">
+      <header class="section__head"><h2>Faces &amp; <em>poses</em></h2><p>Dot eyes and a single-line mouth, as always; brows only when a moment needs them. Then all 35 named poses, shared with the flat rig: stand, wave, point, sit, plus hands on hips, arms crossed, reach up, facepalm, clap, dance, kneel, crouch, run, jump, sitting on the floor and lying down.</p></header>
+      <div class="strip" id="expr-strip"></div>
+      <div class="strip strip--poses" id="pose-strip"></div>
+    </section>
+    <section class="section" id="sets">
+      <header class="section__head"><h2>Generated <em>sets</em></h2><p>Sixteen generated sets in the stick look: soft colour, a warm ink outline on every shape, no vignette. New in v3: kitchen, bedroom, café, hospital, bus, rooftop, classroom and living room. Night sets turn lavender and dusty rose rather than black, so the ink figures still read.</p></header>
+      <div class="sets" id="sets-grid"></div>
+      <div class="card callout">
+        <div><h3>Real <em>scale</em></h3><p>Sets and props are drawn at real size for an actor at scale 1: a character stands 800 px tall (1.7 m), so <b>1 m ≈ 470 px</b>. Frame a wide shot with camera <code>zoom</code> (down to 0.4), never by shrinking the actors. Every thumbnail above is zoom 0.5 with the actor at scale 1.</p></div>
+        <ul class="scale-list">
+          <li><b>Person</b>1.7 m · 800 px</li><li><b>Door</b>2.1 m · 990 px</li><li><b>Desk top</b>0.75 m · 352 px</li><li><b>Chair seat</b>0.45 m · 210 px</li>
+          <li><b>Storey</b>3 m · 1410 px</li><li><b>Street lamp</b>4.5 m · 2140 px</li><li><b>Bus</b>3 × 12 m</li><li><b>Phone</b>15 cm · 82 px</li>
+        </ul>
+      </div>
+    </section>
+    <section class="section" id="props">
+      <header class="section__head"><h2>The <em>props</em></h2><p>The same prop library as v2, outlined and softened. Held props attach to a wrist and follow the forearm; scene props stand in the set at real size.</p></header>
+      <div class="props" id="props-grid"></div>
+    </section>
+    <section class="section" id="palette">
+      <header class="section__head"><h2>Soft <em>colour</em></h2><p>The stick world is light and warm, so black ink always reads: cream walls, pale wood, muted sage and one or two brighter accents per set (a red lantern, a green plant). Clothes take the shared cloth names, softened 12% toward white in this style. Select a chip to copy its name.</p></header>
+      <h3 class="sub">World palette <small class="note">(<code>WORLD.stick</code>, props.mjs)</small></h3><div class="chips" id="pal-world"></div>
+      <h3 class="sub">Book spines</h3><div class="chips" id="pal-books"></div>
+      <h3 class="sub">Clothes <small class="note">(left: the cloth colour · right: as the stick style wears it)</small></h3><div class="chips" id="pal-clothes"></div>
+    </section>
+    <section class="section" id="loops">
+      <header class="section__head"><h2>Motion <em>loops</em></h2><p>Each loop is one <code>do</code> action on the same character, at the full 24 fps with idle life (breathing, weight shift, blinks) underneath.</p></header>
+      <div class="motion-loops" id="motion-grid"></div>
+    </section>
+    <section class="section" id="motion">
+      <header class="section__head"><h2>Smooth <em>motion</em></h2><p>The v3 engine moves like hand-keyed animation: spline keys, overlapping action, actions that blend in and out, a walk whose feet stay planted, and real shot transitions. Nothing procedural is random from frame to frame and nothing oscillates above 5 Hz, so nothing jitters. Below: <code>examples/motion-demo.json</code> live in stick style, beside the MP4 the renderer made from the same file.</p></header>
+      <div class="motion-demo">
+        <figure class="md-phone">
+          <div class="phone phone--sm phone--engine"><div class="svgstage" id="motion-player" role="img" aria-label="Live motion demo: shrug, wave, walk, turn, reach, a push transition, a laugh, a whip transition and a jump"></div></div>
+          <div class="md-controls"><button class="wi-btn" type="button" id="motion-play" aria-pressed="false">Pause</button><input type="range" id="motion-scrub" min="0" max="10.4" step="0.01" value="0" aria-label="Scrub the motion demo"><span class="mono-chip" id="motion-time">0.00 s</span></div>
+          <figcaption>Live, in your browser · stick style</figcaption>
+        </figure>
+        <figure class="md-phone">
+          <div class="phone phone--sm"><video src="media/motion-demo.mp4" controls muted loop playsinline preload="metadata" aria-label="The motion demo rendered to MP4"></video></div>
+          <figcaption>Rendered MP4 · flat style · 1080 × 1920 · with sound</figcaption>
+        </figure>
+        <div class="md-side">
+          <div class="card">
+            <h3>Jump to a <em>beat</em></h3>
+            <p>Each chapter is one field in the scene file.</p>
+            <div class="chapters"><button type="button" data-seek="0.4">shrug · key</button><button type="button" data-seek="1.5">wave · do</button><button type="button" data-seek="3.0">walk · do</button><button type="button" data-seek="4.4">shake</button><button type="button" data-seek="4.9">turn · do</button><button type="button" data-seek="5.3">reach · IK</button><button type="button" data-seek="6.45">push · in</button><button type="button" data-seek="7.0">laugh · do</button><button type="button" data-seek="8.45">whip · in</button><button type="button" data-seek="9.2">jump · do</button></div>
+          </div>
+          <div class="card">
+            <h3>Overlapping <em>action</em></h3>
+            <p>When a pose changes, the body leads and the parts follow a beat later, so a move ends with follow-through instead of a stop. Untick to see the same keys with no drag.</p>
+            <label class="check"><input type="checkbox" id="motion-overlap" checked> <code>meta.motion.overlap: 1</code></label>
+            <ul class="lag" aria-label="Delay of each part after the body">
+              <li><span>body</span><i style="margin-left:0%"></i><span>0 s</span></li><li><span>upper arm</span><i style="margin-left:18%"></i><span>+0.03</span></li>
+              <li><span>head</span><i style="margin-left:24%"></i><span>+0.04</span></li><li><span>forearm</span><i style="margin-left:42%"></i><span>+0.07</span></li>
+              <li><span>wrist</span><i style="margin-left:60%"></i><span>+0.10</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="md-cards">
+        <article class="card md-card"><span class="num-chip">keys</span><h3>Spline <em>keys</em></h3><p>Keys form a monotone cubic spline: they ease in at the first key, pass through middle keys without stopping, and never overshoot. Dashed: the same keys with <code>"ease": "linear"</code>.</p><div class="chart" id="chart-spline"></div></article>
+        <article class="card md-card"><span class="num-chip">do</span><h3>Blended <em>actions</em></h3><p>Every action with <code>from</code>/<code>to</code> mixes in and out over <code>blend</code> seconds (0.2 by default, 0.45 for wave and reach), so nothing snaps. Dashed: no blend.</p><div class="chart" id="chart-blend"></div></article>
+        <article class="card md-card"><span class="num-chip">walk</span><h3>Planted <em>feet</em></h3><p>Footsteps are planned in world space, so a standing foot never slides. Travel eases in over the first half step and out over the last; the cadence comes from the distance and <code>stride</code>; the body bobs once a step with a small head counter-bob.</p><p><code>{"act": "walk", "from": 3.1, "to": 4.9, "dx": 520}</code></p></article>
+        <article class="card md-card"><span class="num-chip">in</span><h3>Shot <em>transitions</em></h3>
+          <div class="trans-row"><div class="svgstage" id="trans-player" role="img" aria-label="Two shots joined by the chosen transition"></div>
+            <div><label class="mini-label">in.type <select id="trans-type"><option>cut</option><option>fade</option><option>crossfade</option><option selected>push</option><option>whip</option><option>zoom</option><option>iris</option></select></label><p class="note">Push and whip get a shutter-length motion blur automatically.</p></div></div></article>
+      </div>
+    </section>
+    <section class="section" id="text">
+      <header class="section__head"><h2>Text &amp; <em>safe zones</em></h2><p>Every video posts to YouTube Shorts, Instagram Reels and TikTok, so text has to clear all three apps' buttons and captions, and stay up long enough to read with the sound off. The engine enforces both: it fits, wraps and clamps every line into the combined safe rect, and <code>--check</code> flags any text that leaves too soon.</p></header>
+      <div class="safe-grid">
+        <figure class="card safe-phone">
+          <div class="phone phone--safe phone--engine" id="safe-frame"><div class="svgstage" id="safe-stage" role="img" aria-label="A live frame with the typed line placed by the engine, under the safe-zone overlay"></div></div>
+          <div class="ov-toggles" role="group" aria-label="Overlay layers">
+            <label class="check"><input type="checkbox" id="ov-safe" checked> Safe rect</label><label class="check"><input type="checkbox" id="ov-notch" checked> Rail notch</label>
+            <label class="check"><input type="checkbox" id="ov-bands" checked> Bands</label><label class="check"><input type="checkbox" id="ov-ui" checked> UI margins</label><label class="check"><input type="checkbox" id="ov-mock"> App buttons</label>
+          </div>
+          <figcaption class="note">The line you type is laid out by <code>text.mjs</code>, the code that renders the videos.</figcaption>
+        </figure>
+        <div class="card rt">
+          <h3>Reading <em>time</em></h3>
+          <p class="formula"><code>read = min(7, max(1.2, 0.375 × words, characters ÷ 17) + 0.5 with a new visual + 0.5 for a 3+ digit number)</code></p>
+          <label class="rt-input">Type a line <input id="rt-text" type="text" value="What if the Sun went out?" autocomplete="off"></label>
+          <div class="rt-row">
+            <label class="rt-input">Role <select id="rt-role"><option value="headline">headline · 108 px</option><option value="body">body · 64 px</option><option value="label">label · 44 px</option></select></label>
+            <label class="check"><input type="checkbox" id="rt-new"> It arrives with a new visual</label>
+          </div>
+          <div class="rt-result" aria-live="polite"><span id="rt-out">2.25 s</span><small id="rt-frames"></small></div>
+          <ul class="rt-terms" id="rt-terms"></ul>
+          <p class="note" id="rt-lines"></p>
+          <p class="note">The text must be <b>readable</b> for that long: at least 90% opaque and within 2% of its final size and place. The entry animation (6 frames here) does not count.</p>
+        </div>
+      </div>
+      <div class="rules-wrap">
+        <table class="rules-table">
+          <thead><tr><th scope="col">Rule</th><th scope="col">Value</th><th scope="col">Source</th></tr></thead>
+          <tbody>
+            <tr><td>Safe rect</td><td>x 120–888, y 288–1248 (768 × 960). Its centre is x 504, not 540</td><td>G3, G4, M1, T2</td></tr>
+            <tr><td>Rail notch</td><td>A text box whose bottom passes y 840 must end by x 780 (TikTok's button rail)</td><td>T2</td></tr>
+            <tr><td>Per platform</td><td>Top / bottom / left / right UI: YouTube 288 / 672 / 48 / 192 · Reels 269 / 672 / 65 / 65 · TikTok 240 / 660 / 120 / 120, rail 300 wide from y 840</td><td>G3, M1, T2</td></tr>
+            <tr><td>Bottom third</td><td>Nothing readable below y 1248: art only</td><td>all three</td></tr>
+            <tr><td>Bands</td><td>hook 288–640 · stage 640–1000 · caption 1000–1248</td><td>judgement on B1</td></tr>
+            <tr><td>Sizes</td><td>headline ≥ 84 px (target 108) · body and bubbles ≥ 52 (64) · labels ≥ 36 (44)</td><td>B1, A1</td></tr>
+            <tr><td>Lines</td><td>≤ 3 per block, ≤ 2 per bubble, about 25 characters per line</td><td>B1</td></tr>
+            <tr><td>Reading time</td><td>the formula above: 160 wpm, 17 characters a second, never past 7 s</td><td>B1, N1, N2</td></tr>
+            <tr><td>Gaps</td><td>between two texts in one slot: exactly 2 frames or ≥ 0.5 s; an empty pause ≥ 1 s</td><td>N3, B1</td></tr>
+            <tr><td>Hook</td><td>readable by frame 6, ≤ 6 words, in the hook band</td><td>R3, T4</td></tr>
+            <tr><td>Faces</td><td>text and bubbles never cover a head; bubbles point at the mouth</td><td>B1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <details class="sources">
+        <summary>Sources</summary>
+        <ol>
+          <li><b>G3</b> Google's vertical safe-zone overlay, measured pixel by pixel: <a href="https://services.google.com/fh/files/misc/youtubesafezoneoverlay_vertical_final.png">youtubesafezoneoverlay_vertical_final.png</a></li>
+          <li><b>G4</b> Google, Universal Video Ad Safe Zones: <a href="https://services.google.com/fh/files/misc/universalsafezones-youtube.pdf">universalsafezones-youtube.pdf</a></li>
+          <li><b>M1</b> Meta Ads Guide, Instagram Reels video specs (14% top, 35% bottom, 6% sides): <a href="https://www.facebook.com/business/ads-guide/update/video/instagram-reels">facebook.com/business/ads-guide</a></li>
+          <li><b>T2</b> upload-post.com safe-zone checker, measuring TikTok's In-Feed template: <a href="https://www.upload-post.com/tools/safe-zone-checker/">upload-post.com/tools/safe-zone-checker</a></li>
+          <li><b>B1</b> BBC Subtitle Guidelines, including the 9:16 size and reading rate: <a href="https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/">bbc.co.uk/accessibility/…/subtitles</a></li>
+          <li><b>N1</b> Netflix Timed Text Style Guide, English (17 characters a second for children): <a href="https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide">partnerhelp.netflixstudios.com</a></li>
+          <li><b>N2</b> Netflix, General Requirements (7 s maximum): <a href="https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements">partnerhelp.netflixstudios.com</a></li>
+          <li><b>N3</b> Netflix, Subtitle Timing Guidelines (2-frame gaps): <a href="https://partnerhelp.netflixstudios.com/hc/en-us/articles/360051554394-Timed-Text-Style-Guide-Subtitle-Timing-Guidelines">partnerhelp.netflixstudios.com</a></li>
+          <li><b>A1</b> Apple Human Interface Guidelines, Typography (17 pt body, 11 pt minimum): <a href="https://developer.apple.com/design/human-interface-guidelines/typography">developer.apple.com</a></li>
+          <li><b>R3</b> Fors Marsh research cited by Facebook, recall after 0.25 s (unverified): <a href="https://www.marketingdive.com/news/facebook-why-mobile-video-ads-must-work-fast/446217/">marketingdive.com</a></li>
+          <li><b>T4</b> TikTok creative best practices, the hook in the first seconds (unverified; the page was blocked): <a href="https://ads.tiktok.com/help/article/creative-best-practices?lang=en">ads.tiktok.com</a></li>
+        </ol>
+        <p class="note">No platform publishes a safe zone for organic posts; all three publish one for ads, which run in the same feed with the same buttons plus a CTA. The full research: <code>stickman-videos/RESEARCH-safe-zones-text.md</code>.</p>
+      </details>
+    </section>
+    <section class="section" id="web-components">
+      <header class="section__head"><h2>Web <em>components</em></h2><p>For the channel's own pages and link-in-bio: plain custom elements in <code>js/components.js</code>, styled by the tokens.</p></header>
+      <div class="wc-row">
+        <div class="card wc-demo">
+          <h3>Buttons</h3>
+          <div class="row"><button class="wi-btn wi-btn--primary" type="button">Watch now</button><button class="wi-btn" type="button">All episodes</button><button class="wi-btn wi-btn--ghost" type="button">Share</button></div>
+        </div>
+        <div class="card wc-demo">
+          <h3>Tags</h3>
+          <div class="row"><wi-tag accent="red">#01</wi-tag><wi-tag accent="blue">psychology</wi-tag><wi-tag accent="green">36 s</wi-tag><wi-tag>silent</wi-tag></div>
+        </div>
+        <div class="card wc-demo">
+          <h3>Mark</h3>
+          <div class="row"><wi-mark size="24"></wi-mark><wi-mark size="40"></wi-mark><wi-mark size="64"></wi-mark><wi-mark size="64" ink></wi-mark></div>
+        </div>
+      </div>
+      <pre class="snippet-block"><code>&lt;wi-episode-card number="01" title="What If Your Shadow Stopped Copying You?"
+  duration="36" accent="red" cover="assets/covers/cover-01-shadow.png"
+  src="media/01-shadow.mp4"&gt;&lt;/wi-episode-card&gt;</code></pre>
+    </section>
+    <section class="section" id="series2">
+      <header class="section__head"><h2>Series <em>two</em></h2><p>The ten premises, rewritten for story, rendered in the stick style by the v3 engine (the flat renders are on the <a href="v2.html#series2">v2 page</a>). Select a cover to play it.</p></header>
+      <div class="episodes" id="series2-grid"></div>
+      <p class="note" id="series2-note" aria-live="polite"></p>
+    </section>
+    <section class="section" id="episodes">
+      <header class="section__head"><h2>Series <em>one</em></h2><p>The archive: ten silent episodes, 33–38 seconds each, rendered by the original canvas kit before v3. That kit is retired; Series 2 above is the current pipeline. Select a cover to play it.</p></header>
+      <div class="episodes" id="episodes-grid"></div>
+    </section>
+
+    <section class="section" id="assets">
+      <header class="section__head"><h2>Banners &amp; <em>profile</em></h2><p>Rendered with the original canvas kit (<code>tools/assets.mjs</code>, now archived), in the pre-v3 bare-stick look.</p></header>
+      <figure class="card banner">
+        <div class="banner__frame"><img src="assets/banners/youtube-banner.png" alt="YouTube channel banner: the theunfinishedco lockup with stickmen on a ground line"><div class="banner__safe" id="banner-safe" hidden><span>Safe area on all devices · 1546 × 423</span></div></div>
+        <figcaption><label class="check"><input type="checkbox" id="toggle-safe"> Show the mobile safe area</label> · YouTube banner, 2560 × 1440 · <a href="assets/banners/youtube-banner.png" download>download</a></figcaption>
+      </figure>
+      <div class="banner-row">
+        <figure class="card"><img class="avatar-crop avatar-crop--lg" src="assets/logo/whatif-avatar.png" alt="Profile picture"><figcaption>Profile picture · 800 × 800 · crops to a circle on YouTube and Instagram</figcaption></figure>
+        <figure class="card"><img class="poster" src="assets/banners/series-poster.png" alt="Series poster: a stickman looking up at the theunfinishedco mark"><figcaption>Series poster · 1080 × 1920 · pinned post / highlight cover</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section" id="tokens">
+      <header class="section__head"><h2>The <em>tokens</em></h2><p><code>tokens.json</code> is the source of truth. <code>node tools/build-tokens.mjs</code> regenerates <code>css/tokens.css</code> and <code>js/tokens.js</code>. Select a row to copy its CSS variable.</p></header>
+      <div id="token-tables"></div>
+    </section>
+  </main>
+
+  <footer class="footer"><wi-mark size="28"></wi-mark><span>theunfinishedco · brand &amp; video system · v1 stick on the <code>whatif-flat</code> v3 engine</span></footer>
+
+  <dialog class="player" id="player">
+    <form method="dialog"><button class="player__close" aria-label="Close">×</button></form>
+    <video id="player-video" controls playsinline></video>
+    <p id="player-title"></p>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/components.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/shell.js"></script>
+</body>
+</html>

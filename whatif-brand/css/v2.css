@@ -1,0 +1,24 @@
+/* What If v2 page: the v2-only sections and the orange accent. Colours for light/dark come from the shared
+   theme in css/shell.css (v2 opens dark by default; the toggle and the stored choice can switch it). */
+body.v2 { --v2-orange: #E8692F; }
+body.v2 .wi-btn--primary { background: var(--v2-orange); border-color: var(--v2-orange); color: #1D1D1F; }
+body.v2 .wi-btn--primary:hover { background: #F07A43; border-color: #F07A43; color: #1D1D1F; }
+body.v2 a:hover { color: var(--v2-orange); }
+body.v2 .ep__num { background: var(--v2-orange); color: #1D1D1F; }
+body.v2 .ep__play span { background: var(--v2-orange); }
+body.v2 .ep__play span::after { border-left-color: #1D1D1F; }
+body.v2 .toast { background: var(--v2-orange); color: #1D1D1F; }
+.v2-title em { color: var(--v2-orange); }
+
+.built-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--wi-space-2); }
+.v2card h3 { font-size: 22px; margin: 10px 0 8px; }
+.v2card p { margin: 0; color: var(--wi-ink-muted); font-size: 15px; }
+.num { font: 600 11px/1 var(--wi-font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--v2-orange); }
+.json-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr); gap: var(--wi-space-2); align-items: start; }
+.code-dark { background: #1C1D20 !important; color: #D8D5CE; margin: 0; max-height: 560px; overflow: auto; font: 500 12.5px/1.5 var(--wi-font-mono); }
+.code-dark code { background: none; padding: 0; color: inherit; }
+.steps { margin: 12px 0 0; padding-left: 20px; display: grid; gap: 10px; color: var(--wi-ink-muted); }
+.v2-title { display: block; font-size: clamp(52px, 7.2vw, 112px); line-height: 0.95; overflow-wrap: anywhere; }
+@media (max-width: 1240px) { .built-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 1000px) { .json-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .built-grid { grid-template-columns: minmax(0, 1fr); } }
