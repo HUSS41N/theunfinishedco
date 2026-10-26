@@ -22,3 +22,32 @@ body.v2 .toast { background: var(--v2-orange); color: #1D1D1F; }
 @media (max-width: 1240px) { .built-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 1000px) { .json-grid { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 560px) { .built-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- The Last Bus ---------- */
+.lb-player { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: var(--wi-space-3); align-items: center; }
+.lb-player video { width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; background: #000; display: block; }
+.lb-player__meta h3 { margin: 4px 0 8px; }
+.lb-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.lb-grid figure, .lb-cast figure { margin: 0; background: var(--eng-card); border: 1px solid var(--eng-line); border-radius: 14px; overflow: hidden; min-width: 0; }
+.lb-grid img, .lb-cast img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #0B0E16; }
+.lb-cast img { aspect-ratio: auto; }
+.lb-grid figcaption, .lb-cast figcaption { font: 500 13px/1.35 var(--wi-font-sans, inherit); color: var(--wi-ink-muted); padding: 10px 12px; }
+.lb-grid figcaption b, .lb-cast figcaption b { font: 600 11px/1.2 var(--wi-font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--wi-ink); margin-right: 6px; }
+.lb-cast { display: grid; gap: 12px; }
+@media (max-width: 900px) { .lb-player { grid-template-columns: minmax(0, 1fr); } .lb-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .lb-grid { grid-template-columns: minmax(0, 1fr); } }
+.lb-scenes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.lb-scenes button { font: 500 13px/1.2 var(--wi-font-sans, inherit); color: var(--wi-ink); background: var(--eng-card); border: 1px solid var(--eng-line); border-radius: 999px; padding: 7px 12px; cursor: pointer; }
+.lb-scenes button:hover, .lb-scenes button:focus-visible { border-color: var(--wi-ink); }
+.lb-scenes b { font: 600 11px/1 var(--wi-font-mono); margin-right: 4px; color: var(--wi-ink-muted); }
+/* The Last Bus · English / Hindi switch on the episode player */
+.lb-lang { display: inline-flex; border: 1px solid var(--eng-line); border-radius: 999px; padding: 3px; gap: 2px; margin-bottom: 10px; }
+.lb-lang button { border: 0; background: none; color: var(--wi-ink-muted); font: 600 13px/1 inherit; padding: 7px 12px; border-radius: 999px; cursor: pointer; }
+.lb-lang button[aria-pressed="true"] { background: var(--v2-orange); color: #1D1D1F; }
+/* The Last Bus · the 9:16 shorts */
+.lb-shorts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 24px; }
+.lb-shorts figure { margin: 0; display: grid; gap: 8px; align-content: start; }
+.lb-shorts video { width: 100%; aspect-ratio: 9 / 16; border-radius: 12px; background: #000; display: block; }
+.lb-shorts figcaption { font-size: 13px; line-height: 1.4; color: var(--wi-ink-muted); }
+.lb-shorts figcaption b { display: block; color: var(--wi-ink); font-size: 14px; }
+@media (max-width: 900px) { .lb-shorts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

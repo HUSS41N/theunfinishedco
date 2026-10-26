@@ -1,0 +1,34 @@
+/* The film pages' video player (js/player.js). The frame sets the size; the video never grows past it. */
+.pl { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 12px; overflow: hidden; color: #fff; outline: none; user-select: none; -webkit-user-select: none; }
+.pl--short { aspect-ratio: 9 / 16; width: min(100%, calc(min(78vh, 760px) * 9 / 16)); margin-inline: auto; }
+.pl:focus-visible { box-shadow: 0 0 0 3px var(--v2-orange, #F26B1D); }
+div.pl > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; background: #000; border-radius: 0; aspect-ratio: auto; }
+.pl:fullscreen { border-radius: 0; max-height: none; aspect-ratio: auto; }
+.pl-big { position: absolute; left: 50%; top: 50%; width: 68px; height: 68px; margin: -34px 0 0 -34px; border: 0; border-radius: 999px; background: rgba(0, 0, 0, 0.55); color: #fff; cursor: pointer; display: grid; place-items: center; backdrop-filter: blur(4px); transition: opacity 0.2s, transform 0.2s; }
+.pl-big svg { width: 34px; height: 34px; margin-left: 4px; }
+.pl-big:hover { transform: scale(1.06); background: rgba(0, 0, 0, 0.7); }
+.pl.is-playing .pl-big { opacity: 0; pointer-events: none; }
+.pl-bar { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 10px 6px; background: linear-gradient(transparent, rgba(0, 0, 0, 0.75)); transition: opacity 0.25s; }
+.pl.is-idle .pl-bar { opacity: 0; }
+.pl.is-idle { cursor: none; }
+.pl-scrub { position: relative; height: 16px; cursor: pointer; touch-action: none; }
+.pl-scrub::before, .pl-buf, .pl-done { content: ""; position: absolute; left: 0; top: 6px; height: 4px; border-radius: 4px; }
+.pl-scrub::before { right: 0; background: rgba(255, 255, 255, 0.25); }
+.pl-buf { background: rgba(255, 255, 255, 0.4); width: 0; }
+.pl-done { background: var(--v2-orange, #F26B1D); width: 0; }
+.pl-scrub:hover::before, .pl-scrub:hover .pl-buf, .pl-scrub:hover .pl-done, .pl.is-scrubbing .pl-done { top: 5px; height: 6px; }
+.pl-knob { position: absolute; top: 2px; width: 12px; height: 12px; margin-left: -6px; border-radius: 999px; background: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); left: 0; transform: scale(0.8); transition: transform 0.15s; }
+.pl-scrub:hover .pl-knob, .pl.is-scrubbing .pl-knob { transform: scale(1.15); }
+.pl-tip { position: absolute; bottom: 20px; transform: translateX(-50%); padding: 3px 6px; border-radius: 6px; background: rgba(0, 0, 0, 0.8); font: 600 11px/1 var(--wi-font-mono, monospace); opacity: 0; pointer-events: none; white-space: nowrap; }
+.pl-scrub:hover .pl-tip { opacity: 1; }
+.pl-row { display: flex; align-items: center; gap: 2px; margin-top: 2px; }
+.pl-btn { width: 36px; height: 36px; border: 0; background: none; color: #fff; border-radius: 8px; cursor: pointer; display: grid; place-items: center; padding: 0; }
+.pl-btn svg { width: 22px; height: 22px; }
+.pl-btn:hover { background: rgba(255, 255, 255, 0.14); }
+.pl-btn:focus-visible { outline: 2px solid #fff; outline-offset: -2px; }
+.pl-time { font: 600 12px/1 var(--wi-font-mono, monospace); padding: 0 6px; white-space: nowrap; opacity: 0.92; }
+.pl-gap { flex: 1; }
+.pl.is-loading::after { content: "Loading…"; position: absolute; top: 10px; left: 10px; padding: 4px 8px; border-radius: 6px; background: rgba(0, 0, 0, 0.7); font: 600 11px/1.2 var(--wi-font-mono, monospace); }
+.pl--short .pl-btn { width: 32px; height: 32px; }
+.pl--short .pl-time { font-size: 11px; padding: 0 3px; }
+@media (max-width: 420px) { .pl--short .pl-btn[data-a="back"], .pl--short .pl-btn[data-a="fwd"] { display: none; } }

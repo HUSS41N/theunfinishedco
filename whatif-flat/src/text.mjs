@@ -53,7 +53,7 @@ const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const E = {out: x => 1 - (1 - x) ** 3, inOut: x => x * x * (3 - 2 * x), back: (x, c = 1.3) => 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2};
 const n2 = v => +(+v).toFixed(2);
 const about = (cx, cy, s) => (s === 1 ? '' : `translate(${n2(cx)} ${n2(cy)}) scale(${n2(s)}) translate(${n2(-cx)} ${n2(-cy)})`);
-const notchOn = C => C?.scene?.meta?.platformSafe !== false;
+const notchOn = C => C?.scene?.meta?.platformSafe !== false && !((C?.W || 0) > (C?.H || 0));
 
 // ---------- screen text layout ----------
 /** entrance length: 6 frames, so even a hook at t = 0 is readable by frame 6 (research rule 10) */
@@ -447,10 +447,10 @@ export function lintText(C, opts = {}) {
       if (Lx.size < Lx.minPx - 0.5) add('warn', from, `${label} renders at ${Math.round(Lx.size)}px, under the ${Lx.role} minimum ${Lx.minPx}px${Lx.size < Lx.req ? ' (auto-shrunk: shorten it or break the line)' : ''}`);
       else if (Lx.size < Lx.req - 1) add('info', from, `${label} auto-${Lx.wrapped ? 'wrapped and ' : ''}shrunk ${Lx.req}→${Math.round(Lx.size)}px to fit the safe width`);
       if (Lx.lines.length > MAX_LINES.block) add('warn', from, `${label} has ${Lx.lines.length} lines; ${MAX_LINES.block} at most`);
-      const longest = Math.max(...Lx.lines.map(l => lineStr(l.toks).length)); if (longest > 25) add('info', from, `${label} has a ${longest}-character line; about 25 reads best on 9:16`);
+      const longest = Math.max(...Lx.lines.map(l => lineStr(l.toks).length)); if (longest > 25 && !(C.W > C.H)) add('info', from, `${label} has a ${longest}-character line; about 25 reads best on 9:16`);
       if (x.inDur && x.inDur > READ.maxEntry) add('warn', from, `${label} entry ${fr(x.inDur)} frames; keep ≤ 7`);
       if (opts.headsAt) { const hs = opts.headsAt(from + Math.min(rv + 0.1, (to - from) / 2)) || []; if (hs.some(h => overlap(Lx.box, h))) add('warn', from, `${label} covers a character's head`); }
-      items.push({from, to, rv, exitDur, newVisual, box: Lx.box, region: regionOf(Lx.box.y + Lx.box.h / 2), label, x, Lx, words: countWords(x.text), need, tick: !!x.tick || x.lint === false});
+      items.push({from, to, rv, exitDur, newVisual, box: Lx.box, region: regionOf(Lx.box.y + Lx.box.h / 2), label, x, Lx, words: countWords(x.text), need, tick: !!x.tick || x.lint === false, caption: !!x.caption});
     }
     for (const s of saysOf(sh)) {
       const from = sh.start + s.from, to = sh.start + Math.min(s.to, len), need = readingTime(s.text), label = `${s._actor} says "${short(s.text)}"`;
@@ -462,7 +462,8 @@ export function lintText(C, opts = {}) {
     }
   }
   // reading time, on whole cards (after merging continuations)
-  for (const it of items.filter(i => !i.bubble && !i.tick)) {
+  // captions (`caption: true`) follow a voice: their timing is the speech, so the silent-text reading rules don't apply
+  for (const it of items.filter(i => !i.bubble && !i.tick && !i.caption)) {
     const {x, from, to, exitDur, rv, need, label, newVisual} = it, readable = to - exitDur - (from + rv);
     if (animOf(x) === 'type') { const cps = x.cps || TYPE_CPS, typed = [...String(x.text)].length / cps;
       if (cps > READ.cps) add('info', from, `${label} types at ${cps} cps (> ${READ.cps}): the typing does not count as reading time`);
@@ -481,7 +482,7 @@ export function lintText(C, opts = {}) {
       else if (f > 2.5 && f < READ.minGap * 24 - 0.5) add('warn', b.from, `${b.label} follows ${a.label} after ${fr(gap)} frames; 3–11 frames flicker: use exactly 2 frames or ≥ ${READ.minGap}s`); }
   }
   // an empty screen between two text cards: ≥ 1 s (BBC); short swaps (≤ 2 frames) are fine
-  const cards = items.filter(i => !i.bubble).sort((a, b) => a.from - b.from); let end = -Infinity, prev = null;
+  const cards = items.filter(i => !i.bubble && !i.caption).sort((a, b) => a.from - b.from); let end = -Infinity, prev = null;
   for (const c of cards) { const gap = c.from - end; if (prev && gap > READ.swapGap + 1e-3 && gap < READ.pause - 1e-6 && gap >= READ.minGap - 1e-6) add('info', c.from, `${c.label}: the screen is empty ${gap.toFixed(2)}s after ${prev.label}; an empty pause between cards reads best at ≥ ${READ.pause}s (or swap in 2 frames)`);
     if (c.to > end) { end = c.to; prev = c; } }
   // the hook: the first text of the video

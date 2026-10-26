@@ -5,7 +5,8 @@
 // HELD props attach to a hand (drawn at the wrist, rotated with the forearm). SCENE props stand in the set.
 // Origins: scene props stand on their origin (bottom centre) unless noted (clock, frame: centre; lantern, pendant: hang point).
 import {layer, g, path, circle, ellipse, rect, poly, stroke, rod, line, blob, rrect, tr, text, el,
-  withStyle, isStick, getStyleMode, inkW, GUARD, mixHex, darken, lighten, desat, tones, isHex, INK} from './svg.mjs';
+  withStyle, isStick, getStyleMode, inkW, GUARD, mixHex, darken, lighten, desat, tones, isHex, INK, lin, id} from './svg.mjs';
+import {devanagari} from './devanagari.mjs';
 
 export const M = 470;   // px per metre at actor scale 1
 
@@ -388,3 +389,355 @@ export function sceneProp(spec, t) {
   const guard = op !== undefined && op < 1 ? GUARD : '';   // an opacity group off canvas panics resvg: GUARD keeps it on (it costs a full-canvas layer, so only while fading)
   return withStyle(spec.style, () => layer('prop:' + (spec.id || spec.type), {transform: tr(spec.x || 0, spec.y || 0, spec.rot || 0, (spec.flip ? -1 : 1) * (spec.scale ?? 1), spec.scale ?? 1), opacity: op}, guard, f(spec, t)));
 }
+
+// =====================================================================================================================
+// THE LAST BUS (night world): story props. Real scale unless noted. Flat shapes + same-hue shade shapes, no clips.
+// =====================================================================================================================
+/** the night palette shared by the Last Bus sets and props (graded later by fx.mjs; these are the "lit" colours) */
+export const NIGHT = {
+  busWall: '#93A28F', busWallLow: '#5E7066', busTrim: '#B2AB92', busCeil: '#C3C9B8', vinyl: '#8E3A3C', vinylB: '#2F6E73', chrome: '#B9C1C4', rubber: '#2A2E31',
+  tube: '#F2FAFF', tubeOff: '#7F8A90', glass: '#1B2A3A', glassFog: '#9DB0C2', sky: '#0E1726', skyLow: '#2A3A52', fog: '#8FA2B8', road: '#22262C', roadWet: '#2E3640',
+  pole: '#1A1D22', sodium: '#FFB25C', candle: '#FFC65A', bulb: '#FFC963', tarp: '#2F5E9E', bamboo: '#8E6C40', tin: '#7C8C8E',
+  busRed: '#B3392F', busCream: '#E6D9B5', khaki: '#B49A6A', olive: '#5C6236', marigold: '#F39A1E', marigold2: '#F7C531',
+};
+const NF = {'font-family': 'Inter Display', 'font-weight': 900, 'text-anchor': 'middle'};
+const MONO = {'font-family': 'JetBrains Mono', 'font-weight': 600, 'text-anchor': 'middle'};
+/** a soft radial glow (userSpace gradient, fill-opacity: resvg-safe off canvas) */
+function propGlow(cx, cy, r, color, k) { const gid = id('pg');
+  return el('defs', {}, el('radialGradient', {id: gid, cx, cy, r, gradientUnits: 'userSpaceOnUse'}, el('stop', {offset: 0, 'stop-color': color, 'stop-opacity': k}), el('stop', {offset: 0.4, 'stop-color': color, 'stop-opacity': k * 0.45}), el('stop', {offset: 1, 'stop-color': color, 'stop-opacity': 0}))) + rect(cx - r, cy - r, r * 2, r * 2, `url(#${gid})`, NI); }
+const smoothNoise = (s, t, hz) => { const h1 = hash(s + 'a'), h2 = hash(s + 'b'), h3 = hash(s + 'c'), f = Math.min(hz, 4.8);
+  return (Math.sin(2 * Math.PI * (f * 0.37 * t + h1)) * 0.5 + Math.sin(2 * Math.PI * (f * 0.61 * t + h2)) * 0.3 + Math.sin(2 * Math.PI * (f * t + h3)) * 0.2); };
+/** a lit bulb level for a flickering bulb (deterministic in t; dips are brief, ≤ ~5 per second) */
+export function bulbFlicker(seed, t, rate = 0.8) {
+  const slot = Math.floor(t * rate), u = t * rate - slot; let lv = 1;
+  for (const k of [slot - 1, slot]) { const h = hash(seed + ':' + k); if (h > 0.55) continue; const a = (k + hash(seed + 'a' + k) * 0.8) / rate, d = 0.05 + 0.12 * hash(seed + 'd' + k), dp = 0.5 + 0.5 * hash(seed + 'p' + k);
+    const tt = t; const w = Math.min(Math.max(0, Math.min(1, (tt - a + 0.02) / 0.04)), Math.max(0, Math.min(1, (a + d - tt + 0.02) / 0.04))); lv = Math.min(lv, 1 - dp * w);
+    if (h < 0.18) { const a2 = a + d + 0.1, d2 = 0.05; const w2 = Math.min(Math.max(0, Math.min(1, (tt - a2 + 0.02) / 0.04)), Math.max(0, Math.min(1, (a2 + d2 - tt + 0.02) / 0.04))); lv = Math.min(lv, 1 - dp * 0.8 * w2); } }
+  void u; return lv;
+}
+
+// ---------- a red plastic (monobloc) chair: seat 0.45 m, back 0.85 m. upside: legs up (origin = the seat face on the table) ----------
+function plasticChair({color, upside = false, part = 'all'} = {}) {
+  const c = T(col(color, 'accent', true)), back = [], front = [];
+  back.push(path(rrect(-108, -400, 216, 178, [40, 40, 12, 12]), c.base), ...[0, 1, 2].map(i => rect(-70, -370 + i * 40, 140, 16, c.deep, {rx: 8, ink: false})), rect(40, -400, 68, 178, c.shade, {rx: 12, ink: false}));
+  front.push(...[[-112, -205, -138, 0], [112, -205, 138, 0]].map(([x1, y1, x2, y2]) => poly([[x1 - 18, y1], [x1 + 18, y1], [x2 + 14, y2], [x2 - 22, y2]], c.shade)),
+    ...[[-78, -205, -92, -14], [78, -205, 92, -14]].map(([x1, y1, x2, y2]) => poly([[x1 - 14, y1], [x1 + 14, y1], [x2 + 12, y2], [x2 - 12, y2]], c.deep, NI)),
+    path(rrect(-158, -300, 50, 26, 12), c.base), path(rrect(108, -300, 50, 26, 12), c.base), rect(-150, -285, 22, 70, c.shade, NI), rect(128, -285, 22, 70, c.shade, NI),
+    path(rrect(-128, -238, 256, 40, 16), c.base), rect(-128, -212, 256, 14, c.shade, {rx: 7, ink: false}), rect(-100, -232, 120, 8, c.light, {rx: 4, ink: false}));
+  const parts = part === 'back' ? back : part === 'front' ? front : [...back, ...front];
+  return upside ? g({transform: 'translate(0 -212) scale(1 -1)'}, ...parts) : g({}, ...parts);
+}
+
+// ---------- the roadside chai stall (2.6 m wide, tarp roof 2.4 m). lit: the bulb (0..1; or keyed/flicker via `t` + `flicker`) ----------
+function teaStall({lit = 1, t = 0, flicker = true, seed = 'stall', glow: glowOn = true} = {}) {
+  const L = flicker ? lit * bulbFlicker(seed, t) : lit, bulbC = mixHex('#4E4636', NIGHT.bulb, L), out = [];
+  const bam = T(NIGHT.bamboo), tarp = T(NIGHT.tarp), wood = T('#7A5634'), tin = T(NIGHT.tin);
+  out.push(rect(-600, -1060, 1200, 1060, '#1E2530', NI), rect(-600, -1060, 1200, 120, '#151A22', NI));   // the dark inside
+  out.push(...[-560, 560].map(x => rod([[x - 8, 0], [x + 6, -1130]], bam.shade, 30)));                 // back poles
+  // tarp roof: a sagging front edge, folds, a rope
+  const edge = []; for (let i = 0; i <= 12; i++) { const x = -700 + i * 1400 / 12; edge.push([x, -1010 + Math.sin(i * Math.PI) * 0 + (i % 2 ? 26 : 0)]); }
+  out.push(poly([[-760, -1230], [760, -1230], [700, -1010], ...edge.slice().reverse()], tarp.base), poly([[-760, -1230], [760, -1230], [740, -1170], [-740, -1170]], tarp.light, NI),
+    ...[-420, -60, 300].map(x => poly([[x, -1225], [x + 60, -1225], [x + 30, -1012], [x - 10, -1012]], tarp.shade, NI)),
+    stroke([[-760, -1180], [-700, -1100], [-640, -1060]], '#C9B58A', 5));
+  out.push(path(rrect(-300, -1210, 600, 120, 8), '#E9DCC0'), rect(-300, -1210, 600, 26, '#C7342C', NI), text('CHAI', 0, -1112, {...NF, 'font-size': 76, fill: '#C7342C'}), rect(150, -1180, 140, 80, '#D9C9A6', NI));   // a hand-painted sign
+  // the bulb on its wire
+  out.push(stroke([[-150, -1010], [-152, -830]], '#151515', 4), rect(-166, -838, 28, 26, '#3A3A3A', {rx: 4}), circle(-152, -796, 26, bulbC, THIN), circle(-160, -804, 9, mixHex(bulbC, '#FFFFFF', 0.5 * L), NI));
+  // counter (left): tin front with faded paint, plank top at 0.77 m, stove + kettle, jars, tumblers
+  out.push(rect(-600, -362, 760, 362, tin.base), rect(-600, -362, 760, 30, wood.base), rect(-600, -332, 760, 18, wood.shade, NI), rect(-560, -300, 680, 180, mixHex(tin.base, '#C7342C', 0.35), NI),
+    text('GARAM CHAI', -220, -190, {...NF, 'font-size': 58, fill: mixHex('#F2E3B8', tin.base, 0.3)}), ...[-520, -100, 120].map(x => rect(x, -318, 8, 300, tin.shade, NI)));
+  out.push(rect(-520, -420, 200, 58, '#2C2C30'), ellipse(-420, -420, 80, 10, '#1A1A1E', NI));   // stove
+  const k = T('#B9C0C6'); out.push(path('M-500 -430 L-340 -430 L-350 -560 Q-420 -600 -490 -560Z', k.base), path('M-420 -430 L-340 -430 L-350 -560 Q-385 -585 -420 -590Z', k.shade, NI),
+    path('M-350 -520 L-280 -575 L-268 -565 L-340 -500Z', k.base), path('M-470 -585 Q-420 -660 -370 -585', 'none', {stroke: '#2A2A2E', 'stroke-width': 10, 'stroke-linecap': 'round'}), ellipse(-420, -594, 30, 8, k.light, NI),
+    ellipse(-460, -500, 18, 26, k.light, NI));
+  for (let i = 0; i < 3; i++) { const x = -230 + i * 105; out.push(path(rrect(x - 40, -480, 80, 118, 14), '#9DB8BE'), rect(x - 34, -440, 68, 72, ['#D99A3E', '#C9783A', '#E3B65A'][i], {ink: false, rx: 8}), rect(x - 44, -500, 88, 26, '#C7342C', {rx: 6}), rect(x - 30, -470, 12, 90, '#E8F1F2', {ink: false, rx: 4})); }
+  for (let i = 0; i < 4; i++) out.push(path(`M${50 + i * 26} -362 L${70 + i * 26} -362 L${74 + i * 26} -${400 + (i % 2) * 10} L${46 + i * 26} -${400 + (i % 2) * 10}Z`, '#C9CED2', THIN));
+  // the side table with the red chair upside down on it
+  const tx = 360, ty = -330;
+  out.push(g({transform: tr(tx, ty)}, plasticChair({upside: true, part: 'back'})));
+  out.push(rect(tx - 190, ty, 380, 26, wood.base), rect(tx - 175, ty + 26, 22, -ty - 26, wood.shade), rect(tx + 153, ty + 26, 22, -ty - 26, wood.shade), rect(tx - 170, ty + 120, 340, 14, wood.deep, NI));
+  out.push(g({transform: tr(tx, ty)}, plasticChair({upside: true, part: 'front'})));
+  // front poles, a low bench, a bucket
+  out.push(...[-680, 680].map(x => rod([[x, 30], [x + (x < 0 ? 18 : -18), -1060]], bam.base, 34)), ...[-680, 680].map(x => rod([[x + 8, 30], [x + (x < 0 ? 26 : -10), -1060]], bam.shade, 10, NI)));
+  out.push(rect(-520, -210, 520, 26, wood.base, {rx: 4}).replace('<rect', '<rect transform="translate(-60 120)"'));
+  out.push(g({transform: 'translate(-330 70)'}, rect(-240, -200, 480, 28, wood.base, {rx: 4}), rect(-220, -172, 20, 172, wood.shade), rect(200, -172, 20, 172, wood.shade)));
+  out.push(path('M560 70 L700 70 L680 -80 L580 -80Z', '#5B6E80'), ellipse(630, -80, 52, 10, '#3E4B57', NI));
+  if (L > 0.02 && glowOn) out.push(propGlow(-152, -796, 260, NIGHT.bulb, 0.5 * L), poly([[-200, -790], [-104, -790], [260, -362], [-560, -362]], NIGHT.bulb, {ink: false, 'fill-opacity': +(0.10 * L).toFixed(3)}));
+  return g({}, ...out);
+}
+
+// ---------- the cake box (26 cm): a bakery box opened on her lap, a round frosted cake, one candle ----------
+// open: the white box with its lid swung up behind (the kraft inside lit by the candle), the low front wall printed with
+// the bakery's name, a round cake (strawberry frosting, glaze drips, a piped shell border top and bottom, sprinkles, two
+// rosettes, "Happy Birthday" piped on top) and one striped candle: straight below, bent over toward the frosting by
+// `bend` (0..1) with a wax drip, its flame always upright, breathing (smooth noise < 5 Hz) with a soft glow.
+// Seen from a little above (circles are ellipses, ry ≈ 0.28 rx). Origin = the bottom centre of the box. closed: lid
+// down, a red ribbon (also HELD).
+function cakeBox({open = true, bend = 0, flame = true, smoke = false, t = 0, frosting = '#F2B4C4', seed = 'cake', glow: glowOn = true} = {}) {
+  const out = [], W = 130, wh = open ? 26 : 58, box = T('#F2EEE4');
+  if (!open) {
+    out.push(poly([[-W / 2 - 4, -wh - 26], [W / 2 + 4, -wh - 26], [W / 2, -wh], [-W / 2, -wh]], box.light), rect(-W / 2, -wh, W, wh, box.base, {rx: 3}), rect(W / 2 - 26, -wh, 26, wh, box.shade, NI), rect(-W / 2, -wh, W, 5, box.light, NI),
+      rect(-8, -wh - 26, 16, wh + 26, '#C7342C', NI), rect(-W / 2, -wh * 0.55, W, 12, '#C7342C', NI), path('M0 -84 q-22 -18 -26 -2 q4 10 26 2 q22 -18 26 -2 q-4 10 -26 2Z', '#C7342C'));
+    return g({}, ...out);
+  }
+  const fr = T(frosting), top = lighten(frosting, 0.32), kraft = '#E2D3B4', kraftDk = '#C4B08A', cream = '#FFF6EC', creamDk = '#E9D9CC';
+  const back = -wh - 30, cx0 = 0, cyB = -wh - 8, cyT = cyB - 34, rx = 50, ry = 14;
+  // the flame's breathing (shared by the flame, its glow and the light on the lid and cake)
+  const sy = 1 + 0.14 * smoothNoise(seed + 'fy', t, 3.4) + 0.06 * smoothNoise(seed + 'fz', t, 4.6), sx = 1 + 0.06 * smoothNoise(seed + 'fx', t, 2.6), sw = 1.6 * smoothNoise(seed + 'sw', t, 2.2), fl = flame ? 0.92 + 0.08 * sy : 0;
+  out.push(ellipse(0, 2, W * 0.62, 9, '#000000', {ink: false, 'fill-opacity': 0.3}));   // its shadow on her lap
+  // the lid, swung up and leaning back: kraft inside, a tuck flap folded over its top edge, the side dust flaps
+  out.push(poly([[-W / 2 + 4, back], [W / 2 - 4, back], [W / 2 - 10, back - 60], [-W / 2 + 10, back - 60]], kraft, NI),
+    poly([[W / 2 - 4, back], [W / 2 - 26, back], [W / 2 - 30, back - 60], [W / 2 - 10, back - 60]], kraftDk, NI),
+    poly([[-W / 2 + 10, back - 60], [W / 2 - 10, back - 60], [W / 2 - 13, back - 70], [-W / 2 + 13, back - 70]], box.light, NI),
+    poly([[-W / 2 + 5, back - 8], [-W / 2 - 3, back - 30], [-W / 2 + 9, back - 44]], box.light, NI), poly([[W / 2 - 5, back - 8], [W / 2 + 3, back - 30], [W / 2 - 9, back - 44]], box.shade, NI));
+  for (let i = 0; i < 6; i++) out.push(rect(-W / 2 + 14, back - 8 - i * 9.5, W - 28 - (i % 2) * 14, 0.8, kraftDk, {ink: false, 'fill-opacity': 0.22}));   // corrugation grain
+  if (flame && glowOn) out.push(propGlow(10, back - 34, 70, NIGHT.candle, 0.42 * fl));   // the candle lights the lid
+  // the tray: inner back wall and sides (kraft), the floor
+  out.push(poly([[-W / 2, -wh], [-W / 2 + 4, back], [W / 2 - 4, back], [W / 2, -wh]], mixHex(kraft, '#FFFFFF', 0.25), NI), poly([[-W / 2, -wh], [-W / 2 + 4, back], [-W / 2 + 12, back + 4], [-W / 2 + 8, -wh]], kraftDk, NI));
+  // the cake: side (shaded), glaze drips, top, base shell border, top shell border, sprinkles, rosettes, piping
+  out.push(ellipse(cx0, cyB + 2, rx + 3, ry, '#000000', {ink: false, 'fill-opacity': 0.25}));
+  out.push(path(`M${-rx} ${cyT} L${-rx} ${cyB} A${rx} ${ry} 0 0 0 ${rx} ${cyB} L${rx} ${cyT}Z`, fr.base, NI),
+    path(`M${rx * 0.38} ${cyT + ry * 0.92} L${rx * 0.38} ${cyB + ry * 0.92} A${rx} ${ry} 0 0 0 ${rx} ${cyB} L${rx} ${cyT}Z`, fr.shade, NI),
+    path(`M${-rx} ${cyT} L${-rx} ${cyB} A${rx} ${ry} 0 0 0 ${-rx * 0.72} ${cyB + ry * 0.7} L${-rx * 0.72} ${cyT + ry * 0.7}Z`, lighten(frosting, 0.12), NI));
+  for (let i = 0; i < 9; i++) { const u = -0.86 + i * 0.215, x = u * rx, y0 = cyT + Math.sqrt(1 - u * u) * ry - 1, L = 5 + 10 * hash(seed + 'dr' + i);   // glaze drips down the front
+    out.push(path(`M${x - 3.4} ${y0} L${x - 3} ${y0 + L} Q${x} ${y0 + L + 4.4} ${x + 3} ${y0 + L} L${x + 3.4} ${y0}Z`, i > 5 ? mixHex(top, fr.shade, 0.35) : top, NI)); }
+  out.push(ellipse(cx0, cyT, rx, ry, top, NI), ellipse(cx0 - 6, cyT - 2, rx * 0.72, ry * 0.6, lighten(top, 0.25), {ink: false, 'fill-opacity': 0.7}));
+  const eD = (x, y, rx, ry, rot = 0) => { const c = Math.cos(rot * Math.PI / 180), s2 = Math.sin(rot * Math.PI / 180), f2 = v => +v.toFixed(2);
+    return `M${f2(x - rx * c)} ${f2(y - rx * s2)}a${rx} ${ry} ${f2(rot)} 1 0 ${f2(2 * rx * c)} ${f2(2 * rx * s2)}a${rx} ${ry} ${f2(rot)} 1 0 ${f2(-2 * rx * c)} ${f2(-2 * rx * s2)}`; };
+  const shells = (cy, rr, n, a0, a1, c, s = 1) => { let d1 = '', d2 = ''; for (let i = 0; i < n; i++) { const a = a0 + (a1 - a0) * (i + 0.5) / n, x = Math.cos(a) * rr, y = cy + Math.sin(a) * rr * 0.28, rot = Math.cos(a) * 25;
+    d1 += eD(x, y, 4.6 * s, 3.2 * s, rot); d2 += eD(x - 1.2 * s, y - 1 * s, 1.8 * s, 1.1 * s); }
+    out.push(path(d1, c, NI), path(d2, '#FFFFFF', {ink: false, 'fill-opacity': 0.7})); };
+  shells(cyB, rx + 1, 15, 0.08, Math.PI - 0.08, cream, 1.05);   // the base border (front half)
+  shells(cyT, rx - 1, 14, Math.PI + 0.12, 2 * Math.PI - 0.12, creamDk);   // the top border (back half, behind)
+  const SPR = ['#F7C531', '#5FC2B6', '#7DB8F0', '#F39A1E', '#FFFFFF', '#9BD18A'];
+  for (let i = 0; i < 30; i++) { const a = hash(seed + 'sa' + i) * Math.PI * 2, r = 0.3 + 0.62 * Math.sqrt(hash(seed + 'sr' + i)), x = Math.cos(a) * rx * r, y = cyT + Math.sin(a) * ry * r;
+    if (Math.abs(y - cyT - 4.5) < 3.5 && Math.abs(x + 6) < 30) continue; out.push(rect(x - 1.3, y - 0.5, 2.6, 1, SPR[i % SPR.length], {ink: false, rx: 0.6, transform: `rotate(${Math.round(hash(seed + 'sq' + i) * 180)} ${x.toFixed(1)} ${y.toFixed(1)})`})); }
+  for (const [x, y] of [[-32, cyT - 5], [-14, cyT - 9.5]]) { for (let q = 0; q < 6; q++) { const a = q * Math.PI / 3; out.push(ellipse(x + Math.cos(a) * 3.2, y + Math.sin(a) * 1.4 - 1, 2.6, 1.9, q < 3 ? creamDk : cream, NI)); } out.push(ellipse(x, y - 1.6, 2.2, 1.5, '#FFFFFF', NI), circle(x + 0.6, y - 2.4, 1.3, '#D8344A', NI)); }
+  out.push(text('Happy Birthday', -6, cyT + 5.5, {'font-family': 'Instrument Serif', 'font-style': 'italic', 'font-size': 9.5, fill: '#7B3A24', 'text-anchor': 'middle', transform: `translate(0 ${(cyT + 5.5) * 0.45}) scale(1 0.55)`}));
+  shells(cyT, rx - 1, 16, 0.1, Math.PI - 0.1, cream);   // the top border (front half)
+  // the candle: the lower part stands in the frosting, the upper part bends over by `bend`; spiral stripes; a wax drip
+  const base = [16, cyT - 5], L1 = 15, L2 = 19, th = clampN(bend) * 70 * Math.PI / 180, mid = [base[0], base[1] - L1], tip = [mid[0] + Math.sin(th) * L2, mid[1] - Math.cos(th) * L2];
+  const ctl = [mid[0] + Math.sin(th) * L2 * 0.3, mid[1] - Math.cos(th) * L2 * 0.55];
+  const cp = `M${base[0]} ${base[1]} L${mid[0]} ${mid[1]} Q${ctl[0].toFixed(2)} ${ctl[1].toFixed(2)} ${tip[0].toFixed(2)} ${tip[1].toFixed(2)}`;
+  out.push(ellipse(base[0], base[1], 5, 1.8, darken(top, 0.18), NI), path(cp, 'none', {stroke: '#F6F4EE', 'stroke-width': 5.6, 'stroke-linecap': 'round', ink: false}), path(cp, 'none', {stroke: '#D8D4CC', 'stroke-width': 1.6, 'stroke-linecap': 'round', ink: false, transform: 'translate(1.6 0)'}));
+  const qpt = u => { const a = 1 - u; return [a * a * mid[0] + 2 * a * u * ctl[0] + u * u * tip[0], a * a * mid[1] + 2 * a * u * ctl[1] + u * u * tip[1]]; };
+  const along = []; for (let i = 1; i < 4; i++) along.push([base[0], base[1] - L1 * i / 4, 0]); for (let i = 0; i < 5; i++) { const u = i / 5, p = qpt(u), q = qpt(u + 0.05); along.push([p[0], p[1], Math.atan2(q[0] - p[0], -(q[1] - p[1]))]); }
+  void along; out.push(path(cp, 'none', {stroke: '#E0466A', 'stroke-width': 5.6, 'stroke-dasharray': '2.2 3.4', ink: false}), path(cp, 'none', {stroke: '#FFFFFF', 'stroke-width': 1.2, 'stroke-opacity': 0.7, ink: false, transform: 'translate(-1.4 0)'}));
+  out.push(path(`M${(mid[0] + 2.6).toFixed(1)} ${(mid[1] + 1).toFixed(1)} q1.6 4 0.6 7 q-1.2 1.6 -1.8 0Z`, '#F2F0EA', NI));   // a wax drip down the bend
+  const wick = [tip[0] + Math.sin(th) * 2.5, tip[1] - Math.cos(th) * 2.5 - 1];
+  out.push(path(`M${tip[0].toFixed(1)} ${tip[1].toFixed(1)} Q${(wick[0] + 0.6).toFixed(1)} ${(wick[1] + 1).toFixed(1)} ${wick[0].toFixed(1)} ${wick[1].toFixed(1)}`, 'none', {stroke: '#1E1A16', 'stroke-width': 1.3, ink: false}));
+  if (bend > 0.3) out.push(ellipse(tip[0] + 2, cyT + 1, 3.2, 1.2, '#F4F2EA', NI), ellipse(tip[0] - 2, cyT + 3, 1.8, 0.8, '#F4F2EA', NI));   // wax dripped onto the frosting below the tip
+  if (flame) {   // the flame always points up; it breathes and sways (smooth noise, < 5 Hz)
+    const fh = 20 * sy, fw = 6.4 * sx, [x, y] = wick;
+    if (glowOn) out.push(propGlow(x, y - fh * 0.45, 46, NIGHT.candle, 0.5 * fl), propGlow(x, cyT, 60, NIGHT.candle, 0.28 * fl));
+    const teardrop = (h, w, dy = 0) => `M${x} ${y + 2 + dy} C${x - w * 1.6} ${y - h * 0.18 + dy} ${x - w * 0.45 + sw} ${y - h * 0.72 + dy} ${x + sw * 1.5} ${y - h + dy} C${x + w * 0.55 + sw} ${y - h * 0.72 + dy} ${x + w * 1.6} ${y - h * 0.18 + dy} ${x} ${y + 2 + dy}Z`;
+    out.push(path(teardrop(fh * 1.12, fw * 1.25), '#FF9A2E', {ink: false, 'fill-opacity': 0.55}), path(teardrop(fh, fw), '#FFB93E', NI), path(teardrop(fh * 0.72, fw * 0.66, 0.5), '#FFE48A', NI),
+      path(teardrop(fh * 0.4, fw * 0.36, 1), '#FFFBEA', NI), ellipse(x, y + 0.5, 2.2, 3.4, '#5B7BE0', {ink: false, 'fill-opacity': 0.85}), stroke([[x, y + 1.6], [x + 0.4, y - 2]], '#2A1A10', 1));
+  } else if (smoke) {   // a thread of smoke: rises, curls, fades (sways < 1 Hz)
+    const pts = []; for (let i = 0; i <= 14; i++) { const u = i / 14; pts.push([wick[0] + Math.sin(u * 5 + t * 1.6) * (3 + u * 14) + u * 8, wick[1] - u * 170]); }
+    out.push(path('M' + pts.map(p => p.map(v => v.toFixed(1)).join(' ')).join(' L'), 'none', {stroke: '#C9CCD2', 'stroke-width': 3, 'stroke-opacity': 0.5, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'}),
+      path('M' + pts.slice(6).map(p => p.map(v => v.toFixed(1)).join(' ')).join(' L'), 'none', {stroke: '#C9CCD2', 'stroke-width': 7, 'stroke-opacity': 0.12, 'stroke-linecap': 'round'}));
+  }
+  // the low front wall of the box (white, printed), its rim, the side flaps folded out
+  out.push(rect(-W / 2, -wh, W, wh, box.base, {rx: 2, ink: false}), rect(W / 2 - 22, -wh, 22, wh, box.shade, NI), rect(-W / 2, -wh, W, 3.4, '#FFFFFF', NI), rect(-W / 2, -wh + 3.4, W, 1.2, kraftDk, NI),
+    rect(-W / 2, -wh + 6, W, 3, '#C7342C', NI), text('Sweet Home', -8, -wh + 18.5, {'font-family': 'Instrument Serif', 'font-style': 'italic', 'font-size': 12.5, fill: '#9C3A22', 'text-anchor': 'middle'}),
+    text('BAKERS · SINCE 1978', -8, -wh + 24, {'font-family': 'Inter Display', 'font-weight': 800, 'font-size': 3.6, fill: '#9C3A22', 'text-anchor': 'middle', 'letter-spacing': 0.6}),
+    ellipse(-40, -8, 10, 3, '#B9AE96', {ink: false, 'fill-opacity': 0.35}));   // a thumb smudge
+  if (flame && glowOn) out.push(propGlow(10, -wh, 60, NIGHT.candle, 0.2 * fl));
+  return g({}, ...out);
+}
+const clampN = (x, a = 0, b = 1) => Math.min(b, Math.max(a, +x || 0));
+
+// ---------- a bus destination board (LED, amber). text keyable; flip 0..1 squashes `prev` out and `text` in ----------
+function destinationBoard({text: label = 'CITY CENTRE', prev = null, change = 1, route = '', w = 760, h = 150, color = '#FFB23F', t = 0} = {}) {
+  const out = [], f = clampN(change), showPrev = prev != null && f < 0.5, s = prev == null ? 1 : Math.abs(Math.cos(f * Math.PI)), str = showPrev ? prev : label;
+  const rw = route ? h * 1.15 : 0, cx = rw / 2, fs = Math.min(h * 0.56, (w - rw - 60) / Math.max(4, String(str).length) * 1.6);
+  out.push(path(rrect(-w / 2 - 18, -h / 2 - 18, w + 36, h + 36, 14), '#3A3D42'), rect(-w / 2, -h / 2, w, h, '#0B0C0E', NI));
+  const glowT = (v, x, size) => g({}, text(v, x, size * 0.36, {...MONO, 'font-size': size, fill: color, 'fill-opacity': 0.35, 'stroke': color, 'stroke-width': size * 0.12, 'stroke-opacity': 0.25}), text(v, x, size * 0.36, {...MONO, 'font-size': size, fill: lighten(color, 0.25)}));
+  out.push(g({transform: `translate(${cx} 0) scale(1 ${Math.max(0.02, s).toFixed(3)})`}, glowT(str, 0, fs)));
+  if (route) out.push(rect(-w / 2 + 8, -h / 2 + 8, rw - 16, h - 16, '#14161A', NI), glowT(route, -w / 2 + rw / 2, h * 0.5), rect(-w / 2 + rw - 4, -h / 2 + 10, 4, h - 20, '#26292E', NI));
+  // the LED dot grid over the panel (pre-blended rows: no pattern element, cheap)
+  for (let y = -h / 2 + 6; y < h / 2; y += 9) out.push(rect(-w / 2, y, w, 2.4, '#0B0C0E', {ink: false, 'fill-opacity': 0.55}));
+  if (prev != null && f > 0 && f < 1) out.push(rect(-w / 2, -1.5, w, 3, color, {ink: false, 'fill-opacity': 0.5 * Math.sin(f * Math.PI)}));
+  out.push(path(`M${-w / 2} ${-h / 2} L${-w / 2 + w * 0.35} ${-h / 2} L${-w / 2 + w * 0.25} ${h / 2} L${-w / 2} ${h / 2}Z`, '#FFFFFF', {ink: false, 'fill-opacity': 0.04}));
+  void t; return g({}, ...out);
+}
+
+// ---------- a string of birthday pennants with one letter each; origin = the left tie point, (w, dy) the right ----------
+function birthdayBanner({text: label = 'HAPPY BIRTHDAY', w = 900, dy = 0, sag = 90, colors = ['#F7C531', '#F2829A', '#E2453C', '#5FC2B6', '#F39A1E']} = {}) {
+  const ch = [...String(label)], n = ch.length, out = [], pt = u => [w * u, dy * u + Math.sin(u * Math.PI) * sag];
+  out.push(stroke(Array.from({length: 25}, (_, i) => pt(i / 24)), '#3A3328', 4));
+  const fw = Math.max(40, Math.min(120, w / n * 0.92)), fh = fw * 1.25;
+  ch.forEach((c, i) => { if (c === ' ') return; const u = (i + 0.5) / n, [x, y] = pt(u), col0 = colors[i % colors.length], ang = Math.atan2(pt(u + 0.01)[1] - y, w * 0.01) * 180 / Math.PI;
+    out.push(g({transform: tr(x, y + 2, ang)}, poly([[-fw / 2, 0], [fw / 2, 0], [0, fh]], col0), poly([[fw * 0.1, 0], [fw / 2, 0], [0, fh]], darken(col0, 0.12), NI), text(c, 0, fh * 0.42, {...NF, 'font-size': fw * 0.5, fill: '#2A2522'}))); });
+  return g({}, ...out);
+}
+
+// ---------- the four silent passengers' objects (real scale; also HELD) ----------
+/** a marigold wedding garland: origin = the top centre (the neck); w = across the shoulders, drop = how low it hangs */
+function garland({w = 230, drop = 330, color} = {}) {
+  const out = [], n = 34, c1 = col(color, null) || NIGHT.marigold;
+  const pt = u => { const a = u * Math.PI; return [-Math.cos(a) * w / 2 * (1 - 0.15 * Math.sin(a)), Math.sin(a) * drop]; };
+  for (let i = 0; i <= n; i++) { const [x, y] = pt(i / n), c = i % 3 === 1 ? NIGHT.marigold2 : i % 7 === 3 ? '#E2453C' : c1;
+    out.push(circle(x, y, 17, darken(c, 0.18), NI), circle(x - 1, y - 2, 15, c, THIN), circle(x - 4, y - 5, 5, lighten(c, 0.35), NI)); }
+  out.push(g({transform: `translate(0 ${drop + 8})`}, stroke([[0, 0], [0, 60]], NIGHT.marigold, 6), circle(0, 70, 18, '#C7342C'), circle(-4, 66, 7, '#E86A5A', NI), ...[-1, 1].map(s2 => path(`M0 78 l${s2 * 10} 28 l${-s2 * 6} 2Z`, '#3E8E4A', NI))));
+  return g({}, ...out);
+}
+/** a school backpack with a cricket bat strapped to it: origin = bottom centre (0.42 m bag, 0.85 m bat) */
+function schoolBag({color, bat = true} = {}) {
+  const c = T(col(color, null) || '#2F5FA8'), out = [];
+  if (bat) out.push(g({transform: 'rotate(18 40 -180)'}, path(rrect(10, -470, 62, 300, [10, 10, 26, 26]), '#E6C98E'), rect(52, -470, 20, 300, '#C9A86A', NI), rect(30, -455, 20, 280, '#F2DDB0', NI), rect(30, -600, 22, 136, '#2A2A2E', {rx: 8}), ...[0, 1, 2, 3].map(i => rect(30, -592 + i * 30, 22, 6, '#5A5A60', NI)), rect(26, -476, 30, 14, '#B8935A', NI)));
+  out.push(path('M-60 -205 Q-60 -250 0 -250 Q60 -250 60 -205', 'none', {stroke: darken(c.base, 0.3), 'stroke-width': 12, 'stroke-linecap': 'round'}),
+    path(rrect(-90, -220, 180, 220, [56, 56, 22, 22]), c.base), rect(30, -210, 60, 200, c.shade, {rx: 18, ink: false}), path(rrect(-66, -110, 132, 92, 20), c.light),
+    stroke([[-60, -100], [60, -100]], darken(c.base, 0.35), 4), rect(-4, -96, 8, 20, '#D9D9D9', {rx: 3}), stroke([[-80, -170], [80, -170]], darken(c.base, 0.3), 3));
+  return g({}, ...out);
+}
+/** an Indian Army soldier's beret (olive, brass badge) or a peaked cap: origin = the bottom centre of the band (0.28 m) */
+function soldierCap({kind = 'beret', color} = {}) {
+  const out = [];
+  if (kind === 'peaked') { const c = T(col(color, null) || '#6B6A3C');
+    out.push(path('M-120 -40 Q-130 -120 0 -130 Q130 -120 120 -40Z', c.base), path('M40 -125 Q130 -115 120 -40 L60 -40Z', c.shade, NI), rect(-112, -46, 224, 40, '#2B2A20', {rx: 8}), rect(-112, -46, 224, 10, '#C9A23A', {rx: 4, ink: false}),
+      path('M-110 -8 Q0 30 110 -8 L96 8 Q0 44 -96 8Z', '#141414'), circle(0, -82, 20, '#D9B44A'), circle(0, -82, 11, '#9C7A22', NI)); }
+  else { const c = T(col(color, null) || '#55603A');
+    out.push(path('M-118 -6 Q-140 -90 -40 -118 Q80 -140 140 -70 Q160 -30 100 -14Z', c.base), path('M40 -125 Q140 -110 140 -70 Q150 -30 100 -14 L50 -20Z', c.shade, NI),
+      path(rrect(-120, -26, 236, 28, 12), '#2E2A22'), circle(-62, -62, 22, '#D9B44A'), path('M-62 -78 l6 12 l13 1 l-10 8 l4 13 l-13 -8 l-13 8 l4 -13 l-10 -8 l13 -1Z', '#9C7A22', NI)); }
+  return g({}, ...out);
+}
+/** a hospital ID wristband (graphic close-up scale: a loop ≈ 2× life so its label reads in an insert) */
+function wristband({label = 'WARD 4 · BED 12', name = 'PATIENT', color = '#F4F6F8', accent = '#3E6FB8'} = {}) {
+  const out = [], rx = 120, ry = 46;
+  out.push(ellipse(0, 0, rx, ry, 'none', {stroke: darken(color, 0.22), 'stroke-width': 26}), ellipse(0, 0, rx, ry, 'none', {stroke: color, 'stroke-width': 20}));
+  out.push(path(rrect(-70, 20, 140, 58, 8), color), rect(-70, 20, 140, 14, accent, {rx: 4, ink: false}), text(name, 0, 31, {...NF, 'font-size': 11, fill: '#FFFFFF', 'font-weight': 800}),
+    text(label, 0, 54, {...MONO, 'font-size': 13, fill: '#26262B'}), ...Array.from({length: 22}, (_, i) => rect(-52 + i * 4.8, 60, hash('bc' + i) < 0.5 ? 2 : 3.4, 12, '#26262B', NI)), circle(100, 30, 8, '#C9CED2'));
+  return g({}, ...out);
+}
+
+// ---------- phone close-ups: lock screen (11:59, missed calls), voicemail player, incoming call; `cracked` overlays broken glass ----------
+function phoneShell(w, h, inner, {cracked = false, crack = [0.62, 0.3], seed = 'crk'} = {}) {
+  const out = [path(rrect(-w / 2 - 20, -h - 20, w + 40, h + 40, 70), '#141418'), path(rrect(-w / 2 - 12, -h - 12, w + 24, h + 24, 64), '#26262C', NI), ...inner, path(rrect(-60, -h + 12, 120, 30, 15), '#0B0B0E')];
+  if (cracked) {   // impact point; jagged radial cracks; two broken rings; a few lighter shards
+    const cx = -w / 2 + w * crack[0], cy = -h + h * crack[1], lines = [];
+    for (let i = 0; i < 11; i++) { const a = i / 11 * Math.PI * 2 + hash(seed + i) * 0.5, len = (0.35 + 0.65 * hash(seed + 'l' + i)) * Math.max(w, h) * 0.75, pts = [[cx, cy]];
+      for (let j = 1; j <= 6; j++) { const r = len * j / 6, a2 = a + (hash(seed + i + ':' + j) - 0.5) * 0.35; pts.push([cx + Math.cos(a2) * r, cy + Math.sin(a2) * r]); }
+      const P = pts.map(([x, y]) => [Math.max(-w / 2 + 4, Math.min(w / 2 - 4, x)), Math.max(-h + 4, Math.min(-4, y))]);
+      lines.push(path('M' + P.map(p => p.map(v => v.toFixed(1)).join(' ')).join(' L'), 'none', {stroke: '#FFFFFF', 'stroke-width': 2.4, 'stroke-opacity': 0.8, 'stroke-linejoin': 'round'}),
+        path('M' + P.map(p => (p[0] + 2).toFixed(1) + ' ' + (p[1] + 2).toFixed(1)).join(' L'), 'none', {stroke: '#000000', 'stroke-width': 1.6, 'stroke-opacity': 0.35})); }
+    for (const r of [34, 78]) { const pts = []; for (let i = 0; i <= 18; i++) { const a = i / 18 * Math.PI * 2, rr = r * (0.8 + 0.4 * hash(seed + 'r' + r + i)); pts.push([cx + Math.cos(a) * rr, cy + Math.sin(a) * rr]); }
+      lines.push(path('M' + pts.map(p => p.map(v => v.toFixed(1)).join(' ')).join(' L'), 'none', {stroke: '#FFFFFF', 'stroke-width': 1.8, 'stroke-opacity': 0.6})); }
+    for (let i = 0; i < 5; i++) { const a = hash(seed + 's' + i) * 6.28, r = 20 + 50 * hash(seed + 'q' + i); lines.push(poly([[cx, cy], [cx + Math.cos(a) * r, cy + Math.sin(a) * r], [cx + Math.cos(a + 0.5) * r * 0.8, cy + Math.sin(a + 0.5) * r * 0.8]], '#FFFFFF', {ink: false, 'fill-opacity': 0.14})); }
+    lines.push(circle(cx, cy, 9, '#FFFFFF', {ink: false, 'fill-opacity': 0.5}));
+    out.push(...lines);
+  }
+  return out;
+}
+function phoneLock({w, h, time = '11:59', ampm = 'PM', date = 'Saturday, 14 October', signal = 'NO SIGNAL', notifs, banner, accent}) {
+  const gid = id('plk'), out = [el('defs', {}, lin(gid, 0, -h, 0, 0, [[0, '#1C2440'], [0.6, '#2B1E3A'], [1, '#10121C']])), path(rrect(-w / 2, -h, w, h, 54), `url(#${gid})`, NI),
+    circle(w * 0.25, -h * 0.25, w * 0.4, '#3A2A55', {ink: false, 'fill-opacity': 0.5}), circle(-w * 0.3, -h * 0.4, w * 0.3, '#22355A', {ink: false, 'fill-opacity': 0.5})];
+  out.push(text(signal, -w / 2 + 40, -h + 46, {'font-family': 'Inter', 'font-weight': 600, 'font-size': 24, fill: '#E9E9EF', 'text-anchor': 'start'}),
+    rect(w / 2 - 92, -h + 26, 52, 24, 'none', {stroke: '#E9E9EF', 'stroke-width': 3, rx: 6}), rect(w / 2 - 88, -h + 30, 10, 16, '#E2453C', {rx: 2, ink: false}), rect(w / 2 - 38, -h + 33, 5, 10, '#E9E9EF', NI));
+  out.push(text(date, 0, -h + 160, {'font-family': 'Inter', 'font-weight': 600, 'font-size': 30, fill: '#E9E9EF', 'text-anchor': 'middle'}),
+    text(time, -12, -h + 330, {'font-family': 'Inter Display', 'font-weight': 700, 'font-size': 180, fill: '#F4F4F8', 'text-anchor': 'middle', 'letter-spacing': -4}),
+    text(ampm, w / 2 - 50, -h + 330, {'font-family': 'Inter', 'font-weight': 600, 'font-size': 34, fill: '#F4F4F8', 'text-anchor': 'end'}));
+  const list = notifs || [{title: banner || 'MUM', body: '7 MISSED CALLS'}];
+  list.forEach((nf, i) => { const y = -h + 420 + i * 150;
+    out.push(path(rrect(-w / 2 + 28, y, w - 56, 128, 28), '#F2F2F6', {ink: false, 'fill-opacity': 0.92}), circle(-w / 2 + 88, y + 64, 30, accent || '#2FB15A'),
+      path(`M${-w / 2 + 76} ${y + 52} q6 -6 12 0 l4 10 q-4 6 2 14 q8 8 14 4 l10 4 q6 6 0 12 q-26 8 -44 -18 q-10 -16 2 -26Z`, '#FFFFFF', NI),
+      text(nf.title, -w / 2 + 136, y + 56, {'font-family': 'Inter Display', 'font-weight': 800, 'font-size': 34, fill: '#16161A', 'text-anchor': 'start'}),
+      text(nf.body, -w / 2 + 136, y + 98, {'font-family': 'Inter', 'font-weight': 600, 'font-size': 28, fill: '#C7342C', 'text-anchor': 'start'}),
+      text(nf.when || 'now', w / 2 - 50, y + 54, {'font-family': 'Inter', 'font-weight': 400, 'font-size': 22, fill: '#6A6A72', 'text-anchor': 'end'})); });
+  out.push(circle(-w / 2 + 90, -110, 44, '#FFFFFF', {ink: false, 'fill-opacity': 0.16}), circle(w / 2 - 90, -110, 44, '#FFFFFF', {ink: false, 'fill-opacity': 0.16}), rect(-90, -36, 180, 8, '#FFFFFF', {rx: 4, ink: false, 'fill-opacity': 0.8}));
+  return out;
+}
+function phoneVoicemail({w, h, who = 'MUM', when = 'Sat 11:47 PM', length = '0:42', progress = 0, playing = false, signal = 'NO SIGNAL', accent = '#2F7DF6', count = '7 missed calls · 1 voicemail'}) {
+  const out = [path(rrect(-w / 2, -h, w, h, 54), '#F7F7F9', NI), text(signal, -w / 2 + 40, -h + 46, {'font-family': 'Inter', 'font-weight': 600, 'font-size': 24, fill: '#1E1E22', 'text-anchor': 'start'}),
+    text('Voicemail', -w / 2 + 40, -h + 140, {'font-family': 'Inter Display', 'font-weight': 800, 'font-size': 56, fill: '#16161A', 'text-anchor': 'start'}),
+    text(count, -w / 2 + 40, -h + 186, {'font-family': 'Inter', 'font-weight': 600, 'font-size': 26, fill: '#C7342C', 'text-anchor': 'start'})];
+  const y = -h + 230; out.push(path(rrect(-w / 2 + 24, y, w - 48, 360, 30), '#FFFFFF'), circle(-w / 2 + 92, y + 70, 40, '#C9CED6'), text(who[0], -w / 2 + 92, y + 84, {...NF, 'font-size': 38, fill: '#FFFFFF'}),
+    text(who, -w / 2 + 152, y + 64, {'font-family': 'Inter Display', 'font-weight': 800, 'font-size': 40, fill: '#16161A', 'text-anchor': 'start'}), text(when, -w / 2 + 152, y + 102, {'font-family': 'Inter', 'font-weight': 400, 'font-size': 24, fill: '#6A6A72', 'text-anchor': 'start'}));
+  const p = clampN(progress), bx0 = -w / 2 + 60, bx1 = w / 2 - 60, bars = 34;
+  for (let i = 0; i < bars; i++) { const x = bx0 + (i + 0.5) * (bx1 - bx0) / bars, hh = 14 + 60 * hash('vm' + i) * (0.4 + 0.6 * Math.sin(i / bars * Math.PI)); out.push(rect(x - 4, y + 190 - hh / 2, 8, hh, (i + 0.5) / bars <= p ? accent : '#CDD2DA', {rx: 4, ink: false})); }
+  out.push(rect(bx0, y + 262, bx1 - bx0, 8, '#E3E6EB', {rx: 4, ink: false}), rect(bx0, y + 262, (bx1 - bx0) * p, 8, accent, {rx: 4, ink: false}), circle(bx0 + (bx1 - bx0) * p, y + 266, 14, accent),
+    text(`0:${String(Math.round(p * 42)).padStart(2, '0')}`, bx0, y + 310, {'font-family': 'Inter', 'font-weight': 600, 'font-size': 24, fill: '#6A6A72', 'text-anchor': 'start'}), text(length, bx1, y + 310, {'font-family': 'Inter', 'font-weight': 600, 'font-size': 24, fill: '#6A6A72', 'text-anchor': 'end'}));
+  const py = y + 470; out.push(circle(0, py, 62, accent), playing ? g({}, rect(-22, py - 26, 14, 52, '#FFFFFF', {rx: 4, ink: false}), rect(8, py - 26, 14, 52, '#FFFFFF', {rx: 4, ink: false})) : path(`M-16 ${py - 30} L30 ${py} L-16 ${py + 30}Z`, '#FFFFFF', NI));
+  out.push(rect(-90, -36, 180, 8, '#16161A', {rx: 4, ink: false}));
+  return out;
+}
+function phoneCall({w, h, who = 'MUM', sub = 'calling…', t = 0}) {
+  const pulse = 0.5 + 0.5 * Math.sin(t * 2 * Math.PI * 0.8);
+  const out = [path(rrect(-w / 2, -h, w, h, 54), '#0F1A14', NI), circle(0, -h * 0.66, 120 + 26 * pulse, '#2FB15A', {ink: false, 'fill-opacity': 0.16}), circle(0, -h * 0.66, 100, '#4A5560'),
+    text(who[0], 0, -h * 0.66 + 36, {...NF, 'font-size': 100, fill: '#FFFFFF'}), text(who, 0, -h * 0.4, {'font-family': 'Inter Display', 'font-weight': 800, 'font-size': 84, fill: '#FFFFFF', 'text-anchor': 'middle'}),
+    text(sub, 0, -h * 0.4 + 56, {'font-family': 'Inter', 'font-weight': 400, 'font-size': 34, fill: '#B9C4BD', 'text-anchor': 'middle'}),
+    circle(-w * 0.26, -150, 56, '#E2453C'), circle(w * 0.26, -150, 56, '#2FB15A'), rect(-w * 0.26 - 26, -156, 52, 12, '#FFFFFF', {rx: 6, ink: false}), path(`M${w * 0.26 - 20} -166 q8 -8 16 0 l6 12 q-6 8 2 18 q10 10 18 4 l12 6 q8 8 0 14 q-34 10 -56 -22 q-12 -20 2 -32Z`, '#FFFFFF', NI)];
+  return out;
+}
+const phoneUIBase = SCENE.phoneUI;
+SCENE.phoneUI = (o = {}) => {
+  const w = o.w || 560, h = o.h || 1000;
+  if (!o.mode || o.mode === 'chat') { if (!o.cracked) return phoneUIBase(o); return g({}, phoneUIBase(o), ...phoneShell(w, h, [], o).slice(4)); }
+  const inner = o.mode === 'lock' ? phoneLock({...o, w, h}) : o.mode === 'voicemail' ? phoneVoicemail({...o, w, h}) : phoneCall({...o, w, h});
+  return withStyle('flat', () => g({}, ...phoneShell(w, h, inner, o)));
+};
+
+// ---------- a phone lying on a table / the ground (15 cm; seen from slightly above). screen: dark|lit|call ----------
+function phoneFlat({screen = 'lit', label = '1 new voicemail', who = 'MUM', cracked = false, rot = 0} = {}) {
+  const out = [], body = 'M-74 -6 L66 -10 L80 4 L-60 10Z';
+  out.push(ellipse(0, 6, 86, 12, '#000000', {ink: false, 'fill-opacity': 0.25}), path(body, '#141418'), path('M-66 -4 L62 -8 L72 2 L-54 7Z', screen === 'dark' ? '#1E2128' : screen === 'call' ? '#163A24' : '#B9D8F2', NI));
+  if (screen !== 'dark') out.push(path('M-50 -3 L30 -6 L36 -1 L-44 2Z', '#FFFFFF', {ink: false, 'fill-opacity': 0.7}), propGlow(0, 0, 90, screen === 'call' ? '#7FE0A0' : '#CFE6FF', 0.3));
+  if (cracked) out.push(path('M10 -6 L-20 2 M10 -6 L40 3 M10 -6 L-6 7 M10 -6 L30 -9', 'none', {stroke: '#FFFFFF', 'stroke-width': 1.2, 'stroke-opacity': 0.8}));
+  void label; void who; void rot;
+  return g({}, ...out);
+}
+
+// ---------- the old city bus from outside (12 m × 3 m): side and front ----------
+/** side view, front to the LEFT (flip for right). lit windows with passenger silhouettes; headlights on/off */
+function busSide({color, lit = 1, headlights = true, board = 'CITY CENTRE', route = '13', seed = 'bus', passengers = 0.5, door = 0} = {}) {
+  const red = T(col(color, null) || NIGHT.busRed), cream = T(NIGHT.busCream), out = [], L = 5640, Hh = 1410, x0 = -L / 2;
+  const winC = mixHex('#2A3440', '#D9F0EA', lit), sil = mixHex('#1A2026', '#2C3A40', 1 - lit);
+  out.push(ellipse(0, 10, L * 0.52, 60, '#000000', {ink: false, 'fill-opacity': 0.35}));
+  out.push(path(`M${x0 + 60} -120 L${x0 + 20} ${-Hh + 140} Q${x0 + 30} ${-Hh} ${x0 + 200} ${-Hh} L${-x0 - 80} ${-Hh} Q${-x0} ${-Hh} ${-x0} ${-Hh + 90} L${-x0} -120Z`, red.base));
+  out.push(rect(x0 + 40, -Hh + 230, L - 40, 520, cream.base, NI), rect(x0 + 40, -560, L - 40, 60, cream.base, NI), rect(x0 + 40, -500, L - 40, 30, red.shade, NI));
+  // windows
+  const wx0 = x0 + 700, n = 10, ww = 420, gap = (L - 760 - n * ww) / (n - 1);
+  for (let i = 0; i < n; i++) { const x = wx0 + i * (ww + gap), y0 = -Hh + 280, y1 = -Hh + 680;
+    out.push(rect(x - 12, y0 - 12, ww + 24, y1 - y0 + 24, darken(cream.base, 0.25), NI), rect(x, y0, ww, y1 - y0, winC, NI), rect(x, y0 + (y1 - y0) * 0.42, ww, 10, darken(cream.base, 0.3), NI));
+    if (lit > 0) out.push(rect(x, y0, ww, 24, '#FFFFFF', {ink: false, 'fill-opacity': 0.25 * lit}));
+    for (let k = 0; k < 2; k++) if (hash(seed + i + ':' + k) < passengers) { const px = x + 90 + k * 220 + (hash(seed + 'x' + i + k) - 0.5) * 60, py = y1 + 10;
+      out.push(ellipse(px, py - 220, 50, 60, sil, NI), path(`M${px - 95} ${py} Q${px - 90} ${py - 150} ${px} ${py - 155} Q${px + 90} ${py - 150} ${px + 95} ${py}Z`, sil, NI)); } }
+  // front: windshield, board, door, headlight
+  out.push(path(`M${x0 + 60} ${-Hh + 300} L${x0 + 40} ${-Hh + 160} Q${x0 + 50} ${-Hh + 60} ${x0 + 220} ${-Hh + 60} L${x0 + 560} ${-Hh + 60} L${x0 + 560} ${-Hh + 700} L${x0 + 60} ${-Hh + 700}Z`, mixHex('#1E2A36', '#C5E6E0', lit * 0.6), NI));
+  out.push(g({transform: tr(x0 + 330, -Hh + 30, 0, 0.62)}, destinationBoard({text: board, route, w: 700, h: 120})));
+  out.push(rect(x0 + 590, -Hh + 220, 300, Hh - 330, darken(red.base, 0.35), NI), rect(x0 + 600 + door * 120, -Hh + 230, 140 - door * 60, Hh - 360, mixHex('#1E2A36', '#C5E6E0', lit * 0.5), NI), rect(x0 + 745, -Hh + 230, 140 - door * 60, Hh - 360, mixHex('#1E2A36', '#C5E6E0', lit * 0.5), NI));
+  out.push(rect(x0 + 20, -300, 120, 90, '#3A3A40', {rx: 18}), circle(x0 + 70, -255, 34, headlights ? '#FFF4D6' : '#5A5A60', THIN));
+  if (headlights) out.push(propGlow(x0 + 50, -255, 420, '#FFE8B8', 0.55), path(`M${x0 + 40} -275 L${x0 - 1900} -520 L${x0 - 1900} 80 L${x0 + 40} -235Z`, '#FFE8B8', {ink: false, 'fill-opacity': 0.12}));
+  out.push(rect(-x0 - 100, -360, 70, 110, '#C7342C', {rx: 10}), rect(-x0 - 98, -350, 60, 40, '#FF5A4A', NI));
+  out.push(rect(x0 + 40, -170, L - 60, 60, '#1E1E22', NI), ...[x0 + 1250, -x0 - 1500].map(x => g({}, circle(x, -60, 190, '#141416'), circle(x, -60, 92, '#6E7076', THIN), circle(x, -60, 34, '#3A3A40', NI), path(`M${x - 250} -120 A250 250 0 0 1 ${x + 250} -120Z`, darken(red.base, 0.45), NI))));
+  for (let i = 0; i < 9; i++) { const x = x0 + 900 + hash(seed + 'rs' + i) * (L - 1400); out.push(rect(x, -470, 10 + hash(seed + 'rw' + i) * 14, 120 + hash(seed + 'rh' + i) * 180, darken(red.base, 0.3), {ink: false, 'fill-opacity': 0.5})); }
+  out.push(rect(x0 + 40, -Hh + 10, L - 80, 26, lighten(red.base, 0.1), NI));
+  out.push(devanagari('राज्य परिवहन', x0 + 2400, -512, {size: 52, fill: red.shade}));   // "state transport" on the cream belt
+  return g({}, ...out);
+}
+/** front view (2.5 m wide): windshield, destination board, round headlights with glare, grille, bumper, mirrors */
+function busFront({color, lit = 1, headlights = true, board = 'CITY CENTRE', route = '13', glare = 1} = {}) {
+  const red = T(col(color, null) || NIGHT.busRed), out = [], w = 1180, Hh = 1410;
+  out.push(ellipse(0, 10, w * 0.6, 50, '#000000', {ink: false, 'fill-opacity': 0.35}), path(`M${-w / 2} -60 L${-w / 2} ${-Hh + 120} Q${-w / 2} ${-Hh} ${-w / 2 + 120} ${-Hh} L${w / 2 - 120} ${-Hh} Q${w / 2} ${-Hh} ${w / 2} ${-Hh + 120} L${w / 2} -60Z`, red.base), rect(w / 2 - 140, -Hh + 60, 140, Hh - 140, red.shade, NI));
+  out.push(g({transform: tr(0, -Hh + 120)}, destinationBoard({text: board, route, w: 860, h: 140})));
+  out.push(path(`M${-w / 2 + 50} ${-Hh + 230} L${w / 2 - 50} ${-Hh + 230} L${w / 2 - 70} -640 L${-w / 2 + 70} -640Z`, mixHex('#1A2430', '#BFE0DA', lit * 0.5), NI), rect(-8, -Hh + 230, 16, Hh - 870, darken(red.base, 0.4), NI),
+    stroke([[-200, -660], [-420, -900]], '#111', 8), stroke([[220, -660], [0, -900]], '#111', 8));
+  out.push(rect(-w / 2, -636, w, 64, NIGHT.busCream, NI), rect(-w / 2, -572, w, 14, red.shade, NI), devanagari('राज्य परिवहन', 0, -588, {size: 44, fill: red.shade}));
+  out.push(rect(-w / 2 + 40, -540, w - 80, 200, darken(red.base, 0.15), NI), ...Array.from({length: 5}, (_, i) => rect(-300, -522 + i * 34, 600, 14, '#2A2A2E', {rx: 6, ink: false})));
+  for (const sd of [-1, 1]) { const x = sd * (w / 2 - 150);
+    out.push(circle(x, -440, 82, '#2A2A30'), circle(x, -440, 62, headlights ? '#FFF6DE' : '#4E4E54', THIN));
+    if (headlights) out.push(propGlow(x, -440, 520 * glare, '#FFE8B8', 0.6 * glare), propGlow(x, -440, 160, '#FFFFFF', 0.9));
+    out.push(rod([[sd * (w / 2), -Hh + 380], [sd * (w / 2 + 160), -Hh + 300]], '#1A1A1E', 10), path(rrect(sd * (w / 2 + 160) - 40, -Hh + 300, 80, 200, 16), '#1A1A1E')); }
+  out.push(path(rrect(-w / 2 - 30, -300, w + 60, 140, 24), '#3A3A40'), path(rrect(-170, -270, 340, 80, 8), '#F2F0E6'), text('MH 01 AB 1999', 0, -215, {...MONO, 'font-size': 42, fill: '#16161A'}),
+    rect(-w / 2 + 20, -160, 180, 160, '#111114', {rx: 30}), rect(w / 2 - 200, -160, 180, 160, '#111114', {rx: 30}));
+  return g({}, ...out);
+}
+
+Object.assign(SCENE, {teaStall, plasticChair, cakeBox, destinationBoard, birthdayBanner, garland, schoolBag, soldierCap, wristband, phoneFlat, busSide, busFront});
+Object.assign(HELD, {
+  garland: (s = 1) => g({transform: `scale(${s * 0.6})`}, garland({w: 90, drop: 260})),
+  schoolBag: (s = 1) => g({transform: `translate(0 ${250 * s}) scale(${s * 0.85})`}, schoolBag({})),
+  soldierCap: (s = 1) => g({transform: `translate(30 10) rotate(-20) scale(${s * 0.85})`}, soldierCap({})),
+  wristband: (s = 1) => g({transform: `scale(${s * 0.5})`}, wristband({})),
+  cakeBox: (s = 1) => g({transform: `translate(0 ${30 * s}) scale(${s * 1.1})`}, cakeBox({open: false})),
+});

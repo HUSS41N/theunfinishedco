@@ -1,3 +1,4 @@
+import {useFrame} from './layout.mjs';
 // v3 scene engine: JSON scene → one layered SVG document per frame.
 // Frame stack (contract §5): set.back → actors marked behind → set.mid → props(back) → actors (by z, then y) → props(front)
 // → set.front → bubbles → screen text → overlays and shot transitions.
@@ -7,12 +8,14 @@ import {defineCharacter, buildCharacter, POSES, DIM} from './character.mjs';
 import {sceneProp} from './props.mjs';
 import {buildSet} from './backgrounds.mjs';
 import {TEXT} from './style.mjs';
-import {EASE, clamp, lerp, mix, hash, noise, envelope, blendWeight, sampleTrack, solveIK, fromAngle, planWalk, walkState} from './motion.mjs';
+import {EASE, clamp, lerp, mix, hash, noise, envelope, blendWeight, sampleTrack, solveIK, fromAngle, planWalk, walkState, ACTIONS, stillBlink} from './motion.mjs';
 
 export {EASE};
 // screen text, speech bubbles and the text linter live in text.mjs (owner: text). Bubbles are placed in screen space
 // through toScreen (world → screen, the same maths as the 'world' layer, shake included).
 import * as TXM from './text.mjs';
+// light, grade and atmosphere (owner: world): shot fields grade / lights / atmos / speed, and the sets' live layers
+import * as FX from './fx.mjs';
 const TX = TXM;
 export const ready = () => Promise.resolve();
 export const textModule = () => TX;
@@ -156,7 +159,7 @@ function posedAt(ctx, tau) {
         const crouch = d.crouch ?? 18;   // a little squash just before take-off and on landing (anticipation / follow-through)
         pose.body.dy += crouch * (Math.exp(-(((lt + 0.08) / 0.07) ** 2)) + Math.exp(-(((lt - dur - 0.06) / 0.08) ** 2))); break; }
       case 'breathe': if (!M.idleOn(a)) pose.body.scaleY *= 1 + Math.sin(tau * 2 * Math.PI * 0.3 + hash(a.id) * 6) * 0.008; break;
-      default: break;   // face-only actions (blink, talk, chew, look) and turn are handled at the frame time
+      default: if (ACTIONS[d.act]) ACTIONS[d.act](d, {tau, from, to, blend, pose, fx, id: a.id, rig, facing}); break;   // story actions (motion.mjs); face-only actions (blink, talk, chew, look) and turn are handled at the frame time
     }
   }
   return {pose, fx};
@@ -226,17 +229,22 @@ function actorAt(C, shot, a, lt) {
   if (say && say.talk !== false && a.talk !== false && track(k, lt, 'tint', a.tint || null) !== 'frozen' && !(a.do || []).some(d => d.act === 'talk' && within(d))) face.mouth = Math.floor((lt - (say.from ?? 0)) * 7) % 3 === 0 ? 'smile' : 'open';
   if (turn.bump > 0) face.turn = lerp(face.turn || 0, -0.85, turn.bump);   // the face leads the turn toward the new side
   // idle life: breathing, a slow weight shift, a drifting head, blinks. All smooth noise under 0.5 Hz.
-  if (M.idleOn(a)) {
-    const still = 1 - fx.walkW, id = a.id;
-    pose.body.scaleY = (pose.body.scaleY ?? 1) * (1 + 0.007 * Math.sin(2 * Math.PI * 0.27 * lt + hash(id) * 6.28));
-    pose.body.lean = (pose.body.lean || 0) + 0.7 * noise(id + ':lean', lt, 0.22) * still;
-    pose.head.tilt = (pose.head.tilt || 0) + 1.1 * noise(id + ':head', lt, 0.3);
-    for (const arm of ['armL', 'armR']) if (pose[arm] && !pose[arm].reach) pose[arm].a += 1.2 * noise(id + arm, lt, 0.35) * still;
-    if (!explicitBlink) face.blink = Math.max(face.blink || 0, blinkAt(id, lt));
+  // (an actor with `still: true` gets none of it: only a rare, slow blink. A cast `life` {rate, amp, blink} slows it, e.g. age "old")
+  if (a.still) { if (!explicitBlink) face.blink = Math.max(face.blink || 0, stillBlink(a.id, lt)); }
+  else if (M.idleOn(a)) {
+    const still = 1 - fx.walkW, id = a.id, lf = Ch.life || {}, rs = lf.rate ?? 1, am = lf.amp ?? 1, ls = lt * rs;
+    pose.body.scaleY = (pose.body.scaleY ?? 1) * (1 + 0.007 * am * Math.sin(2 * Math.PI * 0.27 * ls + hash(id) * 6.28));
+    pose.body.lean = (pose.body.lean || 0) + 0.7 * am * noise(id + ':lean', ls, 0.22) * still;
+    pose.head.tilt = (pose.head.tilt || 0) + 1.1 * am * noise(id + ':head', ls, 0.3);
+    for (const arm of ['armL', 'armR']) if (pose[arm] && !pose[arm].reach) pose[arm].a += 1.2 * am * noise(id + arm, ls, 0.35) * still;
+    if (!explicitBlink) face.blink = Math.max(face.blink || 0, blinkAt(id, lt, lf.blink));
   }
   for (const L of LIMBS) if (pose[L] && pose[L].reach === undefined) delete pose[L].reach;
   const x = track(k, lt, 'x', W / 2) + fx.dx, y = track(k, lt, 'y', 1500) + fx.dy, facing = turn.sign;
-  const ch = buildCharacter(Ch, {...pose, face}, {scale, facing, hold: track(k, lt, 'hold', {}), t: lt, shadow: a.shadow !== false});
+  // character looks (character.mjs): ghost / fade / view / reflection are keyable actor fields
+  const look = {ghost: track(k, lt, 'ghost', a.ghost ?? 0), fade: track(k, lt, 'fade', a.fade ?? 0), view: track(k, lt, 'view', a.view ?? 'front'),
+    reflection: a.reflection ?? null, ghostTo: a.ghostTo, fadeTo: a.fadeTo, still: !!a.still};
+  const ch = buildCharacter(Ch, {...pose, face}, {scale, facing, hold: track(k, lt, 'hold', {}), t: lt, shadow: a.shadow !== false, look});
   const rot = track(k, lt, 'rot', 0), sil = track(k, lt, 'silhouette', a.silhouette || null), tint = track(k, lt, 'tint', a.tint || null);
   let body = ch.svg, defs = '';
   if (sil) { const fid = `sil-${a.id}`; defs = el('filter', {id: fid}, el('feFlood', {'flood-color': sil}), el('feComposite', {in2: 'SourceAlpha', operator: 'in'})); body = g({filter: `url(#${fid})`}, body); }
@@ -246,7 +254,13 @@ function actorAt(C, shot, a, lt) {
   const cr = Math.cos(rot * Math.PI / 180), sr = Math.sin(rot * Math.PI / 180);
   const anchors = Object.fromEntries(Object.entries(local).map(([n, p]) => { const px = p[0] * turn.sx, py = p[1] * turn.sy; return [n, [x + px * cr - py * sr, y + px * sr + py * cr]]; }));
   return {z: a.z || 0, y, behind: !!a.behind, speaker: {id: a.id, anchors, facing, ghost: !!sil || track(k, lt, 'opacity', 1) < 0.6},
-    svg: layer(`actor:${a.id}`, {transform: tr(x, y, rot, turn.sx, turn.sy), opacity: track(k, lt, 'opacity', 1)}, defs ? el('defs', {}, defs) : '', body)};
+    svg: cropped(a.crop, layer(`actor:${a.id}`, {transform: tr(x, y, rot, turn.sx, turn.sy), opacity: +(track(k, lt, 'opacity', 1) * (ch.opacity ?? 1)).toFixed(3)}, defs ? el('defs', {}, defs) : '', body), a.id)};
+}
+/** `crop: [x, y, w, h, r]` (world px): show the actor only inside that rounded rect (a mirror, a window pane) */
+function cropped(c, svg, id) {
+  if (!c) return svg;
+  const [x, y, w, h, r = 0] = c, cid = `crop-${id}`;
+  return el('clipPath', {id: cid, clipPathUnits: 'userSpaceOnUse'}, rect(x, y, w, h, '#000', {rx: r})) + g({'clip-path': `url(#${cid})`}, svg);
 }
 /** builders that return no anchors yet: estimate them from the height (actor layer space, scale and facing applied) */
 function estimateAnchors(ch, scale, facing) {
@@ -265,12 +279,13 @@ const transitionOf = shot => { const t = typeof shot.in === 'string' ? {type: sh
 
 export function compile(scene, opts = {}) {
   const W = scene.meta?.width || 1080, H = scene.meta?.height || 1920, fps = scene.meta?.fps || 24;
+  useFrame(W, H);  // text safe area + type minimums for this frame shape (layout.mjs)
   const style = opts.style || scene.meta?.style || 'flat';
   const cast = Object.fromEntries(Object.entries(scene.cast || {}).map(([id, def]) => [id, defineCharacter({id, ...def, style: opts.style || def.style || style})]));
   resetIds();
   const shots = scene.shots.map((s, i) => { const set = buildSet({preset: 'spotlight', ...(s.set || {}), style: s.set?.style || style}, W, H);
     const pre = v => prefixIds([].concat(v || []).flat(Infinity).join(''), `s${i}`);
-    return {...s, _i: i, _set: {back: pre(set.back), mid: pre(set.mid), front: pre(set.front)}, _in: transitionOf(s)}; });
+    return {...s, _i: i, _set: {back: pre(set.back), mid: pre(set.mid), front: pre(set.front), live: set.live || {}, info: set.info || {}}, _in: transitionOf(s)}; });
   const duration = scene.meta?.duration || Math.max(...shots.map(s => s.end));
   const mm = scene.meta?.motion || {};
   const motion = {overlap: mm.overlap ?? 1, blend: mm.blend ?? 0.2, idle: mm.idle ?? true, idleOn: a => a.idle !== false && (mm.idle ?? true) !== false};
@@ -318,14 +333,19 @@ function shotLayers(C, shot, lt, only) {
   const camScreen = TX.camToScreen(cam, W, H), toScreen = p => { const q = camScreen(p); return [q[0] + cam.sx, q[1] + cam.sy]; };
   toScreen.zoom = cam.zoom;
   const bubbles = only ? '' : TX.bubbleLayer(shot, lt, C, speakers, toScreen);
-  const world = layer('world', {transform: `translate(${W / 2 + cam.sx} ${H / 2 + cam.sy}) rotate(${cam.rot}) scale(${cam.zoom}) translate(${-cam.x} ${-cam.y})`},
-    want('set') ? shot._set.back : '', want('actors') ? actors.filter(a => a.behind).map(a => a.svg) : '', want('set') ? shot._set.mid || '' : '',
-    want('props') ? props('back') : '', want('actors') ? actors.filter(a => !a.behind).map(a => a.svg) : '', want('props') ? props('front') : '', want('set') ? shot._set.front : '');
+  // fx (world owner): the set's live layers (moving exteriors, flickering tubes) and the shot's lights/atmos. All '' for old scenes.
+  const fctx = FX.fxFrame(C, shot, lt, cam), fx = want('set') ? FX.fxLayers(fctx) : {}, live = k => (want('set') && shot._set.live?.[k] ? shot._set.live[k](fctx) || '' : '');
+  const camT = `translate(${W / 2 + cam.sx} ${H / 2 + cam.sy}) rotate(${cam.rot}) scale(${cam.zoom}) translate(${-cam.x} ${-cam.y})`;
+  const world = layer('world', {transform: camT},
+    live('under'), fx.under || '', want('set') ? shot._set.back : '', live('back'), fx.back || '', want('actors') ? actors.filter(a => a.behind).map(a => a.svg) : '', want('set') ? shot._set.mid || '' : '', live('mid'),
+    want('props') ? props('back') : '', want('actors') ? actors.filter(a => !a.behind).map(a => a.svg) : '', want('props') ? props('front') : '', fx.over || '', want('set') ? shot._set.front : '', live('front')) + (fx.screen ? layer('fx:screen', {}, fx.screen) : '');
+  // light added after the grade: world-space glows / sweeps / halos, then screen-space headlights and vignette
+  const post = (fx.post ? layer('fx:light', {transform: camT}, fx.post) : '') + (fx.postScreen ? layer('fx:light-screen', {}, fx.postScreen) : '');
   const texts = only ? '' : TX.screenText ? TX.screenText(shot, lt, C, speakers, toScreen) : inlineText(shot, lt, W);
   const overlays = only ? '' : (shot.overlay || []).filter(o => lt >= o.from && (lt < o.to || (o.hold && o.type !== 'flash' && o.type !== 'fadeIn'))).map(o => { const u = Math.min(1, (lt - o.from) / (o.to - o.from));   // hold: keep the end state (e.g. a fadeOut stays black) until the shot ends
     if (o.type === 'peephole') { const r = o.r || 420, cx = o.cx || W / 2, cy = o.cy || H * 0.45; return path(`M0 0 H${W} V${H} H0Z M${cx - r} ${cy} a${r} ${r} 0 1 0 ${r * 2} 0 a${r} ${r} 0 1 0 ${-r * 2} 0Z`, o.color || '#0E0E10', {'fill-rule': 'evenodd'}); }
     const op = o.type === 'flash' ? 1 - u : o.type === 'fadeIn' ? 1 - u : o.type === 'black' ? 1 : u; return rect(0, 0, W, H, o.color || (o.type === 'flash' ? '#FFFFFF' : '#000000'), {opacity: clamp(op)}); });
-  return {world, screen: layer('screen', {}, bubbles, texts, overlays), speakers};
+  return {world, post, screen: layer('screen', {}, bubbles, texts, overlays), speakers};
 }
 
 const shotIndexAt = (C, t) => { const i = C.shots.findIndex(s => t >= s.start && t < s.end); return i < 0 ? C.shots.length - 1 : i; };
@@ -406,19 +426,25 @@ function composeTransition(C, tin, u, prev, cur) {
  * the SVG document for time t. `part: 'prev'|'cur'` renders only one side of an active transition, full frame (render.mjs
  * composites those in pixels); without it a transition is composed in SVG (correct in browsers).
  */
-export function frameSVG(C, t, {only, part} = {}) {
+export function frameSVG(C, t, {only, part, split} = {}) {
   resetIds();
   const W = C.W, H = C.H, i = shotIndexAt(C, t), shot = C.shots[i], lt = t - shot.start;
   const svgDoc = (...kids) => el('svg', {xmlns: 'http://www.w3.org/2000/svg', width: W, height: H, viewBox: `0 0 ${W} ${H}`}, rect(0, 0, W, H, '#000'), ...kids);
+  // split (render.mjs, graded shots): 'graded' = the world only; 'post' = light + screen on a transparent canvas ('' if empty)
+  const one = L => { if (split === 'graded') return svgDoc(L.world); if (split === 'post') return L.post || !/^<g data-layer="screen"\/>$/.test(L.screen) ? el('svg', {xmlns: 'http://www.w3.org/2000/svg', width: W, height: H, viewBox: `0 0 ${W} ${H}`}, L.post, L.screen) : ''; return svgDoc(L.world, L.post, L.screen); };
   const trn = transitionAt(C, t);
-  if (part === 'prev' && trn) { const ps = C.shots[i - 1], pl = shotLayers(C, ps, t - ps.start, only); return svgDoc(pl.world, pl.screen); }
+  if (part === 'prev' && trn) { const ps = C.shots[i - 1], pl = shotLayers(C, ps, t - ps.start, only); return one(pl); }
   const cur = shotLayers(C, shot, lt, only);
-  if (!trn || part) return svgDoc(cur.world, cur.screen);
+  if (!trn || part) return one(cur);
   const ps = C.shots[i - 1], pl = shotLayers(C, ps, t - ps.start, only);   // the previous shot keeps running past its end
-  const prev = prefixIds(layer('shot:prev', {}, rect(0, 0, W, H, '#000'), pl.world, pl.screen), 'p');
-  const curG = layer('shot:cur', {}, rect(0, 0, W, H, '#000'), cur.world, cur.screen);
+  const prev = prefixIds(layer('shot:prev', {}, rect(0, 0, W, H, '#000'), pl.world, pl.post, pl.screen), 'p');
+  const curG = layer('shot:cur', {}, rect(0, 0, W, H, '#000'), cur.world, cur.post, cur.screen);
   return svgDoc(layer('transition:' + trn.tin.type, {}, composeTransition(C, trn.tin, trn.u, prev, curG)));
 }
+/** the colour grade (fx.mjs params) for the shot shown at t (part 'prev' = the outgoing shot of a transition), or null */
+export function gradeFor(C, t, part) { const shot = gradeShot(C, t, part); return FX.gradeAt(shot, t - shot.start); }
+/** the shot whose pixels are being rendered at t (part 'prev' = the outgoing shot of a transition) */
+export function gradeShot(C, t, part) { const i = shotIndexAt(C, t), trn = transitionAt(C, t); return C.shots[part === 'prev' && trn ? i - 1 : i]; }
 
 /** sound events in the What If kit format */
 export function soundEvents(C) {

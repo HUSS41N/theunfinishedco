@@ -16,12 +16,14 @@ import path from 'node:path';
 import {spawn, execFileSync} from 'node:child_process';
 import zlib from 'node:zlib';
 import {createRequire} from 'node:module';
-import {compile, frameSVG, soundEvents, ready, textModule, motionBlurAt, shotRange, TRANSITIONS, transitionState} from './scene.mjs';
+import {compile, frameSVG, soundEvents, ready, textModule, motionBlurAt, shotRange, TRANSITIONS, transitionState, gradeFor, gradeShot} from './scene.mjs';
+import {applyGrade, compositeOver, lintFx, vignetteAt, GRADES} from './fx.mjs';
 import {defineCharacter, buildCharacter, POSES} from './character.mjs';
 import {guardSVG} from './svg.mjs';
 import {SCENE, HELD} from './props.mjs';
 import {SETS} from './backgrounds.mjs';
 import {SKIN, HAIR, CLOTH} from './style.mjs';
+import {ACTIONS} from './motion.mjs';   // story actions (cry, jolt, …) for --check and --list
 import {el, layer, rect, text, tr} from './svg.mjs';
 
 const require = createRequire(import.meta.url);
@@ -82,8 +84,19 @@ function scaled(src, w, h, s) {
   }
   return out;
 }
+/** one shot's pixels at t (part: 'prev'|'cur' inside a transition). A graded shot (fx.mjs) rasterizes the world, grades
+ *  the pixels, then composites the post layer (added light, captions, overlays) on top, ungraded. */
+function shotRaster(C, t, width, part) {
+  C.pixelGrade = true;   // graded shots take their vignette in the pixel pass (fx.mjs), not as an SVG layer
+  const P = gradeFor(C, t, part);
+  if (!P) { const img = rasterize(frameSVG(C, t, {part}), width); return {pixels: img.pixels, width: img.width, height: img.height}; }
+  const img = rasterize(frameSVG(C, t, {part, split: 'graded'}), width), px = img.pixels;
+  applyGrade(px, img.width, img.height, P, {vignette: vignetteAt(gradeShot(C, t, part))});
+  const post = frameSVG(C, t, {part, split: 'post'}); if (post) compositeOver(px, rasterize(post, width).pixels);
+  return {pixels: px, width: img.width, height: img.height};
+}
 function transitionPixels(C, t, width, st) {
-  const P = rasterize(frameSVG(C, t, {part: 'prev'}), width), Q = rasterize(frameSVG(C, t, {part: 'cur'}), width);
+  const P = shotRaster(C, t, width, 'prev'), Q = shotRaster(C, t, width, 'cur');
   const w = P.width, h = P.height, k = w / C.W, prev = P.pixels, cur = Q.pixels, out = Buffer.alloc(prev.length);
   const col = hexRGB(st.color);
   if (st.type === 'fade') { const src = st.show === 'prev' ? prev : cur, a = st.fade; for (let i = 0; i < out.length; i += 4) { for (let c = 0; c < 3; c++) out[i + c] = src[i + c] * (1 - a) + col[c] * a; out[i + 3] = 255; } }
@@ -109,7 +122,7 @@ function transitionPixels(C, t, width, st) {
 function stillFrame(C, t, width) {
   const st = transitionState(C, t);
   if (st && st.type !== 'cut') return transitionPixels(C, t, width, st);
-  const img = rasterize(frameSVG(C, t), width); return {pixels: img.pixels, width: img.width, height: img.height};
+  return shotRaster(C, t, width);
 }
 /** one video frame as RGBA: motion blur averages N subframes across a 0.5-frame shutter, clamped inside the shot */
 export function renderFrame(C, t, width = C.W) {
@@ -128,10 +141,10 @@ const framePng = (C, t, width = C.W) => { const f = renderFrame(C, t, width); re
 
 async function main() {
   if (has('--list')) return console.log(JSON.stringify({poses: Object.keys(POSES), heldProps: Object.keys(HELD), sceneProps: Object.keys(SCENE), sets: Object.keys(SETS),
-    actions: ['blink', 'breathe', 'talk', 'chew', 'bob', 'laugh', 'tremble', 'wave', 'walk', 'look', 'jump', 'turn', 'reach'], transitions: TRANSITIONS, eases: ['smooth', 'linear', 'inQuad', 'outQuad', 'inOutQuad', 'inCubic', 'outCubic', 'inOutCubic', 'inSine', 'outSine', 'inOutSine', 'outBack', 'anticipate', 'hold', 'in', 'out', 'inOut', 'back', 'step'], skin: Object.keys(SKIN), hair: Object.keys(HAIR), cloth: Object.keys(CLOTH),
+    actions: ['blink', 'breathe', 'talk', 'chew', 'bob', 'laugh', 'tremble', 'wave', 'walk', 'look', 'jump', 'turn', 'reach', ...Object.keys(ACTIONS)], transitions: TRANSITIONS, eases: ['smooth', 'linear', 'inQuad', 'outQuad', 'inOutQuad', 'inCubic', 'outCubic', 'inOutCubic', 'inSine', 'outSine', 'inOutSine', 'outBack', 'anticipate', 'hold', 'in', 'out', 'inOut', 'back', 'step'], skin: Object.keys(SKIN), hair: Object.keys(HAIR), cloth: Object.keys(CLOTH),
     hairStyles: ['short', 'buzz', 'quiff', 'bob', 'long', 'bun', 'curly', 'spiky', 'bald'], tops: ['tee', 'stripes', 'tank', 'shirt', 'hoodie', 'jacket', 'dress'], bottoms: ['jeans', 'pants', 'shorts', 'skirt'],
     accessories: ['glasses', 'sunglasses', 'beard', 'mustache', 'cap', 'headphones', 'mask'], eyes: ['open', 'wide', 'closed', 'happy', 'tired', 'bored', 'angry'], mouths: ['smile', 'grin', 'open', 'scream', 'O', 'flat', 'sad', 'smirk', 'teeth', 'chew'],
-    brows: ['flat', 'up', 'raised', 'worried', 'angry', 'sad'], sfx: 'see whatif-kit/README.md (tick step pop ping whoosh hit sting boing crumble …)', music: ['tender', 'resolve', 'eerie', 'playful', 'tense'], beds: ['room', 'street', 'crowd', 'wind', 'hum', 'rain', 'silence']}, null, 1));
+    brows: ['flat', 'up', 'raised', 'worried', 'angry', 'sad'], sfx: 'see whatif-kit/README.md (tick step pop ping whoosh hit sting boing crumble …)', music: ['tender', 'resolve', 'eerie', 'playful', 'tense'], beds: ['room', 'street', 'crowd', 'wind', 'hum', 'rain', 'silence'], grades: Object.keys(GRADES), lights: ['flicker', 'sweep', 'headlights', 'glow', 'vignette'], atmos: ['fog', 'rain', 'dust']}, null, 1));
   if (has('--cast')) return castSheet(arg('--cast'), arg('--out', path.join(ROOT, 'build')), arg('--style'));
   const file = process.argv[2]; if (!file || file.startsWith('--')) { console.error('usage: node src/render.mjs scene.json [--stills t,..|--svg t|--layers t|--sheet] [--out dir]'); process.exit(1); }
   const scene = JSON.parse(fs.readFileSync(file, 'utf8')), name = path.basename(file, '.json');
@@ -139,13 +152,14 @@ async function main() {
   await ready();
   const C = compile(scene, {style: arg('--style')});
   if (has('--check')) { const problems = [], warnings = [];
-    const ACTS = new Set(['blink', 'breathe', 'talk', 'chew', 'bob', 'laugh', 'tremble', 'wave', 'walk', 'look', 'jump', 'turn', 'reach']);
+    const ACTS = new Set(['blink', 'breathe', 'talk', 'chew', 'bob', 'laugh', 'tremble', 'wave', 'walk', 'look', 'jump', 'turn', 'reach', ...Object.keys(ACTIONS)]);
     C.shots.forEach((sh, i) => { if (sh._in && !TRANSITIONS.includes(sh._in.type)) problems.push(`shot ${i}: unknown transition "${sh._in.type}" (${TRANSITIONS.join(' ')})`);
       if (sh._in && i === 0) warnings.push(`shot 0: "in" transition ignored on the first shot`);
       for (const e of sh.sfx || []) if (!SFX_KINDS.has(e.kind)) problems.push(`shot ${i}: unknown sfx kind "${e.kind}" (one-shots only; beds go in meta beds[]). Known: ${[...SFX_KINDS].join(' ')}`);
       for (const a of sh.actors || []) for (const d of a.do || []) { if (!ACTS.has(d.act)) problems.push(`shot ${i} actor ${a.id}: unknown action "${d.act}"`);
         if (d.act === 'walk' && !(d.to > (d.from ?? 0))) problems.push(`shot ${i} actor ${a.id}: walk needs from < to`);
         if (d.act === 'reach' && !Array.isArray(d.target)) problems.push(`shot ${i} actor ${a.id}: reach needs target [x, y] (character-local px)`); }
+      for (const [lvl, msg] of lintFx(sh, i)) (lvl === 'problem' ? problems : warnings).push(msg);
       for (const s2 of sh.shake || []) if ((s2.amp ?? 6) > 10 || (s2.freq ?? 3) > 4) warnings.push(`shot ${i}: shake amp ${s2.amp ?? 6} / freq ${s2.freq ?? 3} is clamped to amp ≤ 10, freq ≤ 4 Hz`); });
     const TX = textModule(); if (TX?.lintText) { try { for (const w of TX.lintText(C)) warnings.push(`${w.level} ${Number(w.t ?? 0).toFixed(2)}s ${w.msg}`); } catch (e) { warnings.push(`lintText failed: ${e.message}`); } }
     C.shots.forEach((sh, i) => { if (!(sh.end > sh.start)) problems.push(`shot ${i}: end must be after start`); if (i && Math.abs(sh.start - C.shots[i - 1].end) > 1e-6) problems.push(`shot ${i}: starts at ${sh.start}, previous ends at ${C.shots[i - 1].end} (gap/overlap)`);
@@ -179,10 +193,12 @@ async function main() {
   }
   // video
   const video = path.join(OUT, 'video.mp4');
-  const ff = spawn('ffmpeg', ['-v', 'error', '-y', '-f', 'rawvideo', '-pixel_format', 'rgba', '-video_size', `${C.W}x${C.H}`, '-framerate', String(C.fps), '-i', 'pipe:0', '-an', '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p', video], {stdio: ['pipe', 'inherit', 'inherit']});
-  const total = Math.round(C.duration * C.fps), t0 = Date.now();
+  // --clip a:b renders only that time range (seconds); --scale k renders at k× the scene size (crisp crops for re-framing)
+  const SC = Number(arg('--scale', 1)), [ca, cb] = (arg('--clip') || `0:${C.duration}`).split(':').map(Number);
+  const ff = spawn('ffmpeg', ['-v', 'error', '-y', '-f', 'rawvideo', '-pixel_format', 'rgba', '-video_size', `${Math.round(C.W * SC)}x${Math.round(C.H * SC)}`, '-framerate', String(C.fps), '-i', 'pipe:0', '-an', '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p', video], {stdio: ['pipe', 'inherit', 'inherit']});
+  const f0 = Math.round(ca * C.fps), total = Math.min(Math.round(C.duration * C.fps), Math.round(cb * C.fps)) - f0, t0 = Date.now();
   for (let f = 0; f < total; f++) {
-    const img = renderFrame(C, f / C.fps);
+    const img = renderFrame(C, (f0 + f) / C.fps, Math.round(C.W * SC));
     if (!ff.stdin.write(Buffer.from(img.pixels))) await new Promise(r => ff.stdin.once('drain', r));
     if (f % 48 === 0) process.stdout.write(`\rframe ${f}/${total}`);
   }

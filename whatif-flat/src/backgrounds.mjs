@@ -8,9 +8,12 @@
 // x −2850..3950, y −2400..4320 must be covered: we draw X0..X1 × Y0..Y1 below).
 // Interiors are one-point-perspective boxes: back wall at floorY, side walls beyond the corners, a perspective floor and
 // ceiling, skirting, cornice. The vanishing point sits at eye height (≈ 1.55 m above the floor) over x = vx (540).
-import {layer, g, path, circle, ellipse, rect, poly, rad, lin, el, stroke, line, rod, clipped, id, tr, text, rrect,
-  withStyle, withIds, isStick, inkW, mixHex, darken, lighten, desat, INK} from './svg.mjs';
-import {SCENE, P, col, soften, M, facade, cluster, propFn} from './props.mjs';
+import {layer, g, path, circle, ellipse, rect, poly, rad, lin, el, stroke, line, rod, clipped, id, tr, text, rrect, blob,
+  withStyle, withIds, isStick, inkW, mixHex, darken, lighten, desat, tones, INK} from './svg.mjs';
+import {SCENE, P, col, soften, M, facade, cluster, propFn, NIGHT, bulbFlicker} from './props.mjs';
+import {softBlob, softBlobIn, lampAt, lampDead, LAMP_SPACING, LIGHT, travel, flickerLevel, fogLayer} from './fx.mjs';
+import {carCrash} from './crash.mjs';
+import {nightSets, nightBackdrop, flickerLamp, roadside, aisleProjection} from './nightbus.mjs';
 
 const X0 = -3400, X1 = 4600, Y0 = -3400, Y1 = 5600;
 const NI = {ink: false}, THIN = {ink: 'thin'};
@@ -349,4 +352,199 @@ export const SETS = {
 };
 /** build a set preset in the spec's style. spec.style: 'stick' | 'flat' (scene.mjs copies meta.style into it) */
 export function buildSet(spec, W, H) { const f = SETS[spec.preset || 'spotlight']; if (!f) throw new Error(`unknown set "${spec.preset}"`);
-  const s = withIds('set', () => withStyle(spec.style || 'flat', () => f({W, H, ...spec}))); return {back: s.back || [], mid: s.mid || [], front: s.front || []}; }
+  const s = withIds('set', () => withStyle(spec.style || 'flat', () => f({W, H, ...spec})));
+  // live layers (fx.mjs ctx → svg, drawn per frame: moving exteriors, flickering tubes) run in the set's style
+  const live = Object.fromEntries(Object.entries(s.live || {}).filter(([, fn]) => typeof fn === 'function').map(([k, fn]) => [k, ctx => withStyle(spec.style || 'flat', () => fn(ctx))]));
+  return {back: s.back || [], mid: s.mid || [], front: s.front || [], live, info: s.info || {}}; }
+
+// =====================================================================================================================
+// THE LAST BUS (night world). Sets return {back, mid, front, live, info}:
+//   live.under/back/mid/front: ctx => svg, drawn every frame (fx.mjs fxFrame ctx: t, T, d (m travelled), v, lv (light
+//   levels), cam, view). info: {kind, floorY, horizon, tubes:[{x,y,w,h}], ext:{y0,y1,k,viewX,dir}, proj, slot}.
+// Centred on x = 960 (the 16:9 frame centre); floorY 1500 as everywhere. See docs/WORLD.md "The Last Bus".
+// =====================================================================================================================
+const NB = NIGHT;
+const T = c => tones(c);
+const rectD = (x, y, w, h) => `M${x} ${y}h${w}v${h}h${-w}Z`;
+const polyD = pts => 'M' + pts.map(p => `${+p[0].toFixed(1)} ${+p[1].toFixed(1)}`).join(' L') + 'Z';
+const evenodd = (d, f, a = {}) => path(d, f, {'fill-rule': 'evenodd', ...NI, ...a});
+const vgrad = (x, y, w, h, stops, a = {}) => { const gid = id('vg'); return el('defs', {}, lin(gid, 0, y, 0, y + h, stops)) + rect(x, y, w, h, `url(#${gid})`, {...NI, ...a}); };
+const fo = k => ({ink: false, 'fill-opacity': +k.toFixed(3)});
+const wrapIdx = (lo, hi, sp) => [Math.floor(lo / sp) - 1, Math.ceil(hi / sp) + 1];
+
+// THE LAST BUS bus + road sets live in nightbus.mjs (oldBus, busExterior, tunnel); its night backdrop and lamp are shared here.
+Object.assign(SETS, nightSets(SETS));
+export {roadside, aisleProjection};
+// ---------- the roadside chai stall at night (the same stall the bus passes twice) ----------
+function teaStallSet(o) {
+  const {floorY = 1500, cx = 960, seed = 'ts', lit = 1} = o, hz = floorY - 700;
+  const back = [...nightBackdrop({hz, seed}), rect(X0, floorY - 60, X1 - X0, 120, '#1B1A18', NI), rect(X0, floorY + 260, X1 - X0, Y1, NB.road, NI), rect(X0, floorY + 240, X1 - X0, 20, '#3A3A38', NI),
+    ...Array.from({length: 30}, (_, i) => ellipse(X0 + hash(seed + 'st' + i) * (X1 - X0), floorY + 40 + hash(seed + 'sy' + i) * 160, 20 + hash(seed + 'sr' + i) * 40, 8, '#26241F', NI))];
+  const lamp = flickerLamp(cx - 2200, floorY + 20, {seed: seed + 'lamp', dead: true});
+  back.push(lamp.pole, prop('bench', cx + 1500, floorY + 10, {color: '#5A4632'}, 0.9), g({transform: tr(cx + 1300, floorY + 20)}, SCENE.plasticChair({color: '#B8382F'})));
+  const info = {kind: 'exterior', view: 'teaStall', floorY, horizon: hz};
+  return {back, mid: [], front: [], info, live: {back: ctx => g({transform: tr(cx, floorY)}, SCENE.teaStall({t: ctx.T, lit, seed: o.stallSeed || 'stall'})) + softBlob(cx - 152, floorY - 796, 1500, 1100, NB.bulb, 0.22 * bulbFlicker(o.stallSeed || 'stall', ctx.T))}};
+}
+
+// ---------- a narrow residential lane: one house under a flickering streetlight. state 'alive' | 'abandoned' share every
+// coordinate, so a crossfade reads as the same house. The house front is in `mid` with its ground-floor window and the
+// upstairs window as holes: actors marked `behind: true` stand inside the house (the boy running past the window). ----------
+const HOUSE = {w: 2820, gf: 1410, ff: 1320, plinth: 160};   // 6 m wide, 3 m storeys, a 0.35 m plinth
+function laneHouse(o, state, extra = {}) {
+  const {floorY = 1500, cx = 960, seed = 'ln', paint = '#B89E74'} = o, alive = state !== 'abandoned';
+  const {w, gf, ff, plinth} = HOUSE, x0 = cx - w / 2, x1 = cx + w / 2, base = floorY, top = base - plinth - gf - ff, roof = top - 140;
+  const wall = alive ? paint : mixHex(desat(paint, 0.65), '#8A8478', 0.45), wallC = T(wall);
+  const door = [cx - 235, base - plinth - 1000, 470, 1000], win = [cx + 420, base - plinth - 1060, 640, 700], upWin = [cx - 330, base - plinth - gf - 1080, 660, 700];
+  const holes = [win, upWin];
+  const facade = [evenodd(rectD(x0, roof, w, base - roof) + holes.map(r => rectD(...r)).join(''), wallC.base),
+    rect(x1 - 260, roof, 260, base - roof, wallC.shade, NI), rect(x0, base - plinth, w, plinth, darken(wall, 0.25), NI), rect(x0, base - plinth - gf, w, 60, lighten(wall, 0.1), NI),
+    rect(x0 - 40, roof - 20, w + 80, 70, lighten(wall, 0.08), NI), rect(x0, top - 160, w, 160, darken(wall, 0.06), NI)];
+  // the door (closed), steps, the balcony upstairs, window frames and grilles
+  facade.push(rect(door[0] - 40, door[1] - 40, door[2] + 80, door[3] + 40, darken(wall, 0.3), NI), rect(...door, alive ? '#6E3B2A' : '#4A3A32', NI), rect(door[0] + 30, door[1] + 40, door[2] / 2 - 45, door[3] - 80, alive ? '#7E4732' : '#55453C', NI), rect(cx + 15, door[1] + 40, door[2] / 2 - 45, door[3] - 80, alive ? '#7E4732' : '#55453C', NI),
+    circle(cx + 60, door[1] + 520, 14, '#C9A23A', NI), rect(cx - 330, base - plinth, 660, 80, darken(wall, 0.18), NI), rect(cx - 380, base - 80, 760, 80, darken(wall, 0.3), NI));
+  for (const r of holes) { const [x, y, ww, hh] = r; facade.push(rect(x - 30, y - 30, ww + 60, 30, darken(wall, 0.3), NI), rect(x - 30, y + hh, ww + 60, 40, darken(wall, 0.3), NI), rect(x - 30, y, 30, hh, darken(wall, 0.3), NI), rect(x + ww, y, 30, hh, darken(wall, 0.3), NI),
+    rect(x + ww / 2 - 8, y, 16, hh, '#2A2622', NI), ...[1, 2, 3].map(i => rect(x, y + hh * i / 4 - 4, ww, 8, '#2A2622', NI))); }
+  facade.push(rect(upWin[0] - 220, upWin[1] + upWin[3] + 40, upWin[2] + 440, 40, darken(wall, 0.25), NI), ...Array.from({length: 12}, (_, i) => rect(upWin[0] - 200 + i * 98, upWin[1] + upWin[3] - 300, 12, 340, '#2A2622', NI)), rect(upWin[0] - 220, upWin[1] + upWin[3] - 310, upWin[2] + 440, 18, '#2A2622', NI));
+  // the black water tank on the roof, a dish
+  facade.push(path(rrect(x1 - 900, roof - 520, 420, 520, 60), alive ? '#1C1C1E' : '#262422', NI), rect(x1 - 900, roof - 380, 420, 14, '#2C2C2E', NI), ...(alive ? [ellipse(x0 + 500, roof - 160, 120, 60, '#C9CDD2', NI)] : []));
+  if (!alive) {   // peeling paint (lighter blotches + brick showing), damp stains, vines, a cracked pane, dust on the glass, weeds
+    for (let i = 0; i < 40; i++) { const s = seed + 'pe' + i, x = x0 + 80 + hash(s) * (w - 160), y = roof + 120 + hash(s + 'y') * (base - roof - 300), rw = 40 + hash(s + 'w') * 90, rh = 24 + hash(s + 'h') * 50;
+      if ([...holes, door].some(([hx, hy, hw2, hh2]) => x > hx - rw - 40 && x < hx + hw2 + rw + 40 && y > hy - rh - 40 && y < hy + hh2 + rh + 40)) continue;
+      facade.push(path(blobPath(x, y, rw, rh, s), mixHex(wall, '#E8E2D4', 0.18), NI), path(blobPath(x + 4, y + 4, rw * 0.5, rh * 0.45, s + 'b'), mixHex(wall, '#8A4E3A', 0.35), NI)); }
+    for (let i = 0; i < 9; i++) { const x = x0 + 120 + i * 300 + hash(seed + 'dm' + i) * 80; facade.push(rect(x, roof + 60, 40 + hash(seed + 'dw' + i) * 50, 300 + hash(seed + 'dh' + i) * 500, '#4A4A40', fo(0.35))); }
+    const vine = []; for (let j = 0; j < 4; j++) { const pts = []; let x = x0 + 60 + j * 70, y = base; for (let k = 0; k < 14; k++) { pts.push([x, y]); x += (hash(seed + 'v' + j + k) - 0.4) * 90; y -= 120 + hash(seed + 'vy' + j + k) * 60; } vine.push(stroke(pts, '#2E4A2A', 14), ...pts.map(([px, py], k) => ellipse(px + 24, py, 34, 20, k % 2 ? '#3E5E36' : '#2E4A2A', NI))); }
+    facade.push(...vine, ...Array.from({length: 40}, (_, i) => path(`M${x0 - 300 + i * 90} ${base} l${-20 + hash('wd' + i) * 40} ${-60 - hash('wh' + i) * 120} l18 ${40 + hash('wq' + i) * 60}Z`, i % 3 ? '#2E4A2A' : '#3E5E36', NI)));
+    facade.push(path(`M${win[0] + 40} ${win[1] + 30} L${win[0] + 200} ${win[1] + 260} L${win[0] + 150} ${win[1] + 400} M${win[0] + 200} ${win[1] + 260} L${win[0] + 300} ${win[1] + 220}`, 'none', {stroke: '#C9CED2', 'stroke-width': 4, 'stroke-opacity': 0.7}),
+      rect(cx - 120, door[1] + 300, 240, 140, '#D9CDB4', NI), text('TO LET', cx, door[1] + 390, {'font-family': 'Inter Display', 'font-weight': 900, 'font-size': 64, fill: '#7A2A22', 'text-anchor': 'middle'}));
+  }
+  // glass over the holes: clean and warm-reflecting (alive) or dusty (abandoned)
+  const glass = holes.map(([x, y, ww, hh]) => alive ? rect(x, y, ww, hh, '#FFE6B0', fo(0.06)) : g({}, rect(x, y, ww, hh, '#7E7A70', fo(0.5)), rect(x, y + hh * 0.6, ww, hh * 0.4, '#5E5A50', fo(0.3))));
+  return {facade, glass, holes, door, win, upWin, x0, x1, roof, base, wall};
+}
+const blobPath = (x, y, rw, rh, s) => { const pts = []; for (let i = 0; i < 8; i++) { const a = i / 8 * Math.PI * 2, r = 0.7 + 0.5 * hash(s + 'p' + i); pts.push([x + Math.cos(a) * rw * r, y + Math.sin(a) * rh * r]); } return blob(pts); };
+/** what is behind the window holes: a warm lived-in room (alive) or a dark, empty one (abandoned) */
+function houseInside(H, alive, seed) {
+  const out = [];
+  for (const [x, y, ww, hh] of H.holes) { const ix = x - 400, iy = y - 300, iw = ww + 800, ih = hh + 500;
+    if (alive) { out.push(rect(ix, iy, iw, ih, '#C98A4A', NI), vgrad(ix, iy, iw, ih, [[0, '#FFD38A', 0.5], [1, '#7A4A2A', 0.6]]), rect(ix + iw * 0.15, iy + ih * 0.25, iw * 0.25, ih * 0.3, '#8E5A3A', NI), rect(ix + iw * 0.18, iy + ih * 0.28, iw * 0.19, ih * 0.24, '#E8B86A', NI),
+      ...[0, 1, 2].map(i => g({}, stroke([[ix + iw * (0.55 + i * 0.1), iy + ih * 0.15], [ix + iw * (0.56 + i * 0.1), iy + ih * 0.45]], '#5A3A2A', 3), ellipse(ix + iw * (0.55 + i * 0.1), iy + ih * 0.14, 40, 50, ['#E2453C', '#F7C531', '#5FC2B6'][i], NI))),
+      softBlob(x + ww / 2, y + hh * 0.3, ww * 1.2, hh, '#FFE2A0', 0.5)); }
+    else out.push(rect(ix, iy, iw, ih, '#121417', NI), rect(ix, iy + ih * 0.7, iw, ih * 0.3, '#0C0E10', NI), path(`M${ix + 40} ${iy + 30} L${ix + 200} ${iy + 30} L${ix + 40} ${iy + 180}Z`, 'none', {stroke: '#4A4C50', 'stroke-width': 2, 'stroke-opacity': 0.6}));
+  }
+  return out;
+}
+function laneSet(o) {
+  const {floorY = 1500, cx = 960, state = 'alive', seed = 'ln', banner = 'HAPPY BIRTHDAY ROHAN'} = o, alive = state !== 'abandoned', hz = floorY - 1600;
+  const H = laneHouse(o, state);
+  const back = [...nightBackdrop({hz, seed, trees: false, roofs: skyline}), ...houseInside(H, alive, seed)];
+  // neighbours (attached row houses, darker), the lane surface, a low compound wall with a gate gap, the pole + wires
+  const nb = (x, w, h, c) => g({}, rect(x, floorY - h, w, h, c, NI), rect(x, floorY - h - 60, w, 60, lighten(c, 0.06), NI), ...Array.from({length: Math.floor(w / 700)}, (_, i) => rect(x + 200 + i * 700, floorY - h + 300, 360, 420, alive && hash(seed + 'nw' + x + i) < 0.35 ? '#B88A4E' : '#16181C', NI)));
+  const mid = [nb(H.x0 - 3200, 3200, 3500, alive ? '#4E5A5E' : '#3E4446'), nb(H.x1, 3400, 3300, alive ? '#5E5248' : '#46403A'),
+    rect(X0, floorY, X1 - X0, Y1, '#2A2C2E', NI), ...Array.from({length: 18}, (_, i) => path(`M${X0 + i * 480 + hash(seed + 'cr' + i) * 200} ${floorY + 200 + hash(seed + 'cy' + i) * 900} l${60 + hash('a' + i) * 80} ${20} l${40} ${-30}`, 'none', {stroke: '#1C1E20', 'stroke-width': 5})),
+    rect(X0, floorY + 1100, X1 - X0, 40, '#3A3C3E', NI), ...H.facade, ...H.glass,
+    ...[[X0, cx - 600], [cx + 600, X1]].map(([a, b]) => g({}, rect(a, floorY + 160 - 470, b - a, 470, alive ? '#C9BFA8' : '#8E887C', NI), rect(a, floorY + 160 - 500, b - a, 40, alive ? '#D9D0BC' : '#9A9488', NI), rect(a, floorY + 160 - 470, b - a, 80, '#000', fo(0.12)))),
+    ...[cx - 600, cx + 600].map(x => g({}, rect(x - 50, floorY + 160 - 620, 100, 620, alive ? '#B9AE96' : '#7E786C', NI), rect(x - 64, floorY + 160 - 650, 128, 40, alive ? '#D9D0BC' : '#9A9488', NI)))];
+  if (!alive) mid.push(path(`M${cx + 560} ${floorY - 440} L${cx + 160} ${floorY - 400} L${cx + 160} ${floorY + 140} L${cx + 560} ${floorY + 160}Z`, '#5A3A2A', NI), ...Array.from({length: 7}, (_, i) => rect(cx + 180 + i * 55, floorY - 420, 10, 560, '#3A2A22', NI)));
+  if (alive) mid.push(g({transform: tr(H.door[0] - 260, H.door[1] - 90)}, SCENE.birthdayBanner({text: banner, w: H.door[2] + 520 + 700, dy: -40, sag: 150})));
+  else mid.push(stroke([[H.door[0] - 120, H.door[1] - 60], [H.door[0] - 90, H.door[1] - 20]], '#3A3328', 4), circle(H.door[0] - 120, H.door[1] - 60, 6, '#555', NI));
+  // the pole with the flickering streetlight, by the gate; sagging wires across
+  const lamp = flickerLamp(cx - 1100, floorY + 160, {h: 2100, seed: seed + 'pole', rate: alive ? 0.9 : 1.6, depth: alive ? 0.7 : 0.9, arm: 1});
+  mid.push(lamp.pole, ...[0, 1, 2].map(i => path(`M${X0} ${floorY - 2600 + i * 60} Q${cx - 1100} ${floorY - 2300 + i * 70} ${cx - 1100} ${floorY - 2440 - 100 + i * 40} T${X1} ${floorY - 2500 + i * 50}`, 'none', {stroke: '#0E1012', 'stroke-width': 7})));
+  const info = {kind: 'exterior', view: 'lane', floorY, horizon: hz, slot: [...H.win, 0], slotUp: [...H.upWin, 0], door: H.door, insideFloor: floorY - HOUSE.plinth,
+    note: 'behind: true actors stand inside the house: ground floor y = floorY − 160 (seen through the window [slot]), upstairs y = floorY − 1570'};
+  return {back, mid, front: [], info, live: {mid: ctx => lamp.head(ctx)}};
+}
+
+// ---------- Aarav's street at dawn: his house at the end of the road, the upstairs window lit ----------
+function homeStreet(o) {
+  const {floorY = 1500, cx = 960, seed = 'hs', lit = true, paint = '#D8C2A0'} = o;
+  const De = 14, P = (X, Y, Z) => [cx + 470 * De * X / Z, floorY - 470 * 1.6 + 470 * De * (1.6 - Y) / Z], hz = floorY - 752;
+  const back = [vgrad(X0, Y0, X1 - X0, hz - Y0 + 60, [[0, '#4A4E7A'], [0.45, '#8E86B8'], [0.8, '#D8A8B0'], [1, '#F2B88A']]), softBlob(cx + 1500, hz - 80, 1800, 900, '#FFD9A0', 0.5), rect(X0, hz, X1 - X0, Y1 - hz, '#4A4650', NI)];
+  back.push(...skyline({y: hz + 10, hMin: 200, hMax: 700, wMin: 300, wMax: 700, color: '#6E6890', seed: seed + 's', roofs: true}));
+  // the house at the end, facing us (real scale at depth De), upstairs window lit (a slot for the mother)
+  const H = laneHouse({floorY, cx, seed, paint}, 'alive');
+  back.push(...houseInside(H, lit, seed));
+  const mid = [];
+  // road + footpaths in perspective, side houses (simple facades) converging on the end house
+  mid.push(poly([P(-3, 0, 1), P(3, 0, 1), P(3, 0, De), P(-3, 0, De)], '#55525A', NI), poly([P(-4.6, 0.15, 1), P(-3, 0.15, 1), P(-3, 0.15, De), P(-4.6, 0.15, De)], '#7A7480', NI), poly([P(3, 0.15, 1), P(4.6, 0.15, 1), P(4.6, 0.15, De), P(3, 0.15, De)], '#7A7480', NI));
+  for (let z = 2; z < De; z += 4) mid.push(poly([P(-0.06, 0.001, z), P(0.06, 0.001, z), P(0.06, 0.001, z + 2), P(-0.06, 0.001, z + 2)], '#D9D2C2', NI));
+  const cols = ['#C9A98A', '#B8B4C8', '#D2B49A', '#A9B4B0', '#C8A0A0'];
+  for (const sd of [-1, 1]) for (let i = 0; i < 4; i++) { const za = De - (i + 1) * 3.2, zb = De - i * 3.2; if (za < 0.8) continue; const X = sd * 4.6, h = 6.5 + 2 * hash(seed + sd + i), c = cols[(i + (sd > 0 ? 2 : 0)) % cols.length], dk = mixHex(c, '#3A3650', 0.25);
+    mid.push(poly([P(X, 0, za), P(X, 0, zb), P(X, h, zb), P(X, h, za)], dk, NI), poly([P(X, h, za), P(X, h, zb), P(X, h + 0.3, zb), P(X, h + 0.3, za)], lighten(dk, 0.1), NI));
+    for (const [wy0, wy1] of [[1.0, 2.3], [3.9, 5.2]]) mid.push(poly([P(X, wy0, za + 0.8), P(X, wy0, za + 2.0), P(X, wy1, za + 2.0), P(X, wy1, za + 0.8)], hash(seed + 'lw' + sd + i + wy0) < 0.15 ? '#F2C878' : '#2E2C3A', NI)); }
+  mid.push(...H.facade, ...H.glass);
+  // electricity wires across the dawn
+  mid.push(...[0, 1].map(i => path(`M${X0} ${hz - 1500 + i * 80} Q${cx} ${hz - 1100 + i * 80} ${X1} ${hz - 1450 + i * 80}`, 'none', {stroke: '#2A2838', 'stroke-width': 6})));
+  const info = {kind: 'exterior', view: 'homeStreet', floorY, horizon: hz, slot: [...H.upWin, 0], slotDown: [...H.win, 0], proj: P,
+    note: 'the end house is at real scale (floorY); the mother stands behind: true at y = floorY − 1570 in the upstairs window [slot]'};
+  return {back, mid, front: [], info};
+}
+
+// ---------- Ma's kitchen in the morning: the kitchen preset with the table, her phone on it ----------
+function kitchenTable(o) {
+  const {tableX = 960, phone = 'lit'} = o, base = SETS.kitchen({...o, table: true, tableX});
+  const top = (o.floorY ?? 1500) + 260 - 362;
+  base.mid.push(layer('mid:phone', {}, g({transform: tr(tableX + 40, top - 4, 0, 1.4)}, SCENE.phoneFlat({screen: phone})), prop('mug', tableX - 380, top, {}, 1.4)));
+  base.back.push(layer('bg:ma', {}, prop('frame', tableX + 820, (o.floorY ?? 1500) - 980, {w: 220, h: 280, art: 'portrait'}), rect(tableX - 1500, (o.floorY ?? 1500) - 1150, 260, 340, '#F4EEE2', NI), rect(tableX - 1500, (o.floorY ?? 1500) - 1150, 260, 70, '#C7342C', NI),
+    text('OCT', tableX - 1370, (o.floorY ?? 1500) - 1098, {'font-family': 'Inter Display', 'font-weight': 900, 'font-size': 44, fill: '#FFFFFF', 'text-anchor': 'middle'})));
+  base.info = {kind: 'interior', view: 'kitchenTable', floorY: o.floorY ?? 1500, tableTop: top, phone: [tableX + 40, top - 4]};
+  return base;
+}
+
+// ---------- crash flash frames (0.4 s each, live): frame 'headlights' | 'glass' | 'phone'. dur = the frame's length ----------
+function crashFlash(o) {
+  const {frame = 'headlights', cx = 960, cy = 540, dur = 0.5, seed = 'cf', who = 'MUM'} = o;
+  const u = t => Math.max(0, Math.min(1, t / dur));
+  if (frame === 'headlights') {   // a wet road at night, a truck's grille and two lamps rushing in, the horn's glare
+    const P = aisleProjection({floorY: cy + 900, cx, eye: 1.3}), hz = P.vy;
+    const back = [rect(X0, Y0, X1 - X0, Y1 - Y0, '#06080C', NI), vgrad(X0, hz - 600, X1 - X0, 700, [[0, '#0B1018', 0], [1, '#1A2230', 1]]), poly([P(-4, 0, 1), P(4, 0, 1), P(4, 0, 300), P(-4, 0, 300)], '#14181E', NI)];
+    for (let z = 1.5; z < 120; z += 6) back.push(poly([P(-0.07, 0, z), P(0.07, 0, z), P(0.07, 0, z + 3), P(-0.07, 0, z + 3)], '#6E6A5E', NI));
+    return {back, mid: [], front: [], info: {kind: 'exterior', view: 'crash', floorY: cy + 900, horizon: hz},
+      live: {back: ctx => { const e = u(ctx.t) ** 2.2, z = 40 * (1 - e) + 1.4, s = P.f / z, [x, y] = P(0, 0, z), out = [];
+        out.push(path(rrect(x - 1.25 * s, y - 3.2 * s, 2.5 * s, 3.2 * s, 0.15 * s), '#0C0D10', NI), ...[0, 1, 2, 3, 4].map(i => rect(x - 0.9 * s, y - 2.0 * s + i * 0.18 * s, 1.8 * s, 0.07 * s, '#1E2026', NI)),
+          ...[-1, -0.33, 0.33, 1].map(k => circle(x + k * 1.0 * s, y - 3.08 * s, 0.05 * s + 1, '#FFB34A', NI)));
+        for (const sd of [-1, 1]) { const lx = x + sd * 0.95 * s, ly = y - 1.0 * s; out.push(softBlob(lx, ly, 1.8 * s + 60, 1.2 * s + 40, '#FFF1D0', 0.9), circle(lx, ly, 0.22 * s + 4, '#FFFFFF', NI), softBlob(lx, y + 0.1 * s, 2.2 * s, 0.25 * s, '#FFE6B8', 0.5)); }
+        out.push(softBlob(x, y - 1.0 * s, 4 * s + 400, 0.18 * s + 20, '#FFFFFF', 0.6 + 0.4 * e));
+        return out.join(''); }}};
+  }
+  if (frame === 'glass') {   // the windscreen fractures from one point; shards burst toward the camera
+    const back = [rect(X0, Y0, X1 - X0, Y1 - Y0, '#0A0E16', NI), softBlob(cx + 300, cy - 100, 1400, 900, '#3A5A8A', 0.35)];
+    const ix = cx + 120, iy = cy - 60;
+    return {back, mid: [], front: [], info: {kind: 'exterior', view: 'crash', floorY: cy + 900},
+      live: {back: ctx => { const e = u(ctx.t), out = [];
+        for (let i = 0; i < 18; i++) { const a = i / 18 * Math.PI * 2 + hash(seed + i) * 0.3, L = (500 + 900 * hash(seed + 'l' + i)) * Math.min(1, e * 2.5), pts = [[ix, iy]];
+          for (let j = 1; j <= 7; j++) { const r = L * j / 7, a2 = a + (hash(seed + i + ':' + j) - 0.5) * 0.3; pts.push([ix + Math.cos(a2) * r, iy + Math.sin(a2) * r]); }
+          out.push(stroke(pts, '#DDEBFA', 3.5, {'stroke-opacity': 0.85})); }
+        for (const r of [60, 150, 280]) { if (e * 2.5 * 900 < r) continue; const pts = []; for (let i = 0; i <= 24; i++) { const a = i / 24 * Math.PI * 2, rr = r * (0.8 + 0.4 * hash(seed + 'ring' + r + i)); pts.push([ix + Math.cos(a) * rr, iy + Math.sin(a) * rr]); } out.push(stroke(pts, '#DDEBFA', 2.5, {'stroke-opacity': 0.7})); }
+        for (let i = 0; i < 46; i++) { const s = seed + 'sh' + i, a = hash(s) * Math.PI * 2, sp = 900 + 1800 * hash(s + 'v'), r = 40 + sp * e * e, rot = (hash(s + 'r') - 0.5) * 720 * e, sz = (14 + 46 * hash(s + 'z')) * (1 + 2.5 * e);
+          const x = ix + Math.cos(a) * r, y = iy + Math.sin(a) * r + 300 * e * e * hash(s + 'g');
+          out.push(g({transform: tr(x, y, rot)}, poly([[0, -sz], [sz * 0.7, sz * 0.4], [-sz * 0.5, sz * 0.6]], '#CFE3F5', fo(0.55)), poly([[0, -sz], [sz * 0.7, sz * 0.4], [sz * 0.1, 0]], '#FFFFFF', fo(0.5)))); }
+        out.push(softBlob(ix, iy, 300 + 400 * e, 300 + 400 * e, '#FFFFFF', 0.6 * (1 - e)));
+        return out.join(''); }}};
+  }
+  // phone: skidding to rest on wet asphalt, the cracked screen lit "MUM calling"
+  const back = [rect(X0, Y0, X1 - X0, Y1 - Y0, '#101216', NI)];
+  for (let i = 0; i < 260; i++) { const s = seed + 'as' + i; back.push(circle(X0 + 2400 + hash(s) * 3000, Y0 + 2900 + hash(s + 'y') * 3000, 2 + 5 * hash(s + 'r'), hash(s + 'c') < 0.5 ? '#1C1F24' : '#08090B', NI)); }
+  back.push(path(blobPath(cx - 300, cy + 220, 900, 260, seed + 'pd'), '#1A2232', NI), softBlob(cx - 500, cy + 200, 700, 160, '#C7342C', 0.25), softBlob(cx + 400, cy + 260, 500, 120, '#FFB34A', 0.2));
+  return {back, mid: [], front: [], info: {kind: 'exterior', view: 'crash', floorY: cy + 900},
+    live: {back: ctx => { const e = 1 - (1 - u(ctx.t)) ** 3, x = cx - 900 * (1 - e), y = cy + 40 - 60 * (1 - e), rot = -28 + 70 * (1 - e) + 3 * Math.sin(ctx.t * 9) * (1 - e), out = [];
+      for (let i = 0; i < 6; i++) { const s = seed + 'rp' + i, ph = (ctx.t * 1.3 + hash(s)) % 1, rx = cx - 800 + hash(s + 'x') * 1600, ry = cy + 120 + hash(s + 'y') * 300; out.push(ellipse(rx, ry, 20 + 120 * ph, 6 + 34 * ph, 'none', {stroke: '#7A8AA6', 'stroke-width': 3, 'stroke-opacity': 0.5 * (1 - ph)})); }
+      out.push(g({transform: tr(x, y + 120, rot * 0.3, 1, 0.25)}, softBlob(0, 0, 420, 420, '#7FE0A0', 0.25)));
+      out.push(g({transform: tr(x, y, rot, 0.62, 0.62 * 0.62)}, g({transform: 'translate(0 500)'}, SCENE.phoneUI({mode: 'call', who, sub: 'calling…', cracked: true, crack: [0.35, 0.55], t: ctx.t}))));
+      return out.join(''); }}};
+}
+
+Object.assign(SETS, {
+  // busExterior, tunnel (and oldBus): nightbus.mjs (merged above)
+  /** the roadside chai stall at night (the same stall the bus passes; its bulb flickers) */
+  teaStall: teaStallSet,
+  /** a residential lane, one house under a flickering streetlight. state: alive | abandoned */
+  lane: laneSet,
+  /** Aarav's street at dawn, his house at the end, the upstairs window lit */
+  homeStreet,
+  /** Ma's kitchen in the morning with her phone on the table */
+  kitchenTable,
+  /** crash flash frames: frame headlights | glass | phone */
+  crashFlash,
+  /** the crash memory (twist 2): view ots | mount | face | asphalt (src/crash.mjs) */ carCrash,
+});

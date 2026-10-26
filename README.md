@@ -32,6 +32,7 @@ The same file renders in two art styles:
 | [`skills/`](skills/) | **Claude Code skills** that hold everything learned making this: story and hooks, text and safe zones, motion, production and the channel workflow. See [skills/README.md](skills/README.md). |
 | [`profile/voice.md`](profile/voice.md) | The channel profile: voice, rules and platform notes. Every skill reads it first. |
 | [`RESEARCH-safe-zones-text.md`](RESEARCH-safe-zones-text.md) | Sourced research on Shorts, Reels and TikTok safe zones, text sizes and reading time. |
+| [`music/`](music/) | **Text-to-music**, standalone: generate original music beds locally with [ACE-Step](https://github.com/ace-step/ACE-Step). Nothing else depends on it. See [music/README.md](music/README.md). |
 | `whatif-series/`, `whatif-kit/` | **Archive**: Series 1 and the retired canvas kit. The kit's `sfx.py` sound mixer is still used. |
 | `whatifman-01/`, `mu-30-days/`, `two-minute-rule/` | Earlier one-off productions from the same pipeline. |
 

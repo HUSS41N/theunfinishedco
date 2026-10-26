@@ -31,6 +31,8 @@ Every time inside a shot is **shot-relative seconds** (`t`, `from`, `to`).
   "accessories": ["glasses", "sunglasses", "beard", "mustache", "headphones", "mask", {"type": "cap", "color": "blue"}]
 }
 ```
+More cast fields (film face, `age`, `wet`, `mark`, saree / kameez / kurta / sherwani / uniform / army / school / gown, salwar,
+`vest`, `shawl`, `dupatta`, watch, peaked cap, turban + sehra, party hat): docs/CHARACTERS.md.
 `<cloth>`: green olive red coral pink yellow mustard blue navy denim teal purple grey charcoal white black brown tan, or `#hex`.
 Shade and highlight colours are derived automatically (same hue, darker/lighter); never specify them.
 
@@ -85,11 +87,22 @@ Shade and highlight colours are derived automatically (same hue, darker/lighter)
   "do":   [{"act": "blink"}, {"act": "talk", "from": 1, "to": 2.5}],
   "rot": 0,                    // whole-body rotation in degrees (floating, falling); keyable
   "silhouette": "#1C1D22",     // draw the whole character as one flat colour (shadows, ghosts); keyable, null = off
-  "tint": "frozen"             // greyed-out (time frozen, memories); keyable, null = off
+  "tint": "frozen",            // greyed-out (time frozen, memories); keyable, null = off
+  // character looks (details: docs/CHARACTERS.md "Film face, wardrobe, looks")
+  "ghost": 0.6, "ghostTo": "#C8D5E2",   // pre-blended pale ghost; keyable
+  "fade": 0, "fadeTo": "#8E9AA6",       // vanish into fog, legs first; keyable (1 = gone)
+  "view": "front",             // "back": seen from behind; keyable (switch it mid-turn)
+  "reflection": {"tint": "#8FA6BD", "amount": 0.35},   // mirror look
+  "crop": [x, y, w, h, r],     // world rect: show the actor only inside it (rear-view mirror, window pane)
+  "still": true                // uncanny stillness: no idle life, a slow blink every 7–10 s
 }
 ```
+Face keys hold whole objects: a key's `face` replaces the previous one while it interpolates, so repeat `eyes`/`brows`/`mouth`
+in every face key (numbers such as `turn`, `tears`, `quiver` interpolate; strings switch at the key).
 ### Poses
 Named: `stand relaxed wave cheer point shrug think scared hold phone sit sitEat sitSprawl sitPhone sitScream`.
+Story poses: `sitSide sit3q sitSleep grabFront sitHoldLap stillSit driveSeat turnSeat sitPhoneEar sitPhoneChest pressGlass holdBar
+holdChest stoopPlace stoopSide stopHand backAway phoneEar phoneClose phoneChest lookHands standCry slamWall` (see CHARACTERS.md).
 Custom: `{"base": "<named>", "<limb>": {...}, "body": {...}, "head": {...}}` where
 - limbs `armL armR legL legR`: `a` = joint angle at shoulder/hip in degrees (0 = hanging down, **positive swings outward**), `b` = elbow/knee added to `a` (negative bends inward/up), `la`/`lb` = length scale of upper/lower segment (foreshortening, e.g. seated thighs 0.55), `z` = `front|back` (arms only).
 - `body`: `dy` (positive lowers the pelvis; sitting ≈ 150), `dx`, `lean` (degrees), `scaleY`.
@@ -98,9 +111,10 @@ Custom: `{"base": "<named>", "<limb>": {...}, "body": {...}, "head": {...}}` whe
 Useful arm angles: hanging 8 · hand on hip 40/−95 · hand to mouth 24/−148 · pointing 92/4 · raised 146/22 · both up 150/18.
 
 ### Face
-- `eyes`: open wide closed happy tired bored angry.
-- `mouth`: smile grin open scream O flat sad smirk teeth chew.
-- `brows`: flat up raised worried angry sad.
+- `eyes`: open wide closed happy tired bored angry (film face also: shock fear glassy half soft sad grief cry down squint squeeze).
+- `mouth`: smile grin open scream O flat sad smirk teeth chew (film face also: sadSmile tight part whisper speak gasp quiver cry).
+- `brows`: flat up raised worried angry sad (film face also: grief fear shock soft furrow determined).
+- `tears` 0..1, `glisten` 0..1, `quiver` 0..1, `tearSide`: drama extras (any face). `turn` runs −2..2 on the film face (2 = back of head).
 - `look`: pupils, from [−1..1, −1..1].
 - `turn`: −1..1, shifts the face toward a 3/4 view.
 - `blink`: 0..1, normally driven by the `blink` action.
@@ -130,6 +144,12 @@ Every action with `from`/`to` blends in and out over `blend` seconds (default `m
 | reach | `arm from to target blend` | the hand moves to `target: [x, y]` (character-local px: origin on the ground under the pelvis, +x the way the character faces, y negative up) by two-bone IK, elbow down and out, and returns |
 | look | `look turn from to` | override gaze (blended) |
 | jump | `from dur height crouch` | one hop with a small crouch before take-off and on landing |
+| cry | `from to amp sob tears well face` | sobs, trembling lip and chin, glassy eyes, tears that well then run (persist) |
+| jolt | `t amp hold face` | waking with a start: 2-frame snap, flinch, shock eyes, slow settle |
+| stumble | `t dist dir amp` | lurch (brakes), catching step, arms fling, rebound; moves `dist` px |
+| sway | `from to amp rate` | standing on a moving bus; a `reach`ed hand stays put |
+| slam | `t arm target windup to release` | wind up and strike a hand into `target`, hold, release |
+| run | `from to dx rate lean` | running cycle travelling `dx` |
 
 ## Motion
 - **Spline keys.** Without an explicit `ease`, keys form a monotone cubic spline: the move eases in at the first key and out at the last, and passes through middle keys without stopping (it only stops where the value turns around). It never overshoots.
@@ -184,3 +204,88 @@ Every action with `from`/`to` blends in and out over `blend` seconds (default `m
 ### Notes (v3)
 - Actor `"shadow": false` hides the ground shadow. The shadow sits under the feet, so turn it off for airborne actors (y well above the floor).
 - `src/cover.mjs` keeps `say` bubbles on covers and drops only screen text; pass `--style stick` for the v1 cover.
+
+## Light, grade and atmosphere (src/fx.mjs)
+
+Shot-level fields. All deterministic in (shot, t); every oscillation stays under 6 Hz. Scenes without them render exactly
+as before. `node src/render.mjs --list` prints the names.
+
+```jsonc
+{
+  "speed": 9,                                   // m/s the bus/road moves (≈ 32 km/h), or keys [{"t": 0, "v": 9}, {"t": 2, "v": 0}] (brakes)
+  "travel": 120,                                // optional: metres already travelled at the shot start (default start × speed, so cuts stay continuous)
+  "grade": "night",                             // or {"preset": "night", "amount": 0.8, "keys": [{"t": 0, "amount": 0}, {"t": 1, "amount": 1}], …overrides}
+  "lights": [
+    {"type": "flicker", "from": 0.5, "to": 4, "rate": 1.3, "depth": 0.85, "seed": "a", "pattern": "random|stutterOn|stutterOff|off|dying", "tube": [0, 4], "dim": 0.6},
+    {"type": "sweep", "from": 0, "to": 4, "intensity": 0.22, "color": "#FFA94D", "width": 0.9, "every": 0.55, "slant": 0.35},
+    {"type": "headlights", "from": 1.1, "to": 1.9, "x": 960, "y": 560, "sep": 1200, "hold": 0.15},
+    {"type": "glow", "x": 1112, "y": 1180, "r": 120, "intensity": 0.8, "color": "#FFC65A", "flicker": 1, "from": 0, "to": 9, "keys": [{"t": 2, "intensity": 0}]},
+    {"type": "vignette", "amount": 0.5}
+  ],
+  "atmos": [
+    {"type": "fog", "density": 0.6, "color": "#9AABC2", "where": "outside|scene|far|front", "drift": 0.5, "y": 1200, "h": 900},
+    {"type": "rain", "density": 0.5, "where": "glass|air", "angle": 28, "speed": 900},
+    {"type": "dust", "x": 1700, "y": 1050, "w": 800, "h": 700, "n": 40, "color": "#FFF1D0", "intensity": 1}
+  ]
+}
+```
+
+**grade** is a per-pixel colour transform on the rasterised world (render.mjs): saturation, per-channel gain and
+exposure, contrast about a pivot, gamma, a shadow/highlight split tone and lifted blacks, then `amount` mixes it with
+the original. Emissive pixels (bright lamps, bulbs, flames, lit windows; warm ones most) are protected, so the candle
+stays candle-yellow under a cold night grade. `memory` and `crash` add a cheap bloom. Presets:
+
+| preset | look |
+|---|---|
+| `night` | cold blue-teal, crushed brightness, slightly lifted blue blacks |
+| `bus` | the night inside the bus: yellowed tubes, warm and a little sick (teal shadows, sallow highlights). oldBus sets swap it in for `night` (`info.gradeAs`) |
+| `tunnel` | near-dark, sodium orange |
+| `dawn` | lavender shadows, warm highlights |
+| `memory` | desaturated warm, soft contrast, bloom |
+| `crash` | high-contrast white/red, bloom |
+| `day` | identity (useful for keyed amounts) |
+
+Any preset field can be overridden in the object (`exposure`, `sat`, `gain`, `lift`, `gamma`, `contrast`, `pivot`,
+`shadow`, `high`, `protect`, `bloom`). A graded shot renders in two passes: the world (sets, actors, props, atmosphere,
+flicker dimming) is graded; light that is *added* (glows, sweeps, tube halos, dust, headlights) and the screen layer
+(bubbles, captions, overlays) composite on top ungraded, so captions stay white. The vignette is multiplied into the
+grade pass. Browsers (and `--svg`) get the ungraded SVG.
+
+**lights**
+- `flicker`: fluorescent tubes. `random` (default): irregular dips of 45–190 ms, a third of them double blinks, at
+  least 0.22 s apart (≤ ~4 dips/s, never a sustained strobe); `rate` = dips per second (≤ 4). `stutterOn`: dark until
+  `from`, then blip–blip–blip–on (lights coming back); `stutterOff` the reverse; `off`: dark from `from` to `to`;
+  `dying`: mostly off with blips of light. `depth` = how dark a dip gets. Without `tube` the whole room dims (`dim`,
+  default 0.62) and every tube follows; with `tube: [i…]` only those tubes flicker (the room dims a little). The set's
+  tubes draw lit or off from it and get a halo.
+- `sweep`: street-lamp light passing through the bus. On oldBus interiors it is ON by default (no light needed):
+  soft window-shaped sodium pools synced to the exterior's lamps, sliding over passengers, seats and floor at the lamp
+  cadence (LAMP_SPACING / speed), none when stopped, the tunnel's own 6 m lamps inside a tunnel. A `sweep` light only
+  overrides `intensity` (×0.6 for pools), `color`, `every` (s between passes), `from`/`to`; `intensity: 0` turns it
+  off. On other sets: a soft broad warm wash drifting across the frame at that cadence.
+- `headlights`: approaching glare that burns to warm white at `to` (holds `hold` s). On a set that knows its vehicle's
+  lamps (busExterior front) the bloom, cores and streak sit on the bus's own headlights and grow as it comes on; elsewhere
+  two screen-space lamps grow and part from (`x`, `y`).
+- `glow`: a warm point light in world space (candle, bulb, lit window), two soft radial layers; `flicker` 0..1 makes it
+  breathe like a flame (smooth noise < 5 Hz).
+- `vignette`: `amount` 0..1.
+
+**atmos**
+- `fog`: layered soft bands that drift (`drift` m/s) with parallax; on interiors (`where: outside`, the default there)
+  it fills the window exterior and is interleaved by depth so near things stay readable; on exteriors `scene` puts a
+  far layer behind the actors and a thin near layer in front (`far` / `front` for one of them). `y`, `h` place the band.
+- `rain`: `glass` (default inside): streaks running on the outside of the window glass, slanted by the bus speed, plus
+  beads that sit and slide; `air` (default outside): screen-space streaks.
+- `dust`: motes drifting and twinkling in a beam (`x, y, w, h` world rect).
+
+### Sets that move (live layers)
+
+A preset may return `live` functions that the engine calls every frame with the fx context (`t`, `T` film time, `d`
+metres travelled, `v`, light levels, camera, visible rect). They draw the scrolling window exterior, flickering tubes,
+streaming lamps, the stall's bulb, the crash flashes. Order in the world: `live.under` → `set.back` → `live.back` →
+actors marked `behind` → `set.mid` → `live.mid` → props → actors → props(front) → `set.front` → `live.front`.
+
+### Actor `crop`
+
+`"crop": [x, y, w, h, r]` (world px) shows an actor only inside that rounded rect: the rear-view mirror slot
+(`oldBus` `view: "mirror"`: `[470, 170, 980, 330, 40]`) or a window pane. It costs one mask per frame; use it only where needed.
