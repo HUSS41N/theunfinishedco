@@ -9,3 +9,8 @@ out/
 # OS / editor
 .DS_Store
 *.swp
+# videos are rendered locally and never committed
+*.mp4
+*.mov
+*.webm
+*.m4v
